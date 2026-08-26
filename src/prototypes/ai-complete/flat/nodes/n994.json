@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 44,
+    "left": 276,
+    "top": 286,
+    "width": 10
+  },
+  "children": [
+    "n993"
+  ],
+  "height": "22px",
+  "nodeId": "n994",
+  "originalClass": "ant-row ant-form-item-row",
+  "selector": "div.p-table-header.not-data-area > div.p-table__wrapper > div.p-table__wrapper-left.scroll-at-left:nth-of-type(1) > div.p-table-row.p-table-header-row > div.p-table-cell.p-table-header-cell > div.p-table-cell-drag-handle",
+  "styleId": "style_168",
+  "tag": "div",
+  "width": "84px"
+}

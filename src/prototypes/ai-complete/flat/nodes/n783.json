@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 40,
+    "left": 12,
+    "top": 1022,
+    "width": 178
+  },
+  "children": [
+    "n782"
+  ],
+  "height": "45px",
+  "nodeId": "n783",
+  "originalClass": "p-table-cell ant-table-cell p-table-body-cell is-ellipsis",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(18) > div.ant-menu-submenu-title",
+  "styleId": "style_172",
+  "tag": "div",
+  "width": "100px"
+}

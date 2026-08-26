@@ -1,0 +1,15 @@
+{
+  "bbox": {
+    "height": 16,
+    "left": 246,
+    "top": 714,
+    "width": 16
+  },
+  "height": "22px",
+  "nodeId": "n1150",
+  "selector": "div.p-table-body.ant-table-body > div.p-table__wrapper > div.p-table__wrapper-left.scroll-at-left:nth-of-type(1) > div.p-table-row.p-table-body-row:nth-of-type(9) > div.p-table-cell.ant-table-cell > div.p-table-cell__inner > label.p-selection-wrapper.p-selection-checkbox-wrapper > span.p-selection-checkbox",
+  "styleId": "style_204",
+  "tag": "span",
+  "text": "删除",
+  "width": "28px"
+}

@@ -1,0 +1,11 @@
+{
+  "children": [
+    "n247"
+  ],
+  "height": "22px",
+  "nodeId": "n248",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(4) > ul.ant-menu.ant-menu-sub > li.ant-menu-item",
+  "styleId": "style_70",
+  "tag": "li",
+  "width": "72px"
+}

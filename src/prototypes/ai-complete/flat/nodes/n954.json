@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 30,
+    "left": 1219,
+    "top": 108,
+    "width": 437
+  },
+  "children": [
+    "n953"
+  ],
+  "height": "22px",
+  "nodeId": "n954",
+  "originalClass": "p-table-cell__inner",
+  "selector": "#form_item_purchaseType",
+  "styleId": "style_170",
+  "tag": "div",
+  "width": "184px"
+}

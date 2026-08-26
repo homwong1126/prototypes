@@ -1,0 +1,14 @@
+{
+  "bbox": {
+    "height": 856,
+    "left": 0,
+    "top": 0,
+    "width": 1710
+  },
+  "children": [
+    "n1227"
+  ],
+  "nodeId": "n1228",
+  "selector": "#app",
+  "tag": "root"
+}

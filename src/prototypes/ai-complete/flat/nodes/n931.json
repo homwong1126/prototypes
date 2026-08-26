@@ -1,0 +1,29 @@
+{
+  "bbox": {
+    "height": 34,
+    "left": 457,
+    "top": 48,
+    "width": 84
+  },
+  "children": [
+    "n877",
+    "n885",
+    "n893",
+    "n896",
+    "n899",
+    "n902",
+    "n905",
+    "n907",
+    "n909",
+    "n911",
+    "n913",
+    "n930"
+  ],
+  "height": "46px",
+  "nodeId": "n931",
+  "originalClass": "p-table-row p-table-body-row p-table-row-level-0",
+  "selector": "#rc-tabs-1-tab-\\/ka\\/micro-program\\/policyManage\\/edit\\?id\\=2016754178181083138",
+  "styleId": "style_190",
+  "tag": "div",
+  "width": "1800px"
+}

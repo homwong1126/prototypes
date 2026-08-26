@@ -1,0 +1,25 @@
+{
+  "bbox": {
+    "height": 856,
+    "left": 0,
+    "top": 0,
+    "width": 1710
+  },
+  "contentSummary": "中文 系统管理员 系统管理 系统管理 渠道管理 人员管理 瑞行优选 首页管理 政策管理 企业管理 用户管理 资质审核 优惠券核销 活动管理 通知公告 目标管理 计划管理 商机管理 产品管理 订单管理 产品管理 订单管理 车辆管理 财务管理 实销管理 市场开拓 客户关系 菜单管理 政策管理 政策管理编辑 瑞行优选/ 政策管理编辑 政策基本信息 政策编号 ZC20260129001 政策名称 采购类型",
+  "dominantStyle": {
+    "backgroundImage": false
+  },
+  "hasMedia": true,
+  "hasText": true,
+  "id": "section-001",
+  "interactionHints": [
+    "cta",
+    "nav-link",
+    "form",
+    "toggle"
+  ],
+  "name": "signup",
+  "nodeCount": 1054,
+  "selector": "#app",
+  "tagHint": "div"
+}

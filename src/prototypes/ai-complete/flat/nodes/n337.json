@@ -1,0 +1,15 @@
+{
+  "bbox": {
+    "height": 0,
+    "left": 168,
+    "top": 602,
+    "width": 10
+  },
+  "height": "22px",
+  "nodeId": "n337",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(7) > div.ant-menu-submenu-title > i.ant-menu-submenu-arrow",
+  "styleId": "style_129",
+  "tag": "span",
+  "text": "品牌",
+  "width": "28px"
+}

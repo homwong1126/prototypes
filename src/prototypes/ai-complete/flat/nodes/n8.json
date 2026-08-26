@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 0,
+    "left": 240,
+    "top": 24,
+    "width": 1114
+  },
+  "children": [
+    "n7"
+  ],
+  "height": "30px",
+  "nodeId": "n8",
+  "originalClass": "favorites",
+  "selector": "div.favorites > div.ant-tabs.ant-tabs-top > div.ant-tabs-nav:nth-of-type(1)",
+  "styleId": "style_8",
+  "tag": "div",
+  "width": "1114px"
+}

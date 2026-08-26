@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n869"
+  ],
+  "height": "32px",
+  "nodeId": "n870",
+  "originalClass": "ant-col ant-form-item-control",
+  "selector": "div.right-menu > div.right-menu-item:nth-of-type(2) > span.anticon.anticon-close",
+  "styleId": "style_167",
+  "tag": "div",
+  "width": "134px"
+}

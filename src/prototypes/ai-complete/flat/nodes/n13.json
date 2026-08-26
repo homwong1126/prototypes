@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 24,
+    "left": 1378,
+    "top": 12,
+    "width": 36
+  },
+  "children": [
+    "n12"
+  ],
+  "height": "24px",
+  "nodeId": "n13",
+  "originalClass": "fuse-theme-editor-sdk-container",
+  "selector": "div.fuse-theme-editor-sdk-container",
+  "styleId": "style_12",
+  "tag": "div",
+  "width": "36px"
+}

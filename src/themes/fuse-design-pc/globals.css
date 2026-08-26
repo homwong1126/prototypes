@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+/* Fuse Design Pc - derived theme variables from MG archive extraction */
+:root {
+  /* Core palette */
+  --background: #f4f6fb;
+  --foreground: #172033;
+  --card: #ffffff;
+  --card-foreground: #172033;
+  --popover: #ffffff;
+  --popover-foreground: #172033;
+
+  /* Brand */
+  --primary: #2251ff;
+  --primary-foreground: #ffffff;
+  --primary-hover: #1a43de;
+  --primary-soft: #eef2ff;
+
+  /* Surface */
+  --secondary: #edf2fb;
+  --secondary-foreground: #31415f;
+  --muted: #f7f9ff;
+  --muted-foreground: #5d6984;
+  --subtle: #8390ab;
+  --accent: #2f7cff;
+  --accent-foreground: #ffffff;
+
+  /* Semantic */
+  --success: #16a34a;
+  --success-foreground: #ffffff;
+  --warning: #f59e0b;
+  --warning-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+
+  /* Border */
+  --border: #d8e0f0;
+  --border-light: #e8edf7;
+  --border-subtle: #edf1fa;
+  --input: #cfdaef;
+  --ring: rgba(34, 81, 255, 0.28);
+
+  /* Typography */
+  --font-sans: "MiSans", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 28px;
+  --text-4xl: 40px;
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 999px;
+
+  /* Spacing */
+  --spacing-2: 4px;
+  --spacing-3: 6px;
+  --spacing-4: 8px;
+  --spacing-6: 12px;
+  --spacing-8: 16px;
+  --spacing-10: 20px;
+  --spacing-12: 24px;
+  --spacing-16: 32px;
+  --spacing-18: 36px;
+
+  /* Shadows */
+  --shadow-sm: 0 8px 24px rgba(34, 81, 255, 0.06);
+  --shadow-md: 0 18px 45px rgba(34, 81, 255, 0.08);
+  --shadow-lg: 0 28px 70px rgba(34, 81, 255, 0.12);
+}
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-subtle: var(--subtle);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-border-light: var(--border-light);
+  --color-border-subtle: var(--border-subtle);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+}
+
+.fuse-design-pc-theme .theme-token-card {
+  background: var(--card);
+  color: var(--card-foreground);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.fuse-design-pc-theme .theme-token-pill {
+  background: var(--muted);
+  color: var(--secondary-foreground);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+}

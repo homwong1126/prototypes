@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 34,
+    "left": 221,
+    "top": 48,
+    "width": 358
+  },
+  "children": [
+    "n867"
+  ],
+  "height": "32px",
+  "nodeId": "n868",
+  "originalClass": "ant-form-item-control-input-content",
+  "selector": "div.route-tags > div.ant-tabs.ant-tabs-top:nth-of-type(2) > div.ant-tabs-nav:nth-of-type(1) > div.ant-tabs-nav-wrap > div.ant-tabs-nav-list",
+  "styleId": "style_165",
+  "tag": "div",
+  "width": "134px"
+}

@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n752"
+  ],
+  "height": "15px",
+  "nodeId": "n753",
+  "originalClass": "ant-input-number-handler ant-input-number-handler-down",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(17) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(4) > span.ant-menu-title-content",
+  "styleId": "style_184",
+  "tag": "span",
+  "width": "22px"
+}

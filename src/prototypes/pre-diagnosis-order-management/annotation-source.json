@@ -1,0 +1,97 @@
+{
+  "documentVersion": 1,
+  "format": "axhub-annotation-source",
+  "data": {
+    "version": 2,
+    "prototypeName": "pre-diagnosis-order-management",
+    "pageId": "create",
+    "updatedAt": 1782691200000,
+    "nodes": [
+      {
+        "id": "prediag-appointment-entry",
+        "index": 1,
+        "title": "预约单入口",
+        "pageId": ["create", "detail"],
+        "locator": {
+          "selectors": [
+            "[data-annotation-id=\"prediag-appointment-entry\"]"
+          ],
+          "fingerprint": "button|data-annotation-id=prediag-appointment-entry",
+          "path": []
+        },
+        "aiPrompt": "解释创建预诊单页面里的预约单入口如何帮助快速关联预约数据。",
+        "annotationText": "这是进入预约单关联面的主入口。用户在创建预诊单时点击这里，先从当前车辆命中的预约单里选择一条，再把预约时间、预约类型、客户描述和车牌/VIN 带回预诊单表单。若当前车辆没有命中预约单，这个入口仍然保留，方便后续人工切换到其他车辆或改用现场接车。",
+        "hasMarkdown": false,
+        "color": "#D97706",
+        "images": [],
+        "createdAt": 1782691200000,
+        "updatedAt": 1782691200000
+      },
+      {
+        "id": "prediag-appointment-table",
+        "index": 2,
+        "title": "预约单列表",
+        "pageId": "create",
+        "locator": {
+          "selectors": [
+            "[data-annotation-id=\"prediag-appointment-table\"]"
+          ],
+          "fingerprint": "table|data-annotation-id=prediag-appointment-table",
+          "path": []
+        },
+        "aiPrompt": "说明预约单列表的字段展示和选中规则。",
+        "annotationText": "预约单列表只展示与当前车辆匹配的预约单。表格字段按门店实际接待需要组织：预约单号、来源、车牌、VIN、客户姓名、手机号、预约时间、预约类型和状态。点击任意一行即可切换单选状态，底部的“关联选中预约单”会把当前选中的预约单写回预诊单。",
+        "hasMarkdown": false,
+        "color": "#059669",
+        "images": [],
+        "createdAt": 1782691200000,
+        "updatedAt": 1782691200000
+      },
+      {
+        "id": "prediag-linked-appointment-chip",
+        "index": 3,
+        "title": "已关联预约单",
+        "pageId": ["create", "detail"],
+        "locator": {
+          "selectors": [
+            "[data-annotation-id=\"prediag-linked-appointment-chip\"]"
+          ],
+          "fingerprint": "button|data-annotation-id=prediag-linked-appointment-chip",
+          "path": []
+        },
+        "aiPrompt": "说明已关联预约单如何作为预诊单上下文入口。",
+        "annotationText": "当预诊单已经关联到预约单后，这个胶囊按钮会显示预约单号，并允许从车主车辆信息区直接查看预约单详情。它是预诊单与预约单之间的上下文跳转入口，方便接待和技师回看客户到店时间、来源、车型和客户描述。",
+        "hasMarkdown": false,
+        "color": "#7C3AED",
+        "images": [],
+        "createdAt": 1782691200000,
+        "updatedAt": 1782691200000
+      },
+      {
+        "id": "prediag-appointment-detail-table",
+        "index": 4,
+        "title": "预约单详情",
+        "pageId": ["create"],
+        "locator": {
+          "selectors": [
+            "[data-annotation-id=\"prediag-appointment-detail\"]"
+          ],
+          "fingerprint": "modal|data-annotation-id=prediag-appointment-detail",
+          "path": []
+        },
+        "aiPrompt": "说明预约单详情弹窗中的信息分组。",
+        "annotationText": "预约单详情用于补充查看单据上下文，按基本信息、客户信息、车辆信息和服务信息分组展示。这里的目标不是再次编辑预约单，而是让接待人员在创建预诊单时确认预约来源、预约时间、服务方式、车主联系方式和问题描述是否一致。",
+        "hasMarkdown": false,
+        "color": "#D97706",
+        "images": [],
+        "createdAt": 1782691200000,
+        "updatedAt": 1782691200000
+      }
+    ]
+  },
+  "markdownMap": {},
+  "assetMap": {},
+  "directory": {
+    "nodes": []
+  }
+}

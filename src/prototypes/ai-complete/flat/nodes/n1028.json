@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 22,
+    "left": 904,
+    "top": 297,
+    "width": 56
+  },
+  "children": [
+    "n1027"
+  ],
+  "height": "15px",
+  "nodeId": "n1028",
+  "originalClass": "ant-input-number-handler ant-input-number-handler-up",
+  "selector": "div.p-table-header.not-data-area > div.p-table__wrapper > div.p-table__wrapper-static.scroll-at-left:nth-of-type(2) > div.p-table-row.p-table-header-row > div.p-table-cell.p-table-header-cell:nth-of-type(6) > div.p-table-cell__inner:nth-of-type(1) > span:nth-of-type(1)",
+  "styleId": "style_183",
+  "tag": "span",
+  "width": "22px"
+}

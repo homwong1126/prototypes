@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 22,
+    "left": 237,
+    "top": 107,
+    "width": 461
+  },
+  "children": [
+    "n917"
+  ],
+  "height": "14px",
+  "nodeId": "n918",
+  "originalClass": "anticon anticon-down ant-input-number-handler-down-inner",
+  "selector": "form.ant-form.ant-form-vertical > div.ant-row.css-eju0wy > div.ant-col.ant-col-8:nth-of-type(1) > div.ant-form-item.css-eju0wy > div.ant-row.ant-form-item-row > div.ant-col.ant-form-item-control:nth-of-type(2) > div.ant-form-item-control-input",
+  "styleId": "style_182",
+  "tag": "span",
+  "width": "14px"
+}

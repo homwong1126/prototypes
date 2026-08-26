@@ -1,0 +1,16 @@
+{
+  "bbox": {
+    "height": 20,
+    "left": 237,
+    "top": 108,
+    "width": 106
+  },
+  "height": "30px",
+  "id": "form_item_7_verificationAmount",
+  "nodeId": "n921",
+  "originalClass": "ant-input-number-input",
+  "selector": "span.text.c-dynamic-form-item__policyCode__inner > b",
+  "styleId": "style_186",
+  "tag": "input",
+  "width": "132px"
+}

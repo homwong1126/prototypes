@@ -1,0 +1,19 @@
+{
+  "bbox": {
+    "height": 40,
+    "left": 48,
+    "top": 382,
+    "width": 114
+  },
+  "children": [
+    "n270",
+    "n274"
+  ],
+  "height": "32px",
+  "nodeId": "n275",
+  "originalClass": "ant-input-affix-wrapper c-dynamic-form-item__policyName__inner ant-input-affix-wrapper-status-success",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(5) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(3) > span.ant-menu-title-content",
+  "styleId": "style_93",
+  "tag": "span",
+  "width": "460.938px"
+}

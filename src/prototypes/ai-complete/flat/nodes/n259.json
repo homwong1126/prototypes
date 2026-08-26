@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 240,
+    "left": 12,
+    "top": 302,
+    "width": 178
+  },
+  "children": [
+    "n258"
+  ],
+  "height": "26px",
+  "nodeId": "n259",
+  "originalClass": "ant-col ant-col-6 ant-form-item-label",
+  "selector": "#sub_menu_8_\\$\\$_202411212035-popup",
+  "styleId": "style_80",
+  "tag": "div",
+  "width": "460.938px"
+}

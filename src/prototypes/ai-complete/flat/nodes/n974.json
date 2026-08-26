@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 0,
+    "left": 237,
+    "top": 285,
+    "width": 1431
+  },
+  "children": [
+    "n973"
+  ],
+  "height": "14px",
+  "nodeId": "n974",
+  "originalClass": "anticon anticon-down ant-input-number-handler-down-inner",
+  "selector": "div.dynamic-table__body > div:nth-of-type(1)",
+  "styleId": "style_182",
+  "tag": "span",
+  "width": "14px"
+}

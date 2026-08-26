@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n49"
+  ],
+  "height": "40px",
+  "nodeId": "n50",
+  "originalClass": "ellipsis-tooltip-content",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(1) > ul.ant-menu.ant-menu-sub > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(1) > div.ant-menu-submenu-title > i.ant-menu-submenu-arrow",
+  "styleId": "style_37",
+  "tag": "div",
+  "width": "56px"
+}

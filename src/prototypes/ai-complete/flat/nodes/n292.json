@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 16,
+    "left": 24,
+    "top": 554,
+    "width": 16
+  },
+  "children": [
+    "n291"
+  ],
+  "height": "12px",
+  "nodeId": "n292",
+  "originalClass": "anticon anticon-close-circle",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(6) > div.ant-menu-submenu-title > span.iconfont.icon:nth-of-type(1)",
+  "styleId": "style_90",
+  "tag": "span",
+  "width": "12px"
+}

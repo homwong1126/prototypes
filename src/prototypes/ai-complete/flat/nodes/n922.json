@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 58,
+    "left": 710,
+    "top": 81,
+    "width": 485
+  },
+  "children": [
+    "n921"
+  ],
+  "height": "30px",
+  "nodeId": "n922",
+  "originalClass": "ant-input-number-input-wrap",
+  "selector": "form.ant-form.ant-form-vertical > div.ant-row.css-eju0wy > div.ant-col.ant-col-8:nth-of-type(2)",
+  "styleId": "style_187",
+  "tag": "div",
+  "width": "132px"
+}

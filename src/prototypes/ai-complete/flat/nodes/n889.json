@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 0,
+    "left": 241,
+    "top": 108,
+    "width": 1437
+  },
+  "children": [
+    "n888"
+  ],
+  "height": "22px",
+  "nodeId": "n889",
+  "originalClass": "ant-col ant-form-item-control",
+  "selector": "div.center-panel",
+  "styleId": "style_167",
+  "tag": "div",
+  "width": "84px"
+}

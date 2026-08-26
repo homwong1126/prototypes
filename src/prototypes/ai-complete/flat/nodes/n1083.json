@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 44,
+    "left": 1580,
+    "top": 286,
+    "width": 87
+  },
+  "children": [
+    "n1082"
+  ],
+  "height": "14px",
+  "nodeId": "n1083",
+  "originalClass": "anticon anticon-up ant-input-number-handler-up-inner",
+  "selector": "div.p-table-header.not-data-area > div.p-table__wrapper > div.p-table__wrapper-right:nth-of-type(3)",
+  "styleId": "style_182",
+  "tag": "span",
+  "width": "14px"
+}

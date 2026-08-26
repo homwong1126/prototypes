@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 0,
+    "left": 221,
+    "top": 82,
+    "width": 1489
+  },
+  "children": [
+    "n880"
+  ],
+  "height": "22px",
+  "nodeId": "n881",
+  "originalClass": "ant-col ant-form-item-control",
+  "selector": "#rc-tabs-1-panel-\\/ka\\/micro-program\\/policyManage\\/edit\\?id\\=2016754178181083138",
+  "styleId": "style_167",
+  "tag": "div",
+  "width": "84px"
+}

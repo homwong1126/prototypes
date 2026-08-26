@@ -1,0 +1,26 @@
+{
+  "custom": {
+    "border": "0px solid rgb(229, 231, 235)",
+    "borderColor": "rgb(229, 231, 235)",
+    "borderStyle": "solid",
+    "bottom": "60px",
+    "color": "rgba(0, 0, 0, 0.88)",
+    "cursor": "grab",
+    "fontFamily": "\"Microsoft YaHei\", Inter, -apple-system, system-ui, \"Segoe UI\"",
+    "fontSize": "14px",
+    "insetBlockEnd": "60px",
+    "insetBlockStart": "736px",
+    "insetInlineStart": "1650px",
+    "left": "1650px",
+    "minHeight": "0px",
+    "minWidth": "0px",
+    "right": "0px",
+    "textAlign": "start",
+    "textDecoration": "none solid rgba(0, 0, 0, 0.88)",
+    "textOverflow": "clip",
+    "top": "736px",
+    "transition": "0.4s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  "styleId": "style_243",
+  "tw": "block fixed z-50 font-normal leading-none border-0 visible m-0 p-0 overflow-visible"
+}

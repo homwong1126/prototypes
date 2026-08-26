@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 14,
+    "left": 1086,
+    "top": 301,
+    "width": 14
+  },
+  "children": [
+    "n1029"
+  ],
+  "height": "14px",
+  "nodeId": "n1030",
+  "originalClass": "anticon anticon-down ant-input-number-handler-down-inner",
+  "selector": "div.p-table-header.not-data-area > div.p-table__wrapper > div.p-table__wrapper-static.scroll-at-left:nth-of-type(2) > div.p-table-row.p-table-header-row > div.p-table-cell.p-table-header-cell:nth-of-type(7) > div.p-table-cell__inner:nth-of-type(1) > span.anticon.anticon-copy:nth-of-type(2)",
+  "styleId": "style_182",
+  "tag": "span",
+  "width": "14px"
+}

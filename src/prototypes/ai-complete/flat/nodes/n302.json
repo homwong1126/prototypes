@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 16,
+    "left": 24,
+    "top": 274,
+    "width": 16
+  },
+  "children": [
+    "n301"
+  ],
+  "height": "58px",
+  "nodeId": "n302",
+  "originalClass": "ant-form ant-form-vertical c-dynamic-form form c-dynamic-form",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(5) > div.ant-menu-submenu-title > span.iconfont.icon:nth-of-type(1)",
+  "styleId": "style_87",
+  "tag": "form",
+  "width": "1430.83px"
+}

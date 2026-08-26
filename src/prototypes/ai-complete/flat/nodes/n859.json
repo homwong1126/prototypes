@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 12,
+    "left": 408,
+    "top": 59,
+    "width": 12
+  },
+  "children": [
+    "n858"
+  ],
+  "height": "14px",
+  "nodeId": "n859",
+  "originalClass": "anticon anticon-up ant-input-number-handler-up-inner",
+  "selector": "div.route-tags > div.ant-tabs.ant-tabs-top:nth-of-type(2) > div.ant-tabs-nav:nth-of-type(1) > div.ant-tabs-nav-wrap > div.ant-tabs-nav-list > div.ant-tabs-tab.ant-tabs-tab-with-remove:nth-of-type(2) > button.ant-tabs-tab-remove > span.anticon.anticon-close",
+  "styleId": "style_182",
+  "tag": "span",
+  "width": "14px"
+}

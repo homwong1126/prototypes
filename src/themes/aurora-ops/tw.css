@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dmb-canvas: #0b1020;
+  --color-dmb-surface-1: #11182b;
+  --color-dmb-surface-2: #16203a;
+  --color-dmb-surface-3: #1c2744;
+  --color-dmb-surface-4: #223055;
+  --color-dmb-primary: #2f7cf6;
+  --color-dmb-primary-hover: #4b90ff;
+  --color-dmb-primary-focus: #1f6ae6;
+  --color-dmb-text: #e8edf6;
+  --color-dmb-text-muted: #b7c2d6;
+  --color-dmb-border: #28324a;
+  --color-dmb-border-strong: #38445f;
+  --color-dmb-success: #1fb878;
+  --color-dmb-warning: #e0a82e;
+  --color-dmb-danger: #e15858;
+  --radius-dmb-control: 8px;
+  --radius-dmb-card: 12px;
+  --radius-dmb-preview: 16px;
+  --font-dmb-display: "Aurora Display", Inter, "SF Pro Display", system-ui, sans-serif;
+  --font-dmb-body: "Aurora Text", Inter, "SF Pro Text", system-ui, sans-serif;
+  --font-dmb-mono: "Aurora Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}

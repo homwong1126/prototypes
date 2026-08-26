@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n368"
+  ],
+  "height": "14px",
+  "nodeId": "n369",
+  "originalClass": "anticon anticon-copy icon-copy",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(8) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(2)",
+  "styleId": "style_133",
+  "tag": "span",
+  "width": "14px"
+}

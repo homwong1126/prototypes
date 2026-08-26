@@ -1,0 +1,20 @@
+{
+  "bbox": {
+    "height": 22,
+    "left": 138,
+    "top": 66,
+    "width": 42
+  },
+  "children": [
+    "n40",
+    "n212",
+    "n215"
+  ],
+  "height": "795.906px",
+  "nodeId": "n216",
+  "originalClass": "aminui-side",
+  "selector": "span.ant-input-affix-wrapper.css-mftcua > span.ant-input-suffix",
+  "styleId": "style_51",
+  "tag": "div",
+  "width": "206.172px"
+}

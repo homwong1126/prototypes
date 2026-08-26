@@ -1,0 +1,15 @@
+{
+  "bbox": {
+    "height": 0,
+    "left": 168,
+    "top": 202,
+    "width": 10
+  },
+  "height": "0px",
+  "nodeId": "n201",
+  "originalClass": "ant-menu-submenu-arrow",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(3) > div.ant-menu-submenu-title > i.ant-menu-submenu-arrow",
+  "styleId": "style_39",
+  "tag": "i",
+  "width": "10px"
+}

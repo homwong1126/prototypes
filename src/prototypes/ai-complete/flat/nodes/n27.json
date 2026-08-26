@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 20,
+    "left": 1606,
+    "top": 14,
+    "width": 88
+  },
+  "children": [
+    "n26"
+  ],
+  "height": "24px",
+  "nodeId": "n27",
+  "originalClass": "avatar",
+  "selector": "div.name.ant-dropdown-trigger",
+  "styleId": "style_24",
+  "tag": "div",
+  "width": "24px"
+}

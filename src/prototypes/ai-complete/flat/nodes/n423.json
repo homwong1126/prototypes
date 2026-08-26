@@ -1,0 +1,16 @@
+{
+  "bbox": {
+    "height": 40,
+    "left": 50,
+    "top": 702,
+    "width": 94
+  },
+  "children": [
+    "n422"
+  ],
+  "nodeId": "n423",
+  "originalClass": "p-selection-wrapper p-selection-checkbox-wrapper",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(10) > div.ant-menu-submenu-title > span.ant-menu-title-content:nth-of-type(2)",
+  "styleId": "style_123",
+  "tag": "label"
+}

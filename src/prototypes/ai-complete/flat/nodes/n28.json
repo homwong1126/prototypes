@@ -1,0 +1,15 @@
+{
+  "bbox": {
+    "height": 10,
+    "left": 1676,
+    "top": 19,
+    "width": 18
+  },
+  "height": "64px",
+  "nodeId": "n28",
+  "selector": "div.name.ant-dropdown-trigger > span.anticon.anticon-down:nth-of-type(2)",
+  "styleId": "style_25",
+  "tag": "span",
+  "text": "系统管理员",
+  "width": "70px"
+}

@@ -1,0 +1,16 @@
+{
+  "bbox": {
+    "height": 40,
+    "left": 48,
+    "top": 502,
+    "width": 114
+  },
+  "height": "30px",
+  "nodeId": "n286",
+  "originalClass": "ant-select-selection-item",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(5) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(6) > span.ant-menu-title-content",
+  "styleId": "style_96",
+  "tag": "span",
+  "text": "军警",
+  "width": "436.938px"
+}

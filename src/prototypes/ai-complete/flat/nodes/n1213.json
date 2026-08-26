@@ -1,0 +1,19 @@
+{
+  "bbox": {
+    "height": 856,
+    "left": 0,
+    "top": 0,
+    "width": 1710
+  },
+  "children": [
+    "n35",
+    "n1212"
+  ],
+  "height": "856px",
+  "nodeId": "n1213",
+  "originalClass": "ant-layout",
+  "selector": "div.water-marker > div:nth-of-type(1) > section.css-mftcua.ant-layout",
+  "styleId": "style_237",
+  "tag": "section",
+  "width": "1710px"
+}

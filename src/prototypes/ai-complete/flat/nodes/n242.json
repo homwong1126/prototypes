@@ -1,0 +1,13 @@
+{
+  "children": [
+    "n238",
+    "n241"
+  ],
+  "height": "34px",
+  "nodeId": "n242",
+  "originalClass": "ant-tabs ant-tabs-top ant-tabs-card ant-tabs-editable-card ant-tabs-editable",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(3) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(2)",
+  "styleId": "style_64",
+  "tag": "div",
+  "width": "1488.83px"
+}

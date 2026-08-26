@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 0,
+    "left": 168,
+    "top": 562,
+    "width": 10
+  },
+  "children": [
+    "n309"
+  ],
+  "height": "32px",
+  "nodeId": "n310",
+  "originalClass": "ant-btn ant-btn-primary table-header-btn",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(6) > div.ant-menu-submenu-title > i.ant-menu-submenu-arrow",
+  "styleId": "style_109",
+  "tag": "button",
+  "width": "50.6641px"
+}

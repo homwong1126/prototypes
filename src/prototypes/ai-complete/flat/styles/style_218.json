@@ -1,0 +1,22 @@
+{
+  "custom": {
+    "border": "1px solid rgb(240, 240, 240)",
+    "borderColor": "rgb(240, 240, 240)",
+    "borderStyle": "solid",
+    "bottom": "0px",
+    "color": "rgba(0, 0, 0, 0.88)",
+    "fontFamily": "\"Microsoft YaHei\", \"PingFang SC\", -apple-system, system-ui, \"Segoe UI\"",
+    "fontSize": "14px",
+    "left": "0px",
+    "minHeight": "0px",
+    "minWidth": "0px",
+    "right": "0px",
+    "textAlign": "start",
+    "textDecoration": "none solid rgba(0, 0, 0, 0.88)",
+    "textOverflow": "clip",
+    "top": "0px",
+    "transform": "matrix(1, 0, 0, 1, 0, 0)"
+  },
+  "styleId": "style_218",
+  "tw": "block relative font-normal leading-snug border visible m-0 p-0 overflow-visible"
+}

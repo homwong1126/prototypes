@@ -1,0 +1,11 @@
+{
+  "height": "34px",
+  "id": "rc-tabs-1-tab-/system/menu",
+  "nodeId": "n221",
+  "originalClass": "ant-tabs-tab-btn",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(3) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(2) > span.ant-menu-title-content > div.navMenu-collect:nth-of-type(2) > div.collect > img.collect-before",
+  "styleId": "style_56",
+  "tag": "div",
+  "text": "菜单管理",
+  "width": "56px"
+}

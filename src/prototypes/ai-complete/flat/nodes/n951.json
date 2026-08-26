@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 32,
+    "left": 1207,
+    "top": 107,
+    "width": 461
+  },
+  "children": [
+    "n950"
+  ],
+  "height": "22px",
+  "nodeId": "n951",
+  "originalClass": "p-table-cell__inner",
+  "selector": "div.ant-select.ant-select-in-form-item",
+  "styleId": "style_170",
+  "tag": "div",
+  "width": "134px"
+}

@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 34,
+    "left": 331,
+    "top": 48,
+    "width": 110
+  },
+  "children": [
+    "n862"
+  ],
+  "height": "15px",
+  "nodeId": "n863",
+  "originalClass": "ant-input-number-handler ant-input-number-handler-down",
+  "selector": "div.route-tags > div.ant-tabs.ant-tabs-top:nth-of-type(2) > div.ant-tabs-nav:nth-of-type(1) > div.ant-tabs-nav-wrap > div.ant-tabs-nav-list > div.ant-tabs-tab.ant-tabs-tab-with-remove:nth-of-type(2)",
+  "styleId": "style_184",
+  "tag": "span",
+  "width": "22px"
+}

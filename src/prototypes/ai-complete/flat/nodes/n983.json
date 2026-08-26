@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 40,
+    "left": 237,
+    "top": 233,
+    "width": 1431
+  },
+  "children": [
+    "n982"
+  ],
+  "height": "32px",
+  "nodeId": "n983",
+  "originalClass": "ant-row ant-form-item-row",
+  "selector": "div.dynamic-table__extend",
+  "styleId": "style_168",
+  "tag": "div",
+  "width": "134px"
+}

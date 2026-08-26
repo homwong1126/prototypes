@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n892"
+  ],
+  "height": "45px",
+  "nodeId": "n893",
+  "originalClass": "p-table-cell ant-table-cell p-table-body-cell is-ellipsis",
+  "selector": "div.left-panel > button.css-mftcua.ant-btn",
+  "styleId": "style_172",
+  "tag": "div",
+  "width": "100px"
+}

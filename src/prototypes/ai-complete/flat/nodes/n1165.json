@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 16,
+    "left": 246,
+    "top": 806,
+    "width": 16
+  },
+  "children": [
+    "n1164"
+  ],
+  "height": "24px",
+  "nodeId": "n1165",
+  "originalClass": "ant-btn ant-btn-link ant-btn-sm",
+  "selector": "div.p-table-body.ant-table-body > div.p-table__wrapper > div.p-table__wrapper-left.scroll-at-left:nth-of-type(1) > div.p-table-row.p-table-body-row:nth-of-type(11) > div.p-table-cell.ant-table-cell > div.p-table-cell__inner > label.p-selection-wrapper.p-selection-checkbox-wrapper > span.p-selection-checkbox",
+  "styleId": "style_205",
+  "tag": "button",
+  "width": "44px"
+}

@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n321"
+  ],
+  "height": "22px",
+  "nodeId": "n322",
+  "originalClass": "ant-alert-content",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(6) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(1) > span.ant-menu-title-content > div.navMenu-collect:nth-of-type(2) > div.collect > img.collect-before",
+  "styleId": "style_119",
+  "tag": "div",
+  "width": "1404.83px"
+}

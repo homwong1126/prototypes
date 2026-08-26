@@ -1,0 +1,17 @@
+{
+  "custom": {
+    "border": "0px solid rgb(229, 231, 235)",
+    "borderColor": "rgb(229, 231, 235)",
+    "borderStyle": "solid",
+    "color": "rgb(255, 0, 0)",
+    "fontFamily": "\"Microsoft YaHei\", \"PingFang SC\", -apple-system, system-ui, \"Segoe UI\"",
+    "fontSize": "14px",
+    "minHeight": "0px",
+    "minWidth": "0px",
+    "textAlign": "start",
+    "textDecoration": "none solid rgb(255, 0, 0)",
+    "textOverflow": "ellipsis"
+  },
+  "styleId": "style_148",
+  "tw": "inline static font-normal leading-snug whitespace-nowrap border-0 visible m-0 p-0 overflow-hidden"
+}

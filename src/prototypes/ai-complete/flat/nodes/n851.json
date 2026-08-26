@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 808,
+    "left": 221,
+    "top": 48,
+    "width": 1489
+  },
+  "children": [
+    "n850"
+  ],
+  "height": "45px",
+  "nodeId": "n851",
+  "originalClass": "p-table-cell ant-table-cell p-table-body-cell is-ellipsis",
+  "selector": "div.splitpanes.splitpanes--vertical > div.splitpanes__pane.scrollHeight:nth-of-type(3)",
+  "styleId": "style_178",
+  "tag": "div",
+  "width": "150px"
+}

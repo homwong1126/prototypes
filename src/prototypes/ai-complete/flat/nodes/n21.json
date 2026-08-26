@@ -1,0 +1,15 @@
+{
+  "bbox": {
+    "height": 14,
+    "left": 1517,
+    "top": 16,
+    "width": 14
+  },
+  "height": "22px",
+  "nodeId": "n21",
+  "selector": "div.right > button.css-mftcua.ant-btn > span.anticon.anticon-down:nth-of-type(2)",
+  "styleId": "style_20",
+  "tag": "span",
+  "text": "中文",
+  "width": "28px"
+}

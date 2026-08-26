@@ -1,0 +1,19 @@
+{
+  "custom": {
+    "background": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+    "backgroundColor": "rgb(255, 255, 255)",
+    "border": "0px none rgba(0, 0, 0, 0.88)",
+    "borderColor": "rgba(0, 0, 0, 0.88)",
+    "color": "rgba(0, 0, 0, 0.88)",
+    "fontFamily": "\"Microsoft YaHei\"",
+    "fontSize": "14px",
+    "minHeight": "0px",
+    "minWidth": "0px",
+    "textAlign": "start",
+    "textDecoration": "none solid rgba(0, 0, 0, 0.88)",
+    "textOverflow": "clip",
+    "transition": "width 0.3s cubic-bezier(0.2, 0, 0, 1)"
+  },
+  "styleId": "style_47",
+  "tw": "block static font-semibold leading-3 border-0 visible m-0 p-0 overflow-hidden"
+}

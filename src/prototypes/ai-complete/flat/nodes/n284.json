@@ -1,0 +1,16 @@
+{
+  "bbox": {
+    "height": 0,
+    "left": 110,
+    "top": 482,
+    "width": 24
+  },
+  "height": "30px",
+  "id": "form_item_purchaseType",
+  "nodeId": "n284",
+  "originalClass": "ant-select-selection-search-input",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(5) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(5) > span.ant-menu-title-content > div.navMenu-collect:nth-of-type(2) > div.collect",
+  "styleId": "style_94",
+  "tag": "input",
+  "width": "436.938px"
+}

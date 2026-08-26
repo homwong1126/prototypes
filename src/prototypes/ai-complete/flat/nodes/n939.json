@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 32,
+    "left": 722,
+    "top": 107,
+    "width": 461
+  },
+  "children": [
+    "n938"
+  ],
+  "height": "22px",
+  "nodeId": "n939",
+  "originalClass": "ant-form-item form-table-validate-item",
+  "selector": "form.ant-form.ant-form-vertical > div.ant-row.css-eju0wy > div.ant-col.ant-col-8:nth-of-type(2) > div.ant-form-item.css-eju0wy > div.ant-row.ant-form-item-row > div.ant-col.ant-form-item-control:nth-of-type(2) > div.ant-form-item-control-input > div.ant-form-item-control-input-content",
+  "styleId": "style_169",
+  "tag": "div",
+  "width": "84px"
+}

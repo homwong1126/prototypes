@@ -1,0 +1,15 @@
+{
+  "bbox": {
+    "height": 0,
+    "left": 240,
+    "top": 24,
+    "width": 1114
+  },
+  "height": "0px",
+  "nodeId": "n5",
+  "originalClass": "ant-tabs-content ant-tabs-content-top",
+  "selector": "div.favorites > div.ant-tabs.ant-tabs-top > div.ant-tabs-content-holder:nth-of-type(2) > div.ant-tabs-content.ant-tabs-content-top",
+  "styleId": "style_5",
+  "tag": "div",
+  "width": "1114px"
+}

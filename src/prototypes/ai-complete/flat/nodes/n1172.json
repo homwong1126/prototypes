@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 22,
+    "left": 354,
+    "top": 343,
+    "width": 84
+  },
+  "children": [
+    "n1171"
+  ],
+  "height": "24px",
+  "nodeId": "n1172",
+  "originalClass": "ant-btn ant-btn-link ant-btn-sm",
+  "selector": "div.p-table-body.ant-table-body > div.p-table__wrapper > div.p-table__wrapper-static.scroll-at-left:nth-of-type(2) > div.p-table-row.p-table-body-row:nth-of-type(1) > div.p-table-cell.ant-table-cell:nth-of-type(2) > div.p-table-cell__inner > div.ant-form-item.css-eju0wy > div.ant-row.ant-form-item-row",
+  "styleId": "style_205",
+  "tag": "button",
+  "width": "44px"
+}

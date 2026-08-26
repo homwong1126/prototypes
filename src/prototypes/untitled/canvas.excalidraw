@@ -1,0 +1,59 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "axhub-make",
+  "elements": [
+    {
+      "id": "1781495276785-4r9es6v",
+      "type": "embeddable",
+      "x": 786.6667281433388,
+      "y": 237.33335395506842,
+      "width": 120,
+      "height": 32,
+      "angle": 0,
+      "strokeColor": "transparent",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a0",
+      "roundness": {
+        "type": 3
+      },
+      "seed": 1973871898,
+      "version": 2,
+      "versionNonce": 1986383848,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1781495276785,
+      "link": "http://localhost:53817/?p=untitled",
+      "locked": false,
+      "customData": {
+        "title": "未命名",
+        "previewUrl": "http://localhost:51722/prototypes/untitled",
+        "openUrl": "http://localhost:53817/?p=untitled",
+        "previewKind": "web",
+        "resourceType": "prototype",
+        "resourceId": "untitled",
+        "screenshotUrl": "http://localhost:51722/prototypes/untitled/canvas-assets/embed-1781495276785-4r9es6v.png",
+        "embedSizePreset": "free",
+        "embedViewMode": "link",
+        "storedPreviewSize": {
+          "width": 1440,
+          "height": 900,
+          "embedSizePreset": "desktop"
+        },
+        "previewStrokeColor": "#008F5D"
+      }
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

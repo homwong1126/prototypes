@@ -1,0 +1,40 @@
+{
+  "pages": [
+    {
+      "name": "客户预约",
+      "path": "appointments"
+    },
+    {
+      "name": "接车环检",
+      "path": "intake"
+    },
+    {
+      "name": "委托书",
+      "path": "workorder"
+    },
+    {
+      "name": "车间派工",
+      "path": "dispatch"
+    },
+    {
+      "name": "技师打卡",
+      "path": "clocking"
+    },
+    {
+      "name": "车辆报告",
+      "path": "report"
+    },
+    {
+      "name": "结算交车",
+      "path": "settlement"
+    },
+    {
+      "name": "消息中心",
+      "path": "messages"
+    },
+    {
+      "name": "我的",
+      "path": "mine"
+    }
+  ]
+}

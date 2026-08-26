@@ -1,0 +1,15 @@
+{
+  "bbox": {
+    "height": 16,
+    "left": 24,
+    "top": 154,
+    "width": 16
+  },
+  "height": "16px",
+  "nodeId": "n162",
+  "originalClass": "iconfont icon icon-shichengshijia ant-menu-item-icon",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(2) > div.ant-menu-submenu-title > span.iconfont.icon:nth-of-type(1)",
+  "styleId": "style_35",
+  "tag": "span",
+  "width": "16px"
+}

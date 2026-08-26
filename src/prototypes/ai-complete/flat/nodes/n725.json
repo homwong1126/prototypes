@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n724"
+  ],
+  "height": "22px",
+  "nodeId": "n725",
+  "originalClass": "ant-form-item form-table-validate-item",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(16) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(8)",
+  "styleId": "style_169",
+  "tag": "div",
+  "width": "84px"
+}

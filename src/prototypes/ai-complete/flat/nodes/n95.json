@@ -1,0 +1,9 @@
+{
+  "height": "0px",
+  "nodeId": "n95",
+  "originalClass": "collect",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(1) > ul.ant-menu.ant-menu-sub > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(1) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(8) > span.ant-menu-title-content > div.ellipsis-tooltip-content:nth-of-type(1)",
+  "styleId": "style_42",
+  "tag": "div",
+  "width": "24px"
+}

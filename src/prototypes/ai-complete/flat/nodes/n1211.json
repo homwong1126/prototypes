@@ -1,0 +1,20 @@
+{
+  "bbox": {
+    "height": 796,
+    "left": 0,
+    "top": 60,
+    "width": 206
+  },
+  "children": [
+    "n219",
+    "n220",
+    "n1210"
+  ],
+  "height": "808px",
+  "nodeId": "n1211",
+  "originalClass": "splitpanes splitpanes--vertical default-theme splitpanes main-page-splitpanes",
+  "selector": "div.ant-layout-sider-children",
+  "styleId": "style_235",
+  "tag": "div",
+  "width": "1710px"
+}

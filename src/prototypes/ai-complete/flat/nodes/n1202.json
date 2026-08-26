@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 22,
+    "left": 454,
+    "top": 343,
+    "width": 84
+  },
+  "children": [
+    "n1201"
+  ],
+  "height": "65px",
+  "nodeId": "n1202",
+  "originalClass": "footer-btns",
+  "selector": "div.p-table-body.ant-table-body > div.p-table__wrapper > div.p-table__wrapper-static.scroll-at-left:nth-of-type(2) > div.p-table-row.p-table-body-row:nth-of-type(1) > div.p-table-cell.ant-table-cell:nth-of-type(3) > div.p-table-cell__inner > div.ant-form-item.css-eju0wy > div.ant-row.ant-form-item-row > div.ant-col.ant-form-item-control",
+  "styleId": "style_229",
+  "tag": "div",
+  "width": "1510px"
+}

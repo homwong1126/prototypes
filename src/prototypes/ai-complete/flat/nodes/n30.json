@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 808,
+    "left": 0,
+    "top": 48,
+    "width": 1710
+  },
+  "children": [
+    "n29"
+  ],
+  "height": "10px",
+  "nodeId": "n30",
+  "originalClass": "anticon anticon-down",
+  "selector": "div.water-marker > div:nth-of-type(1) > section.css-mftcua.ant-layout > section.css-mftcua.ant-layout",
+  "styleId": "style_26",
+  "tag": "span",
+  "width": "18px"
+}

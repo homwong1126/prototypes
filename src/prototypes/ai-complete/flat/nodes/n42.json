@@ -1,0 +1,13 @@
+{
+  "bbox": {
+    "height": 0,
+    "left": 168,
+    "top": 122,
+    "width": 10
+  },
+  "nodeId": "n42",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(1) > div.ant-menu-submenu-title > i.ant-menu-submenu-arrow",
+  "styleId": "style_36",
+  "tag": "div",
+  "text": "系统管理"
+}

@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 19,
+    "left": 1159,
+    "top": 114,
+    "width": 12
+  },
+  "children": [
+    "n947"
+  ],
+  "height": "22px",
+  "nodeId": "n948",
+  "originalClass": "p-table-cell__inner",
+  "selector": "span.ant-input-affix-wrapper.c-dynamic-form-item__policyName__inner > span.ant-input-suffix > span.ant-input-clear-icon",
+  "styleId": "style_170",
+  "tag": "div",
+  "width": "84px"
+}

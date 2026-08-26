@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 48,
+    "left": 221,
+    "top": 21,
+    "width": 1463
+  },
+  "children": [
+    "n929"
+  ],
+  "height": "45px",
+  "nodeId": "n930",
+  "originalClass": "p-table-cell ant-table-cell p-table-body-cell is-ellipsis",
+  "selector": "div.ant-card-head",
+  "styleId": "style_189",
+  "tag": "div",
+  "width": "150px"
+}

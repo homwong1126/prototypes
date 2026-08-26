@@ -1,0 +1,19 @@
+{
+  "bbox": {
+    "height": 34,
+    "left": 237,
+    "top": 48,
+    "width": 56
+  },
+  "children": [
+    "n860",
+    "n863"
+  ],
+  "height": "30px",
+  "nodeId": "n864",
+  "originalClass": "ant-input-number-handler-wrap",
+  "selector": "#rc-tabs-1-tab-\\/system\\/menu",
+  "styleId": "style_185",
+  "tag": "div",
+  "width": "22px"
+}

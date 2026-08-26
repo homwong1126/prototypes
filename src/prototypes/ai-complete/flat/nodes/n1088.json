@@ -1,0 +1,19 @@
+{
+  "bbox": {
+    "height": 14,
+    "left": 2018,
+    "top": 301,
+    "width": 14
+  },
+  "children": [
+    "n1084",
+    "n1087"
+  ],
+  "height": "30px",
+  "nodeId": "n1088",
+  "originalClass": "ant-input-number-handler-wrap",
+  "selector": "div.p-table-header.not-data-area > div.p-table__wrapper > div.p-table__wrapper-static.scroll-at-left:nth-of-type(2) > div.p-table-row.p-table-header-row > div.p-table-cell.p-table-header-cell:nth-of-type(13) > div.p-table-cell__inner:nth-of-type(1) > span.anticon.anticon-copy:nth-of-type(2)",
+  "styleId": "style_185",
+  "tag": "div",
+  "width": "22px"
+}

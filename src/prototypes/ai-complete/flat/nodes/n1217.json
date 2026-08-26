@@ -1,0 +1,19 @@
+{
+  "bbox": {
+    "height": 48,
+    "left": 0,
+    "top": 0,
+    "width": 1710
+  },
+  "children": [
+    "n1215",
+    "n1216"
+  ],
+  "height": "856px",
+  "nodeId": "n1217",
+  "originalClass": "water-marker",
+  "selector": "div.header-admin",
+  "styleId": "style_241",
+  "tag": "div",
+  "width": "1710px"
+}

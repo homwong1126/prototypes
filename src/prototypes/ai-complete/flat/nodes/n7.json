@@ -1,0 +1,19 @@
+{
+  "bbox": {
+    "height": 0,
+    "left": 240,
+    "top": 24,
+    "width": 1114
+  },
+  "children": [
+    "n4",
+    "n6"
+  ],
+  "height": "0px",
+  "nodeId": "n7",
+  "originalClass": "ant-tabs ant-tabs-top ant-tabs-card ant-tabs-editable-card ant-tabs-editable",
+  "selector": "div.favorites > div.ant-tabs.ant-tabs-top > div.ant-tabs-nav:nth-of-type(1) > div.ant-tabs-nav-wrap",
+  "styleId": "style_7",
+  "tag": "div",
+  "width": "1114px"
+}

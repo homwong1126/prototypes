@@ -1,0 +1,407 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta name="app-version" content="release_web-upms-core_2026_0813_1626">
+  
+		  <script src="/envConfig.js"></script>
+  <script src="/setConfig.js"></script>
+  <script src="/envConfigDMS.js"></script>
+  <script src="/setConfigDMS.js"></script>
+<script>
+window.__DEALER_ENV_CONFIG__ = {
+  "development": {
+    "VITE_ACCOUNT_ID": "a01fd764393fb116",
+    "VITE_DATA_SOURCE_ID": "aa41c51f25cbfa53",
+    "VITE_SERVER_URL": "https://ubacollectuat.mychery.com",
+    "VITE_ENV": "development",
+    "VITE_TITLE": "\u5965\u4e01\u667a\u80fd\u9500\u670d\u5e73\u53f0\uff08\u672c\u5730\u7248\u672c\uff09",
+    "VITE_STORY_KEY": "upms_dev",
+    "VITE_API_BASEURL": "https://odin-chery-dev.mychery.com/",
+    "VITE_API_URL": "/api",
+    "VITE_BASE_CND": "https://odin-chery-dev.mychery.com",
+    "VITE_SSO_PROXY_PATH": "/api/centerAuth/sso/auth",
+    "VITE_SSO_SIGNOUT_PROXY_PATH": "/api/centerAuth/sso/signout",
+    "VITE_AUTO_TENANT": "false",
+    "VITE_PWD_ENC_KEY": "w9R8Ag1KiL0pvMHc",
+    "VITE_AI_ENV": "test",
+    "VITE_OAUTH2_PASSWORD_CLIENT": "legendWeb:legendWeb",
+    "VITE_VERIFY_ENABLE": "true",
+    "VITE_VERIFY_IMAGE_ENABLE": "false",
+    "VITE_PUBLIC_PATH": "http://localhost:3001/",
+    "VITE_PORT": "8090",
+    "VITE_HOME_APP_SCRM": "https://scrm-gf-uat.mychery.com/login/login",
+    "VITE_CDN": "https://odin-cdn-dev.mychery.com",
+    "VITE_IMG_URL": "obs.cn-east-4.myhuaweicloud.com",
+    "VITE_WECOM_AUDIT": "https://odin-join-dev.mychery.com#/pages/oem/approvalAndRectification/rectificationList",
+    "VITE_WECOM_APPROVALDOCUMENTS_REVIEW": "https://odin-join-dev.mychery.com#/pages/oem/approvalAndRectification/reviewApprovalMaterials",
+    "VITE_WECOM_APPROVALDOCUMENTS_DETAIL": "https://odin-join-dev.mychery.com#/pages/dealer/approvalMaterials/materialsDetail",
+    "VITE_WECOM_RECTIFICATIONNOTICE_REVIEW": "https://odin-join-dev.mychery.com#/pages/oem/approvalAndRectification/reviewRectificationResults",
+    "VITE_WECOM_RECTIFICATIONNOTICE_DETAIL": "https://odin-join-dev.mychery.com#/pages/dealer/rectificationOrder/rectificationDetail"
+  },
+  "production": {
+    "VITE_ACCOUNT_ID": "969accfffa4dde13",
+    "VITE_DATA_SOURCE_ID": "acdae7ccdbb8f941",
+    "VITE_SERVER_URL": "https://ubacollect.mychery.com",
+    "VITE_ENV": "production",
+    "VITE_TITLE": "\u5965\u4e01\u667a\u80fd\u9500\u670d\u5e73\u53f0",
+    "VITE_STORY_KEY": "upms",
+    "VITE_API_BASEURL": "https://odin.mychery.com/",
+    "VITE_API_URL": "/api",
+    "VITE_BASE_CND": "https://odin.mychery.com",
+    "VITE_SSO_PROXY_PATH": "/api/centerAuth/sso/auth",
+    "VITE_SSO_SIGNOUT_PROXY_PATH": "/api/centerAuth/sso/signout",
+    "VITE_AUTO_TENANT": "true",
+    "VITE_PWD_ENC_KEY": "w9R8Ag1KiL0pvMHc",
+    "VITE_AI_ENV": "prod",
+    "VITE_OAUTH2_PASSWORD_CLIENT": "legendWeb:legendWeb",
+    "VITE_VERIFY_ENABLE": "true",
+    "VITE_VERIFY_IMAGE_ENABLE": "false",
+    "VITE_PORT": "8090",
+    "VITE_HOME_APP_SCRM": "https://scrm-gf.mychery.com/login/login",
+    "VITE_CDN": "https://odin-cdn.mychery.com",
+    "VITE_IMG_URL": "obs.cn-east-4.myhuaweicloud.com",
+    "VITE_WECOM_AUDIT": "https://odin-join.mychery.com#/pages/oem/approvalAndRectification/rectificationList",
+    "VITE_WECOM_APPROVALDOCUMENTS_REVIEW": "https://odin-join.mychery.com#/pages/oem/approvalAndRectification/reviewApprovalMaterials",
+    "VITE_WECOM_APPROVALDOCUMENTS_DETAIL": "https://odin-join.mychery.com#/pages/dealer/approvalMaterials/materialsDetail",
+    "VITE_WECOM_RECTIFICATIONNOTICE_REVIEW": "https://odin-join.mychery.com#/pages/oem/approvalAndRectification/reviewRectificationResults",
+    "VITE_WECOM_RECTIFICATIONNOTICE_DETAIL": "https://odin-join.mychery.com#/pages/dealer/rectificationOrder/rectificationDetail"
+  },
+  "test": {
+    "VITE_ACCOUNT_ID": "a01fd764393fb116",
+    "VITE_DATA_SOURCE_ID": "aa41c51f25cbfa53",
+    "VITE_SERVER_URL": "https://ubacollectuat.mychery.com",
+    "VITE_ENV": "test",
+    "VITE_TITLE": "\u5965\u4e01\u667a\u80fd\u9500\u670d\u5e73\u53f0\uff08SIT\uff09",
+    "VITE_STORY_KEY": "upms_test",
+    "VITE_API_BASEURL": "https://odin-chery-sit.mychery.com/",
+    "VITE_API_URL": "/api",
+    "VITE_BASE_CND": "https://odin-chery-sit.mychery.com",
+    "VITE_SSO_PROXY_PATH": "/api/centerAuth/sso/auth",
+    "VITE_SSO_SIGNOUT_PROXY_PATH": "/api/centerAuth/sso/signout",
+    "VITE_AUTO_TENANT": "false",
+    "VITE_PWD_ENC_KEY": "w9R8Ag1KiL0pvMHc",
+    "VITE_AI_ENV": "test",
+    "VITE_OAUTH2_PASSWORD_CLIENT": "legendWeb:legendWeb",
+    "VITE_VERIFY_ENABLE": "true",
+    "VITE_VERIFY_IMAGE_ENABLE": "false",
+    "VITE_PORT": "8090",
+    "VITE_HOME_APP_SCRM": "https://scrm-gf-uat.mychery.com/login/login",
+    "VITE_CDN": "https://odin-cdn-sit.mychery.com",
+    "VITE_IMG_URL": "obs.cn-east-4.myhuaweicloud.com",
+    "VITE_WECOM_AUDIT": "https://odin-join-sit.mychery.com#/pages/oem/approvalAndRectification/rectificationList",
+    "VITE_WECOM_APPROVALDOCUMENTS_REVIEW": "https://odin-join-sit.mychery.com#/pages/oem/approvalAndRectification/reviewApprovalMaterials",
+    "VITE_WECOM_APPROVALDOCUMENTS_DETAIL": "https://odin-join-sit.mychery.com#/pages/dealer/approvalMaterials/materialsDetail",
+    "VITE_WECOM_RECTIFICATIONNOTICE_REVIEW": "https://odin-join-sit.mychery.com#/pages/oem/approvalAndRectification/reviewRectificationResults",
+    "VITE_WECOM_RECTIFICATIONNOTICE_DETAIL": "https://odin-join-sit.mychery.com#/pages/dealer/rectificationOrder/rectificationDetail"
+  },
+  "uat": {
+    "VITE_ACCOUNT_ID": "a01fd764393fb116",
+    "VITE_DATA_SOURCE_ID": "aa41c51f25cbfa53",
+    "VITE_SERVER_URL": "https://ubacollectuat.mychery.com",
+    "VITE_ENV": "uat",
+    "VITE_TITLE": "\u5965\u4e01\u667a\u80fd\u9500\u670d\u5e73\u53f0\uff08UAT\uff09",
+    "VITE_STORY_KEY": "upms_uat",
+    "VITE_API_BASEURL": "https://odin-uat.mychery.com/",
+    "VITE_API_URL": "/api",
+    "VITE_BASE_CND": "https://odin-uat.mychery.com",
+    "VITE_SSO_PROXY_PATH": "/api/centerAuth/sso/auth",
+    "VITE_SSO_SIGNOUT_PROXY_PATH": "/api/centerAuth/sso/signout",
+    "VITE_AUTO_TENANT": "false",
+    "VITE_PWD_ENC_KEY": "w9R8Ag1KiL0pvMHc",
+    "VITE_AI_ENV": "test",
+    "VITE_OAUTH2_PASSWORD_CLIENT": "legendWeb:legendWeb",
+    "VITE_VERIFY_ENABLE": "true",
+    "VITE_VERIFY_IMAGE_ENABLE": "false",
+    "VITE_PORT": "8090",
+    "VITE_HOME_APP_SCRM": "https://scrm-gf-uat.mychery.com/login/login",
+    "VITE_CDN": "https://odin-cdn-uat.mychery.com",
+    "VITE_IMG_URL": "obs.cn-east-4.myhuaweicloud.com",
+    "VITE_WECOM_AUDIT": "https://odin-join-uat.mychery.com#/pages/oem/approvalAndRectification/rectificationList",
+    "VITE_WECOM_APPROVALDOCUMENTS_REVIEW": "https://odin-join-uat.mychery.com#/pages/oem/approvalAndRectification/reviewApprovalMaterials",
+    "VITE_WECOM_APPROVALDOCUMENTS_DETAIL": "https://odin-join-uat.mychery.com#/pages/dealer/approvalMaterials/materialsDetail",
+    "VITE_WECOM_RECTIFICATIONNOTICE_REVIEW": "https://odin-join-uat.mychery.com#/pages/oem/approvalAndRectification/reviewRectificationResults",
+    "VITE_WECOM_RECTIFICATIONNOTICE_DETAIL": "https://odin-join-uat.mychery.com#/pages/dealer/rectificationOrder/rectificationDetail"
+  }
+};
+(function () {
+	var hostname = window.location.hostname;
+	var version = '2.0.9';
+
+	window.__toCdnUrl = function (url = '') {
+		if (url && url.startsWith('//')) {
+			return window.location.protocol + url;
+		}
+		return url;
+	};
+
+	// 反序列化环境配置，恢复正则表达式和函数
+	function deserializeEnvConfig(configStr) {
+		try {
+			// 清理可能的控制字符，但保留换行符和制表符
+			var cleanConfigStr = configStr.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '');
+			
+			return JSON.parse(cleanConfigStr, function(key, value) {
+				if (value && typeof value === 'object' && value.__type) {
+					if (value.__type === 'RegExp') {
+						return new RegExp(value.source, value.flags);
+					}
+					if (value.__type === 'Function') {
+						// 使用 Function 构造函数重建函数
+						// 注意：这里假设函数是纯函数，不依赖外部作用域
+						try {
+							return new Function('return ' + value.source)();
+						} catch (e) {
+							console.warn('Failed to deserialize function:', e);
+							return null;
+						}
+					}
+				}
+				return value;
+			});
+		} catch (e) {
+			console.error('Failed to parse environment config:', e);
+			return {};
+		}
+	}
+
+	var regList = deserializeEnvConfig('{"custom":{"__type":"Function","source":"(hostname) => {\\n            if (hostname.includes(\\"dev\\")) {\\n              return \\"development\\";\\n            } else if (hostname.includes(\\"sit\\")) {\\n              return \\"test\\";\\n            } else if (hostname.includes(\\"uat\\")) {\\n              return \\"uat\\";\\n            } else {\\n              return \\"production\\";\\n            }\\n          }"},"default":"production"}');
+
+	// 项目环境变量列表
+	var CLOBAL_ENV = window.__DEALER_ENV_CONFIG__
+
+	if (typeof regList.custom === 'function') {
+		var env = regList.custom(hostname) || regList.default;
+		if (!env || !CLOBAL_ENV[env]) {
+			console.error(`custom environment ${env} not found in CLOBAL_ENV`);
+		}
+
+		window.__DEALER_ENV_DATA__ = CLOBAL_ENV[env];
+		console.log('无状态包: 当前环境 ', env);
+		console.log('无状态包版本: ', version);
+		return;
+	}
+
+	var env = '';
+	var envList = Object.keys(regList);
+	var defaultEnv = regList.default;
+
+	for (var key = 0; key < envList.length; key++) {
+		if (typeof regList[envList[key]] === 'string' && hostname === regList[envList[key]]) {
+			env = envList[key];
+			break;
+		} else if (regList[envList[key]] instanceof RegExp && regList[envList[key]].test(hostname)) {
+			env = envList[key];
+			break;
+		}
+	}
+	if (!env) {
+		if (defaultEnv) {
+			env = defaultEnv;
+		} else {
+			console.error(`hostname ${hostname} not found in regList`);
+			return;
+		}
+	}
+	console.log('无状态包: 当前环境 ', env);
+	console.log('无状态包版本: ', version);
+
+	window.__DEALER_ENV_DATA__ = CLOBAL_ENV[env];
+})();
+		</script>
+<script>self["MonacoEnvironment"] = (function (paths) {
+          return {
+            globalAPI: false,
+            getWorkerUrl : function (moduleId, label) {
+              var result =  paths[label];
+              if (/^((http:)|(https:)|(file:)|(\/\/))/.test(result)) {
+                var currentUrl = String(window.location);
+                var currentOrigin = currentUrl.substr(0, currentUrl.length - window.location.hash.length - window.location.search.length - window.location.pathname.length);
+                if (result.substring(0, currentOrigin.length) !== currentOrigin) {
+                  var js = '/*' + label + '*/importScripts("' + result + '");';
+                  var blob = new Blob([js], { type: 'application/javascript' });
+                  return URL.createObjectURL(blob);
+                }
+              }
+              return result;
+            }
+          };
+        })({
+  "editorWorkerService": "/monacoeditorwork/editor.worker.bundle.js",
+  "typescript": "/monacoeditorwork/ts.worker.bundle.js",
+  "json": "/monacoeditorwork/json.worker.bundle.js",
+  "css": "/monacoeditorwork/css.worker.bundle.js",
+  "html": "/monacoeditorwork/html.worker.bundle.js",
+  "javascript": "/monacoeditorwork/ts.worker.bundle.js",
+  "less": "/monacoeditorwork/css.worker.bundle.js",
+  "scss": "/monacoeditorwork/css.worker.bundle.js",
+  "handlebars": "/monacoeditorwork/html.worker.bundle.js",
+  "razor": "/monacoeditorwork/html.worker.bundle.js"
+});</script>
+
+  <meta charset="UTF-8">
+  <meta version="package_version_dealer_01">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <title>奥丁智能销服平台</title>
+  
+  <script src="https://static-resource-data.obs.cn-east-3.myhuaweicloud.com/design-middle-center/fuseThemeSdk-umd.js"></script>
+  <link rel="stylesheet" href="https://static-resource-data.obs.cn-east-3.myhuaweicloud.com/design-middle-center/fuseThemeSdk.css">
+  <script>
+    // 动态加载AI-SDK的配置
+    const odinAIConfig = {
+      development: {
+        js: 'https://cdn-public.cherygpt.com/sdk/chery-gpt-sdk-test.umd.js'
+      },
+      test: {
+        js: 'https://cdn-public.cherygpt.com/sdk/chery-gpt-sdk-test.umd.js'
+      },
+      uat: {
+        js: 'https://cdn-public.cherygpt.com/sdk/chery-gpt-sdk-test.umd.js'
+      },
+      production: {
+        js: 'https://cdn-public.cherygpt.com/sdk/v2/chery-gpt-sdk.umd.js'
+      }
+    }
+
+    // 根据域名判断环境
+    function getCurrentEnvironment() {
+      const hostname = window.location.hostname
+      if (hostname.includes('dev') || hostname.includes('localhost')) {
+        return 'development'
+      } else if (hostname.includes('sit') || hostname.includes('test')) {
+        return 'test'
+      } else if (hostname.includes('uat')) {
+        return 'uat'
+      } else {
+        return 'production'
+      }
+    }
+
+    // 动态加载CSS
+    function loadCSS(url, id) {
+      return new Promise((resolve, reject) => {
+        const existingLink = document.getElementById(id)
+        if (existingLink) {
+          resolve()
+          return
+        }
+
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.type = 'text/css'
+        link.href = url
+        link.id = id
+
+        link.onload = () => resolve()
+        link.onerror = () => reject(new Error(`Failed to load CSS: ${url}`))
+
+        document.head.appendChild(link)
+      })
+    }
+
+    // 动态加载JS
+    function loadJS(url, id) {
+      return new Promise((resolve, reject) => {
+        const existingScript = document.getElementById(id)
+        if (existingScript) {
+          resolve()
+          return
+        }
+
+        const script = document.createElement('script')
+        script.src = url
+        script.id = id
+
+        script.onload = () => resolve()
+        script.onerror = () => reject(new Error(`Failed to load JS: ${url}`))
+
+        document.head.appendChild(script)
+      })
+    }
+
+    // 加载主题资源
+    async function loadThemeResources() {
+      try {
+        const env = getCurrentEnvironment()
+        const config = odinAIConfig[env]
+
+        if (config) {
+          // 并行加载CSS和JS
+          await Promise.all([
+            config.js ? loadJS(config.js, 'chery-gpt-sdk-js') : Promise.resolve()
+          ])
+          console.log(`AI SDK加载成功 (${env})`)
+        }
+      } catch (error) {
+        console.error('AI SDK加载失败:', error)
+      }
+    }
+
+    // 页面加载完成后立即加载主题资源
+    loadThemeResources()
+  </script>
+  <script crossorigin="">import('/assets/js/index.CaTWJ6Bx.js').finally(() => {
+            
+    const qiankunLifeCycle = window.moudleQiankunAppLifeCycles && window.moudleQiankunAppLifeCycles['dealer'];
+    if (qiankunLifeCycle) {
+      window.proxy.vitemount((props) => qiankunLifeCycle.mount(props));
+      window.proxy.viteunmount((props) => qiankunLifeCycle.unmount(props));
+      window.proxy.vitebootstrap(() => qiankunLifeCycle.bootstrap());
+      window.proxy.viteupdate((props) => qiankunLifeCycle.update(props));
+    }
+  
+          })</script>
+  
+  
+  
+  
+  
+  
+<script>
+		(function(){
+			var preloads = [{"parentTagName":"head","tagName":"link","attrs":{"rel":"icon","href":"/assets/favicon.ico"}},{"parentTagName":"head","tagName":"script","attrs":{"defer":"","src":"/checkIE.js"}},{"parentTagName":"head","tagName":"link","attrs":{"rel":"modulepreload","crossorigin":"","href":"/assets/js/vue.Da-lLI_p.js"}},{"parentTagName":"head","tagName":"link","attrs":{"rel":"modulepreload","crossorigin":"","href":"/assets/js/ant-design-vue.DGDF718v.js"}},{"parentTagName":"head","tagName":"link","attrs":{"rel":"modulepreload","crossorigin":"","href":"/assets/js/quill.CAi0TzSY.js"}},{"parentTagName":"head","tagName":"link","attrs":{"rel":"modulepreload","crossorigin":"","href":"/assets/js/utils.DSeT-Yhp.js"}},{"parentTagName":"head","tagName":"link","attrs":{"rel":"modulepreload","crossorigin":"","href":"/assets/js/crypto.DFal3Zw6.js"}},{"parentTagName":"head","tagName":"link","attrs":{"rel":"stylesheet","crossorigin":"","href":"/assets/css/index.Bh-3ljS4.css"}}];
+			function setAttribute(target, attrs) {
+				for (var key in attrs) {
+					target.setAttribute(key, attrs[key]);
+				}
+				return target;
+			};
+			for(var i = 0; i < preloads.length; i++){
+				var item = preloads[i]
+				var childNode = document.createElement(item.tagName);
+				setAttribute(childNode, item.attrs)
+				
+				document.getElementsByTagName(item.parentTagName)[0].appendChild(childNode);
+			}
+		})();
+		</script>
+		</head>
+	
+
+<body>
+  <div id="app"></div>
+
+
+<script>
+  const createDeffer = (hookName) => {
+    const d = new Promise((resolve, reject) => {
+      window.proxy && (window.proxy[`vite${hookName}`] = resolve)
+    })
+    return props => d.then(fn => fn(props));
+  }
+  const bootstrap = createDeffer('bootstrap');
+  const mount = createDeffer('mount');
+  const unmount = createDeffer('unmount');
+  const update = createDeffer('update');
+
+  ;(global => {
+    global.qiankunName = 'dealer';
+    global['dealer'] = {
+      bootstrap,
+      mount,
+      unmount,
+      update
+    };
+  })(window);
+</script></body></html>

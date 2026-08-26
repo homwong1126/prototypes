@@ -1,0 +1,19 @@
+{
+  "bbox": {
+    "height": 0,
+    "left": 124,
+    "top": 522,
+    "width": 24
+  },
+  "children": [
+    "n1193"
+  ],
+  "height": "627px",
+  "id": "main-view-card",
+  "nodeId": "n1194",
+  "originalClass": "ant-card ant-card-bordered dynamic-table card-553314 main-view-table-card",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(5) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(6) > span.ant-menu-title-content > div.navMenu-collect:nth-of-type(2) > div.collect",
+  "styleId": "style_223",
+  "tag": "div",
+  "width": "1462.83px"
+}

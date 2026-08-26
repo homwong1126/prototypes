@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n1204"
+  ],
+  "height": "829.141px",
+  "id": "kaApp",
+  "nodeId": "n1205",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(4) > ul.ant-menu.ant-menu-sub > li.ant-menu-item > span.ant-menu-title-content > div.ellipsis-tooltip-content:nth-of-type(1) > div",
+  "styleId": "style_232",
+  "tag": "div",
+  "width": "1462.83px"
+}

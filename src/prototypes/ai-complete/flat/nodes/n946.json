@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 12,
+    "left": 1159,
+    "top": 117,
+    "width": 12
+  },
+  "children": [
+    "n945"
+  ],
+  "height": "22px",
+  "nodeId": "n946",
+  "originalClass": "ant-row ant-form-item-row",
+  "selector": "span.ant-input-affix-wrapper.c-dynamic-form-item__policyName__inner > span.ant-input-suffix > span.ant-input-clear-icon > span.anticon.anticon-close-circle",
+  "styleId": "style_168",
+  "tag": "div",
+  "width": "84px"
+}

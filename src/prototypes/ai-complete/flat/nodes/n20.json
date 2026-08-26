@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 16,
+    "left": 1454,
+    "top": 16,
+    "width": 16
+  },
+  "children": [
+    "n19"
+  ],
+  "height": "24px",
+  "nodeId": "n20",
+  "originalClass": "flex",
+  "selector": "div.my-notice",
+  "styleId": "style_19",
+  "tag": "div",
+  "width": "16px"
+}

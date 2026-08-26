@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 40,
+    "left": 50,
+    "top": 662,
+    "width": 56
+  },
+  "children": [
+    "n392"
+  ],
+  "height": "14px",
+  "nodeId": "n393",
+  "originalClass": "anticon anticon-copy icon-copy",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(9) > div.ant-menu-submenu-title > span.ant-menu-title-content:nth-of-type(2) > div.ellipsis-tooltip-content",
+  "styleId": "style_133",
+  "tag": "span",
+  "width": "14px"
+}

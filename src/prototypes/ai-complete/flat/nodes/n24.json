@@ -1,0 +1,19 @@
+{
+  "bbox": {
+    "height": 22,
+    "left": 1481,
+    "top": 13,
+    "width": 28
+  },
+  "children": [
+    "n21",
+    "n23"
+  ],
+  "height": "24px",
+  "nodeId": "n24",
+  "originalClass": "ant-btn ant-btn-link ant-btn-sm ant-dropdown-trigger language-select",
+  "selector": "div.right > button.css-mftcua.ant-btn > span:nth-of-type(1)",
+  "styleId": "style_22",
+  "tag": "button",
+  "width": "52px"
+}

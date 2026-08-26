@@ -1,0 +1,19 @@
+{
+  "bbox": {
+    "height": 24,
+    "left": 1574,
+    "top": 12,
+    "width": 24
+  },
+  "children": [
+    "n27",
+    "n31"
+  ],
+  "height": "24px",
+  "nodeId": "n32",
+  "originalClass": "user-bar",
+  "selector": "div.avatar",
+  "styleId": "style_2",
+  "tag": "div",
+  "width": "152px"
+}

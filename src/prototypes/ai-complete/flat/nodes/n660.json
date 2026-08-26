@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n659"
+  ],
+  "height": "22px",
+  "nodeId": "n660",
+  "originalClass": "ant-row ant-form-item-row",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(15) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(7) > span.ant-menu-title-content",
+  "styleId": "style_168",
+  "tag": "div",
+  "width": "84px"
+}

@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 24,
+    "left": 1414,
+    "top": 12,
+    "width": 16
+  },
+  "children": [
+    "n16"
+  ],
+  "height": "24px",
+  "nodeId": "n17",
+  "originalClass": "btn-view",
+  "selector": "div.btn",
+  "styleId": "style_16",
+  "tag": "div",
+  "width": "40px"
+}

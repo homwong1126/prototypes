@@ -1,0 +1,15 @@
+{
+  "bbox": {
+    "height": 32,
+    "left": 237,
+    "top": 176,
+    "width": 96
+  },
+  "height": "0px",
+  "nodeId": "n966",
+  "originalClass": "p-table-cell__inner",
+  "selector": "div.dynamic-table__header__left > span",
+  "styleId": "style_170",
+  "tag": "div",
+  "width": "104px"
+}

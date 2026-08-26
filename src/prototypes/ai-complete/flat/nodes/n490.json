@@ -1,0 +1,13 @@
+{
+  "bbox": {
+    "height": 16,
+    "left": 24,
+    "top": 794,
+    "width": 16
+  },
+  "nodeId": "n490",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(12) > div.ant-menu-submenu-title > span.iconfont.icon:nth-of-type(1)",
+  "styleId": "style_164",
+  "tag": "span",
+  "text": "奇瑞"
+}

@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 796,
+    "left": 0,
+    "top": 60,
+    "width": 206
+  },
+  "children": [
+    "n218"
+  ],
+  "height": "808px",
+  "nodeId": "n219",
+  "originalClass": "splitpanes__pane scrollHeight",
+  "selector": "div.aminui-side.isExpand",
+  "styleId": "style_54",
+  "tag": "div",
+  "width": "206.172px"
+}

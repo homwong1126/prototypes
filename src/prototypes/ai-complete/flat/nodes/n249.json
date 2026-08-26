@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 40,
+    "left": 12,
+    "top": 222,
+    "width": 178
+  },
+  "children": [
+    "n246",
+    "n248"
+  ],
+  "height": "22px",
+  "nodeId": "n249",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(4)",
+  "styleId": "style_71",
+  "tag": "ol",
+  "width": "142px"
+}

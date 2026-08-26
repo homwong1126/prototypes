@@ -1,0 +1,19 @@
+{
+  "bbox": {
+    "height": 19,
+    "left": 142,
+    "top": 68,
+    "width": 12
+  },
+  "children": [
+    "n36",
+    "n39"
+  ],
+  "height": "32px",
+  "nodeId": "n40",
+  "originalClass": "ant-input-affix-wrapper",
+  "selector": "span.ant-input-clear-icon-hidden.ant-input-clear-icon-has-suffix",
+  "styleId": "style_34",
+  "tag": "span",
+  "width": "180.172px"
+}

@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 22,
+    "left": 241,
+    "top": 86,
+    "width": 142
+  },
+  "children": [
+    "n890"
+  ],
+  "height": "22px",
+  "nodeId": "n891",
+  "originalClass": "ant-form-item form-table-validate-item",
+  "selector": "nav.ant-breadcrumb.css-mftcua > ol",
+  "styleId": "style_169",
+  "tag": "div",
+  "width": "84px"
+}

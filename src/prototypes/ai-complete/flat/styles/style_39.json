@@ -1,0 +1,26 @@
+{
+  "custom": {
+    "border": "0px solid rgb(229, 231, 235)",
+    "borderColor": "rgb(229, 231, 235)",
+    "borderStyle": "solid",
+    "bottom": "20px",
+    "color": "rgba(0, 0, 0, 0.88)",
+    "fontFamily": "\"Microsoft YaHei\"",
+    "fontSize": "14px",
+    "insetBlockEnd": "20px",
+    "insetBlockStart": "20px",
+    "insetInlineEnd": "16px",
+    "insetInlineStart": "152.172px",
+    "left": "152.172px",
+    "minHeight": "0px",
+    "minWidth": "0px",
+    "right": "16px",
+    "textDecoration": "none solid rgba(0, 0, 0, 0.88)",
+    "textOverflow": "clip",
+    "top": "20px",
+    "transform": "matrix(1, 0, 0, 1, 4, 0)",
+    "transition": "transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.3s"
+  },
+  "styleId": "style_39",
+  "tw": "block absolute shrink-0 font-normal italic leading-10 text-left whitespace-nowrap border-0 visible cursor-pointer m-0 p-0 overflow-visible"
+}

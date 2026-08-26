@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 32,
+    "left": 12,
+    "top": 61,
+    "width": 180
+  },
+  "children": [
+    "n217"
+  ],
+  "height": "808px",
+  "nodeId": "n218",
+  "originalClass": "ant-layout-sider ant-layout-sider-light aminui-side-layout",
+  "selector": "span.ant-input-affix-wrapper.css-mftcua",
+  "styleId": "style_53",
+  "tag": "aside",
+  "width": "206.172px"
+}

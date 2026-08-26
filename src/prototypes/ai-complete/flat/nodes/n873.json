@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n872"
+  ],
+  "height": "32px",
+  "nodeId": "n873",
+  "originalClass": "p-table-cell__inner",
+  "selector": "div.right-menu > div.right-menu-item:nth-of-type(2) > div.pl-3.chery-header-tags-right-font",
+  "styleId": "style_170",
+  "tag": "div",
+  "width": "134px"
+}

@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n823"
+  ],
+  "height": "22px",
+  "nodeId": "n824",
+  "originalClass": "ant-form-item-control-input",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(19) > ul.ant-menu.ant-menu-sub > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(4) > div.ant-menu-submenu-title > span.ant-menu-title-content > div.ellipsis-tooltip-content",
+  "styleId": "style_166",
+  "tag": "div",
+  "width": "84px"
+}

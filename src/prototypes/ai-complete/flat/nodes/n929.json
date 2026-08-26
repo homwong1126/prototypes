@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 25,
+    "left": 237,
+    "top": 32,
+    "width": 1431
+  },
+  "children": [
+    "n928"
+  ],
+  "height": "32px",
+  "nodeId": "n929",
+  "originalClass": "p-table-cell__inner",
+  "selector": "div.ant-card-head-wrapper",
+  "styleId": "style_170",
+  "tag": "div",
+  "width": "134px"
+}

@@ -1,0 +1,19 @@
+{
+  "custom": {
+    "border": "0px solid rgb(229, 231, 235)",
+    "borderColor": "rgb(229, 231, 235)",
+    "borderStyle": "solid",
+    "color": "rgba(0, 0, 0, 0.45)",
+    "fontFamily": "\"Microsoft YaHei\"",
+    "fontSize": "12px",
+    "margin": "0px 8px",
+    "marginInlineEnd": "8px",
+    "marginInlineStart": "8px",
+    "minHeight": "0px",
+    "minWidth": "0px",
+    "textDecoration": "none solid rgba(0, 0, 0, 0.45)",
+    "textOverflow": "clip"
+  },
+  "styleId": "style_67",
+  "tw": "inline static font-normal leading-tight text-left border-0 visible mt-0 mr-2 mb-0 ml-2 p-0 overflow-visible"
+}

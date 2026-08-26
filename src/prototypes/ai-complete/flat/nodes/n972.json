@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 20,
+    "left": 250,
+    "top": 243,
+    "width": 113
+  },
+  "children": [
+    "n971"
+  ],
+  "height": "15px",
+  "nodeId": "n972",
+  "originalClass": "ant-input-number-handler ant-input-number-handler-up",
+  "selector": "span.alert-message",
+  "styleId": "style_183",
+  "tag": "span",
+  "width": "22px"
+}

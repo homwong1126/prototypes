@@ -1,0 +1,21 @@
+{
+  "bbox": {
+    "height": 22,
+    "left": 354,
+    "top": 343,
+    "width": 84
+  },
+  "children": [
+    "n1181",
+    "n1182",
+    "n1183",
+    "n1184"
+  ],
+  "height": "32px",
+  "nodeId": "n1185",
+  "originalClass": "ant-spin-dot ant-spin-dot-spin",
+  "selector": "div.p-table-body.ant-table-body > div.p-table__wrapper > div.p-table__wrapper-static.scroll-at-left:nth-of-type(2) > div.p-table-row.p-table-body-row:nth-of-type(1) > div.p-table-cell.ant-table-cell:nth-of-type(2) > div.p-table-cell__inner > div.ant-form-item.css-eju0wy > div.ant-row.ant-form-item-row > div.ant-col.ant-form-item-control > div.ant-form-item-control-input",
+  "styleId": "style_216",
+  "tag": "span",
+  "width": "32px"
+}

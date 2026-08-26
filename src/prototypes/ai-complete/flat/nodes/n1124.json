@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 16,
+    "left": 246,
+    "top": 484,
+    "width": 16
+  },
+  "children": [
+    "n1123"
+  ],
+  "height": "24px",
+  "nodeId": "n1124",
+  "originalClass": "total-opt",
+  "selector": "div.p-table-body.ant-table-body > div.p-table__wrapper > div.p-table__wrapper-left.scroll-at-left:nth-of-type(1) > div.p-table-row.p-table-body-row:nth-of-type(4) > div.p-table-cell.ant-table-cell > div.p-table-cell__inner > label.p-selection-wrapper.p-selection-checkbox-wrapper",
+  "styleId": "style_158",
+  "tag": "div",
+  "width": "44px"
+}

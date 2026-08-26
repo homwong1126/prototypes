@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n856"
+  ],
+  "height": "45px",
+  "nodeId": "n857",
+  "originalClass": "p-table-cell ant-table-cell p-table-body-cell is-ellipsis",
+  "selector": "div.right-menu > div.right-menu-item:nth-of-type(1) > div.pl-3.chery-header-tags-right-font",
+  "styleId": "style_181",
+  "tag": "div",
+  "width": "150px"
+}

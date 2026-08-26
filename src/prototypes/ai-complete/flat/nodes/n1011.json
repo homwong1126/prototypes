@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n1010"
+  ],
+  "height": "45px",
+  "nodeId": "n1011",
+  "originalClass": "p-table-cell ant-table-cell p-table-body-cell is-ellipsis",
+  "selector": "div.p-table-header.not-data-area > div.p-table__wrapper > div.p-table__wrapper-static.scroll-at-left:nth-of-type(2) > div.p-table-row.p-table-header-row > div.p-table-cell.p-table-header-cell:nth-of-type(2) > div.column-btns:nth-of-type(2)",
+  "styleId": "style_175",
+  "tag": "div",
+  "width": "200px"
+}

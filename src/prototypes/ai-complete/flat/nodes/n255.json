@@ -1,0 +1,16 @@
+{
+  "bbox": {
+    "height": 280,
+    "left": 12,
+    "top": 262,
+    "width": 178
+  },
+  "height": "25.1406px",
+  "nodeId": "n255",
+  "originalClass": "ant-card-head-title",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(5)",
+  "styleId": "style_76",
+  "tag": "div",
+  "text": "政策基本信息",
+  "width": "1430.83px"
+}

@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 12,
+    "left": 1645,
+    "top": 117,
+    "width": 12
+  },
+  "children": [
+    "n960"
+  ],
+  "height": "45px",
+  "nodeId": "n961",
+  "originalClass": "p-table-cell ant-table-cell p-table-body-cell is-ellipsis",
+  "selector": "span.ant-select-arrow > span.anticon.anticon-down",
+  "styleId": "style_177",
+  "tag": "div",
+  "width": "150px"
+}

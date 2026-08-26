@@ -1,0 +1,20 @@
+{
+  "bbox": {
+    "height": 40,
+    "left": 12,
+    "top": 462,
+    "width": 178
+  },
+  "children": [
+    "n287",
+    "n290",
+    "n293"
+  ],
+  "height": "32px",
+  "nodeId": "n294",
+  "originalClass": "ant-select ant-select-in-form-item ant-select-status-success c-dynamic-form-item__purchaseType__inner ant-select-single",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(5) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(5)",
+  "styleId": "style_101",
+  "tag": "div",
+  "width": "460.938px"
+}

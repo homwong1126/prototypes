@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n1057"
+  ],
+  "height": "22px",
+  "nodeId": "n1058",
+  "originalClass": "ant-row ant-form-item-row",
+  "selector": "div.p-table-header.not-data-area > div.p-table__wrapper > div.p-table__wrapper-static.scroll-at-left:nth-of-type(2) > div.p-table-row.p-table-header-row > div.p-table-cell.p-table-header-cell:nth-of-type(9) > div.column-btns:nth-of-type(2) > div.column-btn",
+  "styleId": "style_168",
+  "tag": "div",
+  "width": "84px"
+}

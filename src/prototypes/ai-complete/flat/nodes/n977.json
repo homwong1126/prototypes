@@ -1,0 +1,16 @@
+{
+  "bbox": {
+    "height": 493,
+    "left": 237,
+    "top": 285,
+    "width": 1431
+  },
+  "height": "30px",
+  "id": "form_item_8_verificationAmount",
+  "nodeId": "n977",
+  "originalClass": "ant-input-number-input",
+  "selector": "form.ant-form.ant-form-horizontal",
+  "styleId": "style_186",
+  "tag": "input",
+  "width": "132px"
+}

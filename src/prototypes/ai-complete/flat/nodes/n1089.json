@@ -1,0 +1,16 @@
+{
+  "bbox": {
+    "height": 44,
+    "left": 1646,
+    "top": 286,
+    "width": 10
+  },
+  "height": "30px",
+  "id": "form_item_10_verificationAmount",
+  "nodeId": "n1089",
+  "originalClass": "ant-input-number-input",
+  "selector": "div.p-table-header.not-data-area > div.p-table__wrapper > div.p-table__wrapper-right:nth-of-type(3) > div.p-table-row.p-table-header-row > div.p-table-cell.p-table-header-cell > div.p-table-cell-drag-handle:nth-of-type(3)",
+  "styleId": "style_186",
+  "tag": "input",
+  "width": "132px"
+}

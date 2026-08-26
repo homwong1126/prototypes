@@ -1,0 +1,29 @@
+{
+  "bbox": {
+    "height": 58,
+    "left": 722,
+    "top": 81,
+    "width": 461
+  },
+  "children": [
+    "n933",
+    "n941",
+    "n949",
+    "n952",
+    "n955",
+    "n958",
+    "n961",
+    "n963",
+    "n965",
+    "n967",
+    "n969",
+    "n986"
+  ],
+  "height": "46px",
+  "nodeId": "n987",
+  "originalClass": "p-table-row p-table-body-row p-table-row-level-0",
+  "selector": "form.ant-form.ant-form-vertical > div.ant-row.css-eju0wy > div.ant-col.ant-col-8:nth-of-type(2) > div.ant-form-item.css-eju0wy",
+  "styleId": "style_190",
+  "tag": "div",
+  "width": "1800px"
+}

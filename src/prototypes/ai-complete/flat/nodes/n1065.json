@@ -1,0 +1,13 @@
+{
+  "bbox": {
+    "height": 22,
+    "left": 1644,
+    "top": 297,
+    "width": 56
+  },
+  "nodeId": "n1065",
+  "selector": "div.p-table-header.not-data-area > div.p-table__wrapper > div.p-table__wrapper-static.scroll-at-left:nth-of-type(2) > div.p-table-row.p-table-header-row > div.p-table-cell.p-table-header-cell:nth-of-type(11) > div.p-table-cell__inner:nth-of-type(1) > span:nth-of-type(1)",
+  "styleId": "style_173",
+  "tag": "span",
+  "text": "风云T8"
+}

@@ -1,0 +1,15 @@
+{
+  "bbox": {
+    "height": 40,
+    "left": 12,
+    "top": 662,
+    "width": 178
+  },
+  "height": "44px",
+  "nodeId": "n389",
+  "originalClass": "p-table-cell-drag-handle",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(9) > div.ant-menu-submenu-title",
+  "styleId": "style_141",
+  "tag": "div",
+  "width": "10px"
+}

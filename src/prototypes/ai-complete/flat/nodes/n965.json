@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 16,
+    "left": 341,
+    "top": 184,
+    "width": 16
+  },
+  "children": [
+    "n964"
+  ],
+  "height": "45px",
+  "nodeId": "n965",
+  "originalClass": "p-table-cell ant-table-cell p-table-body-cell is-ellipsis",
+  "selector": "div.dynamic-table__header__left > div",
+  "styleId": "style_179",
+  "tag": "div",
+  "width": "200px"
+}

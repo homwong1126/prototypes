@@ -1,0 +1,10 @@
+{
+  "children": [
+    "n457"
+  ],
+  "nodeId": "n458",
+  "originalClass": "p-selection-checkbox",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(11) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(1) > span.ant-menu-title-content",
+  "styleId": "style_123",
+  "tag": "span"
+}

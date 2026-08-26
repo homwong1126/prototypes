@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 627,
+    "left": 221,
+    "top": 163,
+    "width": 1463
+  },
+  "children": [
+    "n956"
+  ],
+  "height": "22px",
+  "nodeId": "n957",
+  "originalClass": "p-table-cell__inner",
+  "selector": "div.adminui-main > div.qiankun-container:nth-of-type(2) > div > div > div > div > div.ant-card.css-eju0wy:nth-of-type(2) > div.ant-card-body",
+  "styleId": "style_170",
+  "tag": "div",
+  "width": "104px"
+}

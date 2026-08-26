@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n1039"
+  ],
+  "height": "32px",
+  "nodeId": "n1040",
+  "originalClass": "ant-form-item form-table-validate-item",
+  "selector": "div.p-table-header.not-data-area > div.p-table__wrapper > div.p-table__wrapper-static.scroll-at-left:nth-of-type(2) > div.p-table-row.p-table-header-row > div.p-table-cell.p-table-header-cell:nth-of-type(5) > div.column-btns:nth-of-type(2)",
+  "styleId": "style_169",
+  "tag": "div",
+  "width": "134px"
+}

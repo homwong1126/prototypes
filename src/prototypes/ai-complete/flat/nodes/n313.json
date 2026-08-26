@@ -1,0 +1,13 @@
+{
+  "children": [
+    "n310",
+    "n312"
+  ],
+  "height": "32px",
+  "nodeId": "n313",
+  "originalClass": "dynamic-table__header__menu-right",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(6) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(1) > span.ant-menu-title-content > div.ellipsis-tooltip-content:nth-of-type(1) > div",
+  "styleId": "style_110",
+  "tag": "div",
+  "width": "117.328px"
+}

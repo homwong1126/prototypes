@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 48,
+    "left": 0,
+    "top": 0,
+    "width": 1710
+  },
+  "children": [
+    "n34"
+  ],
+  "height": "48px",
+  "nodeId": "n35",
+  "originalClass": "ant-layout-header",
+  "selector": "header.ant-layout-header",
+  "styleId": "style_30",
+  "tag": "header",
+  "width": "1710px"
+}

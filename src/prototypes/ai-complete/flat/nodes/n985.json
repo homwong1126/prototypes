@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 22,
+    "left": 1568,
+    "top": 181,
+    "width": 33
+  },
+  "children": [
+    "n984"
+  ],
+  "height": "32px",
+  "nodeId": "n985",
+  "originalClass": "p-table-cell__inner",
+  "selector": "div.dynamic-table__header__menu-right > button.css-eju0wy.ant-btn:nth-of-type(1) > span",
+  "styleId": "style_170",
+  "tag": "div",
+  "width": "134px"
+}

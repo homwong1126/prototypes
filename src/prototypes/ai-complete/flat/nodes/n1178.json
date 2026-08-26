@@ -1,0 +1,28 @@
+{
+  "bbox": {
+    "height": 446,
+    "left": 238,
+    "top": 331,
+    "width": 1429
+  },
+  "children": [
+    "n1107",
+    "n1114",
+    "n1121",
+    "n1128",
+    "n1135",
+    "n1142",
+    "n1149",
+    "n1156",
+    "n1163",
+    "n1170",
+    "n1177"
+  ],
+  "height": "2852px",
+  "nodeId": "n1178",
+  "originalClass": "p-table__wrapper-right scroll-at-left",
+  "selector": "div.p-table-body.ant-table-body",
+  "styleId": "style_155",
+  "tag": "div",
+  "width": "77px"
+}

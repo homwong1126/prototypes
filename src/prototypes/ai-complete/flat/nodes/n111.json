@@ -1,0 +1,18 @@
+{
+  "children": [
+    "n80",
+    "n86",
+    "n92",
+    "n98",
+    "n104",
+    "n110"
+  ],
+  "height": "240px",
+  "id": "sub_menu_8_$$_202411212035-popup",
+  "nodeId": "n111",
+  "originalClass": "ant-menu ant-menu-sub ant-menu-inline",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(1) > ul.ant-menu.ant-menu-sub > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(1) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(4)",
+  "styleId": "style_46",
+  "tag": "ul",
+  "width": "178.172px"
+}

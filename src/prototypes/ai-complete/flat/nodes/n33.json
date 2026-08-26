@@ -1,0 +1,22 @@
+{
+  "bbox": {
+    "height": 24,
+    "left": 1378,
+    "top": 12,
+    "width": 316
+  },
+  "children": [
+    "n13",
+    "n17",
+    "n20",
+    "n24",
+    "n32"
+  ],
+  "height": "24px",
+  "nodeId": "n33",
+  "originalClass": "right",
+  "selector": "div.right",
+  "styleId": "style_28",
+  "tag": "div",
+  "width": "316px"
+}

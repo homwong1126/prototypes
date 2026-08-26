@@ -1,0 +1,36 @@
+{
+  "bbox": {
+    "height": 40,
+    "left": 12,
+    "top": 102,
+    "width": 178
+  },
+  "children": [
+    "n47",
+    "n54",
+    "n61",
+    "n68",
+    "n112",
+    "n119",
+    "n126",
+    "n133",
+    "n140",
+    "n147",
+    "n154",
+    "n161",
+    "n168",
+    "n175",
+    "n182",
+    "n189",
+    "n196",
+    "n203",
+    "n210"
+  ],
+  "height": "1000.3px",
+  "nodeId": "n211",
+  "originalClass": "ant-menu ant-menu-root ant-menu-inline ant-menu-light",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(1)",
+  "styleId": "style_47",
+  "tag": "ul",
+  "width": "178.172px"
+}

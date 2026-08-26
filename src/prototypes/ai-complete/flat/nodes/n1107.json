@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 446,
+    "left": 238,
+    "top": 331,
+    "width": 1429
+  },
+  "children": [
+    "n1106"
+  ],
+  "height": "46px",
+  "nodeId": "n1107",
+  "originalClass": "p-table-row p-table-body-row p-table-row-level-0",
+  "selector": "div.p-table-body.ant-table-body > div.p-table__wrapper",
+  "styleId": "style_208",
+  "tag": "div",
+  "width": "77px"
+}

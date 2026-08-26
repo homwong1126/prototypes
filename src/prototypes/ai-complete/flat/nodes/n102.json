@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n101"
+  ],
+  "height": "0px",
+  "nodeId": "n102",
+  "originalClass": "navMenu-collect",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(1) > ul.ant-menu.ant-menu-sub > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(1) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(8) > span.ant-menu-title-content > div.navMenu-collect:nth-of-type(2)",
+  "styleId": "style_43",
+  "tag": "div",
+  "width": "24px"
+}

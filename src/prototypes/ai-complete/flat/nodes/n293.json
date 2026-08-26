@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 20,
+    "left": 48,
+    "top": 512,
+    "width": 70
+  },
+  "children": [
+    "n292"
+  ],
+  "height": "12px",
+  "nodeId": "n293",
+  "originalClass": "ant-select-clear",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(5) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(6) > span.ant-menu-title-content > div.ellipsis-tooltip-content:nth-of-type(1) > div",
+  "styleId": "style_100",
+  "tag": "span",
+  "width": "12px"
+}

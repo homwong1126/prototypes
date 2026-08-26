@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n417"
+  ],
+  "height": "44px",
+  "nodeId": "n418",
+  "originalClass": "p-table__wrapper-right",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(9) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(3) > span.ant-menu-title-content > div.ellipsis-tooltip-content:nth-of-type(1)",
+  "styleId": "style_155",
+  "tag": "div",
+  "width": "87px"
+}

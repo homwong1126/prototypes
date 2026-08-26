@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n223"
+  ],
+  "height": "34px",
+  "nodeId": "n224",
+  "originalClass": "ant-tabs-tab-remove",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(3) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(3)",
+  "styleId": "style_58",
+  "tag": "button",
+  "width": "22px"
+}

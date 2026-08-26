@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 738,
+    "left": 221,
+    "top": 112,
+    "width": 1473
+  },
+  "children": [
+    "n898"
+  ],
+  "height": "45px",
+  "nodeId": "n899",
+  "originalClass": "p-table-cell ant-table-cell p-table-body-cell is-ellipsis",
+  "selector": "#adminui-main",
+  "styleId": "style_175",
+  "tag": "div",
+  "width": "200px"
+}

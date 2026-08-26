@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 22,
+    "left": 241,
+    "top": 86,
+    "width": 142
+  },
+  "children": [
+    "n891"
+  ],
+  "height": "22px",
+  "nodeId": "n892",
+  "originalClass": "p-table-cell__inner",
+  "selector": "nav.ant-breadcrumb.css-mftcua",
+  "styleId": "style_170",
+  "tag": "div",
+  "width": "84px"
+}

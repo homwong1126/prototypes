@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 22,
+    "left": 24,
+    "top": 66,
+    "width": 110
+  },
+  "children": [
+    "n216"
+  ],
+  "height": "796px",
+  "nodeId": "n217",
+  "originalClass": "ant-layout-sider-children",
+  "selector": "input.ant-input.css-mftcua",
+  "styleId": "style_52",
+  "tag": "div",
+  "width": "206.172px"
+}

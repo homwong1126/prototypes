@@ -1,0 +1,16 @@
+{
+  "custom": {
+    "border": "0px solid rgb(229, 231, 235)",
+    "borderColor": "rgb(229, 231, 235)",
+    "borderStyle": "solid",
+    "color": "rgb(22, 119, 255)",
+    "fontFamily": "\"Microsoft YaHei\"",
+    "fontSize": "14px",
+    "minHeight": "0px",
+    "minWidth": "0px",
+    "textDecoration": "none solid rgb(22, 119, 255)",
+    "textOverflow": "clip"
+  },
+  "styleId": "style_20",
+  "tw": "inline-block static font-normal leading-snug text-center whitespace-nowrap border-0 visible cursor-pointer m-0 p-0 overflow-visible"
+}

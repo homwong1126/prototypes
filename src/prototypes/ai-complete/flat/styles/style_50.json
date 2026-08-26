@@ -1,0 +1,16 @@
+{
+  "custom": {
+    "border": "2px 0px 0px solid rgb(245, 245, 245) rgb(229, 231, 235) rgb(229, 231, 235)",
+    "color": "rgba(0, 0, 0, 0.88)",
+    "fontFamily": "\"Microsoft YaHei\"",
+    "fontSize": "14px",
+    "padding": "8px 0px",
+    "paddingBlockEnd": "8px",
+    "paddingBlockStart": "8px",
+    "textAlign": "start",
+    "textDecoration": "none solid rgba(0, 0, 0, 0.88)",
+    "textOverflow": "clip"
+  },
+  "styleId": "style_50",
+  "tw": "block static font-normal leading-none visible cursor-pointer m-0 pt-2 pr-0 pb-2 pl-0 overflow-visible"
+}

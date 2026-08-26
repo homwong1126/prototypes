@@ -1,0 +1,19 @@
+{
+  "bbox": {
+    "height": 808,
+    "left": 0,
+    "top": 48,
+    "width": 1710
+  },
+  "children": [
+    "n28",
+    "n30"
+  ],
+  "height": "20px",
+  "nodeId": "n31",
+  "originalClass": "name ant-dropdown-trigger",
+  "selector": "div.splitpanes.splitpanes--vertical",
+  "styleId": "style_27",
+  "tag": "div",
+  "width": "88px"
+}

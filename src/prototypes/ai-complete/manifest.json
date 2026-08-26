@@ -1,0 +1,86 @@
+{
+  "version": "3.0",
+  "generator": "axhub-ai-extension",
+  "exportTime": "2026-08-24T06:47:20.048Z",
+  "sourceUrl": "https://keyaccount.mychery.com/ka/micro-program/policyManage/edit?id=2016754178181083138",
+  "viewport": {
+    "height": 856,
+    "width": 1710
+  },
+  "mode": "full",
+  "files": {
+    "domlist": "structure/doms.json",
+    "stylePool": "structure/styles.json",
+    "theme": "theme.json",
+    "screenshot": "screenshot.png",
+    "content": "content.md",
+    "pageMap": "page-map.json",
+    "topology": "topology/topology.json",
+    "selectorMap": "topology/selector-map.json",
+    "contentBlocks": "topology/content-blocks.json",
+    "behaviors": null,
+    "responsive": null,
+    "networkSummary": null,
+    "html": "index.html",
+    "css": "style.css"
+  },
+  "flatStructure": {
+    "skeleton": "flat/skeleton.json",
+    "nodesDir": "flat/nodes/",
+    "stylesDir": "flat/styles/",
+    "index": "flat/index.json"
+  },
+  "livePageAccess": {
+    "sourceUrl": "https://keyaccount.mychery.com/ka/micro-program/policyManage/edit?id=2016754178181083138",
+    "selectorAvailable": true,
+    "note": "每个节点文件包含 selector 字段，可用 Playwright 访问 sourceUrl 进行补充采集"
+  },
+  "screenshots": {
+    "current": "screenshot.png",
+    "responsive": [
+      "screenshots/desktop-1440.png",
+      "screenshots/tablet-768.png",
+      "screenshots/mobile-390.png"
+    ]
+  },
+  "assets": {
+    "imageCount": 0,
+    "fontCount": 7,
+    "imageFiles": [],
+    "fontFiles": [
+      "assets/fonts/iconfont.IUuDI0Lc.woff2?t=1747805864135",
+      "assets/fonts/iconfont.CcsaU-DZ.woff?t=1747805864135",
+      "assets/fonts/iconfont.CNdS-C2q.ttf?t=1747805864135",
+      "assets/fonts/iconfont.woff2?t=1733395304390",
+      "assets/fonts/iconfont.woff?t=1733395304390",
+      "assets/fonts/iconfont.ttf?t=1733395304390",
+      "assets/fonts/MiSans-Regular-7.woff2"
+    ],
+    "viewportScreenshotCount": 0
+  },
+  "stats": {
+    "nodeCount": 1228,
+    "styleCount": 245,
+    "markdownLength": 6719,
+    "sectionCount": 1
+  },
+  "capabilities": {
+    "hasFonts": true,
+    "hasScreenshot": true,
+    "hasResponsiveScreenshots": true,
+    "hasTheme": true,
+    "hasMarkdown": true,
+    "hasPreviewHTML": true,
+    "hasSections": true,
+    "hasTopology": true,
+    "hasSelectorMap": true,
+    "hasBehaviors": false,
+    "hasResponsive": false,
+    "hasNetworkSummary": false,
+    "hasContentBlocks": true,
+    "hasRebuildPrompts": true,
+    "hasFlatStructure": true,
+    "jsonFormat": true,
+    "tailwindClasses": true
+  }
+}

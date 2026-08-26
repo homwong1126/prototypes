@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 22,
+    "left": 294,
+    "top": 297,
+    "width": 28
+  },
+  "children": [
+    "n998"
+  ],
+  "height": "22px",
+  "nodeId": "n999",
+  "originalClass": "ant-form-item-control-input-content",
+  "selector": "div.p-table-header.not-data-area > div.p-table__wrapper > div.p-table__wrapper-static.scroll-at-left:nth-of-type(2) > div.p-table-row.p-table-header-row > div.p-table-cell.p-table-header-cell:nth-of-type(1) > div.p-table-cell__inner:nth-of-type(1) > span",
+  "styleId": "style_165",
+  "tag": "div",
+  "width": "84px"
+}

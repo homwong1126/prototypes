@@ -1,0 +1,13 @@
+{
+  "bbox": {
+    "height": 22,
+    "left": 1159,
+    "top": 112,
+    "width": 12
+  },
+  "nodeId": "n934",
+  "selector": "span.ant-input-affix-wrapper.c-dynamic-form-item__policyName__inner > span.ant-input-suffix",
+  "styleId": "style_164",
+  "tag": "span",
+  "text": "奇瑞"
+}

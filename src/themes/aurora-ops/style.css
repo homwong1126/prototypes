@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+.dmb-page {
+  --dmb-canvas: #0b1020;
+  --dmb-surface-1: #11182b;
+  --dmb-surface-2: #16203a;
+  --dmb-surface-3: #1c2744;
+  --dmb-surface-4: #223055;
+  --dmb-primary: #2f7cf6;
+  --dmb-primary-hover: #4b90ff;
+  --dmb-primary-focus: #1f6ae6;
+  --dmb-text: #e8edf6;
+  --dmb-text-muted: #b7c2d6;
+  --dmb-text-subtle: #7f8aa3;
+  --dmb-border: #28324a;
+  --dmb-border-strong: #38445f;
+  --dmb-border-tertiary: #4b5875;
+  --dmb-success: #1fb878;
+  --dmb-warning: #e0a82e;
+  --dmb-danger: #e15858;
+  --dmb-info: #4ca3ff;
+  --dmb-radius-control: 8px;
+  --dmb-radius-card: 12px;
+  --dmb-radius-preview: 16px;
+  --dmb-radius-pill: 9999px;
+  --dmb-font-display: "Aurora Display", Inter, "SF Pro Display", system-ui, sans-serif;
+  --dmb-font-body: "Aurora Text", Inter, "SF Pro Text", system-ui, sans-serif;
+  --dmb-font-mono: "Aurora Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: var(--dmb-canvas);
+  color: var(--dmb-text);
+  font-family: var(--dmb-font-body);
+}
+
+.dmb-page h1,
+.dmb-page h2,
+.dmb-page h3,
+.dmb-page h4,
+.dmb-page h5,
+.dmb-page h6 {
+  font-family: var(--dmb-font-display);
+  letter-spacing: -0.02em;
+}
+
+.dmb-page a {
+  color: var(--dmb-primary);
+}
+
+.dmb-page .dmb-card {
+  background: var(--dmb-surface-1);
+  border: 1px solid var(--dmb-border);
+  border-radius: var(--dmb-radius-card);
+}
+
+.dmb-page .dmb-card--elevated {
+  background: var(--dmb-surface-2);
+  border-color: var(--dmb-border-strong);
+}
+
+.dmb-page .dmb-button-primary {
+  background: var(--dmb-primary);
+  color: #fff;
+  border-radius: var(--dmb-radius-control);
+}
+
+.dmb-page .dmb-button-primary:hover {
+  background: var(--dmb-primary-hover);
+}
+
+.dmb-page .dmb-button-secondary {
+  background: var(--dmb-surface-2);
+  color: var(--dmb-text);
+  border: 1px solid var(--dmb-border);
+  border-radius: var(--dmb-radius-control);
+}
+
+.dmb-page .dmb-input,
+.dmb-page .dmb-select,
+.dmb-page .dmb-textarea {
+  background: var(--dmb-surface-2);
+  color: var(--dmb-text);
+  border: 1px solid var(--dmb-border);
+  border-radius: var(--dmb-radius-control);
+}
+
+.dmb-page .dmb-input:focus,
+.dmb-page .dmb-select:focus,
+.dmb-page .dmb-textarea:focus {
+  border-color: var(--dmb-primary-focus);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--dmb-primary-focus) 30%, transparent);
+  outline: none;
+}

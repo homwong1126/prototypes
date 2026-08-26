@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n214"
+  ],
+  "height": "35.0938px",
+  "nodeId": "n215",
+  "originalClass": "bottumBtn",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(3) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(1) > span.ant-menu-title-content > div.ellipsis-tooltip-content:nth-of-type(1) > div",
+  "styleId": "style_50",
+  "tag": "view",
+  "width": "204.172px"
+}

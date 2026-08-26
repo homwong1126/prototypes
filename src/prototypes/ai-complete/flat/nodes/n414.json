@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n413"
+  ],
+  "height": "22px",
+  "nodeId": "n414",
+  "originalClass": "p-table-cell__inner",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(9) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(3)",
+  "styleId": "style_130",
+  "tag": "div",
+  "width": "28px"
+}

@@ -1,0 +1,19 @@
+{
+  "bbox": {
+    "height": 40,
+    "left": 12,
+    "top": 102,
+    "width": 178
+  },
+  "children": [
+    "n211"
+  ],
+  "height": "718.812px",
+  "id": "sysMenu",
+  "nodeId": "n212",
+  "originalClass": "adminui-side-scroll",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(1) > div.ant-menu-submenu-title",
+  "styleId": "style_48",
+  "tag": "div",
+  "width": "192.172px"
+}

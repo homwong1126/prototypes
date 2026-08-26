@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 40,
+    "left": 48,
+    "top": 422,
+    "width": 114
+  },
+  "children": [
+    "n273"
+  ],
+  "height": "22px",
+  "nodeId": "n274",
+  "originalClass": "ant-input-suffix",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(5) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(4) > span.ant-menu-title-content",
+  "styleId": "style_92",
+  "tag": "span",
+  "width": "12px"
+}

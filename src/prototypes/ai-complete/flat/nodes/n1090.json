@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n1089"
+  ],
+  "height": "30px",
+  "nodeId": "n1090",
+  "originalClass": "ant-input-number-input-wrap",
+  "selector": "div.p-table-header.not-data-area > div.p-table__wrapper > div.p-table__wrapper-right:nth-of-type(3) > div.p-table-row.p-table-header-row > div.p-table-cell.p-table-header-cell > div.column-btns:nth-of-type(2) > div.column-btn",
+  "styleId": "style_187",
+  "tag": "div",
+  "width": "132px"
+}

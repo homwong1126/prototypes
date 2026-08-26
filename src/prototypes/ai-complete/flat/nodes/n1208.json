@@ -1,0 +1,19 @@
+{
+  "bbox": {
+    "height": 0,
+    "left": 168,
+    "top": 242,
+    "width": 10
+  },
+  "children": [
+    "n1207"
+  ],
+  "height": "738px",
+  "id": "adminui-main",
+  "nodeId": "n1208",
+  "originalClass": "adminui-main",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(4) > div.ant-menu-submenu-title > i.ant-menu-submenu-arrow",
+  "styleId": "style_233",
+  "tag": "div",
+  "width": "1472.83px"
+}

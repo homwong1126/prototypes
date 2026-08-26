@@ -1,0 +1,14 @@
+{
+  "bbox": {
+    "height": 40,
+    "left": 50,
+    "top": 222,
+    "width": 94
+  },
+  "nodeId": "n245",
+  "originalClass": "ant-breadcrumb-separator",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(4) > div.ant-menu-submenu-title > span.ant-menu-title-content:nth-of-type(2)",
+  "styleId": "style_67",
+  "tag": "span",
+  "text": "/"
+}

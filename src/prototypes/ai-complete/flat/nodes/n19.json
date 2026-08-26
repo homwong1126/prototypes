@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n18"
+  ],
+  "height": "16px",
+  "nodeId": "n19",
+  "originalClass": "my-notice",
+  "selector": "div.tip-count",
+  "styleId": "style_18",
+  "tag": "div",
+  "width": "16px"
+}

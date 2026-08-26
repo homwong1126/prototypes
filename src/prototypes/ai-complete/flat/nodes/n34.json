@@ -1,0 +1,20 @@
+{
+  "bbox": {
+    "height": 30,
+    "left": 240,
+    "top": 9,
+    "width": 1114
+  },
+  "children": [
+    "n2",
+    "n9",
+    "n33"
+  ],
+  "height": "48px",
+  "nodeId": "n34",
+  "originalClass": "header-admin",
+  "selector": "div.center",
+  "styleId": "style_29",
+  "tag": "div",
+  "width": "1710px"
+}

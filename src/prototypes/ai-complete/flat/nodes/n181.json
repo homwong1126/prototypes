@@ -1,0 +1,14 @@
+{
+  "children": [
+    "n176",
+    "n179",
+    "n180"
+  ],
+  "height": "40px",
+  "nodeId": "n181",
+  "originalClass": "ant-menu-submenu-title",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(2) > ul.ant-menu.ant-menu-sub > li.ant-menu-submenu.ant-menu-submenu-inline > div.ant-menu-submenu-title > span.ant-menu-title-content > div.ellipsis-tooltip-content > div",
+  "styleId": "style_40",
+  "tag": "div",
+  "width": "178.172px"
+}

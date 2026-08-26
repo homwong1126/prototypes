@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 0,
+    "left": 110,
+    "top": 362,
+    "width": 24
+  },
+  "children": [
+    "n268"
+  ],
+  "height": "26px",
+  "nodeId": "n269",
+  "originalClass": "ant-col ant-col-6 ant-form-item-label",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(5) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(2) > span.ant-menu-title-content > div.navMenu-collect:nth-of-type(2)",
+  "styleId": "style_80",
+  "tag": "div",
+  "width": "460.938px"
+}

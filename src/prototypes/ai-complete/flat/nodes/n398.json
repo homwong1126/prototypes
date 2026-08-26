@@ -1,0 +1,14 @@
+{
+  "_innerHTML": "<span style=\"color: red;\">* </span>核销金额",
+  "children": [
+    "n397"
+  ],
+  "height": "22px",
+  "nodeId": "n398",
+  "originalClass": "star",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(9) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(1)",
+  "styleId": "style_129",
+  "tag": "span",
+  "text": "核销金额",
+  "width": "67.75px"
+}

@@ -1,0 +1,23 @@
+{
+  "children": [
+    "n655",
+    "n663",
+    "n671",
+    "n674",
+    "n677",
+    "n680",
+    "n683",
+    "n685",
+    "n687",
+    "n689",
+    "n691",
+    "n708"
+  ],
+  "height": "46px",
+  "nodeId": "n709",
+  "originalClass": "p-table-row p-table-body-row p-table-row-level-0",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(15) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(6) > span.ant-menu-title-content > div.navMenu-collect:nth-of-type(2) > div.collect",
+  "styleId": "style_190",
+  "tag": "div",
+  "width": "1800px"
+}

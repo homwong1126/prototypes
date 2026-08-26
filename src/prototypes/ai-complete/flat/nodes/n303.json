@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 20,
+    "left": 50,
+    "top": 272,
+    "width": 56
+  },
+  "children": [
+    "n302"
+  ],
+  "height": "83px",
+  "nodeId": "n303",
+  "originalClass": "ant-card-body",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(5) > div.ant-menu-submenu-title > span.ant-menu-title-content:nth-of-type(2) > div.ellipsis-tooltip-content > div",
+  "styleId": "style_103",
+  "tag": "div",
+  "width": "1462.83px"
+}

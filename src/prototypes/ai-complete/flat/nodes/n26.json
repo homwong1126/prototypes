@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 14,
+    "left": 1579,
+    "top": 17,
+    "width": 14
+  },
+  "children": [
+    "n25"
+  ],
+  "height": "14px",
+  "nodeId": "n26",
+  "originalClass": "anticon anticon-user",
+  "selector": "span.anticon.anticon-user",
+  "styleId": "style_23",
+  "tag": "span",
+  "width": "14px"
+}

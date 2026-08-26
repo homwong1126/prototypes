@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 44,
+    "left": 286,
+    "top": 286,
+    "width": 1800
+  },
+  "children": [
+    "n992"
+  ],
+  "height": "22px",
+  "nodeId": "n993",
+  "originalClass": "ant-col ant-form-item-control",
+  "selector": "div.p-table-header.not-data-area > div.p-table__wrapper > div.p-table__wrapper-static.scroll-at-left:nth-of-type(2)",
+  "styleId": "style_167",
+  "tag": "div",
+  "width": "84px"
+}

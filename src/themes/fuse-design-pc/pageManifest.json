@@ -1,0 +1,54 @@
+{
+  "name": "Fuse Design Pc Page Manifest",
+  "description": "基于在线文件 190672623414009 的原始文档流离线提取出的页面层级与关键业务线索。说明：该文件可在线访问，但通过 MasterGo MCP 的 getDsl/getMeta 当前返回空结构，因此本清单采用 raw document stream extraction 方式沉淀。",
+  "source": {
+    "type": "mastergo-online-raw-stream",
+    "fileId": "190672623414009",
+    "fileName": "Fuse.Design-Pc组件包",
+    "extractedAt": "2026-04-14",
+    "mcpDslStatus": "empty"
+  },
+  "confirmedPages": {
+    "cover": {
+      "layerId": "2565:147804",
+      "title": "封面"
+    },
+    "designLanguage": {
+      "layerId": "6678:263266",
+      "title": "设计语言"
+    },
+    "componentIndex": {
+      "layerId": "8:51670",
+      "title": "组件索引"
+    },
+    "odinBusinessComponents": {
+      "layerId": "6678:84864",
+      "title": "ODIN业务组件"
+    },
+    "domesticOdinCase": {
+      "layerId": "6675:167970",
+      "title": "页面案例/国内ODIN"
+    },
+    "overseasOdinCase": {
+      "layerId": "6675:183680",
+      "title": "页面案例/海外ODIN"
+    },
+    "changeLog": {
+      "layerId": "3046:042182",
+      "title": "更新日志"
+    }
+  },
+  "designLanguageSummary": "全新的设计语言，带来耳目一新的视觉体验，经过重新设计优化的组件变体，轻巧且高效；",
+  "businessComponentHints": [
+    "ODIN SMART PLATFORM",
+    "iCAR ODIN页头",
+    "CHERY ODIN页头",
+    "EXEED ODIN页头",
+    "JETOUR ODIN页头",
+    "CHERY X ODIN",
+    "EXEED X ODIN",
+    "iCAR X ODIN"
+  ],
+  "changeLogVersionText": "1.20 June 28, 2020",
+  "atomicComponentsCount": 66
+}

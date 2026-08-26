@@ -1,0 +1,44 @@
+{
+  "server": {
+    "host": "localhost",
+    "allowLAN": true,
+    "lanHost": "10.105.220.142",
+    "enableCommandAPI": false
+  },
+  "cloudPublishing": {
+    "vercel": {
+      "token": "vcp_0g9oJ07H3z9acZxiInzDuWXrK4fHLhvjlvRQumTG8vc2MZC51V4W243R",
+      "projectName": "afs",
+      "teamId": "team_1fbetEaJOkun29rfNyYJrgTa"
+    },
+    "cloudflarePages": {
+      "apiToken": "",
+      "accountId": "",
+      "projectName": "",
+      "productionBranch": "main"
+    },
+    "s3": {
+      "accessKeyId": "",
+      "secretAccessKey": "",
+      "region": "",
+      "bucket": "",
+      "prefix": "",
+      "baseUrl": "",
+      "endpoint": ""
+    },
+    "githubPages": {
+      "repository": "",
+      "branch": "gh-pages",
+      "sourceDirectory": "/"
+    },
+    "publishSettings": {
+      "includeSource": false
+    }
+  },
+  "projectInfo": {
+    "description": null
+  },
+  "projectDefaults": {
+    "defaultTheme": null
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "bbox": {
+    "height": 40,
+    "left": 48,
+    "top": 342,
+    "width": 114
+  },
+  "children": [
+    "n260"
+  ],
+  "nodeId": "n261",
+  "originalClass": "text c-dynamic-form-item__policyCode__inner",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(5) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(2) > span.ant-menu-title-content",
+  "styleId": "style_82",
+  "tag": "span",
+  "width": "100%"
+}

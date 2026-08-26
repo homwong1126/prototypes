@@ -1,0 +1,8 @@
+{
+  "nodeId": "n317",
+  "originalClass": "alert-message",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(6) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(3) > span.ant-menu-title-content",
+  "styleId": "style_114",
+  "tag": "span",
+  "text": "已选择 0 /  条数据"
+}

@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 40,
+    "left": 48,
+    "top": 302,
+    "width": 114
+  },
+  "children": [
+    "n262"
+  ],
+  "height": "22px",
+  "nodeId": "n263",
+  "originalClass": "ant-form-item-control-input",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(5) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(1) > span.ant-menu-title-content",
+  "styleId": "style_84",
+  "tag": "div",
+  "width": "460.938px"
+}

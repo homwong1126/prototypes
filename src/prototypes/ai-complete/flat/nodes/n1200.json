@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 45,
+    "left": 546,
+    "top": 331,
+    "width": 150
+  },
+  "children": [
+    "n1199"
+  ],
+  "height": "32px",
+  "nodeId": "n1200",
+  "originalClass": "ant-space-item",
+  "selector": "div.p-table-body.ant-table-body > div.p-table__wrapper > div.p-table__wrapper-static.scroll-at-left:nth-of-type(2) > div.p-table-row.p-table-body-row:nth-of-type(1) > div.p-table-cell.ant-table-cell:nth-of-type(4)",
+  "styleId": "style_226",
+  "tag": "div",
+  "width": "64.6641px"
+}

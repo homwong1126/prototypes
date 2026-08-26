@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 808,
+    "left": 0,
+    "top": 48,
+    "width": 206
+  },
+  "children": [
+    "n1211"
+  ],
+  "height": "808px",
+  "nodeId": "n1212",
+  "originalClass": "ant-layout ant-layout-has-sider",
+  "selector": "aside.ant-layout-sider.ant-layout-sider-light",
+  "styleId": "style_236",
+  "tag": "section",
+  "width": "1710px"
+}

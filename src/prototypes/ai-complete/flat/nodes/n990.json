@@ -1,0 +1,13 @@
+{
+  "bbox": {
+    "height": 16,
+    "left": 246,
+    "top": 300,
+    "width": 16
+  },
+  "nodeId": "n990",
+  "selector": "div.p-table-header.not-data-area > div.p-table__wrapper > div.p-table__wrapper-left.scroll-at-left:nth-of-type(1) > div.p-table-row.p-table-header-row > div.p-table-cell.p-table-header-cell > label.p-selection-wrapper.p-selection-checkbox-wrapper > span.p-selection-checkbox > span.p-selection-checkbox-inner",
+  "styleId": "style_164",
+  "tag": "span",
+  "text": "奇瑞"
+}

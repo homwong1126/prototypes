@@ -1,0 +1,16 @@
+{
+  "bbox": {
+    "height": 34,
+    "left": 403,
+    "top": 48,
+    "width": 22
+  },
+  "height": "30px",
+  "id": "form_item_6_verificationAmount",
+  "nodeId": "n865",
+  "originalClass": "ant-input-number-input",
+  "selector": "div.route-tags > div.ant-tabs.ant-tabs-top:nth-of-type(2) > div.ant-tabs-nav:nth-of-type(1) > div.ant-tabs-nav-wrap > div.ant-tabs-nav-list > div.ant-tabs-tab.ant-tabs-tab-with-remove:nth-of-type(2) > button.ant-tabs-tab-remove",
+  "styleId": "style_186",
+  "tag": "input",
+  "width": "132px"
+}

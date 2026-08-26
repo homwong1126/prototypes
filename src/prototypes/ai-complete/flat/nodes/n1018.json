@@ -1,0 +1,15 @@
+{
+  "bbox": {
+    "height": 44,
+    "left": 536,
+    "top": 286,
+    "width": 10
+  },
+  "height": "0px",
+  "nodeId": "n1018",
+  "originalClass": "p-table-cell__inner",
+  "selector": "div.p-table-header.not-data-area > div.p-table__wrapper > div.p-table__wrapper-static.scroll-at-left:nth-of-type(2) > div.p-table-row.p-table-header-row > div.p-table-cell.p-table-header-cell:nth-of-type(3) > div.p-table-cell-drag-handle:nth-of-type(3)",
+  "styleId": "style_170",
+  "tag": "div",
+  "width": "134px"
+}

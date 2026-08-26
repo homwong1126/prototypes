@@ -1,0 +1,354 @@
+{
+  "name": "Fuse Design Pc",
+  "description": "从 Fuse.Design-Pc组件包.mg 提取的语义级设计资产清单，包含页面结构、业务组件线索、原子组件覆盖与组件级 token 命名空间。当前为 inventory 级沉淀，不是完整数值化 theme。",
+  "source": {
+    "type": "mastergo-mg-archive",
+    "fileName": "Fuse.Design-Pc组件包.mg",
+    "extractedAt": "2026-04-14"
+  },
+  "designLanguageSummary": "全新的设计语言，带来耳目一新的视觉体验，经过重新设计优化的组件变体，轻巧且高效。",
+  "fontFamiliesObserved": [
+    "MiSans/Medium/Version 4.003",
+    "MiSans/Normal/Version 4.003",
+    "MiSans/Regular/Version 4.003",
+    "PingFang SC/中粗体/Version 1"
+  ],
+  "pageCases": [
+    "国内ODIN",
+    "海外ODIN"
+  ],
+  "businessComponents": [
+    "ODIN业务组件",
+    "ODIN SMART PLATFORM",
+    "iCAR ODIN页头",
+    "CHERY ODIN页头",
+    "CHERY X ODIN",
+    "EXEED ODIN页头",
+    "EXEED X ODIN",
+    "JETOUR ODIN页头",
+    "iCAR X ODIN"
+  ],
+  "atomicComponents": {
+    "common": [
+      "Button 按钮",
+      "Icon 图标",
+      "Typography 排版",
+      "Space 间距",
+      "Grid 栅格",
+      "Layout 布局",
+      "Divider 分隔线"
+    ],
+    "dataEntry": [
+      "Input 输入框",
+      "InputNumber 数字输入框",
+      "Select 选择器",
+      "Radio 单选框",
+      "Checkbox 多选框",
+      "Switch 开关",
+      "Slider 滑动输入条",
+      "Rate 评分",
+      "DatePicker 日期选择器",
+      "TimePicker 时间选择框",
+      "Upload 上传",
+      "TreeSelect 树选择",
+      "Cascader 级联选择",
+      "Mentions 提及",
+      "AutoComplete 自动完成",
+      "Transfer 穿梭框",
+      "ColorPicker 颜色选择器",
+      "Form 表单"
+    ],
+    "dataDisplay": [
+      "Table 表格",
+      "Card 卡片",
+      "List 列表",
+      "Descriptions 描述列表",
+      "Calendar 日历",
+      "Tree 树形控件",
+      "Timeline 时间轴",
+      "Tag 标签",
+      "Badge 徽标数",
+      "Avatar 头像",
+      "Statistic 统计数值",
+      "Collapse 折叠面板",
+      "Tooltip 文字提示",
+      "Popover 气泡卡片",
+      "QRCode 二维码",
+      "Image 图片",
+      "Empty 空状态",
+      "Carousel 走马灯",
+      "Tour 漫游式引导"
+    ],
+    "feedback": [
+      "Alert 警告提示",
+      "Message 全局提示",
+      "Notification 通知提醒框",
+      "Popconfirm 气泡确认框",
+      "Modal 对话框",
+      "Drawer 抽屉",
+      "Progress 进度条",
+      "Spin 加载中",
+      "Skeleton 骨架屏",
+      "Result 结果"
+    ],
+    "navigation": [
+      "Menu 导航菜单",
+      "Tabs 标签页",
+      "Breadcrumb 面包屑",
+      "Pagination 分页",
+      "Steps 步骤条",
+      "Dropdown 下拉菜单",
+      "Anchor 锚点"
+    ],
+    "other": [
+      "Affix 固钉",
+      "FloatButton 悬浮按钮",
+      "Watermark 水印",
+      "illustration 插画库"
+    ]
+  },
+  "exampleCodeCountObserved": 376,
+  "tokenNamespaceInventory": {
+    "Alert": [
+      "Alert.colorText",
+      "Alert.colorInfoBg",
+      "Alert.marginXS",
+      "Alert.colorSuccess",
+      "Alert.colorSuccessBg",
+      "Alert.colorSuccessBorder",
+      "Alert.borderRadiusLG",
+      "Alert.lineWidth"
+    ],
+    "Anchor": [
+      "Anchor.paddingXXS",
+      "Anchor.padding",
+      "Anchor.colorPrimary",
+      "Anchor.lineWidthBold"
+    ],
+    "Avatar": [
+      "Avatar.controlHeight",
+      "Avatar.colorBorderBg",
+      "Avatar.colorTextLightSolid",
+      "Avatar.borderRadius"
+    ],
+    "Badge": [
+      "Badge.marginXS",
+      "Badge.borderRadiusSM",
+      "Badge.paddingXS",
+      "Badge.colorPrimary"
+    ],
+    "Breadcrumb": [
+      "Breadcrumb.borderRadiusSM",
+      "Breadcrumb.marginXXS",
+      "Breadcrumb.paddingXXS",
+      "Breadcrumb.colorTextDescription"
+    ],
+    "Button": [
+      "Button.colorPrimaryHover",
+      "Button.colorErrorHover",
+      "Button.colorTextDisabled",
+      "Button.marginXS",
+      "Button.controlHeight",
+      "Button.colorText",
+      "Button.colorPrimary",
+      "Button.controlHeightSM",
+      "Button.controlHeightLG",
+      "Button.colorErrorActive",
+      "Button.colorBorder",
+      "Button.lineWidth",
+      "Button.colorBgContainer",
+      "Button.borderRadius",
+      "Button.paddingContentHorizontal"
+    ],
+    "Calendar": [
+      "Calendar.colorPrimary",
+      "Calendar.colorTextDisabled",
+      "Calendar.colorSplit",
+      "Calendar.colorText"
+    ],
+    "Card": [
+      "Card.colorBorderSecondary",
+      "Card.marginXS",
+      "Card.padding",
+      "Card.borderRadiusLG"
+    ],
+    "Checkbox": [
+      "Checkbox.colorBorder",
+      "Checkbox.colorBgContainer",
+      "Checkbox.colorPrimary",
+      "Checkbox.marginXS"
+    ],
+    "Collapse": [
+      "Collapse.colorBorder",
+      "Collapse.lineWidth",
+      "Collapse.colorBgContainer",
+      "Collapse.padding"
+    ],
+    "DatePicker": [
+      "DatePicker.colorTextDisabled",
+      "DatePicker.borderRadius",
+      "DatePicker.colorPrimary",
+      "DatePicker.colorBgContainer",
+      "DatePicker.controlHeight",
+      "DatePicker.controlPaddingHorizontal"
+    ],
+    "Descriptions": [
+      "Descriptions.colorSplit",
+      "Descriptions.colorFillAlter",
+      "Descriptions.paddingSM",
+      "Descriptions.colorText"
+    ],
+    "Divider": [
+      "Divider.margin",
+      "Divider.colorText",
+      "Divider.colorSplit",
+      "Divider.lineWidth"
+    ],
+    "Drawer": [
+      "Drawer.colorBgElevated",
+      "Drawer.colorText",
+      "Drawer.colorBgMask",
+      "Drawer.paddingLG"
+    ],
+    "Dropdown": [
+      "Dropdown.marginXS",
+      "Dropdown.borderRadiusSM",
+      "Dropdown.controlItemBgHover",
+      "Dropdown.controlHeight",
+      "Dropdown.controlPaddingHorizontal"
+    ],
+    "FloatButton": [
+      "FloatButton.colorText",
+      "FloatButton.borderRadiusSM",
+      "FloatButton.colorBgElevated",
+      "FloatButton.controlHeightLG"
+    ],
+    "Input": [
+      "Input.colorText",
+      "Input.colorTextDisabled",
+      "Input.controlHeight",
+      "Input.colorIcon",
+      "Input.colorBorder",
+      "Input.borderRadius"
+    ],
+    "InputNumber": [
+      "InputNumber.colorTextDisabled",
+      "InputNumber.controlHeight",
+      "InputNumber.colorBorder",
+      "InputNumber.borderRadius"
+    ],
+    "List": [
+      "List.lineWidth",
+      "List.paddingXS",
+      "List.padding",
+      "List.colorSplit"
+    ],
+    "Menu": [
+      "Menu.borderRadiusSM",
+      "Menu.controlHeightLG",
+      "Menu.marginXS",
+      "Menu.colorText"
+    ],
+    "Message": [
+      "Message.borderRadiusLG",
+      "Message.colorBgElevated",
+      "Message.marginXS"
+    ],
+    "Modal": [
+      "Modal.borderRadiusLG",
+      "Modal.lineWidth",
+      "Modal.padding",
+      "Modal.colorError"
+    ],
+    "Notification": [
+      "Notification.marginXS",
+      "Notification.borderRadiusLG",
+      "Notification.colorBgElevated",
+      "Notification.paddingMD"
+    ],
+    "Pagination": [
+      "Pagination.marginXS",
+      "Pagination.colorPrimary",
+      "Pagination.controlHeight",
+      "Pagination.borderRadius"
+    ],
+    "Popover": [
+      "Popover.colorText",
+      "Popover.borderRadiusLG",
+      "Popover.colorBgElevated",
+      "Popover.padding"
+    ],
+    "Progress": [
+      "Progress.colorSuccess",
+      "Progress.colorInfo",
+      "Progress.colorFillSecondary",
+      "Progress.colorError"
+    ],
+    "Radio": [
+      "Radio.borderRadius",
+      "Radio.colorText",
+      "Radio.colorBorder",
+      "Radio.lineWidth",
+      "Radio.controlHeight"
+    ],
+    "Result": [
+      "Result.colorTextHeading",
+      "Result.colorTextDescription"
+    ],
+    "Segmented": [
+      "Segmented.colorText",
+      "Segmented.borderRadius",
+      "Segmented.controlPaddingHorizontal"
+    ],
+    "Select": [
+      "Select.colorBorder",
+      "Select.borderRadius",
+      "Select.lineWidth",
+      "Select.colorBgContainer",
+      "Select.controlPaddingHorizontal",
+      "Select.colorText"
+    ],
+    "Skeleton": [
+      "Skeleton.marginLG",
+      "Skeleton.borderRadiusSM",
+      "Skeleton.colorFillContent"
+    ],
+    "Slider": [
+      "Slider.colorFillSecondary",
+      "Slider.colorPrimary",
+      "Slider.colorTextDescription"
+    ],
+    "Statistic": [
+      "Statistic.colorTextDescription"
+    ],
+    "Steps": [
+      "Steps.marginXS",
+      "Steps.colorPrimary",
+      "Steps.lineWidth",
+      "Steps.colorText"
+    ],
+    "Switch": [
+      "Switch.colorPrimary",
+      "Switch.colorTextLightSolid"
+    ],
+    "Table": [
+      "Table.paddingXS",
+      "Table.colorSplit",
+      "Table.margin",
+      "Table.colorText",
+      "Table.lineWidth",
+      "Table.colorFillAlter"
+    ],
+    "Tabs": [
+      "Tabs.paddingSM",
+      "Tabs.paddingXS",
+      "Tabs.paddingLG",
+      "Tabs.colorPrimary"
+    ],
+    "Typography": [
+      "Typography.colorText",
+      "Typography.colorWarning",
+      "Typography.colorError"
+    ]
+  }
+}

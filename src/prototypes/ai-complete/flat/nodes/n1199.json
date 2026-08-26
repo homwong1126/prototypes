@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 22,
+    "left": 554,
+    "top": 343,
+    "width": 134
+  },
+  "children": [
+    "n1198"
+  ],
+  "height": "32px",
+  "nodeId": "n1199",
+  "originalClass": "ant-btn ant-btn-primary button",
+  "selector": "div.p-table-body.ant-table-body > div.p-table__wrapper > div.p-table__wrapper-static.scroll-at-left:nth-of-type(2) > div.p-table-row.p-table-body-row:nth-of-type(1) > div.p-table-cell.ant-table-cell:nth-of-type(4) > div.p-table-cell__inner",
+  "styleId": "style_227",
+  "tag": "button",
+  "width": "64.6641px"
+}

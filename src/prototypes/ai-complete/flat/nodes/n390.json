@@ -1,0 +1,13 @@
+{
+  "children": [
+    "n388",
+    "n389"
+  ],
+  "height": "44px",
+  "nodeId": "n390",
+  "originalClass": "p-table-cell p-table-header-cell ant-table-thead",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(8) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(4) > span.ant-menu-title-content > div.ellipsis-tooltip-content:nth-of-type(1) > div",
+  "styleId": "style_146",
+  "tag": "div",
+  "width": "120px"
+}

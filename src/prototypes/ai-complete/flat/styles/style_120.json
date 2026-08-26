@@ -1,0 +1,31 @@
+{
+  "custom": {
+    "background": "rgba(8, 18, 37, 0.04) none repeat scroll 0% 0% / auto padding-box border-box",
+    "backgroundColor": "rgba(8, 18, 37, 0.04)",
+    "border": "1px solid rgb(240, 240, 240)",
+    "borderColor": "rgb(240, 240, 240)",
+    "borderRadius": "2px",
+    "borderStyle": "solid",
+    "bottom": "0px",
+    "color": "rgba(0, 0, 0, 0.88)",
+    "fontFamily": "\"Microsoft YaHei\", \"PingFang SC\", -apple-system, system-ui, \"Segoe UI\"",
+    "fontSize": "14px",
+    "left": "0px",
+    "minHeight": "0px",
+    "minWidth": "0px",
+    "overflowWrap": "break-word",
+    "padding": "8px 12px",
+    "paddingBlockEnd": "8px",
+    "paddingBlockStart": "8px",
+    "paddingInlineEnd": "12px",
+    "paddingInlineStart": "12px",
+    "right": "0px",
+    "textAlign": "start",
+    "textDecoration": "none solid rgba(0, 0, 0, 0.88)",
+    "textOverflow": "clip",
+    "top": "0px",
+    "wordWrap": "break-word"
+  },
+  "styleId": "style_120",
+  "tw": "flex relative items-center font-normal leading-snug border visible m-0 pt-2 pr-3 pb-2 pl-3 overflow-visible"
+}

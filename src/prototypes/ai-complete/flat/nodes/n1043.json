@@ -1,0 +1,29 @@
+{
+  "bbox": {
+    "height": 493,
+    "left": 237,
+    "top": 285,
+    "width": 1431
+  },
+  "children": [
+    "n989",
+    "n997",
+    "n1005",
+    "n1008",
+    "n1011",
+    "n1014",
+    "n1017",
+    "n1019",
+    "n1021",
+    "n1023",
+    "n1025",
+    "n1042"
+  ],
+  "height": "46px",
+  "nodeId": "n1043",
+  "originalClass": "p-table-row p-table-body-row p-table-row-level-0",
+  "selector": "#myTable",
+  "styleId": "style_190",
+  "tag": "div",
+  "width": "1800px"
+}

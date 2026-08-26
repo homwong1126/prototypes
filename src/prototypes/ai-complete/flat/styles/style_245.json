@@ -1,0 +1,20 @@
+{
+  "custom": {
+    "background": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+    "backgroundColor": "rgb(255, 255, 255)",
+    "border": "0px solid rgb(229, 231, 235)",
+    "borderColor": "rgb(229, 231, 235)",
+    "borderStyle": "solid",
+    "color": "rgb(44, 62, 80)",
+    "fontFamily": "\"Microsoft YaHei\", Inter, -apple-system, system-ui, \"Segoe UI\"",
+    "fontSize": "15px",
+    "minHeight": "856px",
+    "minWidth": "0px",
+    "textAlign": "start",
+    "textDecoration": "none solid rgb(44, 62, 80)",
+    "textOverflow": "clip",
+    "transition": "color 0.5s, background-color 0.5s"
+  },
+  "styleId": "style_245",
+  "tw": "block static font-normal leading-none border-0 visible m-0 p-0 overflow-visible"
+}

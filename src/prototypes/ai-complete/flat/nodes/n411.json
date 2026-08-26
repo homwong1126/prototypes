@@ -1,0 +1,30 @@
+{
+  "bbox": {
+    "height": 40,
+    "left": 12,
+    "top": 582,
+    "width": 178
+  },
+  "children": [
+    "n336",
+    "n342",
+    "n348",
+    "n354",
+    "n360",
+    "n366",
+    "n372",
+    "n378",
+    "n384",
+    "n390",
+    "n396",
+    "n403",
+    "n410"
+  ],
+  "height": "44px",
+  "nodeId": "n411",
+  "originalClass": "p-table-row p-table-header-row",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(7) > div.ant-menu-submenu-title",
+  "styleId": "style_87",
+  "tag": "div",
+  "width": "1800px"
+}

@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 16,
+    "left": 246,
+    "top": 714,
+    "width": 16
+  },
+  "children": [
+    "n1160"
+  ],
+  "height": "24px",
+  "nodeId": "n1161",
+  "originalClass": "p-table-cell__inner",
+  "selector": "div.p-table-body.ant-table-body > div.p-table__wrapper > div.p-table__wrapper-left.scroll-at-left:nth-of-type(1) > div.p-table-row.p-table-body-row:nth-of-type(9) > div.p-table-cell.ant-table-cell > div.p-table-cell__inner > label.p-selection-wrapper.p-selection-checkbox-wrapper > span.p-selection-checkbox > span.p-selection-checkbox-inner",
+  "styleId": "style_158",
+  "tag": "div",
+  "width": "44px"
+}

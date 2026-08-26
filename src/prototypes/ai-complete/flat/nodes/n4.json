@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n3"
+  ],
+  "height": "0px",
+  "nodeId": "n4",
+  "originalClass": "ant-tabs-nav",
+  "selector": "div.favorites > div.ant-tabs.ant-tabs-top > div.ant-tabs-nav:nth-of-type(1) > div.ant-tabs-nav-wrap > div.ant-tabs-nav-list",
+  "styleId": "style_4",
+  "tag": "div",
+  "width": "1114px"
+}

@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 829,
+    "left": 221,
+    "top": 21,
+    "width": 1463
+  },
+  "children": [
+    "n901"
+  ],
+  "height": "45px",
+  "nodeId": "n902",
+  "originalClass": "p-table-cell ant-table-cell p-table-body-cell is-ellipsis",
+  "selector": "#__qiankun_microapp_wrapper_for_ka__",
+  "styleId": "style_176",
+  "tag": "div",
+  "width": "120px"
+}

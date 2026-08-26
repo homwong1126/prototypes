@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n327"
+  ],
+  "height": "16px",
+  "nodeId": "n328",
+  "originalClass": "p-selection-wrapper p-selection-checkbox-wrapper",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(6) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(4) > span.ant-menu-title-content",
+  "styleId": "style_124",
+  "tag": "label",
+  "width": "16px"
+}

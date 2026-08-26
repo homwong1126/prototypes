@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n903"
+  ],
+  "height": "22px",
+  "nodeId": "n904",
+  "originalClass": "p-table-cell__inner",
+  "selector": "div.adminui-main > div.qiankun-container:nth-of-type(2) > div > qiankun-head > meta:nth-of-type(3)",
+  "styleId": "style_170",
+  "tag": "div",
+  "width": "134px"
+}

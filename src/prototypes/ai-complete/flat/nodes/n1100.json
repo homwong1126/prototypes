@@ -1,0 +1,22 @@
+{
+  "children": [
+    "n541",
+    "n597",
+    "n653",
+    "n709",
+    "n765",
+    "n819",
+    "n875",
+    "n931",
+    "n987",
+    "n1043",
+    "n1099"
+  ],
+  "height": "2852px",
+  "nodeId": "n1100",
+  "originalClass": "p-table__wrapper-static scroll-at-left",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(11) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(4) > span.ant-menu-title-content > div.ellipsis-tooltip-content:nth-of-type(1) > div",
+  "styleId": "style_151",
+  "tag": "div",
+  "width": "1800px"
+}

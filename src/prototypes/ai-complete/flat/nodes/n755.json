@@ -1,0 +1,10 @@
+{
+  "height": "30px",
+  "id": "form_item_4_verificationAmount",
+  "nodeId": "n755",
+  "originalClass": "ant-input-number-input",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(17) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(4)",
+  "styleId": "style_186",
+  "tag": "input",
+  "width": "132px"
+}

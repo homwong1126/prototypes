@@ -1,0 +1,510 @@
+.inventory-manage-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  font-family: "MiSans-Regular", "Microsoft YaHei", "PingFang SC", -apple-system, system-ui, "Segoe UI", sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Header */
+.inventory-header {
+  height: 48px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  flex-shrink: 0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-area {
+  height: 32px;
+}
+
+.logo-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-btn {
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 2px;
+  padding: 0 10px;
+  height: 24px;
+  background: none;
+  cursor: pointer;
+  color: rgb(22, 119, 255);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.header-btn:hover {
+  background: rgba(22, 119, 255, 0.1);
+}
+
+.header-btn.icon-btn {
+  padding: 4px;
+  border: none;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.header-btn.icon-btn:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px;
+  background: rgb(8, 18, 37);
+  border-radius: 24px;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 206px;
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.search-box {
+  margin: 8px 12px;
+  padding: 4px 11px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.menu-list {
+  padding: 8px 0;
+}
+
+.menu-item {
+  padding: 0 24px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.menu-item:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.menu-item.active {
+  background: rgba(8, 18, 37, 0.04);
+  color: rgb(8, 18, 37);
+  justify-content: space-between;
+}
+
+.submenu-wrapper {
+  background: #fff;
+}
+
+.submenu-item {
+  padding: 0 24px 0 48px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.submenu-item:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.submenu-item.active {
+  color: rgb(22, 119, 255);
+}
+
+.fold-button {
+  padding: 8px 0;
+  border-top: 2px solid #e5e7eb;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.88);
+  width: 100%;
+}
+
+/* Content Area */
+.content-area {
+  flex: 1;
+  overflow-y: auto;
+  background: #f5f5f5;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background: #fff;
+  padding: 8px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb-item {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+}
+
+.breadcrumb-item.active {
+  color: rgba(0, 0, 0, 0.88);
+}
+
+/* Page Content */
+.page-content {
+  padding: 16px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+/* Form Section */
+.form-section {
+  margin-bottom: 16px;
+}
+
+.form-section-title {
+  font-size: 16px;
+  font-weight: 520;
+  color: rgba(8, 18, 37, 0.88);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.form-item {
+  flex: 1;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 4px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+}
+
+.form-label-required::before {
+  content: '*';
+  color: #ff4d4f;
+  margin-right: 4px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 4px 11px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.form-input:focus {
+  border-color: rgb(22, 119, 255);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.1);
+}
+
+.form-input[readonly] {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.form-input-disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 4px 11px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  font-size: 14px;
+  min-height: 80px;
+  resize: vertical;
+  transition: all 0.2s;
+}
+
+.form-textarea:focus {
+  border-color: rgb(22, 119, 255);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.1);
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+  padding: 12px 0;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* Button */
+.btn {
+  padding: 4px 11px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn:hover {
+  border-color: rgb(22, 119, 255);
+  color: rgb(22, 119, 255);
+}
+
+.btn-primary {
+  background: rgb(23, 107, 248);
+  color: #fff;
+  border-color: rgb(23, 107, 248);
+}
+
+.btn-primary:hover {
+  background: #1766cc;
+  border-color: #1766cc;
+  color: #fff;
+}
+
+.btn-default {
+  background: #fff;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.btn-default:hover {
+  border-color: rgb(22, 119, 255);
+  color: rgb(22, 119, 255);
+}
+
+.btn-text {
+  background: transparent;
+  color: rgba(0, 0, 0, 0.88);
+  border: none;
+  padding: 4px 15px;
+}
+
+.btn-text:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.btn-link {
+  background: transparent;
+  color: rgb(22, 119, 255);
+  border: none;
+  padding: 0 14px 0 0;
+  height: 24px;
+  font-size: 14px;
+}
+
+.btn-link:hover {
+  color: rgb(40, 126, 255);
+}
+
+/* Table Container */
+.table-container {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-title {
+  font-size: 16px;
+  font-weight: 520;
+  color: rgba(8, 18, 37, 0.88);
+}
+
+.table-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Table Wrapper */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th {
+  background: #fafafa;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.88);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 12px 16px;
+  border-top: 1px solid #e5e7eb;
+  gap: 8px;
+}
+
+.pagination-info {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.pagination-item {
+  min-width: 32px;
+  height: 32px;
+  padding: 0 6px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.88);
+  transition: all 0.3s;
+}
+
+.pagination-item:hover {
+  border-color: rgb(22, 119, 255);
+  color: rgb(22, 119, 255);
+}
+
+.pagination-item.active {
+  background: rgb(23, 107, 248);
+  border-color: rgb(23, 107, 248);
+  color: #fff;
+}
+
+.pagination-disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Footer Actions */
+.footer-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer-btn {
+  padding: 4px 16px;
+  height: 32px;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.footer-btn-cancel {
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.footer-btn-cancel:hover {
+  border-color: rgb(22, 119, 255);
+  color: rgb(22, 119, 255);
+}
+
+.footer-btn-save {
+  background: rgb(23, 107, 248);
+  border: 1px solid rgb(23, 107, 248);
+  color: #fff;
+}
+
+.footer-btn-save:hover {
+  background: #1766cc;
+  border-color: #1766cc;
+}

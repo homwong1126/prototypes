@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 0,
+    "left": 168,
+    "top": 882,
+    "width": 10
+  },
+  "children": [
+    "n580"
+  ],
+  "height": "14px",
+  "nodeId": "n581",
+  "originalClass": "anticon anticon-up ant-input-number-handler-up-inner",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(14) > div.ant-menu-submenu-title > i.ant-menu-submenu-arrow",
+  "styleId": "style_182",
+  "tag": "span",
+  "width": "14px"
+}

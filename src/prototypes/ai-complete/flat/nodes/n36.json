@@ -1,0 +1,15 @@
+{
+  "bbox": {
+    "height": 12,
+    "left": 142,
+    "top": 71,
+    "width": 12
+  },
+  "height": "22px",
+  "nodeId": "n36",
+  "originalClass": "ant-input",
+  "selector": "span.ant-input-clear-icon-hidden.ant-input-clear-icon-has-suffix > span.anticon.anticon-close-circle",
+  "styleId": "style_31",
+  "tag": "input",
+  "width": "110.172px"
+}

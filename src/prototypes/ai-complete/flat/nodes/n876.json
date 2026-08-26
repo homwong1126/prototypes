@@ -1,0 +1,16 @@
+{
+  "bbox": {
+    "height": 0,
+    "left": 221,
+    "top": 82,
+    "width": 1489
+  },
+  "height": "22px",
+  "nodeId": "n876",
+  "originalClass": "p-table-cell__inner",
+  "selector": "div.route-tags > div.ant-tabs.ant-tabs-top:nth-of-type(2) > div.ant-tabs-content-holder:nth-of-type(2)",
+  "styleId": "style_158",
+  "tag": "div",
+  "text": "8",
+  "width": "8.40625px"
+}

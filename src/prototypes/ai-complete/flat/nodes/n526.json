@@ -1,0 +1,12 @@
+{
+  "children": [
+    "n525"
+  ],
+  "height": "15px",
+  "nodeId": "n526",
+  "originalClass": "ant-input-number-handler ant-input-number-handler-up",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(12) > ul.ant-menu.ant-menu-sub > li.ant-menu-item:nth-of-type(5) > span.ant-menu-title-content",
+  "styleId": "style_183",
+  "tag": "span",
+  "width": "22px"
+}

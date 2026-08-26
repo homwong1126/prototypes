@@ -1,0 +1,19 @@
+{
+  "bbox": {
+    "height": 40,
+    "left": 12,
+    "top": 262,
+    "width": 178
+  },
+  "children": [
+    "n257",
+    "n303"
+  ],
+  "height": "130.141px",
+  "nodeId": "n304",
+  "originalClass": "ant-card ant-card-bordered",
+  "selector": "ul.ant-menu.ant-menu-root > li.ant-menu-submenu.ant-menu-submenu-inline:nth-of-type(5) > div.ant-menu-submenu-title",
+  "styleId": "style_104",
+  "tag": "div",
+  "width": "1462.83px"
+}

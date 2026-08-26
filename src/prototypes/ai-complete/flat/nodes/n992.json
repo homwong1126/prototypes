@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 16,
+    "left": 246,
+    "top": 300,
+    "width": 16
+  },
+  "children": [
+    "n991"
+  ],
+  "height": "22px",
+  "nodeId": "n992",
+  "originalClass": "ant-form-item-control-input",
+  "selector": "div.p-table-header.not-data-area > div.p-table__wrapper > div.p-table__wrapper-left.scroll-at-left:nth-of-type(1) > div.p-table-row.p-table-header-row > div.p-table-cell.p-table-header-cell > label.p-selection-wrapper.p-selection-checkbox-wrapper",
+  "styleId": "style_166",
+  "tag": "div",
+  "width": "84px"
+}

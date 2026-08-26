@@ -1,0 +1,18 @@
+{
+  "bbox": {
+    "height": 22,
+    "left": 1596,
+    "top": 297,
+    "width": 28
+  },
+  "children": [
+    "n1083"
+  ],
+  "height": "15px",
+  "nodeId": "n1084",
+  "originalClass": "ant-input-number-handler ant-input-number-handler-up",
+  "selector": "div.p-table-header.not-data-area > div.p-table__wrapper > div.p-table__wrapper-right:nth-of-type(3) > div.p-table-row.p-table-header-row > div.p-table-cell.p-table-header-cell > div.p-table-cell__inner:nth-of-type(1) > span",
+  "styleId": "style_183",
+  "tag": "span",
+  "width": "22px"
+}

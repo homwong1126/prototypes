@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "sourceName": "local-design-system",
+    "originalDetailUrl": "",
+    "fallbackRawUrl": "",
+    "mirrorSource": "",
+    "websiteUrl": ""
+  },
+  "identity": {
+    "id": "P0-901",
+    "slug": "aurora-ops",
+    "brand": "Aurora Ops",
+    "titleZh": "Aurora Ops 设计系统",
+    "titleEn": "Aurora Ops",
+    "descriptionZh": "面向高密度业务管理与工单操作的设计系统，强调清晰分层、稳定操作和冷静的蓝色系统感。",
+    "descriptionEn": "Calm operations system for dense workflows, service management and enterprise dashboards."
+  },
+  "tags": {
+    "sourceTags": [
+      "local"
+    ],
+    "generatedTags": [
+      "request-flow",
+      "enterprise",
+      "operations",
+      "dense-ui"
+    ],
+    "designTags": [
+      "service-management",
+      "workflow",
+      "dashboard",
+      "table-heavy"
+    ],
+    "distributionTags": [
+      "企业后台",
+      "工单管理",
+      "服务调度",
+      "高密度表格",
+      "运营看板",
+      "流程系统"
+    ]
+  },
+  "assets": {
+    "designMd": {
+      "path": "DESIGN.md",
+      "sourcePath": "DESIGN.md"
+    },
+    "tailwind": {
+      "path": "tw.css",
+      "sourcePath": "tw.css"
+    },
+    "tokens": {
+      "path": "assets/tokens.json",
+      "method": "derived_from_design_md_and_metadata"
+    },
+    "cover": null,
+    "previewHtml": {
+      "type": "source-preview-html",
+      "path": "assets/preview.html",
+      "publicPath": "assets/preview.html",
+      "importPath": "./assets/preview.html?url",
+      "sourcePath": "assets/preview.html"
+    }
+  },
+  "tokens": {
+    "palette": [
+      "#0b1020",
+      "#11182b",
+      "#16203a",
+      "#1c2744",
+      "#223055",
+      "#28324a",
+      "#38445f",
+      "#4b5875",
+      "#e8edf6",
+      "#b7c2d6",
+      "#7f8aa3",
+      "#5e6780",
+      "#2f7cf6",
+      "#4b90ff",
+      "#1f6ae6",
+      "#1fb878",
+      "#e0a82e",
+      "#e15858",
+      "#4ca3ff",
+      "#f7f9fd"
+    ],
+    "typography": {
+      "display": "Aurora Display",
+      "body": "Aurora Text",
+      "mono": "Aurora Mono",
+      "hints": [
+        "Inter",
+        "SF Pro Display",
+        "SF Pro Text",
+        "ui-monospace",
+        "system-ui",
+        "sans-serif"
+      ]
+    },
+    "radius": {
+      "control": "8px",
+      "card": "12px",
+      "preview": "16px",
+      "pill": "9999px",
+      "source": "design-md"
+    },
+    "spacing": {
+      "xxs": "4px",
+      "xs": "8px",
+      "sm": "12px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "32px",
+      "xxl": "40px",
+      "section": "88px",
+      "source": "design-md"
+    }
+  },
+  "previewImages": [
+    {
+      "type": "local-preview",
+      "path": "assets/preview.html"
+    }
+  ],
+  "display": {
+    "brand": "Aurora Ops 设计系统",
+    "brandAlias": "Aurora Ops",
+    "description": "面向高密度业务管理与工单操作的设计系统，强调清晰分层、稳定操作和冷静的蓝色系统感。",
+    "descriptionEn": "Calm operations system for dense workflows, service management and enterprise dashboards.",
+    "variant": "enterprise-operations",
+    "distributionTags": [
+      "企业后台",
+      "工单管理",
+      "服务调度",
+      "高密度表格",
+      "运营看板",
+      "流程系统"
+    ],
+    "fontStylesheets": [],
+    "palette": [
+      { "color": "#0b1020", "labelZh": "主色", "labelEn": "Primary", "textColor": "#ffffff" },
+      { "color": "#4b90ff", "labelZh": "主色悬停", "labelEn": "Primary Hover", "textColor": "#ffffff" },
+      { "color": "#16203a", "labelZh": "辅助色", "labelEn": "Secondary", "textColor": "#e8edf6" },
+      { "color": "#1c2744", "labelZh": "强调色", "labelEn": "Accent", "textColor": "#e8edf6" },
+      { "color": "#11182b", "labelZh": "背景色", "labelEn": "Background", "textColor": "#e8edf6" },
+      { "color": "#223055", "labelZh": "表面色", "labelEn": "Surface", "textColor": "#e8edf6" },
+      { "color": "#e8edf6", "labelZh": "文本色", "labelEn": "Text", "textColor": "#0b1020" },
+      { "color": "#28324a", "labelZh": "边框色", "labelEn": "Border", "textColor": "#e8edf6" },
+      { "color": "#7f8aa3", "labelZh": "颜色 9", "labelEn": "Color 9", "textColor": "#ffffff" },
+      { "color": "#1fb878", "labelZh": "颜色 10", "labelEn": "Success", "textColor": "#ffffff" },
+      { "color": "#e0a82e", "labelZh": "颜色 11", "labelEn": "Warning", "textColor": "#0b1020" },
+      { "color": "#e15858", "labelZh": "颜色 12", "labelEn": "Danger", "textColor": "#ffffff" }
+    ],
+    "shadows": [],
+    "borders": [
+      { "label": "边框 1 - Border 1", "value": "#28324a", "cssValue": "#28324a", "description": "hairline" },
+      { "label": "边框 2 - Border 2", "value": "#38445f", "cssValue": "#38445f", "description": "hairline-strong" },
+      { "label": "边框 3 - Border 3", "value": "#4b5875", "cssValue": "#4b5875", "description": "hairline-tertiary" }
+    ],
+    "typography": [
+      "Aurora Display",
+      "Aurora Text",
+      "Aurora Mono",
+      "Inter",
+      "SF Pro Display",
+      "SF Pro Text"
+    ],
+    "previewImages": [
+      { "type": "local-preview", "path": "assets/preview.html" }
+    ],
+    "panels": [
+      { "eyebrow": "场景", "title": "高密度工单操作", "body": "适合服务台、调度、审批和车辆档案等高频业务页面。" },
+      { "eyebrow": "结构", "title": "蓝色系统感", "body": "用单一主色与多层表面分层，保障信息密度与阅读秩序。" },
+      { "eyebrow": "规则", "title": "状态优先于装饰", "body": "状态色只用于风险、成功、警示和信息提示，不做无意义点缀。" }
+    ],
+    "usageGuidance": {
+      "do": [
+        "建议：Use the blue primary for the main action and focus states only.",
+        "建议：Use layered surfaces to separate dense content blocks.",
+        "建议：Keep tables sticky and compact for operational scanning.",
+        "建议：Use status colors only when a process state changes.",
+        "建议：Keep form fields and buttons aligned to an 8px rhythm."
+      ],
+      "dont": [
+        "避免：add decorative gradients or glowing UI effects.",
+        "避免：mix unrelated accent colors into the core system.",
+        "避免：over-round controls into pill-heavy surfaces.",
+        "避免：use shadows as the main hierarchy mechanism.",
+        "避免：make important actions ambiguous or low contrast."
+      ]
+    },
+    "radius": {
+      "control": "8px",
+      "card": "12px",
+      "preview": "16px",
+      "pill": "9999px",
+      "source": "design-md"
+    },
+    "spacing": {
+      "xxs": "4px",
+      "xs": "8px",
+      "sm": "12px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "32px",
+      "xxl": "40px",
+      "section": "88px",
+      "source": "design-md"
+    }
+  },
+  "status": {
+    "displayPage": "done",
+    "collectionErrors": []
+  }
+}
