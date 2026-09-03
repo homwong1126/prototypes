@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="300" viewBox="0 0 1600 300">
+  <defs>
+    <style>
+      .actor { fill: #333; }
+      .step { fill: #e3f2fd; stroke: #1976d2; stroke-width: 2; }
+      .step-highlight { fill: #c8e6c9; stroke: #388e3c; stroke-width: 2; }
+      .step-warning { fill: #fff9c4; stroke: #f57c00; stroke-width: 2; }
+      .step-info { fill: #bbdefb; stroke: #1976d2; stroke-width: 2; }
+      .text { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 13px; fill: #333; text-anchor: middle; }
+      .text-small { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 11px; fill: #666; text-anchor: middle; }
+      .arrow { fill: none; stroke: #666; stroke-width: 2; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#666" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="800" y="30" class="text" style="font-size: 18px; font-weight: 600;">预收款管理用户旅程</text>
+  
+  <!-- Actor -->
+  <ellipse cx="80" cy="120" rx="20" ry="30" class="actor" />
+  <rect x="60" y="150" width="40" height="50" class="actor" />
+  <line x1="60" y1="170" x2="40" y2="200" stroke="#333" stroke-width="3" />
+  <line x1="100" y1="170" x2="120" y2="200" stroke="#333" stroke-width="3" />
+  <text x="80" y="230" class="text-small">收银员/服务顾问</text>
+  
+  <!-- Step 1: 进入预收款管理 -->
+  <rect x="150" y="100" width="130" height="50" rx="8" class="step" />
+  <text x="215" y="130" class="text">进入预收款管理</text>
+  <line x1="120" y1="150" x2="150" y2="125" class="arrow" />
+  
+  <!-- Step 2: 点击新增预收款 -->
+  <rect x="310" y="100" width="130" height="50" rx="8" class="step" />
+  <text x="375" y="130" class="text">点击新增预收款</text>
+  <line x1="280" y1="125" x2="310" y2="125" class="arrow" />
+  
+  <!-- Step 3: 搜索车辆信息 -->
+  <rect x="470" y="100" width="130" height="50" rx="8" class="step" />
+  <text x="535" y="125" class="text">搜索车辆信息</text>
+  <text x="535" y="140" class="text-small">(车牌/VIN/客户/手机)</text>
+  <line x1="440" y1="125" x2="470" y2="125" class="arrow" />
+  
+  <!-- Step 4: 自动回填信息 -->
+  <rect x="630" y="100" width="130" height="50" rx="8" class="step-highlight" />
+  <text x="695" y="125" class="text" style="font-weight: 600;">自动回填信息</text>
+  <text x="695" y="140" class="text-small">客户+车辆信息</text>
+  <line x1="600" y1="125" x2="630" y2="125" class="arrow" />
+  
+  <!-- Step 5: 填写预收信息 -->
+  <rect x="790" y="100" width="130" height="50" rx="8" class="step" />
+  <text x="855" y="125" class="text">填写预收信息</text>
+  <text x="855" y="140" class="text-small">金额+支付方式</text>
+  <line x1="760" y1="125" x2="790" y2="125" class="arrow" />
+  
+  <!-- Step 6: 保存生成预收单 -->
+  <rect x="950" y="100" width="130" height="50" rx="8" class="step-highlight" />
+  <text x="1015" y="125" class="text" style="font-weight: 600;">保存生成预收单</text>
+  <text x="1015" y="140" class="text-small">状态:待抵扣</text>
+  <line x1="920" y1="125" x2="950" y2="125" class="arrow" />
+  
+  <!-- Step 7: 维修结算关联 -->
+  <rect x="1110" y="100" width="130" height="50" rx="8" class="step" />
+  <text x="1175" y="125" class="text">维修结算关联</text>
+  <text x="1175" y="140" class="text-small">关联结算单</text>
+  <line x1="1080" y1="125" x2="1110" y2="125" class="arrow" />
+  
+  <!-- Step 8: 计算抵扣方案 -->
+  <rect x="1270" y="100" width="130" height="50" rx="8" class="step-warning" />
+  <text x="1335" y="120" class="text" style="font-weight: 600;">计算抵扣方案</text>
+  <text x="1335" y="135" class="text-small">仅抵扣客户自费</text>
+  <text x="1335" y="148" class="text-small" style="font-size: 10px;">min(余额,自费应收)</text>
+  <line x1="1240" y1="125" x2="1270" y2="125" class="arrow" />
+  
+  <!-- Step 9: 确认抵扣/退款 -->
+  <rect x="1430" y="100" width="130" height="50" rx="8" class="step-info" />
+  <text x="1495" y="120" class="text" style="font-weight: 600;">确认抵扣/退款</text>
+  <text x="1495" y="135" class="text-small">保留余额 或</text>
+  <text x="1495" y="148" class="text-small">发起退款</text>
+  <line x1="1400" y1="125" x2="1430" y2="125" class="arrow" />
+  
+  <!-- Bottom timeline -->
+  <line x1="150" y1="200" x2="1560" y2="200" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5" />
+  <text x="215" y="220" class="text-small" style="fill: #999;">登记阶段</text>
+  <text x="535" y="220" class="text-small" style="fill: #999;">信息采集</text>
+  <text x="855" y="220" class="text-small" style="fill: #999;">创建预收</text>
+  <text x="1175" y="220" class="text-small" style="fill: #999;">结算联动</text>
+  <text x="1495" y="220" class="text-small" style="fill: #999;">资金处理</text>
+  
+  <!-- Legend -->
+  <rect x="50" y="260" width="15" height="15" rx="2" class="step" />
+  <text x="75" y="272" class="text-small" style="text-anchor: start;">常规步骤</text>
+  
+  <rect x="180" y="260" width="15" height="15" rx="2" class="step-highlight" />
+  <text x="205" y="272" class="text-small" style="text-anchor: start;">系统自动</text>
+  
+  <rect x="310" y="260" width="15" height="15" rx="2" class="step-warning" />
+  <text x="335" y="272" class="text-small" style="text-anchor: start;">核心规则</text>
+  
+  <rect x="440" y="260" width="15" height="15" rx="2" class="step-info" />
+  <text x="465" y="272" class="text-small" style="text-anchor: start;">决策点</text>
+</svg>

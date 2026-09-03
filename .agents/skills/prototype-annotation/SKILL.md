@@ -43,9 +43,12 @@ description: 原型标注替代 PRD 时使用：把页面目录、组件说明�
 - `folder`：分组目录节点。
 - `route`：交给宿主处理，可切当前原型页面、状态、数据源或路由。
 - `markdown`：打开内联 Markdown 文档。
+- `markdownPath`：只用于目录 Markdown 文档，可指向当前原型目录内的 `docs/*.md`；客户端构建链路会内联为运行时读取的 `markdown`。
 - `link`：打开其他原型地址、资源地址或外部链接。
 
 多原型入口优先用 `link` 指向 `/prototypes/<prototype-id>` 或完整 URL；当前原型内部页面/状态入口再用 `route`。
+
+这里的相对 `link` 只用于 annotation 运行时数据。回复用户、请求验收或给预览入口时，优先使用 ready 检查返回的完整 `serverUrl`；管理端不可用时才使用 `targetUrl`。
 
 ## 组件标注
 
@@ -56,6 +59,7 @@ description: 原型标注替代 PRD 时使用：把页面目录、组件说明�
 - `pageId` 可以是字符串或字符串数组，用于限制 marker 出现在哪些页面/状态。
 - `hasMarkdown: false` 使用 `annotationText` 和 `images`。
 - `hasMarkdown: true` 使用 `markdownMap[node.id]`，运行时会忽略 `annotationText` 和 `images`。
+- 页面有对话框或遮罩层时，检查实际 DOM，把包含弹窗内容的活动层根选择器写入 `presentation.layerSelectors`。
 
 ## 组件状态
 
@@ -72,3 +76,5 @@ description: 原型标注替代 PRD 时使用：把页面目录、组件说明�
 - 不要把目录节点误写成组件标注节点；目录没有 marker。
 - 不要把组件状态只写进页面本地 state；需要出现在标注面板里的状态要写进节点 `controls`。
 - 不要依赖不稳定 CSS 选择器作为唯一定位方式；能补稳定属性时优先补。
+- `showBrandLink`、`defaultMarkerIndexVisible`、`renderToolbarActions` 这类展示增强选项只有在用户明确要求品牌入口、默认显示序号或工具栏自定义动作时才设置；常规标注接入保持默认配置。
+- Markdown 图片必须随原型发布：放到当前原型 `assets/` 并用最终可访问 URL；不要用本地路径、`/api/markdown-file` 或 `../assets/...`。

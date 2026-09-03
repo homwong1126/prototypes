@@ -1,0 +1,104 @@
+- generic [ref=f2e3]:
+  - banner [ref=f2e4]:
+    - img "Logo" [ref=f2e7]
+    - generic [ref=f2e8]:
+      - button [ref=f2e9] [cursor=pointer]
+      - button "中文" [ref=f2e12] [cursor=pointer]
+      - generic [ref=f2e16]: 系统管理员
+  - generic [ref=f2e22]:
+    - complementary [ref=f2e23]:
+      - textbox "搜索菜单..." [ref=f2e25]
+      - generic [ref=f2e28]:
+        - generic [ref=f2e29] [cursor=pointer]: 限价管理
+        - generic [ref=f2e33]:
+          - generic [ref=f2e34] [cursor=pointer]: 限价列表
+          - generic [ref=f2e35] [cursor=pointer]: 限价规则
+          - generic [ref=f2e36] [cursor=pointer]: 限价申请
+          - generic [ref=f2e37] [cursor=pointer]: 用户管理
+          - generic [ref=f2e38] [cursor=pointer]: 资质审核
+          - generic [ref=f2e39] [cursor=pointer]: 优惠券核销
+      - button [ref=f2e40] [cursor=pointer]
+    - main [ref=f2e43]:
+      - generic [ref=f2e44]: 限价管理/限价列表
+      - generic [ref=f2e46]:
+        - generic [ref=f2e48]:
+          - generic [ref=f2e49]: 筛选条件
+          - generic [ref=f2e50]:
+            - generic [ref=f2e51]:
+              - generic [ref=f2e52]: 限价类型
+              - combobox [ref=f2e53]:
+                - option "全部" [selected]
+                - option "常规车"
+                - option "冰雹车"
+                - option "超期车"
+                - option "外采车"
+                - option "公告到期车"
+                - option "虚传车"
+                - option "政策到期车"
+                - option "其他"
+            - generic [ref=f2e54]:
+              - generic [ref=f2e55]: 年份
+              - combobox [ref=f2e56]:
+                - option "全部" [selected]
+                - option "2024"
+                - option "2025"
+                - option "2026"
+            - generic [ref=f2e57]:
+              - generic [ref=f2e58]: 月份
+              - combobox [ref=f2e59]:
+                - option "全部" [selected]
+                - option "1"
+                - option "2"
+                - option "3"
+                - option "4"
+                - option "5"
+                - option "6"
+                - option "7"
+                - option "8"
+                - option "9"
+                - option "10"
+                - option "11"
+                - option "12"
+        - generic [ref=f2e60]:
+          - generic [ref=f2e61]:
+            - generic [ref=f2e62]: 限价列表
+            - button "新增" [ref=f2e64] [cursor=pointer]
+          - table [ref=f2e67]:
+            - rowgroup [ref=f2e68]:
+              - row [ref=f2e69]:
+                - columnheader "序号" [ref=f2e70]
+                - columnheader "限价类型" [ref=f2e71]
+                - columnheader "年份" [ref=f2e72]
+                - columnheader "月份" [ref=f2e73]
+                - columnheader "创建时间" [ref=f2e74]
+                - columnheader "状态" [ref=f2e75]
+                - columnheader "操作" [ref=f2e76]
+            - rowgroup [ref=f2e77]:
+              - row [ref=f2e78]:
+                - cell "1" [ref=f2e79]
+                - cell "常规车" [ref=f2e80]
+                - cell "-" [ref=f2e81]
+                - cell "-" [ref=f2e82]
+                - cell "2026-01-05 09:30:00" [ref=f2e83]
+                - cell "已生效" [ref=f2e84]
+                - cell [ref=f2e86]:
+                  - button "编辑" [ref=f2e87] [cursor=pointer]
+              - row [ref=f2e88]:
+                - cell "2" [ref=f2e89]
+                - cell "冰雹车" [ref=f2e90]
+                - cell "2026" [ref=f2e91]
+                - cell "6" [ref=f2e92]
+                - cell "2026-06-10 14:20:00" [ref=f2e93]
+                - cell "已生效" [ref=f2e94]
+                - cell [ref=f2e96]:
+                  - button "编辑" [ref=f2e97] [cursor=pointer]
+              - row [ref=f2e98]:
+                - cell "3" [ref=f2e99]
+                - cell "超期车" [ref=f2e100]
+                - cell "2026" [ref=f2e101]
+                - cell "7" [ref=f2e102]
+                - cell "2026-07-15 16:40:00" [ref=f2e103]
+                - cell "已生效" [ref=f2e104]
+                - cell [ref=f2e106]:
+                  - button "编辑" [ref=f2e107] [cursor=pointer]
+  - button [ref=f2e109] [cursor=pointer]

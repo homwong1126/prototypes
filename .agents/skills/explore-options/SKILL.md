@@ -28,7 +28,8 @@ description: Use when a Make client批注 or user request asks for 多方案探�
 
 如果用户要求“看看不同方向”“能切换比较”，或当前实现适合在页面内切换方案，就把方案做成 tweak：
 
-- React 原型优先使用 `axhub-genie-editor-react` 的 `createGenieEditorReactTweakStore` 和 `useRegisterGenieEditorTweak`。
+- `@axhub/commentary-react` 只有把方案做成页面内可切换的 React tweak 时才需要；普通方案探索不依赖它。
+- React 原型优先使用 `@axhub/commentary-react` 的 `createCommentaryReactTweakStore` 和 `useRegisterCommentaryTweak`。
 - 复用项目现有 `schema / values / adapter / update` 模式，不另造平行配置。
 - 方案字段优先用 `card`，不要用普通下拉。
 - 每个 `options[]` 项至少包含 `label`、`description`、`value`。
@@ -60,10 +61,10 @@ React 最小形态：
 ```tsx
 import React from 'react';
 import {
-  createGenieEditorReactTweakStore,
-  useGenieEditorReactTweakStore,
-  useRegisterGenieEditorTweak,
-} from 'axhub-genie-editor-react';
+  createCommentaryReactTweakStore,
+  useCommentaryReactTweakStore,
+  useRegisterCommentaryTweak,
+} from '@axhub/commentary-react';
 
 const optionSchema = {
   title: '多方案探索',
@@ -82,12 +83,12 @@ const optionSchema = {
 function Example() {
   const rootRef = React.useRef<HTMLDivElement | null>(null);
   const store = React.useMemo(
-    () => createGenieEditorReactTweakStore({ variant: 'balanced' }),
+    () => createCommentaryReactTweakStore({ variant: 'balanced' }),
     [],
   );
-  const values = useGenieEditorReactTweakStore(store);
+  const values = useCommentaryReactTweakStore(store);
 
-  useRegisterGenieEditorTweak({
+  useRegisterCommentaryTweak({
     elementRef: rootRef,
     schema: optionSchema,
     store,

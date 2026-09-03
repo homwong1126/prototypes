@@ -1,0 +1,132 @@
+- generic [ref=f6e3]:
+  - banner [ref=f6e4]:
+    - img "Logo" [ref=f6e6]
+    - generic [ref=f6e7]:
+      - button "中文" [ref=f6e8] [cursor=pointer]
+      - generic [ref=f6e12]: 系统管理员
+  - generic [ref=f6e18]:
+    - complementary [ref=f6e19]:
+      - textbox "搜索菜单..." [ref=f6e21]
+      - generic [ref=f6e24]:
+        - generic [ref=f6e25] [cursor=pointer]: 限价管理
+        - generic [ref=f6e29]:
+          - generic [ref=f6e30] [cursor=pointer]: 限价列表
+          - generic [ref=f6e31] [cursor=pointer]: 限价规则
+          - generic [ref=f6e32] [cursor=pointer]: 限价申请
+          - generic [ref=f6e33] [cursor=pointer]: 用户管理
+          - generic [ref=f6e34] [cursor=pointer]: 资质审核
+          - generic [ref=f6e35] [cursor=pointer]: 优惠券核销
+      - button [ref=f6e36] [cursor=pointer]
+    - main [ref=f6e39]:
+      - generic [ref=f6e40]:
+        - generic [ref=f6e41]: 限价管理
+        - generic [ref=f6e42]: /
+        - generic [ref=f6e43]: 限价申请
+        - generic [ref=f6e44]: ">"
+        - generic [ref=f6e45]: 申请审核
+      - generic [ref=f6e46]:
+        - generic [ref=f6e47]:
+          - generic [ref=f6e48]: 申请单信息
+          - generic [ref=f6e52]:
+            - generic [ref=f6e53]:
+              - generic [ref=f6e54]: 申请单号
+              - textbox [disabled] [ref=f6e56]: XJ3463-1202608260001
+              - paragraph [ref=f6e57]: 自动生成：XJ + 经销商ERP号(3463-1) + 年月日 + 流水号，不可编辑
+            - generic [ref=f6e58]:
+              - generic [ref=f6e59]: 门店销售ERP号
+              - textbox [disabled] [ref=f6e61]: 3463-1
+            - generic [ref=f6e62]:
+              - generic [ref=f6e63]: 门店名称
+              - textbox [disabled] [ref=f6e65]: 上海QQ
+        - generic [ref=f6e66]:
+          - generic [ref=f6e67]: 车辆信息
+          - generic [ref=f6e71]:
+            - generic [ref=f6e72]:
+              - generic [ref=f6e73]: VIN码
+              - generic [ref=f6e74]: LVTDB21B6TDN02238
+            - generic [ref=f6e75]:
+              - generic [ref=f6e76]: SAP物料编号
+              - generic [ref=f6e77]: T64706TCWJW0015
+            - generic [ref=f6e78]:
+              - generic [ref=f6e79]: 物料编号
+              - generic [ref=f6e80]: T64706TCWJW0015
+            - generic [ref=f6e81]:
+              - generic [ref=f6e82]: 品牌
+              - generic [ref=f6e83]: 奇瑞
+            - generic [ref=f6e84]:
+              - generic [ref=f6e85]: 产品系列
+              - generic [ref=f6e86]: 瑞虎系列
+            - generic [ref=f6e87]:
+              - generic [ref=f6e88]: 车系
+              - generic [ref=f6e89]: 瑞虎8
+            - generic [ref=f6e90]:
+              - generic [ref=f6e91]: 车型
+              - generic [ref=f6e92]: 第五代瑞虎8-豹款
+            - generic [ref=f6e93]:
+              - generic [ref=f6e94]: 年款
+              - generic [ref=f6e95]: 2026款
+            - generic [ref=f6e96]:
+              - generic [ref=f6e97]: 动力
+              - generic [ref=f6e98]: 1.6T-7DCT
+            - generic [ref=f6e99]:
+              - generic [ref=f6e100]: 版型
+              - generic [ref=f6e101]: 尊贵型
+            - generic [ref=f6e102]:
+              - generic [ref=f6e103]: 内饰颜色
+              - generic [ref=f6e104]: 琥珀棕
+            - generic [ref=f6e105]:
+              - generic [ref=f6e106]: 外观颜色
+              - generic [ref=f6e107]: 石墨黑(新)
+            - generic [ref=f6e108]:
+              - generic [ref=f6e109]: 采购订单类型
+              - generic [ref=f6e110]: 周订单
+            - generic [ref=f6e111]:
+              - generic [ref=f6e112]: 采购类型
+              - generic [ref=f6e113]: 厂家
+            - generic [ref=f6e114]:
+              - generic [ref=f6e115]: 生产日期
+              - generic [ref=f6e116]: 2026-07-30
+            - generic [ref=f6e117]:
+              - generic [ref=f6e118]: 入库时间
+              - generic [ref=f6e119]: 2026-08-17 10:47:47
+            - generic [ref=f6e120]:
+              - generic [ref=f6e121]: 采购价格（含税）
+              - generic [ref=f6e122]: 75,180 元
+        - generic [ref=f6e123]:
+          - generic [ref=f6e124]: 限价信息
+          - generic [ref=f6e128]:
+            - generic [ref=f6e129]:
+              - generic [ref=f6e130]: 综合毛利限价
+              - generic [ref=f6e131]:
+                - text: 3,000
+                - emphasis [ref=f6e132]: 元
+            - generic [ref=f6e133]: →
+            - generic [ref=f6e134]:
+              - generic [ref=f6e135]: 预估综合毛利
+              - generic [ref=f6e136]:
+                - text: 2,500
+                - emphasis [ref=f6e137]: 元
+              - generic [ref=f6e138]: 低于限价 500 元，需审核确认
+          - generic [ref=f6e141]:
+            - generic [ref=f6e142]: 所需审核层级
+            - generic [ref=f6e143]: 大区审核
+            - generic [ref=f6e146]: 超出限价 500 元，≤ 大区审核权限
+        - generic [ref=f6e147]:
+          - generic [ref=f6e148]: 审核信息
+          - generic [ref=f6e152]:
+            - generic [ref=f6e153]: 审核状态
+            - generic [ref=f6e154]: 待审核
+          - generic [ref=f6e155]:
+            - generic [ref=f6e156]:
+              - generic [ref=f6e157]: 审核人
+              - textbox [disabled] [ref=f6e159]: —
+            - generic [ref=f6e160]:
+              - generic [ref=f6e161]: 审核时间
+              - textbox [disabled] [ref=f6e163]: —
+          - generic [ref=f6e164]:
+            - generic [ref=f6e165]: 审核意见
+            - textbox "请输入审核意见..." [ref=f6e166]
+        - generic [ref=f6e167]:
+          - button "返回" [ref=f6e168] [cursor=pointer]
+          - button "驳回" [ref=f6e169] [cursor=pointer]
+          - button "通过" [ref=f6e173] [cursor=pointer]

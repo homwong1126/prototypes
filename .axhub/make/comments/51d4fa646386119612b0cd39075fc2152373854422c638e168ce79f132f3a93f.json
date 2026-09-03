@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 3,
+  "kind": "prototype-edit-comments",
+  "resource": {
+    "id": "price-limit-apply",
+    "targetPath": "prototypes/price-limit-apply",
+    "filePath": ".axhub/make/comments/51d4fa646386119612b0cd39075fc2152373854422c638e168ce79f132f3a93f.json"
+  },
+  "comments": [
+    {
+      "label": "button(\"驳回\")",
+      "locator": {
+        "selectors": [
+          ".pla-footer-btn-reject",
+          ".pla-footer-btn.pla-footer-btn-reject",
+          "body > div > div > div > main > div:nth-of-type(2) > div:nth-of-type(5) > button:nth-of-type(2)",
+          "#root div > div > main > div:nth-of-type(2) > div:nth-of-type(5) > button:nth-of-type(2)"
+        ],
+        "fingerprint": "button|class=pla-footer-btn.pla-footer-btn-reject|text=驳回",
+        "path": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          4,
+          1
+        ]
+      },
+      "marker": {
+        "clientX": 826.0390625,
+        "clientY": 816.375,
+        "documentX": 826.0390625,
+        "documentY": 816.375,
+        "xPercent": 48.306377923976605,
+        "y": 816.375,
+        "isFixed": false,
+        "offsetX": 69.0390625,
+        "offsetY": 24.5,
+        "dirtySince": 1788326220715
+      },
+      "id": "5092bbdf-a471-43ee-85e6-a05a23aebf77",
+      "state": "completed",
+      "comment": "大区审核是第一个审批节点，无驳回按钮",
+      "pageScope": "/prototypes/price-limit-apply",
+      "provider": "codex",
+      "requestId": "annotation-mtjn9b8q-ctniy8",
+      "sessionId": "annotation-mtjn9b8q-ctniy8",
+      "updatedAt": 1788326234030,
+      "message": "修改完成",
+      "code": null
+    }
+  ],
+  "images": []
+}

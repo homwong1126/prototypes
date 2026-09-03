@@ -1,0 +1,128 @@
+- generic [ref=f7e3]:
+  - banner [ref=f7e4]:
+    - img "Logo" [ref=f7e6]
+    - generic [ref=f7e7]:
+      - button "中文" [ref=f7e8] [cursor=pointer]
+      - generic [ref=f7e12]: 系统管理员
+  - generic [ref=f7e18]:
+    - complementary [ref=f7e19]:
+      - textbox "搜索菜单..." [ref=f7e21]
+      - generic [ref=f7e24]:
+        - generic [ref=f7e25] [cursor=pointer]: 限价管理
+        - generic [ref=f7e29]:
+          - generic [ref=f7e30] [cursor=pointer]: 限价列表
+          - generic [ref=f7e31] [cursor=pointer]: 限价规则
+          - generic [ref=f7e32] [cursor=pointer]: 限价申请
+          - generic [ref=f7e33] [cursor=pointer]: 用户管理
+          - generic [ref=f7e34] [cursor=pointer]: 资质审核
+          - generic [ref=f7e35] [cursor=pointer]: 优惠券核销
+      - button [ref=f7e36] [cursor=pointer]
+    - main [ref=f7e39]:
+      - generic [ref=f7e40]:
+        - generic [ref=f7e41]: 限价管理
+        - generic [ref=f7e42]: /
+        - generic [ref=f7e43]: 限价申请
+      - generic [ref=f7e44]:
+        - generic [ref=f7e45]:
+          - generic [ref=f7e46]: 筛选条件
+          - generic [ref=f7e47]:
+            - generic [ref=f7e48]:
+              - generic [ref=f7e49]: 申请单号
+              - textbox "请输入申请单号" [ref=f7e50]
+            - generic [ref=f7e51]:
+              - generic [ref=f7e52]: 审核状态
+              - combobox [ref=f7e53]:
+                - option "全部" [selected]
+                - option "待审核"
+                - option "已通过"
+                - option "已驳回"
+            - button "查询" [ref=f7e54] [cursor=pointer]
+        - generic [ref=f7e58]:
+          - generic [ref=f7e59]:
+            - generic [ref=f7e60]: 限价申请列表
+            - button "新增申请" [ref=f7e61] [cursor=pointer]
+          - table [ref=f7e64]:
+            - rowgroup [ref=f7e65]:
+              - row [ref=f7e66]:
+                - columnheader "申请单号" [ref=f7e67]
+                - columnheader "VIN码" [ref=f7e68]
+                - columnheader "车型" [ref=f7e69]
+                - columnheader "门店名称" [ref=f7e70]
+                - columnheader "综合毛利限价" [ref=f7e71]
+                - columnheader "预估综合毛利" [ref=f7e72]
+                - columnheader "审核层级" [ref=f7e73]
+                - columnheader "审核状态" [ref=f7e74]
+                - columnheader "创建时间" [ref=f7e75]
+                - columnheader "审核人" [ref=f7e76]
+                - columnheader "审核时间" [ref=f7e77]
+                - columnheader "操作" [ref=f7e78]
+            - rowgroup [ref=f7e79]:
+              - row [ref=f7e80]:
+                - cell "XJ3463-1202608260001" [ref=f7e81]
+                - cell "LVTDB21B6TDN02238" [ref=f7e82]
+                - cell "瑞虎8 第五代瑞虎8-豹款" [ref=f7e83]
+                - cell "上海QQ" [ref=f7e84]
+                - cell "3,000" [ref=f7e85]
+                - cell "2,500" [ref=f7e86]
+                - cell "大区审核" [ref=f7e87]:
+                  - generic "超出限价 500 元" [ref=f7e88]: 大区审核
+                - cell "待审核" [ref=f7e90]
+                - cell "2026-08-26 10:24:32" [ref=f7e91]
+                - cell "—" [ref=f7e92]
+                - cell "—" [ref=f7e93]
+                - cell [ref=f7e94]:
+                  - button "大区审核" [ref=f7e96] [cursor=pointer]
+              - row [ref=f7e97]:
+                - cell "XJ3463-1202608260002" [ref=f7e98]
+                - cell "LVTDB21B6TDP02456" [ref=f7e99]
+                - cell "瑞虎8 第五代瑞虎8-豹款" [ref=f7e100]
+                - cell "上海QQ" [ref=f7e101]
+                - cell "3,000" [ref=f7e102]
+                - cell "1,500" [ref=f7e103]
+                - cell "大区审核 →条线审核" [ref=f7e104]:
+                  - generic "超出限价 1500 元" [ref=f7e105]:
+                    - generic [ref=f7e106]: 大区审核
+                    - generic [ref=f7e107]: →条线审核
+                - cell "待审核" [ref=f7e108]
+                - cell "2026-08-26 11:02:44" [ref=f7e109]
+                - cell "—" [ref=f7e110]
+                - cell "—" [ref=f7e111]
+                - cell [ref=f7e112]:
+                  - generic [ref=f7e113]:
+                    - button "大区审核" [ref=f7e114] [cursor=pointer]
+                    - button "条线审核" [ref=f7e115] [cursor=pointer]
+              - row [ref=f7e116]:
+                - cell "XJ3463-1202608260003" [ref=f7e117]
+                - cell "LVTDB21B6TDN03247" [ref=f7e118]
+                - cell "瑞虎8 第五代瑞虎8-豹款" [ref=f7e119]
+                - cell "上海QQ" [ref=f7e120]
+                - cell "3,000" [ref=f7e121]
+                - cell "800" [ref=f7e122]
+                - cell "大区审核 →条线审核 →门店审核" [ref=f7e123]:
+                  - generic "超出限价 2200 元" [ref=f7e124]:
+                    - generic [ref=f7e125]: 大区审核
+                    - generic [ref=f7e126]: →条线审核
+                    - generic [ref=f7e127]: →门店审核
+                - cell "已通过" [ref=f7e128]
+                - cell "2026-08-25 16:48:05" [ref=f7e129]
+                - cell "王经理" [ref=f7e130]
+                - cell "2026-08-26 09:20:11" [ref=f7e131]
+                - cell [ref=f7e132]:
+                  - button "查看" [ref=f7e134] [cursor=pointer]
+              - row [ref=f7e138]:
+                - cell "XJ3463-1202608250004" [ref=f7e139]
+                - cell "LVTDB21B6TDN14860" [ref=f7e140]
+                - cell "瑞虎8 第五代瑞虎8-豹款" [ref=f7e141]
+                - cell "上海QQ" [ref=f7e142]
+                - cell "3,000" [ref=f7e143]
+                - cell "1,200" [ref=f7e144]
+                - cell "大区审核 →条线审核" [ref=f7e145]:
+                  - generic "超出限价 1800 元" [ref=f7e146]:
+                    - generic [ref=f7e147]: 大区审核
+                    - generic [ref=f7e148]: →条线审核
+                - cell "已驳回" [ref=f7e149]
+                - cell "2026-08-25 09:33:27" [ref=f7e150]
+                - cell "李总监" [ref=f7e151]
+                - cell "2026-08-25 14:52:03" [ref=f7e152]
+                - cell [ref=f7e153]:
+                  - button "查看" [ref=f7e155] [cursor=pointer]

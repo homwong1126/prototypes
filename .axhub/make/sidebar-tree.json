@@ -1,30 +1,36 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-26T07:29:20.347Z",
+  "updatedAt": "2026-09-01T06:34:35.234Z",
   "prototypes": [
     {
-      "id": "item-prototypes-inventory-manage",
+      "id": "item:prototypes:order-manage-entry",
       "kind": "item",
-      "title": "inventory manage",
+      "title": "订单管理录入",
+      "itemKey": "prototypes/order-manage-entry"
+    },
+    {
+      "id": "item:prototypes:inventory-manage",
+      "kind": "item",
+      "title": "库存管理",
       "itemKey": "prototypes/inventory-manage"
     },
     {
-      "id": "item-prototypes-policy-management-edit",
+      "id": "item:prototypes:policy-management-edit",
       "kind": "item",
-      "title": "policy management edit",
+      "title": "限价规则管理",
       "itemKey": "prototypes/policy-management-edit"
     },
     {
-      "id": "item:prototypes:touch-and-talk-annotation-demo",
+      "id": "item:prototypes:price-limit-apply",
       "kind": "item",
-      "title": "批注演示",
-      "itemKey": "prototypes/touch-and-talk-annotation-demo"
+      "title": "限价申请",
+      "itemKey": "prototypes/price-limit-apply"
     },
     {
-      "id": "item:prototypes:untitled-2",
+      "id": "item:prototypes:price-limit-list",
       "kind": "item",
-      "title": "未命名",
-      "itemKey": "prototypes/untitled-2"
+      "title": "限价申请列表",
+      "itemKey": "prototypes/price-limit-list"
     },
     {
       "id": "item:prototypes:repair-workorder-m02",
@@ -59,14 +65,26 @@
     {
       "id": "item:prototypes:beginner-guide",
       "kind": "item",
-      "title": "新手指导",
+      "title": "指导",
       "itemKey": "prototypes/beginner-guide"
+    },
+    {
+      "id": "item:prototypes:touch-and-talk-annotation-demo",
+      "kind": "item",
+      "title": "演示",
+      "itemKey": "prototypes/touch-and-talk-annotation-demo"
     },
     {
       "id": "item:prototypes:annotation-demo",
       "kind": "item",
-      "title": "标注演示",
+      "title": "演示",
       "itemKey": "prototypes/annotation-demo"
+    },
+    {
+      "id": "item:prototypes:price-limit-list-copy",
+      "kind": "item",
+      "title": "限价申请列表",
+      "itemKey": "prototypes/price-limit-list-copy"
     }
   ],
   "docs": [],

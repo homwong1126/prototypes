@@ -1,8 +1,8 @@
 {
   "server": {
     "host": "localhost",
-    "allowLAN": true,
     "lanHost": "10.105.220.142",
+    "skipLanPreviewAuth": false,
     "enableCommandAPI": false
   },
   "cloudPublishing": {
@@ -32,13 +32,16 @@
       "sourceDirectory": "/"
     },
     "publishSettings": {
-      "includeSource": false
+      "includeSource": false,
+      "visibleTargets": [
+        "axhub"
+      ]
     }
   },
   "projectInfo": {
     "description": null
   },
   "projectDefaults": {
-    "defaultTheme": null
+    "defaultTheme": "fuse-design-pc"
   }
 }

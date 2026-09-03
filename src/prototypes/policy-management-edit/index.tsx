@@ -5,8 +5,8 @@
  * 大客户营销平台 - 政策管理编辑页面
  * 用于编辑和管理政策信息，包括政策基本信息和车型信息
  */
-import React, { useState } from 'react'
-import { ChevronDown, Plus, FileSpreadsheet, Trash2 } from 'lucide-react'
+import React, { useRef, useState } from 'react'
+import { ChevronDown, Plus, FileSpreadsheet, Trash2, X, Upload, Download, Calendar, ChevronLeft, ChevronRight, Settings } from 'lucide-react'
 import './style.css'
 import logoImg from './assets/logo.jpeg'
 import { AnnotationViewer, type AnnotationSourceDocument } from '@axhub/annotation';
@@ -26,19 +26,22 @@ interface VehicleModel {
   powertrainName: string
   versionCode: string
   versionName: string
-  verificationAmount: string
-  endDate: string
+  grossProfitLimit: string
+  regionalTotalPermission: string
+  linePermission: string
+  storeOperationPermission: string
+  groupPermission: string
 }
 
 interface PolicyBasicInfo {
-  policyNo: string
+  limitType: string
   year: string
   month: string
 }
 
 interface PolicyListItem {
   id: number
-  policyNo: string
+  limitType: string
   year: string
   month: string
   createTime: string
@@ -60,8 +63,11 @@ const VEHICLE_MODELS: VehicleModel[] = [
     powertrainName: '',
     versionCode: '',
     versionName: '',
-    verificationAmount: '',
-    endDate: '',
+    grossProfitLimit: '',
+    regionalTotalPermission: '',
+    linePermission: '',
+    storeOperationPermission: '',
+    groupPermission: '',
   },
   {
     id: 2,
@@ -75,8 +81,11 @@ const VEHICLE_MODELS: VehicleModel[] = [
     powertrainName: '',
     versionCode: '',
     versionName: '',
-    verificationAmount: '',
-    endDate: '',
+    grossProfitLimit: '',
+    regionalTotalPermission: '',
+    linePermission: '',
+    storeOperationPermission: '',
+    groupPermission: ''
   },
   {
     id: 3,
@@ -90,8 +99,11 @@ const VEHICLE_MODELS: VehicleModel[] = [
     powertrainName: '',
     versionCode: '',
     versionName: '',
-    verificationAmount: '',
-    endDate: '',
+    grossProfitLimit: '',
+    regionalTotalPermission: '',
+    linePermission: '',
+    storeOperationPermission: '',
+    groupPermission: ''
   },
   {
     id: 4,
@@ -105,8 +117,11 @@ const VEHICLE_MODELS: VehicleModel[] = [
     powertrainName: '',
     versionCode: '',
     versionName: '',
-    verificationAmount: '',
-    endDate: '',
+    grossProfitLimit: '',
+    regionalTotalPermission: '',
+    linePermission: '',
+    storeOperationPermission: '',
+    groupPermission: ''
   },
   {
     id: 5,
@@ -120,8 +135,11 @@ const VEHICLE_MODELS: VehicleModel[] = [
     powertrainName: '',
     versionCode: '',
     versionName: '',
-    verificationAmount: '',
-    endDate: '',
+    grossProfitLimit: '',
+    regionalTotalPermission: '',
+    linePermission: '',
+    storeOperationPermission: '',
+    groupPermission: ''
   },
   {
     id: 6,
@@ -135,8 +153,11 @@ const VEHICLE_MODELS: VehicleModel[] = [
     powertrainName: '',
     versionCode: '',
     versionName: '',
-    verificationAmount: '',
-    endDate: '',
+    grossProfitLimit: '',
+    regionalTotalPermission: '',
+    linePermission: '',
+    storeOperationPermission: '',
+    groupPermission: ''
   },
   {
     id: 7,
@@ -150,8 +171,11 @@ const VEHICLE_MODELS: VehicleModel[] = [
     powertrainName: '',
     versionCode: '',
     versionName: '',
-    verificationAmount: '',
-    endDate: '',
+    grossProfitLimit: '',
+    regionalTotalPermission: '',
+    linePermission: '',
+    storeOperationPermission: '',
+    groupPermission: ''
   },
   {
     id: 8,
@@ -165,8 +189,11 @@ const VEHICLE_MODELS: VehicleModel[] = [
     powertrainName: '',
     versionCode: '',
     versionName: '',
-    verificationAmount: '',
-    endDate: '',
+    grossProfitLimit: '',
+    regionalTotalPermission: '',
+    linePermission: '',
+    storeOperationPermission: '',
+    groupPermission: ''
   },
   {
     id: 9,
@@ -180,8 +207,11 @@ const VEHICLE_MODELS: VehicleModel[] = [
     powertrainName: '',
     versionCode: '',
     versionName: '',
-    verificationAmount: '',
-    endDate: '',
+    grossProfitLimit: '',
+    regionalTotalPermission: '',
+    linePermission: '',
+    storeOperationPermission: '',
+    groupPermission: ''
   },
   {
     id: 10,
@@ -195,8 +225,11 @@ const VEHICLE_MODELS: VehicleModel[] = [
     powertrainName: '',
     versionCode: '',
     versionName: '',
-    verificationAmount: '',
-    endDate: '',
+    grossProfitLimit: '',
+    regionalTotalPermission: '',
+    linePermission: '',
+    storeOperationPermission: '',
+    groupPermission: ''
   },
   {
     id: 11,
@@ -210,62 +243,204 @@ const VEHICLE_MODELS: VehicleModel[] = [
     powertrainName: '',
     versionCode: '',
     versionName: '',
-    verificationAmount: '',
-    endDate: '',
+    grossProfitLimit: '',
+    regionalTotalPermission: '',
+    linePermission: '',
+    storeOperationPermission: '',
+    groupPermission: ''
   },
 ]
 
 const INITIAL_POLICY_INFO: PolicyBasicInfo = {
-  policyNo: '常规车',
+  limitType: '常规车',
   year: '',
   month: '',
 }
 
+const LIMIT_TYPE_OPTIONS = ['常规车', '冰雹车', '超期车', '外采车', '公告到期车', '虚传车', '政策到期车', '其他'] as const
+const TEMPLATE_DOWNLOAD_URL = 'file:///Users/hom/Downloads/下载专用文件夹/temp1/限价导入模板.xlsx'
+
 const POLICY_LIST: PolicyListItem[] = [
   {
     id: 1,
-    policyNo: '常规车',
-    year: '2025',
+    limitType: '常规车',
+    year: '2026',
     month: '1',
-    createTime: '2025-01-15 10:30:00',
+    createTime: '2026-01-05 09:30:00',
     status: '已生效',
   },
   {
     id: 2,
-    policyNo: '常规车',
-    year: '2025',
-    month: '2',
-    createTime: '2025-02-15 10:30:00',
+    limitType: '冰雹车',
+    year: '-',
+    month: '-',
+    createTime: '2026-06-10 14:20:00',
     status: '已生效',
   },
   {
     id: 3,
-    policyNo: '非常规车',
-    year: '2025',
-    month: '1',
-    createTime: '2025-01-20 14:20:00',
-    status: '草稿',
+    limitType: '超期车',
+    year: '-',
+    month: '-',
+    createTime: '2026-07-15 16:40:00',
+    status: '已生效',
   },
   {
     id: 4,
-    policyNo: '常规车',
-    year: '2024',
-    month: '12',
-    createTime: '2024-12-15 10:30:00',
-    status: '已失效',
+    limitType: '外采车',
+    year: '-',
+    month: '-',
+    createTime: '2026-07-18 10:15:00',
+    status: '已生效',
+  },
+  {
+    id: 5,
+    limitType: '公告到期车',
+    year: '-',
+    month: '-',
+    createTime: '2026-07-20 11:40:00',
+    status: '已生效',
   },
 ]
+
+// ─── 车型目录数据 ──────────────────────────────────────────────────────────────
+
+interface VehicleCatalogItem {
+  key: string
+  brand: string
+  level: string
+  modelCode: string
+  modelName: string
+  yearCode: string
+  yearName: string
+  powertrainCode: string
+  powertrainName: string
+  versionCode: string
+  versionName: string
+}
+
+const buildCatalogItem = (item: Omit<VehicleCatalogItem, 'key'>): VehicleCatalogItem => ({
+  ...item,
+  key: `${item.brand}|${item.level}|${item.modelCode}|${item.modelName}|${item.yearCode}|${item.yearName}|${item.powertrainCode}|${item.powertrainName}|${item.versionCode}|${item.versionName}`,
+})
+
+const VEHICLE_CATALOG: VehicleCatalogItem[] = [
+  buildCatalogItem({ brand: '星途', level: '车型', modelCode: '004', modelName: '揽月', yearCode: '', yearName: '', powertrainCode: '', powertrainName: '', versionCode: '', versionName: '' }),
+  buildCatalogItem({ brand: '捷途', level: '车型', modelCode: '2025X70PLUS', modelName: '2025款X70PLUS冠军版', yearCode: '', yearName: '', powertrainCode: '', powertrainName: '', versionCode: '', versionName: '' }),
+  buildCatalogItem({ brand: '捷途', level: '车型', modelCode: '2025X70PLUS-1', modelName: '2025款X70PLUS', yearCode: '', yearName: '', powertrainCode: '', powertrainName: '', versionCode: '', versionName: '' }),
+  buildCatalogItem({ brand: '捷途', level: '车型', modelCode: '2025X90PLUS', modelName: '2025款X90PLUS', yearCode: '', yearName: '', powertrainCode: '', powertrainName: '', versionCode: '', versionName: '' }),
+  buildCatalogItem({ brand: '捷途', level: '车型', modelCode: '24KDSRYB', modelName: '24款大圣（燃油版）', yearCode: '', yearName: '', powertrainCode: '', powertrainName: '', versionCode: '', versionName: '' }),
+  buildCatalogItem({ brand: 'CS2026', level: '车型', modelCode: 'cs2027', modelName: '测试车型2027', yearCode: '', yearName: '', powertrainCode: '', powertrainName: '', versionCode: '', versionName: '' }),
+  buildCatalogItem({ brand: 'CS2026', level: '车型', modelCode: 'cscx2026', modelName: '测试车型2026', yearCode: '', yearName: '', powertrainCode: '', powertrainName: '', versionCode: '', versionName: '' }),
+  buildCatalogItem({ brand: '星途', level: '车型', modelCode: 'E03', modelName: '星纪元ES', yearCode: '2025N', yearName: '2025款', powertrainCode: '', powertrainName: '', versionCode: '', versionName: '' }),
+  buildCatalogItem({ brand: '星途', level: '车型', modelCode: 'E0Y', modelName: '星纪元ET', yearCode: '2025N', yearName: '2025款', powertrainCode: '', powertrainName: '', versionCode: '', versionName: '' }),
+  buildCatalogItem({ brand: '星途', level: '车型', modelCode: 'LYCDM', modelName: '揽月C-DM', yearCode: '2025N', yearName: '2025款', powertrainCode: '', powertrainName: '', versionCode: '', versionName: '' }),
+  buildCatalogItem({ brand: '奇瑞', level: '车型', modelCode: 'QR42', modelName: '全新艾瑞泽5', yearCode: 'ARZ5-2025', yearName: '2025款', powertrainCode: '', powertrainName: '', versionCode: '', versionName: '' }),
+  buildCatalogItem({ brand: '奇瑞', level: '年款', modelCode: 'QR123', modelName: '艾瑞泽8 PRO', yearCode: 'ARZ8PRO_2025年', yearName: '2025款', powertrainCode: '', powertrainName: '', versionCode: '', versionName: '' }),
+  buildCatalogItem({ brand: '奇瑞', level: '年款', modelCode: 'QR119', modelName: '风云A8L', yearCode: 'FYA-2025', yearName: '2025款', powertrainCode: '', powertrainName: '', versionCode: '', versionName: '' }),
+  buildCatalogItem({ brand: '奇瑞', level: '年款', modelCode: 'QR120', modelName: '风云A9L', yearCode: 'FYA-2025', yearName: '2025款', powertrainCode: '', powertrainName: '', versionCode: '', versionName: '' }),
+  buildCatalogItem({ brand: '奇瑞', level: '年款', modelCode: 'QR106', modelName: '风云T9', yearCode: 'FYT-2025', yearName: '2025款', powertrainCode: '', powertrainName: '', versionCode: '', versionName: '' }),
+  buildCatalogItem({ brand: '奇瑞', level: '年款', modelCode: 'QR121', modelName: '风云T8', yearCode: 'FYT-2025', yearName: '2025款', powertrainCode: '', powertrainName: '', versionCode: '', versionName: '' }),
+  buildCatalogItem({ brand: '捷途', level: '动总', modelCode: 'T2A-1.6T', modelName: '1.6TGDI-7DCT', yearCode: '', yearName: '', powertrainCode: 'PT16T', powertrainName: '1.6T发动机', versionCode: '', versionName: '' }),
+  buildCatalogItem({ brand: '星途', level: '版型', modelCode: 'E03-版本A', modelName: '星纪元ES 四驱性能版', yearCode: '2025N', yearName: '2025款', powertrainCode: '', powertrainName: '', versionCode: 'V-A', versionName: '性能版' }),
+]
+
+const VEHICLE_CATALOG_TOTAL = 945
+const CATALOG_BRAND_OPTIONS = ['星途', '捷途', '奇瑞', 'CS2026']
+const CATALOG_LEVEL_OPTIONS = ['车型', '年款', '动总', '版型']
 
 // ─── 组件 ───────────────────────────────────────────────────────────────────────
 
 const Component = function PolicyManagementEdit() {
-  const [currentPage, setCurrentPage] = useState<'list' | 'rules'>('list')
+  const [currentPage, setCurrentPage] = useState<'list' | 'add' | 'rules'>('list')
   const [activeMenu, setActiveMenu] = useState('list')
   const [policyInfo, setPolicyInfo] = useState<PolicyBasicInfo>(INITIAL_POLICY_INFO)
   const [vehicleModels, setVehicleModels] = useState<VehicleModel[]>(VEHICLE_MODELS)
-  const [filterPolicyNo, setFilterPolicyNo] = useState('')
+  const [filterLimitType, setFilterLimitType] = useState('')
   const [filterYear, setFilterYear] = useState('')
   const [filterMonth, setFilterMonth] = useState('')
+  const [showImportModal, setShowImportModal] = useState(false)
+  const [showVehicleSelectModal, setShowVehicleSelectModal] = useState(false)
+  const [vehicleSearch, setVehicleSearch] = useState({
+    brand: '',
+    level: '',
+    modelCode: '',
+    modelName: '',
+    yearCode: '',
+    yearName: '',
+    powertrainCode: '',
+  })
+  const [selectedVehicleKeys, setSelectedVehicleKeys] = useState<string[]>([])
+  const [importPage, setImportPage] = useState(1)
+  const [importPageSize, setImportPageSize] = useState(20)
+  const [importStartTime, setImportStartTime] = useState('')
+  const [importEndTime, setImportEndTime] = useState('')
+  const [importFileName, setImportFileName] = useState('')
+  const importFileInputRef = useRef<HTMLInputElement>(null)
+  const [importMessage, setImportMessage] = useState('')
+  const [importRecords, setImportRecords] = useState([
+    {
+      id: 1,
+      recordId: '2091753051236438018',
+      importTime: '2026/08/24 13:02:45',
+      operator: 'fanxin',
+      fileName: '限价导入模板_1787547954405.xlsx',
+      total: 8,
+      sourceFile: '源文件',
+      hasLog: false,
+    },
+    {
+      id: 2,
+      recordId: '2091693906315542530',
+      importTime: '2026/08/24 09:07:44',
+      operator: 'fanxin',
+      fileName: '限价导入模板_1787533859055.xlsx',
+      total: 0,
+      sourceFile: '源文件',
+      hasLog: true,
+    },
+    {
+      id: 3,
+      recordId: '2091693685246361601',
+      importTime: '2026/08/24 09:06:51',
+      operator: 'fanxin',
+      fileName: '限价导入模板_1787533806590.xlsx',
+      total: 0,
+      sourceFile: '源文件',
+      hasLog: true,
+    },
+    {
+      id: 4,
+      recordId: '2091693393398300674',
+      importTime: '2026/08/24 09:05:41',
+      operator: 'fanxin',
+      fileName: '限价导入模板_1787533736712.xlsx',
+      total: 0,
+      sourceFile: '源文件',
+      hasLog: true,
+    },
+    {
+      id: 5,
+      recordId: '2091692838915506177',
+      importTime: '2026/08/24 09:03:29',
+      operator: 'fanxin',
+      fileName: '限价导入模板_1787533600622.xlsx',
+      total: 0,
+      sourceFile: '源文件',
+      hasLog: true,
+    },
+    {
+      id: 6,
+      recordId: '2090674704217636865',
+      importTime: '2026/08/21 13:37:47',
+      operator: 'admin',
+      fileName: '限价管理导入模板_1787290666078.xlsx',
+      total: 1,
+      sourceFile: '源文件',
+      hasLog: false,
+    },
+  ])
+  const isRegularLimitType = policyInfo.limitType === '常规车'
 
   const handleMenuClick = (menu: string) => {
     setActiveMenu(menu)
@@ -278,12 +453,66 @@ const Component = function PolicyManagementEdit() {
 
   const handleEditPolicy = (policy: PolicyListItem) => {
     setPolicyInfo({
-      policyNo: policy.policyNo,
-      year: policy.year,
-      month: policy.month,
+      limitType: policy.limitType,
+      year: policy.year === '-' ? '' : policy.year,
+      month: policy.month === '-' ? '' : policy.month,
     })
     setCurrentPage('rules')
     setActiveMenu('rules')
+  }
+
+  const handleAddPolicy = () => {
+    setPolicyInfo({ ...INITIAL_POLICY_INFO })
+    setVehicleModels([])
+    setCurrentPage('add')
+    setActiveMenu('rules')
+  }
+
+  const handleSavePolicy = () => {
+    if (!policyInfo.limitType || (isRegularLimitType && (!policyInfo.year || !policyInfo.month))) {
+      alert('请填写限价类型、年份和月份')
+      return
+    }
+
+    if (vehicleModels.length === 0) {
+      alert('请至少新增一条限价规则')
+      return
+    }
+
+    if (isDuplicateVersion(vehicleModels)) {
+      alert('版型数据重复，不可重复导入')
+      return
+    }
+
+    const requiredFields: Array<keyof VehicleModel> = [
+      'grossProfitLimit',
+      'regionalTotalPermission',
+      'linePermission',
+      'storeOperationPermission',
+      'groupPermission',
+    ]
+    const hasEmptyRequiredField = vehicleModels.some(model =>
+      requiredFields.some(field => model[field].trim() === '')
+    )
+
+    if (hasEmptyRequiredField) {
+      alert('请填写所有必填权限字段')
+      return
+    }
+
+    console.log('保存新增限价:', policyInfo, vehicleModels)
+    alert('保存成功')
+    setCurrentPage('list')
+    setActiveMenu('list')
+  }
+
+  const handleLimitTypeChange = (limitType: string) => {
+    setPolicyInfo(prev => ({
+      ...prev,
+      limitType,
+      year: limitType === '常规车' ? prev.year : '',
+      month: limitType === '常规车' ? prev.month : '',
+    }))
   }
 
   const handleDeleteModel = (id: number) => {
@@ -291,25 +520,127 @@ const Component = function PolicyManagementEdit() {
   }
 
   const handleAddModel = () => {
-    const newId = Math.max(...vehicleModels.map(m => m.id), 0) + 1
+    setShowVehicleSelectModal(true)
+  }
+
+  const handleCloseVehicleSelect = () => {
+    setShowVehicleSelectModal(false)
+  }
+
+  const filteredVehicleCatalog = VEHICLE_CATALOG.filter(item => (
+    (!vehicleSearch.brand || item.brand === vehicleSearch.brand) &&
+    (!vehicleSearch.level || item.level === vehicleSearch.level) &&
+    (!vehicleSearch.modelCode || item.modelCode.toLowerCase().includes(vehicleSearch.modelCode.toLowerCase())) &&
+    (!vehicleSearch.modelName || item.modelName.includes(vehicleSearch.modelName)) &&
+    (!vehicleSearch.yearCode || item.yearCode.toLowerCase().includes(vehicleSearch.yearCode.toLowerCase())) &&
+    (!vehicleSearch.yearName || item.yearName.includes(vehicleSearch.yearName)) &&
+    (!vehicleSearch.powertrainCode || item.powertrainCode.toLowerCase().includes(vehicleSearch.powertrainCode.toLowerCase()))
+  ))
+
+  const updateVehicleSearch = (field: keyof typeof vehicleSearch, value: string) => {
+    setVehicleSearch(prev => ({ ...prev, [field]: value }))
+  }
+
+  const toggleVehicleSelection = (key: string) => {
+    setSelectedVehicleKeys(prev => prev.includes(key) ? prev.filter(itemKey => itemKey !== key) : [...prev, key])
+  }
+
+  const handleConfirmVehicleSelect = () => {
+    if (selectedVehicleKeys.length === 0) {
+      alert('请选择车型数据')
+      return
+    }
+    const selectedModels = VEHICLE_CATALOG.filter(item => selectedVehicleKeys.includes(item.key))
+    const existingKeys = new Set(vehicleModels.map(model => `${model.brand}|${model.level}|${model.modelCode}|${model.modelName}|${model.yearCode}|${model.yearName}|${model.powertrainCode}|${model.powertrainName}|${model.versionCode}|${model.versionName}`))
+    const duplicate = selectedModels.find(item => existingKeys.has(item.key))
+    if (duplicate) {
+      alert(`版型数据重复：${duplicate.versionName || duplicate.modelName}，不可重复添加`)
+      return
+    }
+    let nextId = Math.max(...vehicleModels.map(m => m.id), 0)
     setVehicleModels(prev => [
       ...prev,
-      {
-        id: newId,
-        brand: '',
-        level: '',
-        modelCode: '',
-        modelName: '',
-        yearCode: '',
-        yearName: '',
-        powertrainCode: '',
-        powertrainName: '',
-        versionCode: '',
-        versionName: '',
-        verificationAmount: '',
-        endDate: '',
-      },
+      ...selectedModels.map(item => ({
+        id: ++nextId,
+        brand: item.brand,
+        level: item.level,
+        modelCode: item.modelCode,
+        modelName: item.modelName,
+        yearCode: item.yearCode,
+        yearName: item.yearName,
+        powertrainCode: item.powertrainCode,
+        powertrainName: item.powertrainName,
+        versionCode: item.versionCode,
+        versionName: item.versionName,
+        grossProfitLimit: '',
+        regionalTotalPermission: '',
+        linePermission: '',
+        storeOperationPermission: '',
+        groupPermission: '',
+      })),
     ])
+    setSelectedVehicleKeys([])
+    setShowVehicleSelectModal(false)
+  }
+
+  const handleOpenImport = () => {
+    setShowImportModal(true)
+  }
+
+  const handleCloseImport = () => {
+    setShowImportModal(false)
+  }
+
+  const handleDownloadTemplate = () => {
+    const link = document.createElement('a')
+    link.href = TEMPLATE_DOWNLOAD_URL
+    link.download = '限价导入模板.xlsx'
+    link.click()
+  }
+
+  const handleImportFile = (file: File | undefined) => {
+    if (!file) return
+    if (!/\.xlsx?$/i.test(file.name)) {
+      setImportMessage('请上传 .xlsx 或 .xls 格式文件')
+      return
+    }
+    setImportFileName(file.name)
+    setImportMessage('文件已选择，点击确定开始导入')
+  }
+
+  const handleImportSearch = () => {
+    console.log('导入查询', { importStartTime, importEndTime, importFileName })
+  }
+
+  const handleImportReset = () => {
+    setImportStartTime('')
+    setImportEndTime('')
+    setImportFileName('')
+    setImportMessage('')
+    if (importFileInputRef.current) importFileInputRef.current.value = ''
+  }
+
+  const handleImportConfirm = () => {
+    if (!importFileName) {
+      setImportMessage('请先选择导入文件')
+      return
+    }
+    if (isDuplicateVersion(vehicleModels)) {
+      setImportMessage('版型数据重复，不可重复导入')
+      return
+    }
+    setShowImportModal(false)
+    setImportMessage('')
+  }
+
+  const isDuplicateVersion = (models: VehicleModel[]) => {
+    const seen = new Set<string>()
+    return models.some(model => {
+      const key = `${model.brand}|${model.level}|${model.modelCode}|${model.modelName}|${model.yearCode}|${model.yearName}|${model.powertrainCode}|${model.powertrainName}|${model.versionCode}|${model.versionName}`
+      if (seen.has(key)) return true
+      seen.add(key)
+      return false
+    })
   }
 
   const handleModelChange = (id: number, field: keyof VehicleModel, value: string) => {
@@ -320,14 +651,43 @@ const Component = function PolicyManagementEdit() {
     )
   }
 
+  // 仅允许输入整数（可输入负数，不可为小数）
+  const handleNumberChange = (id: number, field: keyof VehicleModel, value: string) => {
+    if (value === '' || /^-?\d*$/.test(value)) {
+      handleModelChange(id, field, value)
+    }
+  }
+
   const handleSave = () => {
+    if (!policyInfo.limitType || (isRegularLimitType && (!policyInfo.year || !policyInfo.month))) {
+      alert('请填写限价类型、年份和月份')
+      return
+    }
+
+    const requiredFields: Array<keyof VehicleModel> = [
+      'grossProfitLimit',
+      'regionalTotalPermission',
+      'linePermission',
+      'storeOperationPermission',
+      'groupPermission',
+    ]
+    const hasEmptyRequiredField = vehicleModels.some(model =>
+      requiredFields.some(field => model[field].trim() === '')
+    )
+
+    if (hasEmptyRequiredField) {
+      alert('请填写所有必填权限字段')
+      return
+    }
+
     console.log('保存政策信息:', policyInfo)
     console.log('保存车型信息:', vehicleModels)
     alert('保存成功')
   }
 
   const handleBack = () => {
-    console.log('返回')
+    setCurrentPage('list')
+    setActiveMenu('list')
   }
 
   return (
@@ -379,10 +739,6 @@ const Component = function PolicyManagementEdit() {
                   <div className="submenu-wrapper">
                     <div className={`submenu-item ${activeMenu === 'list' ? 'active' : ''}`} onClick={() => handleMenuClick('list')}>限价列表</div>
                     <div className={`submenu-item ${activeMenu === 'rules' ? 'active' : ''}`} onClick={() => handleMenuClick('rules')}>限价规则</div>
-                    <div className="submenu-item">限价申请</div>
-                    <div className="submenu-item">用户管理</div>
-                    <div className="submenu-item">资质审核</div>
-                    <div className="submenu-item">优惠券核销</div>
                   </div>
                 </div>
       
@@ -398,7 +754,7 @@ const Component = function PolicyManagementEdit() {
                 {/* Breadcrumb */}
                 <div className="breadcrumb">
                   <span className="breadcrumb-item active">
-                    {currentPage === 'list' ? '限价管理/限价列表' : '限价管理/限价规则'}
+                    {currentPage === 'list' ? '限价管理/限价列表' : currentPage === 'add' ? '限价管理/新增限价' : '限价管理/限价规则'}
                   </span>
                 </div>
 
@@ -413,19 +769,20 @@ const Component = function PolicyManagementEdit() {
                           <div className="form-section-title">筛选条件</div>
                           <div className="form-row">
                             <div className="form-item">
-                              <label className="form-label">政策编号</label>
+                              <label className="form-label">限价类型</label>
                               <select
                                 className="form-input"
-                                value={filterPolicyNo}
-                                onChange={e => setFilterPolicyNo(e.target.value)}
+                                value={filterLimitType}
+                                onChange={e => setFilterLimitType(e.target.value)}
                               >
                                 <option value="">全部</option>
-                                <option value="常规车">常规车</option>
-                                <option value="非常规车">非常规车</option>
+                                {LIMIT_TYPE_OPTIONS.map(option => (
+                                  <option key={option} value={option}>{option}</option>
+                                ))}
                               </select>
                             </div>
                             <div className="form-item">
-                              <label className="form-label">年</label>
+                              <label className="form-label">年份</label>
                               <select
                                 className="form-input"
                                 value={filterYear}
@@ -438,7 +795,7 @@ const Component = function PolicyManagementEdit() {
                               </select>
                             </div>
                             <div className="form-item">
-                              <label className="form-label">月</label>
+                              <label className="form-label">月份</label>
                               <select
                                 className="form-input"
                                 value={filterMonth}
@@ -461,7 +818,7 @@ const Component = function PolicyManagementEdit() {
                         <div className="table-header">
                           <div className="table-title">限价列表</div>
                           <div className="table-actions">
-                            <button className="btn">
+                            <button className="btn" onClick={handleAddPolicy}>
                               <Plus size={14} />
                               新增
                             </button>
@@ -472,9 +829,9 @@ const Component = function PolicyManagementEdit() {
                             <thead>
                               <tr>
                                 <th>序号</th>
-                                <th>政策编号</th>
-                                <th>年</th>
-                                <th>月</th>
+                                <th>限价类型</th>
+                                <th>年份</th>
+                                <th>月份</th>
                                 <th>创建时间</th>
                                 <th>状态</th>
                                 <th>操作</th>
@@ -483,14 +840,14 @@ const Component = function PolicyManagementEdit() {
                             <tbody>
                               {POLICY_LIST
                                 .filter(item =>
-                                  (filterPolicyNo === '' || item.policyNo === filterPolicyNo) &&
+                                  (filterLimitType === '' || item.limitType === filterLimitType) &&
                                   (filterYear === '' || item.year === filterYear) &&
                                   (filterMonth === '' || item.month === filterMonth)
                                 )
                                 .map((item, index) => (
                                   <tr key={item.id}>
                                     <td>{index + 1}</td>
-                                    <td>{item.policyNo}</td>
+                                    <td>{item.limitType}</td>
                                     <td>{item.year}</td>
                                     <td>{item.month}</td>
                                     <td>{item.createTime}</td>
@@ -512,7 +869,7 @@ const Component = function PolicyManagementEdit() {
                       </div>
                     </>
                   ) : (
-                    // 规则编辑页面
+                    // 新增与规则编辑页面
                     <>
                       {/* Basic Info Card */}
                       <div className="card">
@@ -520,44 +877,49 @@ const Component = function PolicyManagementEdit() {
                       <div className="form-section-title">限价基本信息</div>
                       <div className="form-row">
                         <div className="form-item">
-                          <label className="form-label">限价类型</label>
+                          <label className="form-label required">限价类型</label>
                           <select
                             className="form-input"
-                            value={policyInfo.policyNo}
-                            onChange={e => setPolicyInfo(prev => ({ ...prev, policyNo: e.target.value }))}
+                            value={policyInfo.limitType}
+                            onChange={e => handleLimitTypeChange(e.target.value)}
                           >
-                            <option value="常规车">常规车</option>
-                            <option value="非常规车">非常规车</option>
-                          </select>
-                        </div>
-                        <div className="form-item">
-                          <label className="form-label">年</label>
-                          <select
-                            className="form-input"
-                            value={policyInfo.year}
-                            onChange={e => setPolicyInfo(prev => ({ ...prev, year: e.target.value }))}
-                          >
-                            <option value="">请选择</option>
-                            <option value="2024">2024</option>
-                            <option value="2025">2025</option>
-                            <option value="2026">2026</option>
-                          </select>
-                        </div>
-                        <div className="form-item">
-                          <label className="form-label">月</label>
-                          <select
-                            className="form-input"
-                            value={policyInfo.month}
-                            onChange={e => setPolicyInfo(prev => ({ ...prev, month: e.target.value }))}
-                          >
-                            <option value="">请选择</option>
-                            {Array.from({ length: 12 }, (_, i) => (
-                              <option key={i + 1} value={String(i + 1)}>
-                                {i + 1}
-                              </option>
+                            {LIMIT_TYPE_OPTIONS.map(option => (
+                              <option key={option} value={option}>{option}</option>
                             ))}
                           </select>
                         </div>
+                        {isRegularLimitType && (
+                          <>
+                            <div className="form-item">
+                              <label className="form-label required">年份</label>
+                              <select
+                                className="form-input"
+                                value={policyInfo.year}
+                                onChange={e => setPolicyInfo(prev => ({ ...prev, year: e.target.value }))}
+                              >
+                                <option value="">请选择</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                              </select>
+                            </div>
+                            <div className="form-item">
+                              <label className="form-label required">月份</label>
+                              <select
+                                className="form-input"
+                                value={policyInfo.month}
+                                onChange={e => setPolicyInfo(prev => ({ ...prev, month: e.target.value }))}
+                              >
+                                <option value="">请选择</option>
+                                {Array.from({ length: 12 }, (_, i) => (
+                                  <option key={i + 1} value={String(i + 1)}>
+                                    {i + 1}
+                                  </option>
+                                ))}
+                              </select>
+                            </div>
+                          </>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -570,6 +932,10 @@ const Component = function PolicyManagementEdit() {
                         <button className="btn" onClick={handleAddModel}>
                           <Plus size={14} />
                           新增
+                        </button>
+                        <button className="btn" onClick={handleOpenImport}>
+                          <Upload size={14} />
+                          导入
                         </button>
                         <button className="btn">
                           <FileSpreadsheet size={14} />
@@ -592,8 +958,11 @@ const Component = function PolicyManagementEdit() {
                             <th>动总名称</th>
                             <th>版型编号</th>
                             <th>版型名称</th>
-                            <th className="required">核销金额</th>
-                            <th className="required">终止日期</th>
+                            <th className="required">综合毛利限价</th>
+                            <th className="required">大区总权限</th>
+                            <th className="required">条线权限</th>
+                            <th className="required">门店运营权限</th>
+                            <th className="required">集团权限</th>
                             <th>操作</th>
                           </tr>
                         </thead>
@@ -615,16 +984,45 @@ const Component = function PolicyManagementEdit() {
                                 <input
                                   type="text"
                                   className="table-input"
-                                  value={model.verificationAmount}
-                                  onChange={e => handleModelChange(model.id, 'verificationAmount', e.target.value)}
+                                  placeholder="请输入综合毛利限价"
+                                  value={model.grossProfitLimit}
+                                  onChange={e => handleNumberChange(model.id, 'grossProfitLimit', e.target.value)}
                                 />
                               </td>
                               <td>
                                 <input
                                   type="text"
                                   className="table-input"
-                                  value={model.endDate}
-                                  onChange={e => handleModelChange(model.id, 'endDate', e.target.value)}
+                                  placeholder="请输入大区总权限"
+                                  value={model.regionalTotalPermission}
+                                  onChange={e => handleNumberChange(model.id, 'regionalTotalPermission', e.target.value)}
+                                />
+                              </td>
+                              <td>
+                                <input
+                                  type="text"
+                                  className="table-input"
+                                  placeholder="请输入条线权限"
+                                  value={model.linePermission}
+                                  onChange={e => handleNumberChange(model.id, 'linePermission', e.target.value)}
+                                />
+                              </td>
+                              <td>
+                                <input
+                                  type="text"
+                                  className="table-input"
+                                  placeholder="请输入门店运营权限"
+                                  value={model.storeOperationPermission}
+                                  onChange={e => handleNumberChange(model.id, 'storeOperationPermission', e.target.value)}
+                                />
+                              </td>
+                              <td>
+                                <input
+                                  type="text"
+                                  className="table-input"
+                                  placeholder="请输入集团权限"
+                                  value={model.groupPermission}
+                                  onChange={e => handleNumberChange(model.id, 'groupPermission', e.target.value)}
                                 />
                               </td>
                               <td>
@@ -645,10 +1043,12 @@ const Component = function PolicyManagementEdit() {
                     <button className="footer-btn footer-btn-cancel" onClick={handleBack}>
                       返回
                     </button>
-                    <button className="footer-btn footer-btn-save" onClick={handleSave}>
+                    <button className="footer-btn footer-btn-save" onClick={currentPage === 'add' ? handleSavePolicy : handleSave}>
                       保存
                     </button>
                   </div>
+                    </>
+                  )}
                 </div>
               </main>
             </div>
@@ -662,8 +1062,115 @@ const Component = function PolicyManagementEdit() {
               </button>
             </div>
           </div>
+      {showVehicleSelectModal && (
+        <div className="vehicle-select-mask" onClick={handleCloseVehicleSelect}>
+          <div className="vehicle-select-modal" onClick={event => event.stopPropagation()}>
+            <div className="vehicle-select-header">
+              <span>车型选择</span>
+              <button className="import-close-btn" onClick={handleCloseVehicleSelect} aria-label="关闭车型选择弹窗"><X size={20} /></button>
+            </div>
+            <div className="vehicle-select-body">
+              <div className="vehicle-filter-grid">
+                <div className="vehicle-filter-item"><label>品牌</label><select value={vehicleSearch.brand} onChange={event => updateVehicleSearch('brand', event.target.value)}><option value="">请选择品牌</option>{CATALOG_BRAND_OPTIONS.map(option => <option key={option}>{option}</option>)}</select></div>
+                <div className="vehicle-filter-item"><label>目录层级</label><select value={vehicleSearch.level} onChange={event => updateVehicleSearch('level', event.target.value)}><option value="">请选择目录层级</option>{CATALOG_LEVEL_OPTIONS.map(option => <option key={option}>{option}</option>)}</select></div>
+                <div className="vehicle-filter-item"><label>车型编码</label><input placeholder="请选择车型编码" value={vehicleSearch.modelCode} onChange={event => updateVehicleSearch('modelCode', event.target.value)} /></div>
+                <div className="vehicle-filter-item"><label>车型名称</label><input placeholder="请选择车型名称" value={vehicleSearch.modelName} onChange={event => updateVehicleSearch('modelName', event.target.value)} /></div>
+                <div className="vehicle-filter-item"><label>年款编码</label><input placeholder="请选择年款编码" value={vehicleSearch.yearCode} onChange={event => updateVehicleSearch('yearCode', event.target.value)} /></div>
+                <div className="vehicle-filter-item"><label>年款名称</label><input placeholder="请选择年款名称" value={vehicleSearch.yearName} onChange={event => updateVehicleSearch('yearName', event.target.value)} /></div>
+                <div className="vehicle-filter-item"><label>动总编码</label><input placeholder="请选择动总编码" value={vehicleSearch.powertrainCode} onChange={event => updateVehicleSearch('powertrainCode', event.target.value)} /></div>
+                <div className="vehicle-filter-actions"><button className="vehicle-expand-btn">展开 <ChevronDown size={13} /></button><button className="btn btn-primary" onClick={() => setVehicleSearch(prev => ({ ...prev }))}>查 询</button><button className="btn" onClick={() => setVehicleSearch({ brand: '', level: '', modelCode: '', modelName: '', yearCode: '', yearName: '', powertrainCode: '' })}>重 置</button></div>
+              </div>
+              <div className="vehicle-selected-count">已选择 {selectedVehicleKeys.length} / {VEHICLE_CATALOG_TOTAL} 条数据</div>
+              <div className="vehicle-table-wrap">
+                <table className="vehicle-select-table">
+                  <thead><tr><th><input type="checkbox" checked={filteredVehicleCatalog.length > 0 && filteredVehicleCatalog.every(item => selectedVehicleKeys.includes(item.key))} onChange={event => setSelectedVehicleKeys(event.target.checked ? filteredVehicleCatalog.map(item => item.key) : [])} /></th><th>序号</th><th>品牌</th><th>目录层级</th><th>车型编码</th><th>车型名称</th><th>年款编码</th><th>年款名称</th><th>动总编码</th><th>动总名称</th><th>版型编码</th><th>版型名称</th></tr></thead>
+                  <tbody>{filteredVehicleCatalog.map((item, index) => <tr key={item.key}><td><input type="checkbox" checked={selectedVehicleKeys.includes(item.key)} onChange={() => toggleVehicleSelection(item.key)} /></td><td>{index + 1}</td><td><span className="vehicle-tag">{item.brand}</span></td><td><span className="vehicle-tag">{item.level}</span></td><td>{item.modelCode}</td><td>{item.modelName}</td><td>{item.yearCode}</td><td>{item.yearName}</td><td>{item.powertrainCode}</td><td>{item.powertrainName}</td><td>{item.versionCode}</td><td>{item.versionName}</td></tr>)}</tbody>
+                </table>
+              </div>
+              <div className="vehicle-pagination"><span>共 {VEHICLE_CATALOG_TOTAL} 条</span><button disabled>‹</button><button className="page-active">1</button><button>2</button><button>3</button><span>...</span><button>48</button><button>›</button><select><option>20 条/页</option></select><span>跳至</span><input aria-label="跳转页码" /><span>页</span></div>
+            </div>
+            <div className="vehicle-select-footer"><button className="footer-btn footer-btn-cancel" onClick={handleCloseVehicleSelect}>取消</button><button className="footer-btn footer-btn-save" onClick={handleConfirmVehicleSelect}>确定</button></div>
+          </div>
+        </div>
+      )}
+
+      {showImportModal && (
+        <div className="import-modal-mask" onClick={handleCloseImport}>
+          <div className="import-modal" onClick={event => event.stopPropagation()}>
+            <div className="import-modal-header">
+              <span>导入政策</span>
+              <button className="import-close-btn" onClick={handleCloseImport} aria-label="关闭导入弹窗">
+                <X size={20} />
+              </button>
+            </div>
+            <div className="import-modal-body">
+              <div className="import-section-title">导入文件</div>
+              <div className="import-upload-row">
+                <button className="btn import-upload-btn" onClick={() => importFileInputRef.current?.click()}>
+                  <Upload size={14} /> 导入文件
+                </button>
+                <input
+                  ref={importFileInputRef}
+                  type="file"
+                  accept=".xlsx,.xls"
+                  className="import-file-hidden"
+                  onChange={event => handleImportFile(event.target.files?.[0])}
+                />
+                <button className="import-template-link" onClick={handleDownloadTemplate}>
+                  下载导入模板
+                </button>
+              </div>
+              {importFileName && <div className="import-file-name">已选择：{importFileName}</div>}
+              {importMessage && <div className="import-message">{importMessage}</div>}
+
+              <div className="import-filter-title">创建时间</div>
+              <div className="import-filter-row">
+                <input className="import-date-input" type="date" value={importStartTime} onChange={event => setImportStartTime(event.target.value)} />
+                <span>到</span>
+                <input className="import-date-input" type="date" value={importEndTime} onChange={event => setImportEndTime(event.target.value)} />
+                <button className="btn btn-primary import-query-btn" onClick={handleImportSearch}>查 询</button>
+              </div>
+
+              <div className="import-data-header">
+                <span>数据列表</span>
+                <Settings size={14} />
+              </div>
+              <div className="import-records-wrapper">
+                <table className="import-records-table">
+                  <thead>
+                    <tr><th>序号</th><th>记录ID</th><th>导入时间</th><th>操作人</th><th>文件名</th><th>总数</th><th>操作</th></tr>
+                  </thead>
+                  <tbody>
+                    {importRecords.slice((importPage - 1) * importPageSize, importPage * importPageSize).map(record => (
+                      <tr key={record.id}>
+                        <td>{record.id}</td><td>{record.recordId}</td><td>{record.importTime}</td><td>{record.operator}</td><td>{record.fileName}</td><td>{record.total}</td>
+                        <td><button className="import-link-btn">源文件</button>{record.hasLog && <button className="import-link-btn">失败日志</button>}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div className="import-pagination">
+                <span>共 {importRecords.length === 6 ? 84 : importRecords.length} 条</span>
+                <button disabled={importPage === 1} onClick={() => setImportPage(page => Math.max(1, page - 1))}><ChevronLeft size={14} /></button>
+                <button className="page-active">{importPage}</button>
+                <button onClick={() => setImportPage(page => page + 1)}>2</button>
+                <button onClick={() => setImportPage(page => page + 1)}>3</button>
+                <span>...</span><button>4</button><button><ChevronRight size={14} /></button>
+                <select value={importPageSize} onChange={event => setImportPageSize(Number(event.target.value))}><option value="20">20 条/页</option><option value="50">50 条/页</option></select>
+              </div>
+            </div>
+            <div className="import-modal-footer">
+              <button className="footer-btn footer-btn-cancel" onClick={handleCloseImport}>取消</button>
+              <button className="footer-btn footer-btn-save" onClick={handleImportConfirm}>确定</button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <AnnotationViewer
         source={annotationSourceDocument as unknown as AnnotationSourceDocument}
+        defaultVisible
         options={{
           currentPageId: "policy-management-edit",
           toolbarEdge: 'right',

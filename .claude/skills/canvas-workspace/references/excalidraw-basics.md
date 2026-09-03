@@ -1,8 +1,6 @@
 # Excalidraw 基础指导
 
-这份只说明如何把内容组织成 Excalidraw 图，不规定 Axhub 画布流程。基础思路参考 `excalidraw-diagram-generator`：先判断图类型，再抽取元素、关系和复杂度，最后生成清晰布局。
-
-参考来源：https://www.skills.sh/github/awesome-copilot/excalidraw-diagram-generator
+这份只说明如何把内容组织成普通 Excalidraw 图，不规定 Axhub 画布流程。流程图、关系图、架构图等请求先按 `canvas-workspace` 主文档分流；已确定要画成 Excalidraw 元素后，再读本文件。
 
 ## 先判断图类型
 
@@ -34,7 +32,7 @@
 - 思维导图：中心主题 + 4-6 个主分支。
 - 泳道图：角色用列或行，活动放进对应泳道。
 
-相关内容使用 Frame 分组，组内元素用 `frameId` 归属到对应 Frame。
+多元素图先创建一个唯一的 Frame，再创建或整理相关元素。所有相关元素（包括文字、形状、连线和图片）都必须设置同一个 `frameId`，该 `frameId` 必须指向实际存在的 Frame；Frame 自身保持 `frameId: null`。Frame 的边界必须覆盖所有相关元素，写入后检查 Frame 的子元素、边界和 `frameId` 引用，不得留下没有 `frameId` 的相关元素。
 
 ## 控制复杂度
 
@@ -45,5 +43,5 @@
 
 ## 与 Axhub 规范的边界
 
-- 画布文件仍写入 `src/prototypes/<prototype-name>/canvas.excalidraw`。
+- 画布文件写入 `src/resources/**/*.excalidraw`。
 - 字体、颜色、节点、资源和交付口径仍按本技能主文档与其他 references 执行。

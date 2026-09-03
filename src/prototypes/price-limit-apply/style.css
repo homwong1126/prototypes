@@ -1,0 +1,908 @@
+@import "tailwindcss";
+
+.pla-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  font-family: "Microsoft YaHei", "PingFang SC", -apple-system, system-ui, "Segoe UI", MiSans, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* ── Header ── */
+.pla-header {
+  height: 48px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  flex-shrink: 0;
+}
+
+.pla-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.pla-logo {
+  height: 32px;
+}
+
+.pla-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.pla-header-btn {
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 2px;
+  padding: 0 10px;
+  height: 24px;
+  background: none;
+  cursor: pointer;
+  color: rgb(22, 119, 255);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.pla-header-btn:hover {
+  background: rgba(22, 119, 255, 0.1);
+}
+
+.pla-user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px;
+  background: rgb(8, 18, 37);
+  border-radius: 24px;
+  color: #fff;
+  font-size: 14px;
+  height: 32px;
+}
+
+/* ── Main ── */
+.pla-main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ── Sidebar ── */
+.pla-sidebar {
+  width: 206px;
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+  overflow-y: auto;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.pla-search-box {
+  margin: 8px 12px;
+  padding: 4px 11px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pla-search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.pla-menu-list {
+  padding: 8px 0;
+}
+
+.pla-menu-item {
+  padding: 0 24px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.pla-menu-item:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.pla-menu-item-active {
+  background: rgba(8, 18, 37, 0.04);
+  color: rgb(8, 18, 37);
+  justify-content: space-between;
+}
+
+.pla-submenu-wrapper {
+  background: #fff;
+}
+
+.pla-submenu-item {
+  padding: 0 24px 0 48px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.pla-submenu-item:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.pla-submenu-item-active {
+  color: rgb(22, 119, 255);
+  font-weight: 500;
+}
+
+.pla-fold-button {
+  margin-top: auto;
+  padding: 8px 0;
+  border-top: 2px solid #e5e7eb;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.88);
+  width: 100%;
+}
+
+/* ── Content Area ── */
+.pla-content-area {
+  flex: 1;
+  overflow-y: auto;
+  background: #f5f5f5;
+}
+
+.pla-breadcrumb {
+  background: #fff;
+  padding: 8px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pla-breadcrumb-item {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+}
+
+.pla-breadcrumb-item-active {
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.pla-breadcrumb-separator {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.pla-page-content {
+  padding: 16px;
+  max-width: 1200px;
+}
+
+/* ── Card ── */
+.pla-card {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.pla-section-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 520;
+  color: rgba(8, 18, 37, 0.88);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.pla-section-title svg {
+  color: rgb(22, 119, 255);
+}
+
+/* ── 表单 ── */
+.pla-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 24px;
+}
+
+.pla-form-item-full {
+  grid-column: 1 / -1;
+}
+
+.pla-form-label {
+  display: block;
+  margin-bottom: 4px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+}
+
+.pla-input-wrap {
+  position: relative;
+}
+
+.pla-form-input {
+  width: 100%;
+  padding: 4px 11px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  font-size: 14px;
+  transition: all 0.2s;
+  height: 32px;
+}
+
+.pla-form-input:focus {
+  border-color: rgb(22, 119, 255);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.1);
+}
+
+.pla-form-input-disabled {
+  background: #f5f5f5;
+  color: rgba(0, 0, 0, 0.55);
+  cursor: not-allowed;
+}
+
+.pla-input-suffix {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+.pla-form-hint {
+  margin-top: 4px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.45);
+  line-height: 1.6;
+}
+
+/* ── 车辆信息 ── */
+.pla-vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px 24px;
+}
+
+.pla-vehicle-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.pla-v-label {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.pla-v-value {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.88);
+  font-weight: 500;
+  word-break: break-all;
+  line-height: 1.6;
+}
+
+.pla-v-value-highlight {
+  color: rgb(22, 119, 255);
+  font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  letter-spacing: 0.3px;
+}
+
+.pla-v-value-price {
+  color: #d46b08;
+  font-weight: 700;
+}
+
+/* ── 限价信息 ── */
+.pla-margin-row {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pla-margin-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  min-width: 240px;
+  flex: 1;
+  max-width: 340px;
+}
+
+.pla-margin-box-limit {
+  background: #f5f8ff;
+  border-color: #adc6ff;
+}
+
+.pla-margin-box-estimate {
+  background: #fffdf6;
+  border-color: #ffe7a3;
+}
+
+.pla-margin-label {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.pla-margin-number {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.88);
+  line-height: 1.2;
+}
+
+.pla-margin-box-limit .pla-margin-number {
+  color: rgb(22, 119, 255);
+}
+
+.pla-margin-box-estimate .pla-margin-number {
+  color: #d46b08;
+}
+
+.pla-margin-number em {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.45);
+  margin-left: 4px;
+}
+
+.pla-margin-arrow {
+  align-self: center;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.35);
+  padding-bottom: 18px;
+}
+
+.pla-margin-warning {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #d46b08;
+  margin-top: 2px;
+}
+
+/* ── 审核信息 ── */
+.pla-chain-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed #e5e7eb;
+  flex-wrap: wrap;
+}
+
+.pla-chain-label {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.pla-chain {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.pla-chain-node-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+.pla-chain-sep {
+  color: rgba(0, 0, 0, 0.35);
+  margin: 0 2px;
+}
+
+.pla-chain-node {
+  padding: 2px 10px;
+  border-radius: 2px;
+  font-size: 13px;
+  border: 1px solid transparent;
+}
+
+.pla-chain-node-daqu { background: #e6f4ff; color: #1677ff; border-color: #91caff; }
+.pla-chain-node-tiaoxian { background: #f0f5ff; color: #2f54eb; border-color: #adc6ff; }
+.pla-chain-node-mendian { background: #fff7e6; color: #d46b08; border-color: #ffd591; }
+.pla-chain-node-jituan { background: #f9f0ff; color: #722ed1; border-color: #d3adf7; }
+
+.pla-chain-node-current {
+  outline: 2px solid rgb(22, 119, 255);
+  outline-offset: 1px;
+}
+
+.pla-chain-note {
+  font-size: 12px;
+  color: #d46b08;
+}
+
+.pla-review-meta {
+  margin-bottom: 4px;
+}
+
+.pla-review-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.pla-review-label {
+  margin-bottom: 0;
+}
+
+.pla-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 2px;
+  font-size: 13px;
+  border: 1px solid transparent;
+}
+
+.pla-status-pending {
+  background: #fff7e6;
+  color: #d46b08;
+  border-color: #ffd591;
+}
+
+.pla-status-approved {
+  background: #f6ffed;
+  color: #52c41a;
+  border-color: #b7eb8f;
+}
+
+.pla-status-rejected {
+  background: #fff1f0;
+  color: #ff4d4f;
+  border-color: #ffa39e;
+}
+
+.pla-review-comment {
+  margin-top: 16px;
+}
+
+.pla-textarea {
+  width: 100%;
+  min-height: 96px;
+  padding: 8px 11px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  font-size: 14px;
+  font-family: inherit;
+  line-height: 1.6;
+  resize: vertical;
+  transition: all 0.2s;
+}
+
+.pla-textarea:focus {
+  border-color: rgb(22, 119, 255);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.1);
+}
+
+.pla-textarea:disabled {
+  background: #f5f5f5;
+  color: rgba(0, 0, 0, 0.55);
+  cursor: not-allowed;
+}
+
+.pla-textarea-error {
+  border-color: #ff4d4f;
+}
+
+.pla-form-error {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #ff4d4f;
+}
+
+/* ── Footer Actions ── */
+.pla-footer-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+}
+
+.pla-footer-btn {
+  padding: 4px 16px;
+  height: 32px;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pla-footer-btn-cancel {
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.pla-footer-btn-cancel:hover {
+  border-color: rgb(22, 119, 255);
+  color: rgb(22, 119, 255);
+}
+
+.pla-footer-btn-reject {
+  background: #fff;
+  border: 1px solid #ff4d4f;
+  color: #ff4d4f;
+}
+
+.pla-footer-btn-reject:hover {
+  background: #fff1f0;
+  border-color: #ff4d4f;
+}
+
+.pla-footer-btn-approve {
+  background: rgb(23, 107, 248);
+  border: 1px solid rgb(23, 107, 248);
+  color: #fff;
+}
+
+.pla-footer-btn-approve:hover {
+  background: #1766cc;
+  border-color: #1766cc;
+}
+
+.pla-result-tip {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+/* ── Toast ── */
+.pla-toast {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: pla-toast-in 0.25s ease;
+}
+
+.pla-toast-success {
+  background: #52c41a;
+}
+
+.pla-toast-error {
+  background: #ff4d4f;
+}
+
+@keyframes pla-toast-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* ── 响应式 ── */
+@media (max-width: 900px) {
+  .pla-vehicle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pla-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .pla-vehicle-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── 列表筛选 ── */
+.pla-list-filter {
+  grid-template-columns: 1fr 1fr 1fr auto;
+  align-items: end;
+}
+
+.pla-list-filter-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 2px;
+}
+
+.pla-input-with-icon .pla-input-suffix {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pla-filter-btn {
+  padding: 4px 16px;
+  height: 32px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pla-filter-btn:hover {
+  border-color: rgb(22, 119, 255);
+  color: rgb(22, 119, 255);
+}
+
+/* ── 申请单列表表格 ── */
+.pla-table-container {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.pla-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.pla-table-title {
+  font-size: 16px;
+  font-weight: 520;
+  color: rgba(8, 18, 37, 0.88);
+}
+
+.pla-table-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.pla-table-wrapper {
+  overflow-x: auto;
+}
+
+.pla-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.pla-table th {
+  background: #fafafa;
+  padding: 8px;
+  text-align: left;
+  font-weight: 520;
+  color: rgba(0, 0, 0, 0.88);
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.pla-table td {
+  padding: 8px;
+  border-bottom: 1px solid #f0f0f0;
+  color: rgba(0, 0, 0, 0.88);
+  white-space: nowrap;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pla-table tbody tr:hover {
+  background: rgba(22, 119, 255, 0.03);
+}
+
+.pla-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.pla-cell-mono {
+  font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 13px;
+}
+
+.pla-cell-warn {
+  color: #d46b08;
+  font-weight: 600;
+}
+
+.pla-table-empty {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.45);
+  padding: 32px 0 !important;
+}
+
+/* ── 级别标签 ── */
+.pla-level-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.pla-level-none {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  white-space: nowrap;
+  border: 1px solid #d9d9d9;
+  color: rgba(0, 0, 0, 0.65);
+  background: #fafafa;
+}
+
+.pla-level-da {
+  background: #e6f7ff;
+  color: #1890ff;
+  border-color: #91d5ff;
+}
+
+.pla-level-tiao {
+  background: #f9f0ff;
+  color: #722ed1;
+  border-color: #d3adf7;
+}
+
+.pla-level-men {
+  background: #fff7e6;
+  color: #d46b08;
+  border-color: #ffd591;
+}
+
+.pla-level-ji {
+  background: #fff1f0;
+  color: #ff4d4f;
+  border-color: #ffa39e;
+}
+
+/* ── 通用按钮 ── */
+.pla-btn {
+  padding: 4px 11px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.pla-btn:hover {
+  border-color: rgb(22, 119, 255);
+  color: rgb(22, 119, 255);
+}
+
+.pla-btn-ghost {
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.pla-btn-primary {
+  background: rgb(23, 107, 248);
+  border-color: rgb(23, 107, 248);
+  color: #fff;
+}
+
+.pla-btn-primary:hover {
+  background: #1766cc;
+  border-color: #1766cc;
+  color: #fff;
+}
+
+.pla-btn-view {
+  color: rgb(22, 119, 255);
+  border-color: rgb(22, 119, 255);
+}
+
+.pla-btn-view:hover {
+  background: rgba(22, 119, 255, 0.1);
+  border-color: rgb(22, 119, 255);
+  color: rgb(22, 119, 255);
+}
+
+/* ── 需审核级别框 ── */
+.pla-margin-box-level {
+  background: #f9f0ff;
+  border-color: #d3adf7;
+}
+
+.pla-review-text {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+/* ── 详情页（只读） ── */
+.pla-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px 24px;
+}
+
+.pla-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.pla-detail-item-full {
+  grid-column: 1 / -1;
+}
+
+.pla-detail-value {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.88);
+  font-weight: 500;
+  word-break: break-all;
+  line-height: 1.6;
+}
+
+.pla-detail-comment {
+  background: #fafafa;
+  border: 1px solid #f0f0f0;
+  border-radius: 2px;
+  padding: 8px 11px;
+  font-weight: 400;
+}
+
+.pla-detail-comment-approve {
+  background: #f6ffed;
+  border-color: #b7eb8f;
+}

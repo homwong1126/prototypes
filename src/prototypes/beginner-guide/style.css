@@ -365,6 +365,167 @@
     gap: 16px;
 }
 
+.beginner-guide-preparation-flow {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 0;
+}
+
+.beginner-guide-preparation-step {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 26px minmax(0, 1fr);
+    align-items: center;
+    gap: 10px;
+}
+
+.beginner-guide-preparation-step > span {
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--brand);
+    border-radius: 999px;
+    color: var(--brand);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1;
+}
+
+.beginner-guide-preparation-step div {
+    min-width: 0;
+    display: grid;
+    gap: 3px;
+}
+
+.beginner-guide-preparation-step strong {
+    color: var(--near-black);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.beginner-guide-preparation-step small {
+    color: var(--stone);
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.beginner-guide-preparation-arrow,
+.beginner-guide-lifecycle-arrow {
+    color: var(--brand);
+}
+
+.beginner-guide-lifecycle-flow {
+    display: flex;
+    align-items: stretch;
+    gap: 7px;
+    margin-top: 14px;
+}
+
+.beginner-guide-lifecycle-node {
+    min-width: 0;
+    min-height: 132px;
+    flex: 1 1 0;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--brand);
+    border-radius: 8px;
+    background: var(--ivory);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px;
+}
+
+.beginner-guide-lifecycle-node small {
+    color: var(--brand);
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.beginner-guide-lifecycle-node strong {
+    color: var(--near-black);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.beginner-guide-lifecycle-node span {
+    color: var(--stone);
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.beginner-guide-lifecycle-node.is-optional {
+    border-color: #d8d6cd;
+    border-left-color: var(--stone);
+    background: #f0efe9;
+}
+
+.beginner-guide-lifecycle-node.is-optional small {
+    color: var(--stone);
+}
+
+.beginner-guide-lifecycle-arrow {
+    align-self: center;
+    flex: 0 0 17px;
+}
+
+.beginner-guide-lifecycle-note {
+    margin-top: 10px !important;
+    color: var(--stone) !important;
+    font-size: 13px !important;
+}
+
+.beginner-guide-capability-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.beginner-guide-capability-card {
+    min-width: 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--ivory);
+    padding: 16px;
+}
+
+.beginner-guide-capability-card > span {
+    color: var(--brand);
+    display: block;
+    margin-bottom: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.beginner-guide-capability-card h4 {
+    margin: 0 0 8px;
+    color: var(--near-black);
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.beginner-guide-capability-card p {
+    margin: 0;
+    color: var(--olive);
+    font-size: 14px;
+    line-height: 1.55;
+}
+
 .beginner-guide-step-card {
     min-height: 120px;
     border: 1px solid var(--border);
@@ -464,124 +625,24 @@
     min-height: 118px;
 }
 
-.beginner-guide-advanced-categories {
-    display: grid;
-    gap: 18px;
-}
-
-.beginner-guide-advanced-category {
-    border-top: 1px solid var(--border);
-    padding-top: 15px;
-}
-
-.beginner-guide-advanced-category h4 {
-    margin: 0 0 6px;
-    color: var(--near-black);
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.25;
-}
-
-.beginner-guide-advanced-category > p {
-    margin-bottom: 12px;
-    color: var(--olive);
-    font-size: 14px;
-}
-
-.beginner-guide-advanced-topic-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    border-top: 1px solid var(--border-soft);
-}
-
-.beginner-guide-advanced-topic {
-    min-height: 86px;
-    border-bottom: 1px solid var(--border-soft);
-    display: grid;
-    align-content: start;
-    gap: 6px;
-    padding: 12px 14px 12px 0;
-}
-
-.beginner-guide-advanced-topic:nth-child(odd) {
-    border-right: 1px solid var(--border-soft);
-}
-
-.beginner-guide-advanced-topic:nth-child(even) {
-    padding-left: 14px;
-}
-
-.beginner-guide-advanced-topic:nth-last-child(-n + 2) {
-    border-bottom: 0;
-}
-
-.beginner-guide-advanced-topic strong {
-    color: var(--near-black);
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 1.25;
-}
-
-.beginner-guide-advanced-topic span {
-    color: var(--olive);
-    font-size: 13px;
-    line-height: 1.5;
-}
-
-.beginner-guide-advanced-import-card {
+.beginner-guide-help-card {
     margin-top: 12px;
 }
 
-.beginner-guide-advanced-import-card .beginner-guide-step-copy {
-    grid-template-columns: 34px minmax(0, 1fr);
-}
-
-.beginner-guide-advanced-import-card .beginner-guide-step-copy > span {
-    width: 30px;
-    height: 30px;
-    background: #eef2f7;
-    font-family: var(--serif);
-    font-size: 12px;
-}
-
-.beginner-guide-advanced-import-card .beginner-guide-step-copy p + p {
-    margin-top: 8px;
-}
-
-.beginner-guide-advanced-placeholder {
-    min-height: 180px;
-    flex-direction: column;
-    gap: 8px;
-    background:
-        linear-gradient(90deg, transparent 0 18px, #e8e6dc 18px 19px, transparent 19px 100%),
-        linear-gradient(0deg, transparent 0 18px, #e8e6dc 18px 19px, transparent 19px 100%),
-        var(--ivory);
-    background-size: 20px 20px;
-    padding: 22px;
-}
-
-.beginner-guide-advanced-placeholder span {
+.beginner-guide-help-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
     color: var(--brand);
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 500;
-    line-height: 1.35;
+    text-decoration: none;
 }
 
-.beginner-guide-advanced-placeholder strong {
-    color: var(--near-black);
-    font-size: 17px;
-    font-weight: 500;
-    line-height: 1.25;
-}
-
-.beginner-guide-advanced-placeholder small {
-    color: var(--stone);
-    font-size: 12px;
-    line-height: 1.4;
-}
-
-.beginner-guide-delete-note {
-    margin-bottom: 0;
+.beginner-guide-help-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .beginner-guide-flowcards {
@@ -762,6 +823,69 @@
     color: var(--stone);
     font-size: 14px;
     line-height: 1.65;
+}
+
+.beginner-guide-flowcard .beginner-guide-uncertainty-note {
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.beginner-guide-uncertainty-effect-flow {
+    width: min(100%, 310px);
+    display: grid;
+    grid-template-columns: minmax(92px, 1fr) 34px minmax(92px, 1fr);
+    grid-template-areas:
+        "prompt prompt prompt"
+        "arrow-left . arrow-right"
+        "result-a . result-b";
+    align-items: center;
+    justify-items: center;
+    gap: 10px 4px;
+}
+
+.beginner-guide-uncertainty-prompt {
+    grid-area: prompt;
+    width: min(190px, 100%);
+}
+
+.beginner-guide-uncertainty-arrow-left {
+    grid-area: arrow-left;
+}
+
+.beginner-guide-uncertainty-arrow-right {
+    grid-area: arrow-right;
+}
+
+.beginner-guide-uncertainty-result-a {
+    grid-area: result-a;
+    width: 100%;
+}
+
+.beginner-guide-uncertainty-result-b {
+    grid-area: result-b;
+    width: 100%;
+}
+
+.beginner-guide-uncertainty-time-flow {
+    width: min(100%, 390px);
+    display: grid;
+    grid-template-columns: minmax(78px, 1fr) 18px minmax(94px, 1.15fr) 18px minmax(78px, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 6px;
+}
+
+.beginner-guide-uncertainty-time-flow .beginner-guide-flow-step {
+    width: 100%;
+}
+
+.beginner-guide-uncertainty-time-flow small {
+    margin-top: 3px;
+    color: var(--stone);
+    font-family: var(--mono);
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 0.08em;
 }
 
 .beginner-guide-tip-grid {
@@ -1047,19 +1171,28 @@
         gap: 14px;
     }
 
+    .beginner-guide-lifecycle-flow {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .beginner-guide-lifecycle-node {
+        min-height: 0;
+    }
+
+    .beginner-guide-lifecycle-arrow {
+        justify-self: center;
+        transform: rotate(90deg);
+    }
+
+    .beginner-guide-capability-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
     .beginner-guide-step-card {
         grid-template-columns: 1fr;
-    }
-
-    .beginner-guide-advanced-topic-list {
-        grid-template-columns: 1fr;
-    }
-
-    .beginner-guide-advanced-topic,
-    .beginner-guide-advanced-topic:nth-child(even) {
-        border-right: 0;
-        padding-left: 0;
-        padding-right: 0;
     }
 
     .beginner-guide-step-image {
@@ -1149,6 +1282,15 @@
         width: 100%;
         gap: 5px;
         padding: 6px;
+    }
+
+    .beginner-guide-uncertainty-time-flow {
+        grid-template-columns: minmax(68px, 1fr) 12px minmax(82px, 1.1fr) 12px minmax(68px, 1fr);
+        gap: 4px;
+    }
+
+    .beginner-guide-flowcard .beginner-guide-uncertainty-note {
+        white-space: normal;
     }
 
     .beginner-guide-footer-actions {

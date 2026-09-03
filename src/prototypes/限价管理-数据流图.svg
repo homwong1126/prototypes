@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <style>
+      .system { fill: #e3f2fd; stroke: #1976d2; stroke-width: 2; }
+      .database { fill: #c8e6c9; stroke: #388e3c; stroke-width: 2; }
+      .external { fill: #fff9c4; stroke: #f57c00; stroke-width: 2; }
+      .finance { fill: #ffccbc; stroke: #d84315; stroke-width: 2; }
+      .text { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 14px; fill: #333; text-anchor: middle; }
+      .text-small { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; fill: #666; text-anchor: middle; }
+      .arrow { fill: none; stroke: #666; stroke-width: 2; marker-end: url(#arrowhead); }
+      .arrow-bi { fill: none; stroke: #666; stroke-width: 2; marker-end: url(#arrowhead); marker-start: url(#arrowhead-start); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#666" />
+    </marker>
+    <marker id="arrowhead-start" markerWidth="10" markerHeight="10" refX="1" refY="3" orient="auto">
+      <polygon points="10 0, 0 3, 10 6" fill="#666" />
+    </marker>
+  </defs>
+
+  <text x="800" y="40" class="text" style="font-size: 20px; font-weight: 600;">&#x9650;&#x4ef7;&#x7ba1;&#x7406;&#x6570;&#x636e;&#x6d41;&#x56fe;</text>
+
+  <rect x="620" y="370" width="360" height="110" rx="12" class="system" />
+  <text x="800" y="410" class="text" style="font-size: 16px; font-weight: 600;">&#x9650;&#x4ef7;&#x7ba1;&#x7406;&#x5e73;&#x53f0;</text>
+  <text x="800" y="430" class="text-small">&#x6838;&#x5fc3;&#x4e1a;&#x52a1;&#x5904;&#x7406;</text>
+  <text x="800" y="448" class="text-small" style="font-size: 11px;">&#x8f66;&#x8f86;&#x6027;&#x8d28;&#x5224;&#x5b9a; | &#x89c4;&#x5219;&#x5339;&#x914d; | &#x964d;&#x5e45;&#x8ba1;&#x7b97; | &#x5ba1;&#x6279;&#x6d41;&#x8f6c;</text>
+
+  <ellipse cx="270" cy="160" rx="110" ry="62" class="database" />
+  <text x="270" y="154" class="text" style="font-weight: 600;">&#x5e93;&#x5b58;&#x7ba1;&#x7406;&#x7cfb;&#x7edf;</text>
+  <text x="270" y="174" class="text-small">&#x8f66;&#x8f86;&#x5b9a;&#x4e49;&#x5b57;&#x6bb5;</text>
+  <text x="270" y="192" class="text-small" style="font-size: 11px;">&#x6027;&#x8d28;&#x7c7b;&#x578b; / &#x7248;&#x578b; / &#x8f66;&#x578b;</text>
+
+  <rect x="1220" y="110" width="220" height="110" rx="10" class="external" />
+  <text x="1330" y="150" class="text" style="font-weight: 600;">&#x9500;&#x552e;/&#x8ba2;&#x5355;&#x7cfb;&#x7edf;</text>
+  <text x="1330" y="170" class="text-small">&#x8ba2;&#x5355;&#x914d;&#x8f66;&#x4fdd;&#x5b58;</text>
+  <text x="1330" y="188" class="text-small" style="font-size: 11px;">&#x9884;&#x4f30;&#x7efc;&#x5408;&#x6bdb;&#x5229;</text>
+
+  <rect x="1020" y="250" width="200" height="95" rx="10" class="external" />
+  <text x="1120" y="288" class="text" style="font-weight: 600;">&#x65b0;&#x8f66;&#x5f00;&#x7968;&#x6d41;&#x7a0b;</text>
+  <text x="1120" y="308" class="text-small">&#x8bfb;&#x53d6;&#x5df2;&#x901a;&#x8fc7;&#x72b6;&#x6001;</text>
+
+  <rect x="120" y="610" width="240" height="110" rx="10" class="finance" />
+  <text x="240" y="650" class="text" style="font-weight: 600;">&#x9650;&#x4ef7;&#x89c4;&#x5219;&#x8868;</text>
+  <text x="240" y="670" class="text-small">&#x8f66;&#x578b;/&#x7248;&#x578b;/&#x5e74;&#x6b3e;/&#x6708;&#x6b3e;</text>
+  <text x="240" y="688" class="text-small" style="font-size: 11px;">&#x7efc;&#x5408;&#x6bdb;&#x5229;&#x9650;&#x4ef7; | &#x5ba1;&#x6279;&#x989d;&#x5ea6;</text>
+
+  <rect x="1230" y="620" width="220" height="100" rx="10" class="finance" />
+  <text x="1340" y="655" class="text" style="font-weight: 600;">&#x5ba1;&#x6838;&#x4eba;&#x5458;</text>
+  <text x="1340" y="675" class="text-small">&#x5927;&#x533a; / &#x6761;&#x7ebf; / &#x95e8;&#x5e97; / &#x96c6;&#x56e2;</text>
+  <text x="1340" y="693" class="text-small" style="font-size: 11px;">&#x901a;&#x8fc7; / &#x9a73;&#x56de;</text>
+
+  <rect x="120" y="330" width="230" height="100" rx="10" class="database" />
+  <text x="235" y="370" class="text" style="font-weight: 600;">&#x65e0;&#x5339;&#x914d;&#x89c4;&#x5219;&#x573a;&#x666f;</text>
+  <text x="235" y="390" class="text-small">&#x7248;&#x578b;&#x65e0;&#x89c4;&#x5219;</text>
+  <text x="235" y="408" class="text-small" style="font-size: 11px;">&#x9ed8;&#x8ba4;&#x4e0d;&#x751f;&#x6210;&#x7533;&#x8bf7;&#x5355;</text>
+
+  <rect x="1210" y="360" width="240" height="110" rx="10" class="system" />
+  <text x="1330" y="400" class="text" style="font-weight: 600;">&#x9650;&#x4ef7;&#x7533;&#x8bf7;&#x5355;</text>
+  <text x="1330" y="420" class="text-small">&#x5f85;&#x5ba1;&#x6838; / &#x5df2;&#x901a;&#x8fc7; / &#x5df2;&#x9a73;&#x56de;</text>
+  <text x="1330" y="438" class="text-small" style="font-size: 11px;">&#x540c;&#x8f66;&#x4ec5;&#x4e00;&#x6761;&#x6709;&#x6548;&#x5355;</text>
+
+  <path d="M 380 185 Q 500 260 620 385" class="arrow" />
+  <text x="500" y="270" class="text-small" style="fill: #1976d2;">&#x67e5;&#x8be2;&#x8f66;&#x8f86;&#x5b9a;&#x4e49;&#x5b57;&#x6bb5;</text>
+  <text x="500" y="285" class="text-small" style="font-size: 10px; fill: #666;">&#x5e38;&#x89c4;&#x8f66;/&#x975e;&#x5e38;&#x89c4;&#x8f66;</text>
+
+  <path d="M 620 400 Q 500 320 390 390" class="arrow" stroke-dasharray="4,4" />
+  <text x="480" y="338" class="text-small" style="font-size: 10px; fill: #999;">&#x8fd4;&#x56de;&#x6027;&#x8d28;&#x7ed3;&#x679c;</text>
+
+  <path d="M 620 430 Q 470 540 360 650" class="arrow" />
+  <text x="500" y="540" class="text-small" style="fill: #d84315;">&#x67e5;&#x8be2;&#x9650;&#x4ef7;&#x89c4;&#x5219;</text>
+  <text x="500" y="556" class="text-small" style="font-size: 10px; fill: #666;">&#x8f66;&#x578b;/&#x7248;&#x578b;/&#x5e74;&#x6b3e;/&#x6708;&#x6b3e;</text>
+
+  <path d="M 360 670 Q 500 620 620 470" class="arrow" stroke-dasharray="4,4" />
+  <text x="485" y="610" class="text-small" style="font-size: 10px; fill: #999;">&#x8fd4;&#x56de;&#x89c4;&#x5219;&#x4e0e;&#x989d;&#x5ea6;</text>
+
+  <path d="M 980 395 Q 1120 385 1210 410" class="arrow" />
+  <text x="1090" y="375" class="text-small" style="fill: #1976d2;">&#x521b;&#x5efa;&#x7533;&#x8bf7;&#x5355;</text>
+  <text x="1090" y="390" class="text-small" style="font-size: 10px; fill: #666;">&#x89e6;&#x53d1;&#x5ba1;&#x6279;&#x6d41;&#x8f6c;</text>
+
+  <path d="M 980 430 Q 1120 515 1230 650" class="arrow" />
+  <text x="1120" y="530" class="text-small" style="fill: #d84315;">&#x6d41;&#x8f6c;&#x81f3;&#x5ba1;&#x6838;&#x4eba;&#x5458;</text>
+  <text x="1120" y="546" class="text-small" style="font-size: 10px; fill: #666;">&#x9010;&#x7ea7;&#x901a;&#x8fc7;/&#x9a73;&#x56de;</text>
+
+  <path d="M 1330 360 Q 1330 270 1320 220" class="arrow" />
+  <text x="1380" y="300" class="text-small" style="fill: #f57c00;">&#x5f00;&#x7968;&#x653e;&#x884c;&#x68c0;&#x67e5;</text>
+  <text x="1380" y="316" class="text-small" style="font-size: 10px; fill: #666;">&#x4ec5;&#x5df2;&#x901a;&#x8fc7;&#x53ef;&#x7ee7;&#x7eed;</text>
+
+  <path d="M 1050 300 Q 950 250 830 370" class="arrow" />
+  <text x="920" y="255" class="text-small" style="fill: #1976d2;">&#x8bfb;&#x53d6;&#x7533;&#x8bf7;&#x72b6;&#x6001;</text>
+
+  <path d="M 240 460 Q 360 520 620 420" class="arrow" />
+  <text x="430" y="490" class="text-small" style="fill: #388e3c;">&#x65e0;&#x5339;&#x914d;&#x5219;&#x4e0d;&#x751f;&#x6210;</text>
+  <text x="430" y="505" class="text-small" style="font-size: 10px; fill: #666;">&#x9ed8;&#x8ba4;&#x65e0;&#x9700;&#x9650;&#x4ef7;&#x5ba1;&#x6279;</text>
+
+  <g transform="translate(70, 90)">
+    <rect x="0" y="0" width="210" height="90" rx="8" fill="#f5f5f5" stroke="#ddd" stroke-width="1" />
+    <text x="105" y="20" class="text-small" style="font-weight: 600;">&#x6570;&#x636e;&#x6d41;&#x8bf4;&#x660e;</text>
+    <text x="105" y="40" class="text-small" style="font-size: 11px;">&#x5b9e;&#x7ebf;&#x7bad;&#x5934;&#65306;&#x8bf7;&#x6c42; / &#x521b;&#x5efa; / &#x6d41;&#x8f6c;</text>
+    <text x="105" y="56" class="text-small" style="font-size: 11px;">&#x865a;&#x7ebf;&#x7bad;&#x5934;&#65306;&#x8fd4;&#x56de; / &#x56de;&#x5199; / &#x653e;&#x884c;</text>
+    <text x="105" y="72" class="text-small" style="font-size: 11px;">&#x53cc;&#x5411;&#x542b;&#x4e49;&#65306;&#x67e5;&#x8be2;&#x5e76;&#x56de;&#x4f20;&#x7ed3;&#x679c;</text>
+  </g>
+
+  <g transform="translate(1040, 760)">
+    <rect x="0" y="0" width="480" height="100" rx="8" fill="#fff3e0" stroke="#f57c00" stroke-width="2" />
+    <text x="240" y="20" class="text-small" style="font-weight: 600; fill: #e65100;">&#x6838;&#x5fc3;&#x4e1a;&#x52a1;&#x89c4;&#x5219;</text>
+    <text x="20" y="42" class="text-small" style="font-size: 11px; text-anchor: start;">1. &#x901a;&#x8fc7;&#x5e93;&#x5b58;&#x8f66;&#x8f86;&#x5b9a;&#x4e49;&#x5b57;&#x6bb5;&#x5224;&#x5b9a;&#x8f66;&#x8f86;&#x6027;&#x8d28;&#xff1a;&#x5e38;&#x89c4;&#x8f66; / &#x975e;&#x5e38;&#x89c4;&#x8f66;&#x3002;</text>
+    <text x="20" y="58" class="text-small" style="font-size: 11px; text-anchor: start;">2. &#x6309;&#x8f66;&#x578b; / &#x7248;&#x578b;&#x5339;&#x914d;&#x9650;&#x4ef7;&#x89c4;&#x5219;&#x8868;&#xff0c;&#x83b7;&#x53d6;&#x7efc;&#x5408;&#x6bdb;&#x5229;&#x9650;&#x4ef7;&#x4e0e;&#x5ba1;&#x6279;&#x989d;&#x5ea6;&#x3002;</text>
+    <text x="20" y="74" class="text-small" style="font-size: 11px; text-anchor: start;">3. &#x7248;&#x578b;&#x65e0;&#x5339;&#x914d;&#x65f6;&#x4e0d;&#x751f;&#x6210;&#x7533;&#x8bf7;&#x5355;&#xff0c;&#x9ed8;&#x8ba4;&#x65e0;&#x9700;&#x9650;&#x4ef7;&#x5ba1;&#x6279;&#x3002;</text>
+    <text x="20" y="90" class="text-small" style="font-size: 11px; text-anchor: start;">4. &#x9650;&#x4ef7;&#x6d41;&#x7a0b;&#x5fc5;&#x987b;&#x5df2;&#x901a;&#x8fc7;&#x540e;&#xff0c;&#x65b0;&#x8f66;&#x5f00;&#x7968;&#x65b9;&#x53ef;&#x7ee7;&#x7eed;&#x3002;</text>
+  </g>
+</svg>

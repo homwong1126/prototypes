@@ -1,0 +1,216 @@
+{
+  "documentVersion": 1,
+  "format": "axhub-annotation-source",
+  "data": {
+    "version": 2,
+    "prototypeName": "price-limit-apply",
+    "pageId": "list",
+    "updatedAt": 1787846400000,
+    "nodes": [
+      {
+        "id": "price-limit-apply-list-page",
+        "index": 1,
+        "title": "限价申请列表页",
+        "pageId": "list",
+        "locator": {
+          "selectors": [".pla-table-container"],
+          "fingerprint": "section|class=pla-table-container",
+          "path": []
+        },
+        "aiPrompt": "说明限价申请列表页的字段、操作列规则，以及待审核与已审核状态的入口差异。",
+        "annotationText": "列表页展示申请单号、VIN码、车系、车型、预估综合毛利、综合毛利限价、需审核级别、审核状态、创建时间、审核人、审核时间和操作列。待审核单据在操作列显示对应级别的审核按钮，审核完成后只保留查看按钮。",
+        "hasMarkdown": false,
+        "color": "#D97706",
+        "images": [],
+        "createdAt": 1787846400000,
+        "updatedAt": 1787846400000
+      },
+      {
+        "id": "price-limit-apply-filter-bar",
+        "index": 2,
+        "title": "列表筛选条件",
+        "pageId": "list",
+        "locator": {
+          "selectors": [".pla-card:first-of-type"],
+          "fingerprint": "section|class=pla-card:first-of-type",
+          "path": []
+        },
+        "aiPrompt": "说明列表页筛选条件如何帮助定位申请单。",
+        "annotationText": "筛选条件用于按申请单号/VIN码、审核状态和需审核级别快速查找申请单；重置按钮可恢复默认视图。",
+        "hasMarkdown": false,
+        "color": "#059669",
+        "images": [],
+        "createdAt": 1787846400000,
+        "updatedAt": 1787846400000
+      },
+      {
+        "id": "price-limit-apply-review-entry",
+        "index": 3,
+        "title": "审核入口",
+        "pageId": "list",
+        "locator": {
+          "selectors": [".pla-btn-primary"],
+          "fingerprint": "button|class=pla-btn-primary",
+          "path": []
+        },
+        "aiPrompt": "说明待审核申请如何从列表进入审核页。",
+        "annotationText": "预估综合毛利不低于综合毛利限价的单据无需审批，不显示审核按钮；预估毛利为负值时走集团审核；预估毛利低于限价时按降幅命中层级配置金额判定审核级别。点击审核按钮进入对应申请单的审核页，该按钮只出现在待审核且需审批的单据上。",
+        "hasMarkdown": false,
+        "color": "#7C3AED",
+        "images": [],
+        "createdAt": 1787846400000,
+        "updatedAt": 1787846400000
+      },
+      {
+        "id": "price-limit-apply-detail-entry",
+        "index": 4,
+        "title": "只读详情入口",
+        "pageId": "list",
+        "locator": {
+          "selectors": [".pla-btn-view"],
+          "fingerprint": "button|class=pla-btn-view",
+          "path": []
+        },
+        "aiPrompt": "说明已审核完成的单据如何进入只读详情页。",
+        "annotationText": "当申请单已通过或已驳回时，操作列只显示查看按钮。进入后仅可查看申请信息、车辆信息、限价信息和审核记录，不可编辑。",
+        "hasMarkdown": false,
+        "color": "#2563EB",
+        "images": [],
+        "createdAt": 1787846400000,
+        "updatedAt": 1787846400000
+      },
+      {
+        "id": "price-limit-apply-review-page",
+        "index": 5,
+        "title": "限价申请审核页",
+        "pageId": "review",
+        "locator": {
+          "selectors": [".pla-footer-actions"],
+          "fingerprint": "section|class=pla-footer-actions",
+          "path": []
+        },
+        "aiPrompt": "说明审核页的结构、通过/驳回动作和校验规则。",
+        "annotationText": "审核页展示申请单信息、车辆信息、限价信息和审核信息。驳回时必须填写审核意见；通过或驳回后返回列表，申请单状态与审核人、审核时间同步更新。",
+        "hasMarkdown": false,
+        "color": "#D97706",
+        "images": [],
+        "controls": [
+          {
+            "type": "segmented",
+            "attributeId": "review_level",
+            "displayName": "当前审核层级",
+            "info": "切换当前申请单的审核级别展示，便于检查页面文案和状态。",
+            "initialValue": "大区",
+            "options": [
+              { "label": "大区", "value": "大区" },
+              { "label": "条线", "value": "条线" },
+              { "label": "门店", "value": "门店" },
+              { "label": "集团", "value": "集团" }
+            ]
+          },
+          {
+            "type": "segmented",
+            "attributeId": "review_state",
+            "displayName": "审核结果预览",
+            "info": "用于预览通过和驳回两种审核结果说明。",
+            "initialValue": "pending",
+            "options": [
+              { "label": "待审核", "value": "pending" },
+              { "label": "已通过", "value": "approved" },
+              { "label": "已驳回", "value": "rejected" }
+            ]
+          }
+        ],
+        "createdAt": 1787846400000,
+        "updatedAt": 1787846400000
+      },
+      {
+        "id": "price-limit-apply-detail-page",
+        "index": 6,
+        "title": "限价申请详情页",
+        "pageId": "detail",
+        "locator": {
+          "selectors": [".pla-detail-grid"],
+          "fingerprint": "section|class=pla-detail-grid",
+          "path": []
+        },
+        "aiPrompt": "说明只读详情页展示的完整信息范围。",
+        "annotationText": "只读详情页展示申请单信息、车辆信息、限价信息和审核信息。页面没有编辑控件，仅保留返回列表按钮。",
+        "hasMarkdown": false,
+        "color": "#059669",
+        "images": [],
+        "createdAt": 1787846400000,
+        "updatedAt": 1787846400000
+      }
+    ]
+  },
+  "markdownMap": {
+    "price-limit-apply-list-page": "# 限价申请列表页\n\n列表页是限价申请原型的默认入口，用于统一查看所有申请单的状态、审核层级和操作入口。\n\n## 展示字段\n- 申请单号\n- VIN码\n- 车系\n- 车型\n- 预估综合毛利\n- 综合毛利限价\n- 需审核级别\n- 审核状态\n- 创建时间\n- 审核人\n- 审核时间\n- 操作\n\n## 交互规则\n- 待审核单据显示对应级别的审核按钮\n- 审核完成后仅保留查看按钮\n- 筛选条件支持按申请单号/VIN码、审核状态、需审核级别筛选\n- 重置按钮恢复默认筛选状态\n\n## 说明\n当前基础版标注先覆盖列表、审核和详情三种主场景，后续如补充批量操作、导出或分页，再继续扩展标注节点。",
+    "price-limit-apply-filter-bar": "# 列表筛选条件\n\n筛选区用于帮助审核人员快速定位目标申请单。\n\n## 筛选能力\n- 申请单号 / VIN码：模糊查找\n- 审核状态：待审核、已通过、已驳回\n- 需审核级别：大区、条线、门店、集团\n\n## 使用说明\n- 当业务侧需要优先查找某一层级的待审单据时，可直接通过需审核级别筛选\n- 当需要核对历史审批结果时，可通过审核状态筛选已通过或已驳回数据\n\n## 待确认项\n- 是否需要增加日期范围筛选\n- 是否需要显示更多车辆维度过滤条件",
+    "price-limit-apply-review-entry": "# 审核入口\n\n根据审批规则计算单据是否需要审批以及由哪一级审批。\n\n## 审批规则\n1. 预估综合毛利 >= 综合毛利限价：无需审批，不显示审核按钮\n2. 预估综合毛利为负值：走全部审批（集团审核）\n3. 预估综合毛利 < 综合毛利限价（且非负）：按降幅命中层级配置金额判定\n   - 降幅不超过大区权限：显示大区审核\n   - 降幅超过大区权限但未超过条线权限：显示条线审核\n   - 降幅超过条线权限但未超过门店权限：显示门店审核\n   - 降幅超过门店权限：显示集团审核\n\n## 行为\n点击按钮后进入审核页，继续完成通过或驳回。\n\n## 待确认项\n- 审核人身份是否需要按登录角色自动切换\n- 若某级别超出权限，是否需要强制跳过该级按钮直接进入更高层",
+    "price-limit-apply-detail-entry": "# 只读详情入口\n\n当申请单已经完成审核后，列表操作列只显示查看按钮。\n\n## 详情页可见内容\n- 申请单信息\n- 车辆信息\n- 限价信息\n- 审核信息\n\n## 交互规则\n- 页面只读，不允许编辑\n- 只提供返回列表操作\n\n## 待确认项\n- 是否需要单独的打印或导出动作\n- 是否需要从详情页回跳到当前筛选状态的列表",
+    "price-limit-apply-review-page": "# 限价申请审核页\n\n审核页用于处理待审核单据。\n\n## 页面结构\n1. 申请单信息：申请单号、门店销售ERP号、门店名称\n2. 车辆信息：VIN、物料、车型、颜色、采购价格等\n3. 限价信息：综合毛利限价、预估综合毛利、降幅、需审核级别\n4. 审核信息：审核状态、创建时间、审核意见\n\n## 校验规则\n- 驳回时必须填写审核意见\n- 通过时可填写意见，也可沿用默认同意文案\n\n## 审核结果\n- 点击通过：返回列表并更新为已通过\n- 点击驳回：返回列表并更新为已驳回\n\n## 待确认项\n- 审核通过/驳回时是否需要记录真实登录用户\n- 审核意见是否需要强制保留历史版本",
+    "price-limit-apply-detail-page": "# 限价申请详情页\n\n详情页是审核完成后的只读页面。\n\n## 展示内容\n- 申请单信息\n- 车辆信息\n- 限价信息\n- 审核信息\n\n## 交互限制\n- 不提供编辑能力\n- 只保留返回列表\n\n## 说明\n详情页与审核页复用同一套业务数据，但根据审核状态切换为只读表达。"
+  },
+  "assetMap": {},
+  "directory": {
+    "nodes": [
+      {
+        "type": "folder",
+        "id": "price-limit-apply-directory",
+        "title": "限价申请标注目录",
+        "defaultExpanded": true,
+        "children": [
+          {
+            "type": "link",
+            "id": "price-limit-apply-prototype",
+            "title": "打开限价申请原型",
+            "href": "/prototypes/price-limit-apply",
+            "target": "self"
+          },
+          {
+            "type": "markdown",
+            "id": "price-limit-apply-overview-doc",
+            "title": "需求说明",
+            "markdown": "# 限价申请需求说明\n\n## 当前原型范围\n- 限价申请列表页\n- 限价申请审核页\n- 限价申请详情页\n\n## 审批规则\n- 预估综合毛利 >= 综合毛利限价：无需审批\n- 预估综合毛利为负值：走全部审批（集团审核）\n- 预估综合毛利 < 综合毛利限价：按降幅命中层级配置金额判定审核级别\n  - 大区 1000 / 条线 2000 / 门店 3000 / 集团 不限\n\n## 已覆盖规则\n- 申请单列表展示申请单号、车辆信息、审核状态、创建时间、审核人、审核时间和操作列\n- 无需审批的单据在需审核级别与操作列展示\"无需审批\"\n- 审核完成后只允许查看，不允许编辑\n\n## 待产品确认\n- 各级权限额度是否就是 1000 / 2000 / 3000 / 不限\n- 审核人是否需要接真实登录人\n- 是否需要增加日期筛选、分页或批量操作"
+          },
+          {
+            "type": "link",
+            "id": "price-limit-apply-policy-edit",
+            "title": "相关原型：限价规则编辑",
+            "href": "/prototypes/policy-management-edit",
+            "target": "self"
+          },
+          {
+            "type": "link",
+            "id": "price-limit-apply-external-rule",
+            "title": "外部参考：审核层级规则说明",
+            "href": "https://example.com/price-limit-apply-rule",
+            "target": "blank"
+          },
+          {
+            "type": "route",
+            "id": "price-limit-apply-route-list",
+            "title": "回到列表视图",
+            "route": "list",
+            "payload": { "view_mode": "list" }
+          },
+          {
+            "type": "route",
+            "id": "price-limit-apply-route-review",
+            "title": "切换到审核视图",
+            "route": "review",
+            "payload": { "view_mode": "review" }
+          },
+          {
+            "type": "route",
+            "id": "price-limit-apply-route-detail",
+            "title": "切换到详情视图",
+            "route": "detail",
+            "payload": { "view_mode": "detail" }
+          }
+        ]
+      }
+    ]
+  }
+}

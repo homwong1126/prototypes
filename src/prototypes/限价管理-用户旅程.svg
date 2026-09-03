@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="320" viewBox="0 0 1600 320">
+  <defs>
+    <style>
+      .actor { fill: #333; }
+      .step { fill: #e3f2fd; stroke: #1976d2; stroke-width: 2; }
+      .step-highlight { fill: #c8e6c9; stroke: #388e3c; stroke-width: 2; }
+      .step-warning { fill: #fff9c4; stroke: #f57c00; stroke-width: 2; }
+      .step-info { fill: #bbdefb; stroke: #1976d2; stroke-width: 2; }
+      .text { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 13px; fill: #333; text-anchor: middle; }
+      .text-small { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 11px; fill: #666; text-anchor: middle; }
+      .arrow { fill: none; stroke: #666; stroke-width: 2; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#666" />
+    </marker>
+  </defs>
+
+  <text x="800" y="30" class="text" style="font-size: 18px; font-weight: 600;">&#x9650;&#x4ef7;&#x7ba1;&#x7406;&#x7528;&#x6237;&#x65c5;&#x7a0b;</text>
+
+  <ellipse cx="80" cy="120" rx="20" ry="30" class="actor" />
+  <rect x="60" y="150" width="40" height="50" class="actor" />
+  <line x1="60" y1="170" x2="40" y2="200" stroke="#333" stroke-width="3" />
+  <line x1="100" y1="170" x2="120" y2="200" stroke="#333" stroke-width="3" />
+  <text x="80" y="230" class="text-small">&#x95e8;&#x5e97;&#x9500;&#x552e;/&#x5ba1;&#x6838;&#x4eba;</text>
+
+  <rect x="150" y="100" width="130" height="50" rx="8" class="step" />
+  <text x="215" y="130" class="text">&#x8ba2;&#x5355;&#x914d;&#x8f66;&#x4fdd;&#x5b58;</text>
+  <line x1="120" y1="150" x2="150" y2="125" class="arrow" />
+
+  <rect x="310" y="100" width="130" height="50" rx="8" class="step-highlight" />
+  <text x="375" y="125" class="text" style="font-weight: 600;">&#x5224;&#x5b9a;&#x8f66;&#x8f86;&#x6027;&#x8d28;</text>
+  <text x="375" y="140" class="text-small">&#x5e38;&#x89c4;/&#x975e;&#x5e38;&#x89c4;</text>
+  <line x1="280" y1="125" x2="310" y2="125" class="arrow" />
+
+  <rect x="470" y="100" width="130" height="50" rx="8" class="step-highlight" />
+  <text x="535" y="125" class="text" style="font-weight: 600;">&#x5339;&#x914d;&#x9650;&#x4ef7;&#x89c4;&#x5219;</text>
+  <text x="535" y="140" class="text-small">&#x8f66;&#x578b;/&#x7248;&#x578b;</text>
+  <line x1="440" y1="125" x2="470" y2="125" class="arrow" />
+
+  <rect x="630" y="100" width="130" height="50" rx="8" class="step-warning" />
+  <text x="695" y="120" class="text" style="font-weight: 600;">&#x8ba1;&#x7b97;&#x964d;&#x5e45;</text>
+  <text x="695" y="135" class="text-small">&#x9650;&#x4ef7; - &#x9884;&#x4f30;&#x6bdb;&#x5229;</text>
+  <text x="695" y="148" class="text-small" style="font-size: 10px;">&#x964d;&#x5e45;&gt;0 &#x89e6;&#x53d1;</text>
+  <line x1="600" y1="125" x2="630" y2="125" class="arrow" />
+
+  <rect x="790" y="100" width="130" height="50" rx="8" class="step-highlight" />
+  <text x="855" y="125" class="text" style="font-weight: 600;">&#x751f;&#x6210;&#x7533;&#x8bf7;&#x5355;</text>
+  <text x="855" y="140" class="text-small">&#x72b6;&#x6001;:&#x5f85;&#x5ba1;&#x6838;</text>
+  <line x1="760" y1="125" x2="790" y2="125" class="arrow" />
+
+  <rect x="950" y="100" width="130" height="50" rx="8" class="step" />
+  <text x="1015" y="120" class="text">&#x9010;&#x7ea7;&#x5ba1;&#x6279;</text>
+  <text x="1015" y="135" class="text-small">&#x5927;&#x533a;&#x2192;&#x6761;&#x7ebf;&#x2192;</text>
+  <text x="1015" y="148" class="text-small">&#x95e8;&#x5e97;&#x2192;&#x96c6;&#x56e2;</text>
+  <line x1="920" y1="125" x2="950" y2="125" class="arrow" />
+
+  <rect x="1110" y="100" width="130" height="50" rx="8" class="step-warning" />
+  <text x="1175" y="125" class="text" style="font-weight: 600;">&#x9a73;&#x56de;&#x9010;&#x7ea7;&#x9000;&#x56de;</text>
+  <text x="1175" y="140" class="text-small">&#x9000;&#x56de;&#x4e0a;&#x4e00;&#x8282;&#x70b9;</text>
+  <line x1="1080" y1="125" x2="1110" y2="125" class="arrow" />
+
+  <rect x="1270" y="100" width="130" height="50" rx="8" class="step-info" />
+  <text x="1335" y="125" class="text" style="font-weight: 600;">&#x5ba1;&#x6838;&#x901a;&#x8fc7;</text>
+  <text x="1335" y="140" class="text-small">&#x72b6;&#x6001;:&#x5df2;&#x901a;&#x8fc7;</text>
+  <line x1="1240" y1="125" x2="1270" y2="125" class="arrow" />
+
+  <rect x="1430" y="100" width="130" height="50" rx="8" class="step-highlight" />
+  <text x="1495" y="125" class="text" style="font-weight: 600;">&#x65b0;&#x8f66;&#x5f00;&#x7968;</text>
+  <text x="1495" y="140" class="text-small">&#x5df2;&#x901a;&#x8fc7;&#x653e;&#x884c;</text>
+  <line x1="1400" y1="125" x2="1430" y2="125" class="arrow" />
+
+  <line x1="150" y1="200" x2="1560" y2="200" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5" />
+  <text x="215" y="220" class="text-small" style="fill: #999;">&#x89e6;&#x53d1;&#x9636;&#x6bb5;</text>
+  <text x="470" y="220" class="text-small" style="fill: #999;">&#x89c4;&#x5219;&#x5339;&#x914d;</text>
+  <text x="855" y="220" class="text-small" style="fill: #999;">&#x7533;&#x8bf7;&#x751f;&#x6210;</text>
+  <text x="1175" y="220" class="text-small" style="fill: #999;">&#x5ba1;&#x6279;&#x6d41;&#x8f6c;</text>
+  <text x="1495" y="220" class="text-small" style="fill: #999;">&#x5f00;&#x7968;&#x653e;&#x884c;</text>
+
+  <rect x="50" y="260" width="15" height="15" rx="2" class="step" />
+  <text x="75" y="272" class="text-small" style="text-anchor: start;">&#x5e38;&#x89c4;&#x6b65;&#x9aa4;</text>
+
+  <rect x="180" y="260" width="15" height="15" rx="2" class="step-highlight" />
+  <text x="205" y="272" class="text-small" style="text-anchor: start;">&#x7cfb;&#x7edf;&#x81ea;&#x52a8;</text>
+
+  <rect x="310" y="260" width="15" height="15" rx="2" class="step-warning" />
+  <text x="335" y="272" class="text-small" style="text-anchor: start;">&#x6838;&#x5fc3;&#x89c4;&#x5219;</text>
+
+  <rect x="440" y="260" width="15" height="15" rx="2" class="step-info" />
+  <text x="465" y="272" class="text-small" style="text-anchor: start;">&#x51b3;&#x7b56;&#x70b9;</text>
+</svg>

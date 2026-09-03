@@ -1,0 +1,13 @@
+{
+  "documentVersion": 1,
+  "format": "axhub-annotation-source",
+  "data": {
+    "version": 2,
+    "prototypeName": "inventory-manage",
+    "pageId": "inventory-manage",
+    "nodes": [],
+    "updatedAt": 1787813414008
+  },
+  "markdownMap": {},
+  "assetMap": {}
+}

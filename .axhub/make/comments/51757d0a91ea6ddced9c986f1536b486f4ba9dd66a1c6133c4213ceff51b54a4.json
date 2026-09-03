@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 3,
+  "kind": "prototype-edit-comments",
+  "resource": {
+    "id": "inventory-manage",
+    "targetPath": "prototypes/inventory-manage",
+    "filePath": ".axhub/make/comments/51757d0a91ea6ddced9c986f1536b486f4ba9dd66a1c6133c4213ceff51b54a4.json"
+  },
+  "comments": [
+    {
+      "label": "select(\"常规车冰雹车超期车外采车公告到期车虚传车政策到期车其他\")",
+      "locator": {
+        "selectors": [
+          "body > div > div > div > main > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div:nth-of-type(28) > div > select",
+          "#root div > div > main > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div:nth-of-type(28) > div > select"
+        ],
+        "fingerprint": "select|class=edit-form-input.edit-form-select|text=常规车冰雹车超期车外采车公告到期车虚传车政策到期车其他",
+        "path": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          27,
+          1,
+          0
+        ]
+      },
+      "marker": {
+        "clientX": 1305.1129150390625,
+        "clientY": 667.4132080078125,
+        "documentX": 1305.1129150390625,
+        "documentY": 667.4132080078125,
+        "xPercent": 82.60208323032042,
+        "y": 667.4132080078125,
+        "isFixed": false,
+        "offsetX": 62.482666015625,
+        "offsetY": 16.4149169921875,
+        "dirtySince": 1787813335649
+      },
+      "id": "1dde582e-9b35-4f85-beb7-fb99e5cfad51",
+      "state": "idle",
+      "comment": "默认常规车",
+      "pageScope": "/prototypes/inventory-manage",
+      "provider": null,
+      "requestId": null,
+      "sessionId": null,
+      "updatedAt": null,
+      "message": null,
+      "code": null
+    }
+  ],
+  "images": []
+}

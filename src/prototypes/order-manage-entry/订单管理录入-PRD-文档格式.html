@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>订单管理录入 PRD</title>
+  <style>
+    body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12pt; line-height: 1.7; color: #222; margin: 28px; }
+    h1, h2, h3, h4 { color: #111; margin-top: 20px; margin-bottom: 10px; }
+    h1 { font-size: 22pt; }
+    h2 { font-size: 16pt; }
+    h3 { font-size: 13pt; }
+    h4 { font-size: 12pt; }
+    p { margin: 6px 0; }
+    ul, ol { margin: 6px 0 6px 24px; }
+    table { width: 100%; border-collapse: collapse; margin: 10px 0 18px; }
+    th, td { border: 1px solid #cfcfcf; padding: 7px 8px; vertical-align: top; text-align: left; }
+    th { background: #f5f5f5; font-weight: 600; }
+    code { background: #f5f5f5; padding: 1px 4px; border-radius: 3px; font-size: 11pt; }
+    .subtle { color: #666; }
+    .note { color: #8a6d00; background: #fff9e6; border: 1px solid #f0e0b0; padding: 8px 10px; border-radius: 4px; margin: 8px 0; }
+  </style>
+</head>
+<body>
+  <h1>订单管理录入</h1>
+
+  <h2>1. 变更日志</h2>
+  <table>
+    <thead><tr><th>时间</th><th>版本号</th><th>变更人</th><th>变更类型</th><th>预计上线时间</th><th>主要变更内容</th></tr></thead>
+    <tbody>
+      <tr><td>2026-08-31</td><td>V1.1</td><td>AI整理</td><td>功能新增</td><td>待定</td><td>订单录入页新增「新车开票」信息块：支持查看与编辑，编辑前若存在未完成审批的限价申请单则弹框提醒"订单已触发限价审批，通过限价管理-限价申请跟踪审批进度"；未触发限价审批时直接编辑。</td></tr>
+      <tr><td>2026-08-31</td><td>V1.0</td><td>AI整理</td><td>创建</td><td>待定</td><td>基于订单管理录入原型整理生成 PRD，覆盖基本信息、订单信息、单车成交价、毛利区域等订单录入字段与必填校验。</td></tr>
+    </tbody>
+  </table>
+
+  <h2>2. 菜单列表</h2>
+  <table>
+    <thead><tr><th>一级菜单</th><th>二级菜单</th><th>三级菜单</th><th>功能菜单</th><th>功能模块</th><th>功能说明</th><th>使用角色</th></tr></thead>
+    <tbody>
+      <tr><td>盈丰运营管理平台</td><td>订单管理</td><td>订单录入</td><td>订单录入页</td><td>订单维护</td><td>录入订单基本信息、订单信息、单车成交价、毛利相关字段，并维护订单的新车开票信息。</td><td>门店销售</td></tr>
+      <tr><td>盈丰运营管理平台</td><td>订单管理</td><td>订单录入</td><td>新车开票卡片</td><td>开票信息维护</td><td>查看与编辑新车开票信息块，包含开票金额、税率、地补、发票购买方、发票附件等；受限价审批状态约束。</td><td>门店销售、财务</td></tr>
+    </tbody>
+  </table>
+
+  <h2>3. 业务对象</h2>
+  <h3>3.1 对象关系</h3>
+  <p>订单 ---- 订单明细（1 --&gt; N）---- 新车开票信息（1 --&gt; 1），订单 ---- 限价申请单（1 --&gt; N，审批未完成时关联）。</p>
+  <h3>3.2 业务对象定义</h3>
+  <table>
+    <thead><tr><th>对象名称</th><th>名称</th><th>是否必填</th><th>类型</th><th>长度</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr><td>订单</td><td>客户姓名</td><td>是</td><td>文本</td><td>50</td><td></td></tr>
+      <tr><td>订单</td><td>联系方式</td><td>是</td><td>文本</td><td>30</td><td></td></tr>
+      <tr><td>订单</td><td>客户类型</td><td>是</td><td>枚举</td><td>-</td><td>个人、企业。</td></tr>
+      <tr><td>订单</td><td>销售顾问姓名</td><td>是</td><td>文本</td><td>30</td><td></td></tr>
+      <tr><td>订单</td><td>证件类型 / 证件号码</td><td>是</td><td>文本</td><td>50</td><td>身份证、护照、营业执照。</td></tr>
+      <tr><td>订单</td><td>品牌 / 车系 / 车型 / 版本</td><td>是</td><td>枚举</td><td>-</td><td>车辆基础信息。</td></tr>
+      <tr><td>订单</td><td>外观颜色 / 内饰</td><td>是</td><td>枚举</td><td>-</td><td></td></tr>
+      <tr><td>订单</td><td>指导价 / 议价结果（含税）</td><td>是</td><td>数字</td><td>-</td><td></td></tr>
+      <tr><td>订单</td><td>订单渠道</td><td>是</td><td>枚举</td><td>-</td><td>本店零售订单、二网订单、大客户订单。</td></tr>
+      <tr><td>订单</td><td>订单类型</td><td>是</td><td>枚举</td><td>-</td><td>正常订单、预订单。</td></tr>
+      <tr><td>订单</td><td>项目名称</td><td>是</td><td>文本</td><td>100</td><td>支持搜索选择。</td></tr>
+      <tr><td>订单</td><td>订单日期 / 预计开票日期</td><td>是</td><td>日期</td><td>-</td><td></td></tr>
+      <tr><td>订单</td><td>合同编号 / 合同金额</td><td>是</td><td>文本/数字</td><td>-</td><td></td></tr>
+      <tr><td>订单</td><td>定金 / 定金日期 / 已收未开票金额</td><td>是</td><td>数字</td><td>-</td><td></td></tr>
+      <tr><td>订单</td><td>付款方式</td><td>是</td><td>枚举</td><td>-</td><td>全款、按揭、融资租赁。</td></tr>
+      <tr><td>订单</td><td>单车成交价（含税）</td><td>是</td><td>数字</td><td>-</td><td></td></tr>
+      <tr><td>订单</td><td>单车成交价-税率</td><td>是</td><td>枚举</td><td>-</td><td>13%、6%。</td></tr>
+      <tr><td>订单</td><td>单车成交价（不含税）</td><td>是</td><td>数字</td><td>-</td><td>系统根据含税金额与税率计算，只读。</td></tr>
+      <tr><td>订单</td><td>预估综合毛利</td><td>是</td><td>整数</td><td>-</td><td>仅支持整数，可为负整数，不可输入小数点。</td></tr>
+      <tr><td>订单</td><td>是否试乘试驾 / 试乘试驾人员</td><td>是</td><td>枚举</td><td>-</td><td></td></tr>
+      <tr><td>新车开票信息</td><td>开票日期</td><td>是</td><td>日期</td><td>-</td><td></td></tr>
+      <tr><td>新车开票信息</td><td>新车收入（含税）</td><td>是</td><td>数字</td><td>-</td><td></td></tr>
+      <tr><td>新车开票信息</td><td>新车收入-税率</td><td>是</td><td>枚举</td><td>-</td><td>13%、6%。</td></tr>
+      <tr><td>新车开票信息</td><td>新车收入（不含税）</td><td>是</td><td>数字</td><td>-</td><td>系统根据含税金额与税率计算，只读。</td></tr>
+      <tr><td>新车开票信息</td><td>销售折让（含税）</td><td>否</td><td>数字</td><td>-</td><td></td></tr>
+      <tr><td>新车开票信息</td><td>建店返利（含税）</td><td>否</td><td>数字</td><td>-</td><td></td></tr>
+      <tr><td>新车开票信息</td><td>是否地补</td><td>是</td><td>枚举</td><td>-</td><td>是、否。</td></tr>
+      <tr><td>新车开票信息</td><td>享受地补地区 / 享受地补金额</td><td>否</td><td>文本/数字</td><td>-</td><td>选择省市。</td></tr>
+      <tr><td>新车开票信息</td><td>发票购买方</td><td>是</td><td>文本</td><td>200</td><td></td></tr>
+      <tr><td>新车开票信息</td><td>开票备注</td><td>否</td><td>长文本</td><td>500</td><td></td></tr>
+      <tr><td>新车开票信息</td><td>开票金额（含税）</td><td>是</td><td>数字</td><td>-</td><td></td></tr>
+      <tr><td>新车开票信息</td><td>开票金额-税率</td><td>是</td><td>枚举</td><td>-</td><td>13%、6%。</td></tr>
+      <tr><td>新车开票信息</td><td>开票金额（不含税）</td><td>是</td><td>数字</td><td>-</td><td>系统根据含税金额与税率计算，只读。</td></tr>
+      <tr><td>新车开票信息</td><td>现价金额（不含税）</td><td>是</td><td>数字</td><td>-</td><td>截图示例为 2,000。</td></tr>
+      <tr><td>新车开票信息</td><td>发票附件</td><td>是</td><td>文件</td><td>-</td><td>至少上传一张发票附件；支持 .rar,.zip,.pdf,.jpg,.png,.jpeg,.ppt 格式。</td></tr>
+    </tbody>
+  </table>
+
+  <h2>4. 用户旅程</h2>
+  <p>用户旅程流程说明如下：</p>
+  <ol>
+    <li>门店销售进入订单管理-订单录入，填写订单基本信息与订单信息并保存。</li>
+    <li>保存订单时系统计算预估综合毛利；若订单触发限价审批，系统自动生成限价申请单。</li>
+    <li>用户在订单详情查看「新车开票」信息块，只能查看不可编辑。</li>
+    <li>点击「编辑」：
+      <ul>
+        <li>若该订单存在未完成审批的限价申请单（待审核/审批中），弹框提醒："订单已触发限价审批，通过限价管理-限价申请跟踪审批进度。"，本次不允许进入编辑。</li>
+        <li>若该订单未触发限价审批，直接进入新车开票信息编辑态。</li>
+      </ul>
+    </li>
+    <li>编辑态下修改开票字段并上传发票附件，可「退出编辑」放弃修改或「保存」提交。</li>
+    <li>保存成功后退出编辑态，卡片以只读形式展示最新数据。</li>
+  </ol>
+
+  <h2>5. 数据流图</h2>
+  <p>数据流流程说明如下：</p>
+  <ol>
+    <li>订单录入保存后，订单数据写入订单主档。</li>
+    <li>订单毛利相关字段由系统按订单金额、单车成交价与税率计算。</li>
+    <li>预估综合毛利写入订单，并参与限价管理模块审批触发判定。</li>
+    <li>限价审批状态（未触发/审批中/已通过/已驳回）回传订单，约束新车开票编辑权限。</li>
+    <li>新车开票保存后，开票信息与发票附件写入订单开票数据。</li>
+  </ol>
+
+  <h2>6. 状态机</h2>
+  <p>新车开票信息关注的状态节点如下：</p>
+  <ul>
+    <li>只读态：默认展示开票字段值，操作列仅显示「编辑」按钮。</li>
+    <li>编辑拦截：订单存在未完成审批的限价申请单时，点击编辑弹出审批提醒，不进入编辑态。</li>
+    <li>编辑态：订单未触发限价审批时点击编辑进入，字段可编辑，提供「退出编辑」「保存」按钮。</li>
+    <li>保存成功：退出编辑态回到只读态，展示最新数据。</li>
+    <li>退出编辑：放弃本次修改，数据回滚为编辑前值。</li>
+  </ul>
+  <p class="note">注：原型提供"演示：有限价审批未完成"开关，用于展示两种分支：命中审批弹出提醒阻断编辑，未命中直接进入编辑态。</p>
+
+  <h2>7. 功能原型</h2>
+  <p>原型来源：订单管理录入（src/prototypes/order-manage-entry）。</p>
+  <p>所属模块：订单管理</p>
+  <p>核心业务规则：</p>
+  <ul>
+    <li>订单录入字段按民事必填规则校验，未填写完整时提示"请完善必填项"。</li>
+    <li>预估综合毛利仅支持整数，可为负整数，不可输入小数点。</li>
+    <li>新车开票信息块默认只读；点击编辑时校验限价审批状态。</li>
+    <li>存在未完成审批的限价申请单时，弹框提醒"订单已触发限价审批，通过限价管理-限价申请跟踪审批进度。"并阻断编辑。</li>
+    <li>未触发限价审批时直接进入编辑态，可退出编辑、可保存。</li>
+    <li>发票附件为必填项，支持上传与删除，限制指定文件格式。</li>
+  </ul>
+
+  <h2>8. 功能详细说明</h2>
+  <h3>8.1 新开车票卡片 - 只读态</h3>
+  <h4>8.1.1 展示字段</h4>
+  <table>
+    <thead><tr><th>字段名称</th><th>是否必填</th><th>特殊说明</th></tr></thead>
+    <tbody>
+      <tr><td>开票日期</td><td>是</td><td>如 2026-09-01。</td></tr>
+      <tr><td>新车收入（含税）</td><td>是</td><td>如 92,696。</td></tr>
+      <tr><td>新车收入-税率</td><td>是</td><td>如 13%。</td></tr>
+      <tr><td>新车收入（不含税）</td><td>是</td><td>如 82,031.86，系统计算。</td></tr>
+      <tr><td>销售折让（含税）</td><td>否</td><td>无值显示 "-"。</td></tr>
+      <tr><td>建店返利（含税）</td><td>否</td><td>无值显示 "-"。</td></tr>
+      <tr><td>是否地补</td><td>是</td><td>如 是。</td></tr>
+      <tr><td>享受地补地区</td><td>否</td><td>无值显示 "-"。</td></tr>
+      <tr><td>享受地补金额</td><td>否</td><td>无值显示 "-"。</td></tr>
+      <tr><td>发票购买方</td><td>是</td><td>如 广东星势力企业管理咨询有限公司。</td></tr>
+      <tr><td>开票备注</td><td>否</td><td>无值显示 "-"。</td></tr>
+      <tr><td>开票金额（含税）</td><td>是</td><td>如 92,696。</td></tr>
+      <tr><td>开票金额-税率</td><td>是</td><td>如 13%。</td></tr>
+      <tr><td>开票金额（不含税）</td><td>是</td><td>如 82,031.86，系统计算。</td></tr>
+      <tr><td>现价金额（不含税）</td><td>是</td><td>如 2,000。</td></tr>
+    </tbody>
+  </table>
+  <h4>8.1.2 附件展示</h4>
+  <ul>
+    <li>表格头部：项目 / 附件；项目列显示"发票"（必填）。</li>
+    <li>附件列展示已上传发票的缩略图预览。</li>
+    <li>文件格式提示：.rar,.zip,.pdf,.jpg,.png,.jpeg,.ppt。</li>
+  </ul>
+
+  <h3>8.2 新开车票卡片 - 编辑入口与限价审批约束</h3>
+  <table>
+    <thead><tr><th>场景</th><th>点击编辑响应</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>订单存在未完成审批的限价申请单</td><td>弹框提醒："订单已触发限价审批，通过限价管理-限价申请跟踪审批进度。"</td><td>不进入编辑态，弹框提供「取消」「知道了」关闭。</td></tr>
+      <tr><td>订单未触发限价审批</td><td>直接进入新车开票编辑态</td><td>字段可编辑，底部提供「退出编辑」「保存」按钮。</td></tr>
+    </tbody>
+  </table>
+
+  <h3>8.3 新开车票卡片 - 编辑态</h3>
+  <ul>
+    <li>开票日期：日期输入并带日历图标。</li>
+    <li>新车收入（含税）/ 开票金额（含税）：手工输入。</li>
+    <li>税率：下拉选择 13%、6%。</li>
+    <li>新车收入（不含税）/ 开票金额（不含税）：只读，系统计算。</li>
+    <li>销售折让（含税）、建店返利（含税）、享受地补金额、开票备注：可输入，可为空。</li>
+    <li>是否地补：下拉 是/否。</li>
+    <li>享受地补地区：下拉选择省市。</li>
+    <li>发票购买方：文本输入。</li>
+    <li>现价金额（不含税）：数字输入。</li>
+    <li>发票附件：可「+ 上传附件」追加文件，可删除已有附件；空列表时保存提示"请上传发票附件"。</li>
+  </ul>
+  <h4>8.3.1 操作按钮</h4>
+  <table>
+    <thead><tr><th>操作按钮</th><th>按钮可用条件</th><th>按钮操作逻辑</th></tr></thead>
+    <tbody>
+      <tr><td>退出编辑</td><td>始终可用</td><td>放弃本次修改，数据回滚为编辑前值，返回只读态。</td></tr>
+      <tr><td>保存</td><td>始终可用</td><td>校验必填项与发票附件，成功后返回只读态并展示最新数据。</td></tr>
+    </tbody>
+  </table>
+
+  <h2>9. 内部接口</h2>
+  <h3>9.1 内部接口列表</h3>
+  <table>
+    <thead><tr><th>接口名称</th><th>接口说明</th><th>请求方式</th><th>请求参数</th><th>响应参数</th></tr></thead>
+    <tbody>
+      <tr><td>保存订单录入</td><td>保存订单基本信息、订单信息、单车成交价与毛利字段</td><td>POST</td><td>订单录入表单</td><td>订单号、保存结果</td></tr>
+      <tr><td>查询订单详情</td><td>按订单号查询订单详情（含新车开票信息）</td><td>GET</td><td>订单号</td><td>订单信息、新车开票信息</td></tr>
+      <tr><td>查询限价审批状态</td><td>查询订单关联的限价申请单审批状态，判断是否允许编辑新车开票</td><td>GET</td><td>订单号 / VIN码</td><td>是否存在未完成审批的限价申请单、审批状态</td></tr>
+      <tr><td>保存新车开票信息</td><td>保存新车开票字段与发票附件</td><td>POST</td><td>订单号、开票字段、附件列表</td><td>保存结果</td></tr>
+      <tr><td>上传发票附件</td><td>上传发票附件文件</td><td>POST</td><td>文件</td><td>附件ID、附件地址</td></tr>
+    </tbody>
+  </table>
+
+  <h2>10. 外部接口</h2>
+  <table>
+    <thead><tr><th>关联系统</th><th>交互说明</th><th>频率</th><th>接口路径</th><th>字段/逻辑说明</th></tr></thead>
+    <tbody>
+      <tr><td>限价管理</td><td>读取订单关联限价申请审批状态，约束新车开票编辑入口</td><td>点击编辑时</td><td>/api/price-limit/query-by-order</td><td>待补充</td></tr>
+      <tr><td>财务/开票系统</td><td>开票日期、开票金额、税率等字段对接</td><td>保存时</td><td>待补充</td><td>待补充</td></tr>
+    </tbody>
+  </table>
+
+  <h2>11. 业务规则总结</h2>
+  <ol>
+    <li><strong>订单录入必填</strong>：客户信息、车辆信息、订单信息、单车成交价、预估综合毛利、试乘试驾等字段必填，未填完整提示"请完善必填项"。</li>
+    <li><strong>预估综合毛利校验</strong>：仅支持整数，可为负整数，不可输入小数点。</li>
+    <li><strong>新车开票默认只读</strong>：订单录入页展示新车开票信息块，默认只读，仅提供「编辑」入口。</li>
+    <li><strong>限价审批约束编辑</strong>：编辑前校验限价申请状态；存在未完成审批的限价申请单时弹框提醒"订单已触发限价审批，通过限价管理-限价申请跟踪审批进度。"并阻断编辑。</li>
+    <li><strong>直接编辑</strong>：订单未触发限价审批时，点击编辑直接进入编辑态，可退出编辑、可保存。</li>
+    <li><strong>开票必填</strong>：开票日期、新车收入、税率、是否地补、发票购买方、开票金额、现价金额及发票附件必填。</li>
+    <li><strong>附件格式</strong>：支持 .rar,.zip,.pdf,.jpg,.png,.jpeg,.ppt，发票附件至少上传一张。</li>
+  </ol>
+
+  <h2>12. 权限控制</h2>
+  <ul>
+    <li>门店销售：可录入订单、维护新车开票信息（受限价审批状态约束）。</li>
+    <li>财务：可查看开票信息，编辑权限待确认。</li>
+  </ul>
+</body>
+</html>

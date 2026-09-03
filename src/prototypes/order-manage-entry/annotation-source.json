@@ -1,0 +1,50 @@
+{
+  "documentVersion": 1,
+  "format": "axhub-annotation-source",
+  "data": {
+    "version": 2,
+    "prototypeName": "order-manage-entry",
+    "pageId": "order-manage-entry",
+    "nodes": [
+      {
+        "id": "order-manage-entry-invoice-card",
+        "index": 1,
+        "title": "新车开票信息块",
+        "pageId": "order-manage-entry",
+        "locator": {
+          "selectors": [".ome-card"],
+          "fingerprint": "section",
+          "path": []
+        },
+        "aiPrompt": "说明新车开票信息块的字段与只读态展示。",
+        "annotationText": "订单录入页新增新车开票信息块，只读展示开票日期、新车收入（含税/税率/不含税）、销售折让、建店返利、是否地补、享受地补地区与金额、发票购买方、开票备注、开票金额（含税/税率/不含税）、现价金额（不含税）及发票附件缩略图。文件格式限制：.rar,.zip,.pdf,.jpg,.png,.jpeg,.ppt。",
+        "hasMarkdown": false,
+        "color": "#D97706",
+        "images": [],
+        "createdAt": 1787645511747,
+        "updatedAt": 1787645511747
+      },
+      {
+        "id": "order-manage-entry-invoice-edit",
+        "index": 2,
+        "title": "新车开票编辑入口与限价审批约束",
+        "pageId": "order-manage-entry",
+        "locator": {
+          "selectors": [".ome-icon-card-btn"],
+          "fingerprint": "button|null",
+          "path": []
+        },
+        "aiPrompt": "说明编辑按钮的两种响应：存在未完成审批的限价申请单时弹框提醒并阻断编辑；未触发限价审批时直接进入编辑态。",
+        "annotationText": "点击编辑时，若该订单存在未完成审批的限价申请单，弹框提醒\"订单已触发限价审批，通过限价管理-限价申请跟踪审批进度。\"并阻断编辑；若该订单未触发限价审批，则直接进入新车开票信息块的编辑态。原型提供\"演示：有限价审批未完成\"开关用于切换两种场景。编辑态支持退出编辑（回滚）与保存（校验必填项及发票附件）。",
+        "hasMarkdown": false,
+        "color": "#2563EB",
+        "images": [],
+        "createdAt": 1787645511747,
+        "updatedAt": 1787645511747
+      }
+    ],
+    "updatedAt": 1787645511747
+  },
+  "markdownMap": {},
+  "assetMap": {}
+}

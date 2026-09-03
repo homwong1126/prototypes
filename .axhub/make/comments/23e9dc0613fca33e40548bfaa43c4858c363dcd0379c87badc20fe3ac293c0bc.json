@@ -1,0 +1,682 @@
+{
+  "schemaVersion": 3,
+  "kind": "prototype-edit-comments",
+  "resource": {
+    "id": "policy-management-edit",
+    "targetPath": "prototypes/policy-management-edit",
+    "filePath": ".axhub/make/comments/23e9dc0613fca33e40548bfaa43c4858c363dcd0379c87badc20fe3ac293c0bc.json"
+  },
+  "comments": [
+    {
+      "locator": {
+        "selectors": [
+          "body > div > div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(1) > div > div:nth-of-type(3) > div > label",
+          "#root div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(1) > div > div:nth-of-type(3) > div > label"
+        ],
+        "fingerprint": "label|class=form-label",
+        "path": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "textChange": {
+        "before": "采购类型",
+        "after": ""
+      },
+      "label": "frame:|shadow:|sel:body > div > div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(1) > div > div:nth-of-type(3) > div > label|#root div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(1) > div > div:nth-of-type(3) > div > label",
+      "id": "c8a632ba-1670-4bec-a502-38955505b597",
+      "state": "idle",
+      "pageScope": "/prototypes/policy-management-edit",
+      "provider": null,
+      "requestId": null,
+      "sessionId": null,
+      "updatedAt": null,
+      "message": null,
+      "code": null
+    },
+    {
+      "locator": {
+        "selectors": [
+          "body > div > div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(1) > div > div:nth-of-type(3) > div > label",
+          "#root div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(1) > div > div:nth-of-type(3) > div > label"
+        ],
+        "fingerprint": "label|class=form-label",
+        "path": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "textChange": {
+        "before": "采购类型",
+        "after": ""
+      },
+      "label": "frame:|shadow:|sel:body > div > div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(1) > div > div:nth-of-type(3) > div > label|#root div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(1) > div > div:nth-of-type(3) > div > label",
+      "id": "01318fca-f470-468d-97dc-f20c04d150a3",
+      "state": "idle",
+      "pageScope": "/prototypes/policy-management-edit",
+      "provider": null,
+      "requestId": null,
+      "sessionId": null,
+      "updatedAt": null,
+      "message": null,
+      "code": null
+    },
+    {
+      "label": "select(\"请选择品牌星途捷途奇瑞CS2026\")",
+      "locator": {
+        "selectors": [
+          "body > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > select",
+          "#root div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > select"
+        ],
+        "fingerprint": "select|text=请选择品牌星途捷途奇瑞CS2026",
+        "path": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      "marker": {
+        "clientX": 531.79296875,
+        "clientY": 123.10546875,
+        "documentX": 531.79296875,
+        "documentY": 123.10546875,
+        "xPercent": 31.099004020467834,
+        "y": 123.10546875,
+        "isFixed": true,
+        "offsetX": 160.79296875,
+        "offsetY": 10.10546875,
+        "dirtySince": 1788325844617
+      },
+      "id": "041e7630-3627-443d-8c24-fc5c726735e6",
+      "state": "completed",
+      "comment": "下拉精确查询",
+      "pageScope": "/prototypes/policy-management-edit",
+      "provider": "codex",
+      "requestId": "annotation-mtjn192x-1aic04",
+      "sessionId": "annotation-mtjn192x-1aic04",
+      "updatedAt": 1788325853244,
+      "message": "修改完成",
+      "code": null
+    },
+    {
+      "label": "input[placeholder=\"请选择车型编码\"]",
+      "locator": {
+        "selectors": [
+          "body > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > input",
+          "#root div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > input"
+        ],
+        "fingerprint": "input",
+        "path": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          2,
+          1
+        ]
+      },
+      "marker": {
+        "clientX": 940.70703125,
+        "clientY": 134.52734375,
+        "documentX": 940.70703125,
+        "documentY": 134.52734375,
+        "xPercent": 55.01210709064327,
+        "y": 134.52734375,
+        "isFixed": true,
+        "offsetX": 79.70703125,
+        "offsetY": 21.52734375,
+        "dirtySince": 1788325866949
+      },
+      "id": "4623508e-8089-486d-b3ab-6dbdfbdad643",
+      "state": "completed",
+      "comment": "输入精准查询",
+      "pageScope": "/prototypes/policy-management-edit",
+      "provider": "codex",
+      "requestId": "annotation-mtjn1qbe-ehk459",
+      "sessionId": "annotation-mtjn1qbe-ehk459",
+      "updatedAt": 1788325875282,
+      "message": "修改完成",
+      "code": null
+    },
+    {
+      "label": "input[placeholder=\"请选择车型名称\"]",
+      "locator": {
+        "selectors": [
+          "body > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(4) > input",
+          "#root div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(4) > input"
+        ],
+        "fingerprint": "input",
+        "path": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          3,
+          1
+        ]
+      },
+      "marker": {
+        "clientX": 1181.62109375,
+        "clientY": 131.6015625,
+        "documentX": 1181.62109375,
+        "documentY": 131.6015625,
+        "xPercent": 69.10064875730994,
+        "y": 131.6015625,
+        "isFixed": true,
+        "offsetX": 75.62109375,
+        "offsetY": 18.6015625,
+        "dirtySince": 1788325879782
+      },
+      "id": "7c233ed2-ad41-4744-9f4a-8cf6a7fe0573",
+      "state": "completed",
+      "comment": "输入精准查询",
+      "pageScope": "/prototypes/policy-management-edit",
+      "provider": "codex",
+      "requestId": "annotation-mtjn2070-9n7mfn",
+      "sessionId": "annotation-mtjn2070-9n7mfn",
+      "updatedAt": 1788325891497,
+      "message": "修改完成",
+      "code": null
+    },
+    {
+      "label": "input[placeholder=\"请选择年款编码\"]",
+      "locator": {
+        "selectors": [
+          "body > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(5) > input",
+          "#root div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(5) > input"
+        ],
+        "fingerprint": "input",
+        "path": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          4,
+          1
+        ]
+      },
+      "marker": {
+        "clientX": 462.23828125,
+        "clientY": 218.5234375,
+        "documentX": 462.23828125,
+        "documentY": 218.5234375,
+        "xPercent": 27.03147843567251,
+        "y": 218.5234375,
+        "isFixed": true,
+        "offsetX": 91.23828125,
+        "offsetY": 30.5234375,
+        "dirtySince": 1788325885764
+      },
+      "id": "1886328a-d856-4647-8f73-865aa7e95f36",
+      "state": "completed",
+      "comment": "输入精准查询",
+      "pageScope": "/prototypes/policy-management-edit",
+      "provider": "codex",
+      "requestId": "annotation-mtjn24ue-it5pgt",
+      "sessionId": "annotation-mtjn24ue-it5pgt",
+      "updatedAt": 1788325894726,
+      "message": "修改完成",
+      "code": null
+    },
+    {
+      "label": "input[placeholder=\"请选择年款名称\"]",
+      "locator": {
+        "selectors": [
+          "body > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(6) > input",
+          "#root div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(6) > input"
+        ],
+        "fingerprint": "input",
+        "path": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          5,
+          1
+        ]
+      },
+      "marker": {
+        "clientX": 770.7421875,
+        "clientY": 207.42578125,
+        "documentX": 770.7421875,
+        "documentY": 207.42578125,
+        "xPercent": 45.07264254385965,
+        "y": 207.42578125,
+        "isFixed": true,
+        "offsetX": 154.7421875,
+        "offsetY": 19.42578125,
+        "dirtySince": 1788325891681
+      },
+      "id": "bd6844c4-d76d-44d8-a698-0d4f804c132a",
+      "state": "completed",
+      "comment": "输入精准查询",
+      "pageScope": "/prototypes/policy-management-edit",
+      "provider": "codex",
+      "requestId": "annotation-mtjn29fn-pwq4uu",
+      "sessionId": "annotation-mtjn29fn-pwq4uu",
+      "updatedAt": 1788325972751,
+      "message": "修改完成",
+      "code": null
+    },
+    {
+      "label": "input[placeholder=\"请选择动总编码\"]",
+      "locator": {
+        "selectors": [
+          "body > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(7) > input",
+          "#root div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(7) > input"
+        ],
+        "fingerprint": "input",
+        "path": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          6,
+          1
+        ]
+      },
+      "marker": {
+        "clientX": 911.23046875,
+        "clientY": 207.609375,
+        "documentX": 911.23046875,
+        "documentY": 207.609375,
+        "xPercent": 53.28833150584795,
+        "y": 207.609375,
+        "isFixed": true,
+        "offsetX": 50.23046875,
+        "offsetY": 19.609375,
+        "dirtySince": 1788325896630
+      },
+      "id": "4c23f2cd-b092-4c5c-a770-46ab905fcfc0",
+      "state": "completed",
+      "comment": "输入精准查询",
+      "pageScope": "/prototypes/policy-management-edit",
+      "provider": "codex",
+      "requestId": "annotation-mtjn2d8h-gys1id",
+      "sessionId": "annotation-mtjn2d8h-gys1id",
+      "updatedAt": 1788325904167,
+      "message": "修改完成",
+      "code": null
+    },
+    {
+      "locator": {
+        "selectors": [
+          "body > div > div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(1) > label",
+          "#root div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(1) > label"
+        ],
+        "fingerprint": "label|class=form-label|text=限价类型",
+        "path": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "textChange": {
+        "before": "政策编号",
+        "after": "限价类型"
+      },
+      "label": "label(\"限价类型\")",
+      "marker": {
+        "clientX": 317.91668701171875,
+        "clientY": 169.62240600585938,
+        "documentX": 317.91668701171875,
+        "documentY": 169.62240600585938,
+        "xPercent": 16.732457211143092,
+        "y": 169.62240600585938,
+        "isFixed": false,
+        "offsetX": 79.3663330078125,
+        "offsetY": 9.205734252929688,
+        "dirtySince": 1787646379127
+      },
+      "id": "aa7a01b5-a222-44fd-95db-68df04744e18",
+      "state": "completed",
+      "pageScope": "/prototypes/policy-management-edit?annotationSession=1",
+      "provider": "cursor",
+      "requestId": "annotation-mt8ehy74-aehqpr",
+      "sessionId": "annotation-mt8ehy74-aehqpr",
+      "updatedAt": 1787646488945,
+      "message": "修改完成",
+      "code": null
+    },
+    {
+      "locator": {
+        "selectors": [
+          "body > div > div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > table > thead > tr > th:nth-of-type(3)",
+          "#root div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > table > thead > tr > th:nth-of-type(3)"
+        ],
+        "fingerprint": "th|text=车系",
+        "path": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "textChange": {
+        "before": "层级",
+        "after": "车系"
+      },
+      "label": "th(\"车系\")",
+      "marker": {
+        "clientX": 365.5165100097656,
+        "clientY": 335.42535400390625,
+        "documentX": 365.5165100097656,
+        "documentY": 335.42535400390625,
+        "xPercent": 19.23771105314556,
+        "y": 335.42535400390625,
+        "isFixed": false,
+        "offsetX": 30.0303955078125,
+        "offsetY": 23.611114501953125,
+        "dirtySince": 1787646452023
+      },
+      "id": "ded45ac9-71b5-4aab-a2ec-059d1866c458",
+      "state": "completed",
+      "pageScope": "/prototypes/policy-management-edit?annotationSession=1",
+      "provider": "cursor",
+      "requestId": "annotation-mt8ejidm-skul9a",
+      "sessionId": "annotation-mt8ejidm-skul9a",
+      "updatedAt": 1787646532543,
+      "message": "修改完成",
+      "code": null
+    },
+    {
+      "locator": {
+        "selectors": [
+          "body > div > div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > table > tbody > tr:nth-of-type(1) > td:nth-of-type(3)",
+          "#root div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > table > tbody > tr:nth-of-type(1) > td:nth-of-type(3)"
+        ],
+        "fingerprint": "td|text=小蚂蚁",
+        "path": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          2
+        ]
+      },
+      "textChange": {
+        "before": "车型",
+        "after": "小蚂蚁"
+      },
+      "label": "td(\"小蚂蚁\")",
+      "marker": {
+        "clientX": 353.4375305175781,
+        "clientY": 377.3133850097656,
+        "documentX": 353.4375305175781,
+        "documentY": 377.3133850097656,
+        "xPercent": 18.601975290398848,
+        "y": 377.3133850097656,
+        "isFixed": false,
+        "offsetX": 19.149322509765625,
+        "offsetY": 29.231781005859375,
+        "dirtySince": 1787646464546
+      },
+      "id": "d96fe454-237c-4cd9-9662-5d6449b03af3",
+      "state": "completed",
+      "pageScope": "/prototypes/policy-management-edit?annotationSession=1",
+      "provider": "cursor",
+      "requestId": "annotation-mt8er6d7-0lzd9l",
+      "sessionId": "annotation-mt8er6d7-0lzd9l",
+      "updatedAt": 1787646923144,
+      "message": "修改完成",
+      "code": null
+    },
+    {
+      "locator": {
+        "selectors": [
+          "body > div > div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > table > tbody > tr:nth-of-type(2) > td:nth-of-type(3)",
+          "#root div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > table > tbody > tr:nth-of-type(2) > td:nth-of-type(3)"
+        ],
+        "fingerprint": "td|text=星纪元",
+        "path": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          2
+        ]
+      },
+      "textChange": {
+        "before": "年款",
+        "after": "星纪元"
+      },
+      "label": "td(\"星纪元\")",
+      "marker": {
+        "clientX": 378.90191650390625,
+        "clientY": 419.62677001953125,
+        "documentX": 378.90191650390625,
+        "documentY": 419.62677001953125,
+        "xPercent": 19.94220613178454,
+        "y": 419.62677001953125,
+        "isFixed": false,
+        "offsetX": 44.61370849609375,
+        "offsetY": 25.902801513671875,
+        "dirtySince": 1787646665869
+      },
+      "id": "1ccfb8c3-f5f8-412a-a16f-d1f4b9b3c154",
+      "state": "completed",
+      "pageScope": "/prototypes/policy-management-edit?annotationSession=1",
+      "provider": "cursor",
+      "requestId": "annotation-mt8er8k7-iwvo7d",
+      "sessionId": "annotation-mt8er8k7-iwvo7d",
+      "updatedAt": 1787646898370,
+      "message": "修改完成",
+      "code": null
+    },
+    {
+      "locator": {
+        "selectors": [
+          "body > div > div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > table > tbody > tr:nth-of-type(3) > td:nth-of-type(3)",
+          "#root div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > table > tbody > tr:nth-of-type(3) > td:nth-of-type(3)"
+        ],
+        "fingerprint": "td|text=星纪元",
+        "path": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          2,
+          2
+        ]
+      },
+      "textChange": {
+        "before": "年款",
+        "after": "星纪元"
+      },
+      "label": "td(\"星纪元\")",
+      "marker": {
+        "clientX": 367.3220520019531,
+        "clientY": 467.4305725097656,
+        "documentX": 367.3220520019531,
+        "documentY": 467.4305725097656,
+        "xPercent": 19.332739579050166,
+        "y": 467.4305725097656,
+        "isFixed": false,
+        "offsetX": 33.033843994140625,
+        "offsetY": 28.064239501953125,
+        "dirtySince": 1787646682368
+      },
+      "id": "bcabe801-c2ff-48c5-9635-86e97b670e6c",
+      "state": "completed",
+      "pageScope": "/prototypes/policy-management-edit?annotationSession=1",
+      "provider": "cursor",
+      "requestId": "annotation-mt8era84-ngfrzc",
+      "sessionId": "annotation-mt8era84-ngfrzc",
+      "updatedAt": 1787646875535,
+      "message": "修改完成",
+      "code": null
+    },
+    {
+      "label": "div(\"菜单管理/政策管理/政策管理编辑\")",
+      "locator": {
+        "selectors": [
+          ".breadcrumb",
+          "body > div > div > div:nth-of-type(1) > main > div:nth-of-type(1)",
+          "#root div > div:nth-of-type(1) > main > div:nth-of-type(1)"
+        ],
+        "fingerprint": "div|class=breadcrumb|text=菜单管理/政策管理/政策管理编辑",
+        "path": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      "marker": {
+        "clientX": 296.115478515625,
+        "clientY": 72.7170181274414,
+        "documentX": 296.115478515625,
+        "documentY": 72.7170181274414,
+        "xPercent": 15.585025185032894,
+        "y": 72.7170181274414,
+        "isFixed": false,
+        "offsetX": 89.5616455078125,
+        "offsetY": 24.166667938232422,
+        "dirtySince": 1787645579326
+      },
+      "id": "f80490b0-293e-4106-bc97-188f9a3e33eb",
+      "state": "completed",
+      "comment": "限价管理/限价规则",
+      "pageScope": "/prototypes/policy-management-edit?annotationSession=1",
+      "provider": "cursor",
+      "requestId": "annotation-mt8e2143-lchty6",
+      "sessionId": "annotation-mt8e2143-lchty6",
+      "updatedAt": 1787645797843,
+      "message": "修改完成",
+      "code": null
+    },
+    {
+      "label": "td(\"年款\")",
+      "locator": {
+        "selectors": [
+          "body > div > div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > table > tbody > tr:nth-of-type(4) > td:nth-of-type(3)",
+          "#root div > div:nth-of-type(1) > main > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > table > tbody > tr:nth-of-type(4) > td:nth-of-type(3)"
+        ],
+        "fingerprint": "td|text=年款",
+        "path": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          3,
+          2
+        ]
+      },
+      "marker": {
+        "clientX": 376.48004150390625,
+        "clientY": 507.1961975097656,
+        "documentX": 376.48004150390625,
+        "documentY": 507.1961975097656,
+        "xPercent": 19.81473902652138,
+        "y": 507.1961975097656,
+        "isFixed": false,
+        "offsetX": 42.19183349609375,
+        "offsetY": 22.1875,
+        "dirtySince": 1787646696803
+      },
+      "id": "e5d35120-e82e-4b0d-95cd-a7833946a5d8",
+      "state": "completed",
+      "comment": "星途",
+      "pageScope": "/prototypes/policy-management-edit?annotationSession=1",
+      "provider": "cursor",
+      "requestId": "annotation-mt8erbpw-uilszf",
+      "sessionId": "annotation-mt8erbpw-uilszf",
+      "updatedAt": 1787646865149,
+      "message": "修改完成",
+      "code": null
+    }
+  ],
+  "images": []
+}

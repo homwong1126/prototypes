@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <style>
+      .state-initial { fill: #e3f2fd; stroke: #1976d2; stroke-width: 3; }
+      .state-processing { fill: #fff9c4; stroke: #f57c00; stroke-width: 3; }
+      .state-completed { fill: #c8e6c9; stroke: #388e3c; stroke-width: 3; }
+      .state-refund { fill: #ffe0b2; stroke: #ef6c00; stroke-width: 3; }
+      .state-final { fill: #ffccbc; stroke: #d84315; stroke-width: 3; }
+      .text { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; fill: #333; text-anchor: middle; font-weight: 600; }
+      .text-small { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; fill: #666; text-anchor: middle; }
+      .text-tiny { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 10px; fill: #999; text-anchor: middle; }
+      .arrow { fill: none; stroke: #666; stroke-width: 2.5; marker-end: url(#arrowhead); }
+      .arrow-self { fill: none; stroke: #999; stroke-width: 2; stroke-dasharray: 5,3; marker-end: url(#arrowhead-small); }
+      .label { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; fill: #1976d2; font-weight: 500; }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="3" orient="auto">
+      <polygon points="0 0, 12 3, 0 6" fill="#666" />
+    </marker>
+    <marker id="arrowhead-small" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#999" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="600" y="40" class="text" style="font-size: 22px;">预收款管理状态机</text>
+  <text x="600" y="65" class="text-small" style="fill: #666;">Prepayment Management State Machine</text>
+  
+  <!-- State 1: 待抵扣 (Initial) -->
+  <rect x="150" y="250" width="180" height="100" rx="15" class="state-initial" />
+  <text x="240" y="290" class="text" style="font-size: 18px;">待抵扣</text>
+  <text x="240" y="310" class="text-small">Pending Deduction</text>
+  <text x="240" y="330" class="text-tiny">可用余额 = 预收总额</text>
+  
+  <!-- State 2: 部分抵扣 (Processing) -->
+  <rect x="510" y="250" width="180" height="100" rx="15" class="state-processing" />
+  <text x="600" y="290" class="text" style="font-size: 18px;">部分抵扣</text>
+  <text x="600" y="310" class="text-small">Partial Deduction</text>
+  <text x="600" y="330" class="text-tiny">仍有可用余额</text>
+  
+  <!-- State 3: 已抵扣 (Completed) -->
+  <rect x="870" y="250" width="180" height="100" rx="15" class="state-completed" />
+  <text x="960" y="290" class="text" style="font-size: 18px;">已抵扣</text>
+  <text x="960" y="310" class="text-small">Fully Deducted</text>
+  <text x="960" y="330" class="text-tiny">可用余额 = 0</text>
+  
+  <!-- State 4: 可退款 (Refundable) -->
+  <rect x="510" y="500" width="180" height="100" rx="15" class="state-refund" />
+  <text x="600" y="540" class="text" style="font-size: 18px;">可退款</text>
+  <text x="600" y="560" class="text-small">Refundable</text>
+  <text x="600" y="580" class="text-tiny">满足退款条件</text>
+  
+  <!-- State 5: 已退款 (Refunded) -->
+  <rect x="870" y="500" width="180" height="100" rx="15" class="state-final" />
+  <text x="960" y="540" class="text" style="font-size: 18px;">已退款</text>
+  <text x="960" y="560" class="text-small">Refunded</text>
+  <text x="960" y="580" class="text-tiny">退款已完成</text>
+  
+  <!-- Start Point -->
+  <circle cx="80" cy="300" r="20" fill="#333" />
+  <text x="80" y="340" class="text-small">开始</text>
+  
+  <!-- Arrow: Start -> 待抵扣 -->
+  <line x1="100" y1="300" x2="150" y2="300" class="arrow" />
+  <text x="125" y="290" class="label">创建预收</text>
+  
+  <!-- Arrow: 待抵扣 -> 部分抵扣 -->
+  <line x1="330" y1="300" x2="510" y2="300" class="arrow" />
+  <text x="420" y="290" class="label">部分抵扣</text>
+  <text x="420" y="305" class="text-tiny">抵扣后仍有余额</text>
+  
+  <!-- Arrow: 待抵扣 -> 已抵扣 (curved top) -->
+  <path d="M 330 270 Q 600 180 870 270" class="arrow" />
+  <text x="600" y="210" class="label">全部抵扣</text>
+  <text x="600" y="225" class="text-tiny">余额 ≤ 自费应收</text>
+  
+  <!-- Arrow: 待抵扣 -> 可退款 -->
+  <path d="M 240 350 L 240 450 L 510 550" class="arrow" />
+  <text x="280" y="430" class="label">需要退款</text>
+  <text x="280" y="445" class="text-tiny">客户取消维修</text>
+  
+  <!-- Arrow: 部分抵扣 -> 已抵扣 -->
+  <line x1="690" y1="300" x2="870" y2="300" class="arrow" />
+  <text x="780" y="290" class="label">继续抵扣</text>
+  <text x="780" y="305" class="text-tiny">余额全部用完</text>
+  
+  <!-- Arrow: 部分抵扣 -> 可退款 -->
+  <line x1="600" y1="350" x2="600" y2="500" class="arrow" />
+  <text x="640" y="425" class="label">需要退款</text>
+  <text x="640" y="440" class="text-tiny">剩余余额退款</text>
+  
+  <!-- Arrow: 部分抵扣 -> 部分抵扣 (self loop) -->
+  <path d="M 690 280 Q 750 240 750 300 Q 750 360 690 320" class="arrow-self" />
+  <text x="780" y="260" class="text-tiny" style="fill: #999;">多次抵扣</text>
+  
+  <!-- Arrow: 可退款 -> 已退款 -->
+  <line x1="690" y1="550" x2="870" y2="550" class="arrow" />
+  <text x="780" y="540" class="label">退款完成</text>
+  <text x="780" y="555" class="text-tiny">原路退回</text>
+  
+  <!-- Legend -->
+  <g transform="translate(50, 100)">
+    <rect x="0" y="0" width="280" height="120" rx="10" fill="#f5f5f5" stroke="#ddd" stroke-width="2" />
+    <text x="140" y="25" class="text" style="font-size: 14px;">状态说明</text>
+    
+    <rect x="15" y="40" width="60" height="30" rx="5" class="state-initial" />
+    <text x="85" y="60" class="text-small" style="text-anchor: start;">初始状态</text>
+    
+    <rect x="155" y="40" width="60" height="30" rx="5" class="state-processing" />
+    <text x="225" y="60" class="text-small" style="text-anchor: start;">处理中</text>
+    
+    <rect x="15" y="80" width="60" height="30" rx="5" class="state-completed" />
+    <text x="85" y="100" class="text-small" style="text-anchor: start;">已完成</text>
+    
+    <rect x="155" y="80" width="60" height="30" rx="5" class="state-refund" />
+    <text x="225" y="100" class="text-small" style="text-anchor: start;">可退款</text>
+  </g>
+  
+  <!-- Business Rules -->
+  <g transform="translate(850, 100)">
+    <rect x="0" y="0" width="300" height="120" rx="10" fill="#fff3e0" stroke="#f57c00" stroke-width="2" />
+    <text x="150" y="25" class="text" style="font-size: 14px; fill: #e65100;">核心业务规则</text>
+    
+    <text x="150" y="48" class="text-small" style="font-size: 11px; text-anchor: start;" transform="translate(20, 0)">
+      1. 本次可抵扣 = min(可用余额, 客户自费应收)
+    </text>
+    <text x="150" y="65" class="text-small" style="font-size: 11px; text-anchor: start;" transform="translate(20, 0)">
+      2. 仅抵扣客户自费，不抵扣保修/保险
+    </text>
+    <text x="150" y="82" class="text-small" style="font-size: 11px; text-anchor: start;" transform="translate(20, 0)">
+      3. 超额余额可保留或发起退款
+    </text>
+    <text x="150" y="99" class="text-small" style="font-size: 11px; text-anchor: start;" transform="translate(20, 0)">
+      4. 部分抵扣状态可多次抵扣
+    </text>
+  </g>
+  
+  <!-- State Transition Table -->
+  <g transform="translate(50, 620)">
+    <text x="0" y="0" class="text" style="font-size: 14px; text-anchor: start;">状态流转条件：</text>
+    <text x="0" y="20" class="text-small" style="font-size: 11px; text-anchor: start; fill: #666;">
+      待抵扣 → 部分抵扣：抵扣金额 &lt; 可用余额
+    </text>
+    <text x="0" y="38" class="text-small" style="font-size: 11px; text-anchor: start; fill: #666;">
+      待抵扣 → 已抵扣：抵扣金额 = 可用余额
+    </text>
+    <text x="0" y="56" class="text-small" style="font-size: 11px; text-anchor: start; fill: #666;">
+      部分抵扣 → 已抵扣：剩余余额全部抵扣完
+    </text>
+    
+    <text x="450" y="20" class="text-small" style="font-size: 11px; text-anchor: start; fill: #666;">
+      待抵扣/部分抵扣 → 可退款：客户取消或配件未到货
+    </text>
+    <text x="450" y="38" class="text-small" style="font-size: 11px; text-anchor: start; fill: #666;">
+      可退款 → 已退款：退款申请审批通过并完成退款
+    </text>
+    <text x="450" y="56" class="text-small" style="font-size: 11px; text-anchor: start; fill: #666;">
+      部分抵扣 → 部分抵扣：多次结算，每次抵扣后仍有余额
+    </text>
+  </g>
+</svg>

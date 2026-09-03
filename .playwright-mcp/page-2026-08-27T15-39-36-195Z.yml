@@ -1,0 +1,151 @@
+- generic [ref=f9e3]:
+  - banner [ref=f9e4]:
+    - img "Logo" [ref=f9e6]
+    - generic [ref=f9e7]:
+      - button "中文" [ref=f9e8] [cursor=pointer]
+      - generic [ref=f9e12]: 系统管理员
+  - generic [ref=f9e18]:
+    - complementary [ref=f9e19]:
+      - textbox "搜索菜单..." [ref=f9e21]
+      - generic [ref=f9e24]:
+        - generic [ref=f9e25] [cursor=pointer]: 限价管理
+        - generic [ref=f9e29]:
+          - generic [ref=f9e30] [cursor=pointer]: 限价列表
+          - generic [ref=f9e31] [cursor=pointer]: 限价规则
+          - generic [ref=f9e32] [cursor=pointer]: 限价申请
+          - generic [ref=f9e33] [cursor=pointer]: 用户管理
+          - generic [ref=f9e34] [cursor=pointer]: 资质审核
+          - generic [ref=f9e35] [cursor=pointer]: 优惠券核销
+      - button [ref=f9e36] [cursor=pointer]
+    - main [ref=f9e39]:
+      - generic [ref=f9e40]:
+        - generic [ref=f9e41]: 限价管理
+        - generic [ref=f9e42]: /
+        - generic [ref=f9e43]: 限价申请
+      - generic [ref=f9e44]:
+        - generic [ref=f9e45]:
+          - generic [ref=f9e46]: 筛选条件
+          - generic [ref=f9e50]:
+            - generic [ref=f9e51]:
+              - generic [ref=f9e52]: 申请单号 / VIN码
+              - textbox "请输入申请单号或VIN码" [ref=f9e54]
+            - generic [ref=f9e55]:
+              - generic [ref=f9e56]: 审核状态
+              - combobox [ref=f9e57]:
+                - option "全部" [selected]
+                - option "待审核"
+                - option "已通过"
+                - option "已驳回"
+            - generic [ref=f9e58]:
+              - generic [ref=f9e59]: 需审核级别
+              - combobox [ref=f9e60]:
+                - option "全部" [selected]
+                - option "大区审核"
+                - option "条线审核"
+                - option "门店审核"
+                - option "集团审核"
+            - button "重置" [ref=f9e62] [cursor=pointer]
+        - generic [ref=f9e63]:
+          - generic [ref=f9e64]:
+            - generic [ref=f9e65]: 限价申请单列表
+            - button "导出" [ref=f9e67] [cursor=pointer]
+          - table [ref=f9e72]:
+            - rowgroup [ref=f9e73]:
+              - row [ref=f9e74]:
+                - columnheader "申请单号" [ref=f9e75]
+                - columnheader "VIN码" [ref=f9e76]
+                - columnheader "车系" [ref=f9e77]
+                - columnheader "车型" [ref=f9e78]
+                - columnheader "预估综合毛利" [ref=f9e79]
+                - columnheader "综合毛利限价" [ref=f9e80]
+                - columnheader "需审核级别" [ref=f9e81]
+                - columnheader "审核状态" [ref=f9e82]
+                - columnheader "创建时间" [ref=f9e83]
+                - columnheader "审核人" [ref=f9e84]
+                - columnheader "审核时间" [ref=f9e85]
+                - columnheader "操作" [ref=f9e86]
+            - rowgroup [ref=f9e87]:
+              - row [ref=f9e88]:
+                - cell "XJ3463-1202608260001" [ref=f9e89]
+                - cell "LVTDB21B6TDN02238" [ref=f9e90]
+                - cell "瑞虎8" [ref=f9e91]
+                - cell "第五代瑞虎8-豹款" [ref=f9e92]
+                - cell "2,500" [ref=f9e93]
+                - cell "3,000" [ref=f9e94]
+                - cell "大区审核" [ref=f9e95]
+                - cell "待审核" [ref=f9e97]
+                - cell "2026-08-26 09:15:30" [ref=f9e99]
+                - cell "-" [ref=f9e100]
+                - cell "-" [ref=f9e101]
+                - cell [ref=f9e102]:
+                  - button "大区审核" [ref=f9e103] [cursor=pointer]
+              - row [ref=f9e104]:
+                - cell "XJ3463-1202608260002" [ref=f9e105]
+                - cell "LVTDB21B6TDN03147" [ref=f9e106]
+                - cell "瑞虎8" [ref=f9e107]
+                - cell "第五代瑞虎8-豹款" [ref=f9e108]
+                - cell "1,500" [ref=f9e109]
+                - cell "3,000" [ref=f9e110]
+                - cell "条线审核" [ref=f9e111]
+                - cell "待审核" [ref=f9e113]
+                - cell "2026-08-26 10:02:11" [ref=f9e115]
+                - cell "-" [ref=f9e116]
+                - cell "-" [ref=f9e117]
+                - cell [ref=f9e118]:
+                  - button "条线审核" [ref=f9e119] [cursor=pointer]
+              - row [ref=f9e120]:
+                - cell "XJ3463-1202608260003" [ref=f9e121]
+                - cell "LVTDB21B6TDN04522" [ref=f9e122]
+                - cell "瑞虎8" [ref=f9e123]
+                - cell "第五代瑞虎8-豹款" [ref=f9e124]
+                - cell "500" [ref=f9e125]
+                - cell "3,000" [ref=f9e126]
+                - cell "门店审核" [ref=f9e127]
+                - cell "待审核" [ref=f9e129]
+                - cell "2026-08-26 11:40:05" [ref=f9e131]
+                - cell "-" [ref=f9e132]
+                - cell "-" [ref=f9e133]
+                - cell [ref=f9e134]:
+                  - button "门店审核" [ref=f9e135] [cursor=pointer]
+              - row [ref=f9e136]:
+                - cell "XJ3463-1202608260004" [ref=f9e137]
+                - cell "LVTDB21B6TDN05893" [ref=f9e138]
+                - cell "瑞虎8" [ref=f9e139]
+                - cell "第五代瑞虎8-豹款" [ref=f9e140]
+                - cell "-300" [ref=f9e141]
+                - cell "3,000" [ref=f9e142]
+                - cell "集团审核" [ref=f9e143]
+                - cell "待审核" [ref=f9e145]
+                - cell "2026-08-26 14:26:47" [ref=f9e147]
+                - cell "-" [ref=f9e148]
+                - cell "-" [ref=f9e149]
+                - cell [ref=f9e150]:
+                  - button "集团审核" [ref=f9e151] [cursor=pointer]
+              - row [ref=f9e152]:
+                - cell "XJ3463-1202608260005" [ref=f9e153]
+                - cell "LVTDB21B6TDN01204" [ref=f9e154]
+                - cell "瑞虎8" [ref=f9e155]
+                - cell "第五代瑞虎8-豹款" [ref=f9e156]
+                - cell "2,800" [ref=f9e157]
+                - cell "3,000" [ref=f9e158]
+                - cell "大区审核" [ref=f9e159]
+                - cell "已通过" [ref=f9e161]
+                - cell "2026-08-25 16:08:20" [ref=f9e163]
+                - cell "王审核" [ref=f9e164]
+                - cell "2026-08-25 17:30:00" [ref=f9e165]
+                - cell [ref=f9e166]:
+                  - button "查看" [ref=f9e167] [cursor=pointer]
+              - row [ref=f9e171]:
+                - cell "XJ3463-1202608260006" [ref=f9e172]
+                - cell "LVTDB21B6TDN02661" [ref=f9e173]
+                - cell "瑞虎8" [ref=f9e174]
+                - cell "第五代瑞虎8-豹款" [ref=f9e175]
+                - cell "1,200" [ref=f9e176]
+                - cell "3,000" [ref=f9e177]
+                - cell "条线审核" [ref=f9e178]
+                - cell "已驳回" [ref=f9e180]
+                - cell "2026-08-25 11:25:44" [ref=f9e182]
+                - cell "李审核" [ref=f9e183]
+                - cell "2026-08-25 15:02:30" [ref=f9e184]
+                - cell [ref=f9e185]:
+                  - button "查看" [ref=f9e186] [cursor=pointer]

@@ -1,0 +1,193 @@
+{
+  "documentVersion": 1,
+  "format": "axhub-annotation-source",
+  "data": {
+    "version": 2,
+    "prototypeName": "price-limit-list",
+    "pageId": "list",
+    "updatedAt": 1787923200000,
+    "nodes": [
+      {
+        "id": "pll-list-page",
+        "index": 1,
+        "title": "限价申请列表页",
+        "pageId": "list",
+        "locator": {
+          "selectors": ["[data-annotation-id=\"pll-list-page\"]"],
+          "fingerprint": "section|data-annotation-id=pll-list-page",
+          "path": []
+        },
+        "aiPrompt": "说明限价申请列表页的整体结构、字段与操作入口。",
+        "annotationText": "",
+        "hasMarkdown": true,
+        "color": "#D97706",
+        "images": [],
+        "createdAt": 1787923200000,
+        "updatedAt": 1787923200000
+      },
+      {
+        "id": "pll-filter",
+        "index": 2,
+        "title": "筛选条件",
+        "pageId": "list",
+        "locator": {
+          "selectors": ["[data-annotation-id=\"pll-filter\"]"],
+          "fingerprint": "section|data-annotation-id=pll-filter",
+          "path": []
+        },
+        "aiPrompt": "说明筛选条件的能力与审核状态演示方式。",
+        "annotationText": "",
+        "hasMarkdown": true,
+        "color": "#059669",
+        "images": [],
+        "controls": [
+          {
+            "type": "segmented",
+            "attributeId": "list_status",
+            "displayName": "审核状态演示",
+            "info": "切换列表的审核状态筛选，用于演示待审核、已通过、已驳回三种数据形态。",
+            "initialValue": "all",
+            "options": [
+              { "label": "全部", "value": "all" },
+              { "label": "待审核", "value": "pending" },
+              { "label": "已通过", "value": "approved" },
+              { "label": "已驳回", "value": "rejected" }
+            ]
+          }
+        ],
+        "createdAt": 1787923200000,
+        "updatedAt": 1787923200000
+      },
+      {
+        "id": "pll-table",
+        "index": 3,
+        "title": "申请单列表字段",
+        "pageId": "list",
+        "locator": {
+          "selectors": ["[data-annotation-id=\"pll-table\"]"],
+          "fingerprint": "section|data-annotation-id=pll-table",
+          "path": []
+        },
+        "aiPrompt": "说明限价申请列表各字段的含义。",
+        "annotationText": "",
+        "hasMarkdown": true,
+        "color": "#2563EB",
+        "images": [],
+        "createdAt": 1787923200000,
+        "updatedAt": 1787923200000
+      },
+      {
+        "id": "pll-approval-chain",
+        "index": 4,
+        "title": "审核层级判定",
+        "pageId": "list",
+        "locator": {
+          "selectors": ["[data-annotation-id=\"pll-approval-chain\"]"],
+          "fingerprint": "td|data-annotation-id=pll-approval-chain",
+          "path": []
+        },
+        "aiPrompt": "说明审核层级列的判定规则",
+        "annotationText": "",
+        "hasMarkdown": true,
+        "color": "#7C3AED",
+        "images": [],
+        "createdAt": 1787923200000,
+        "updatedAt": 1787923200000
+      },
+      {
+        "id": "pll-actions",
+        "index": 5,
+        "title": "操作列规则",
+        "pageId": "list",
+        "locator": {
+          "selectors": ["[data-annotation-id=\"pll-actions\"]"],
+          "fingerprint": "div|data-annotation-id=pll-actions",
+          "path": []
+        },
+        "aiPrompt": "说明操作列在不同审核状态下的入口差异",
+        "annotationText": "",
+        "hasMarkdown": true,
+        "color": "#E11D48",
+        "images": [],
+        "createdAt": 1787923200000,
+        "updatedAt": 1787923200000
+      }
+    ]
+  },
+  "markdownMap": {
+    "pll-list-page": "# 限价申请列表页\n\n限价申请列表是限价管理模块的核心页面，用于统一查看门店提交的限价申请单，并按需进入审核或详情。\n\n## 页面结构\n- 顶部导航与左侧菜单（限价管理 / 限价申请）\n- 筛选条件区\n- 限价申请列表\n- 分页区\n\n## 关联页面\n- 审核 / 详情：`price-limit-apply` 原型\n- 限价规则维护：`policy-management-edit` 原型\n- 列表入口：`price-limit-list` 原型\n\n## 已确认需求\n- 需要分页能力\n- 暂不需要新增申请入口\n- 审核页与详情页跳转需要携带申请号、mode、level 等参数\n- 审核人需要接真实登录用户\n\n## 待确认项\n- 是否需要按日期范围筛选",
+    "pll-filter": "# 筛选条件\n\n## 当前能力\n- 申请单号：模糊匹配\n- 审核状态：全部 / 待审核 / 已通过 / 已驳回\n- 查询按钮：当前为占位，筛选使用即时过滤\n- 分页能力：需求已确认，后续需要在列表继续补齐\n\n## 标注演示\n- 打开本节点面板，通过“审核状态演示”分段控件切换列表数据形态。\n\n## 待确认项\n- 是否需要 VIN 码、门店名称等更多筛选维度\n- 是否要增加日期范围筛选\n- 查询按钮是否需要等待确认后再执行",
+    "pll-table": "# 申请单列表字段\n\n| 字段 | 说明 |\n| --- | --- |\n| 申请单号 | 系统自动生成，如 XJ3463-1202608260001 |\n| VIN码 | 车辆唯一识别码 |\n| 车型 | 车系 + 车型名称 |\n| 门店名称 | 提交申请的门店 |\n| 综合毛利限价 | 规则表中的毛利限价 |\n| 预估综合毛利 | 门店预估成交毛利 |\n| 审核层级 | 按判定规则计算出的最高审核层级（可多级） |\n| 审核状态 | 待审核 / 已通过 / 已驳回 |\n| 创建时间 | 申请提交时间 |\n| 审核人 | 完成审核的用户，未审核显示 — |\n| 审核时间 | 完成审核的时间 |\n| 操作 | 审核入口或查看入口 |\n\n## 待确认项\n- 是否需要展示申请理由 / 附件等更多信息列\n- 是否需要展示分页统计文案",
+    "pll-approval-chain": "# 审核层级判定\n\n审核层级由共享规则 `resolveApprovalLevel` 计算：\n\n```\n突破金额 = 综合毛利限价 − 预估综合毛利\n\n当综合毛利限价为 2000，且权限示例为：\n- 大区审核：500\n- 条线审核：500\n- 门店运营审核：1000\n\n则判定规则如下：\n- 预估综合毛利 ≥ 2000：无需审批\n- 预估综合毛利 = 2000：无需审批\n- 预估综合毛利 = 1999 或 1500：仅大区审核\n- 预估综合毛利 = 1001 或 1000：大区审核后流转至条线审核\n- 预估综合毛利 = 999 或 0：流转至门店审核\n- 预估综合毛利 = -1：流转至集团审批\n```\n\n## 业务说明\n- 这里保留当前共享规则的计算方式，后续如权限表变化只需同步共享数据源。\n\n## 待确认项\n- 当前示例中的权限值是否需要与共享规则完全一致，还是仅在说明文案中展示为业务示例",
+    "pll-actions": "# 操作列规则\n\n| 场景 | 展示 | 行为 |\n| --- | --- | --- |\n| 待审核且判定出层级 | 对应审核级别按钮 | 跳转限价申请审核页（携带申请号、层级参数） |\n| 待审核但超出集团权限 | “超出集团权限”提示 | 无跳转，需人工处理 |\n| 已通过 / 已驳回 | 查看按钮 | 跳转限价申请只读详情页 |\n\n## 已确认需求\n- 审核按钮跳转后需要携带申请号、mode、level\n- 审核人需要接真实登录用户\n\n## 待确认项\n- “超出集团权限”是否需要支持人工强制审核入口"
+  },
+  "assetMap": {},
+  "directory": {
+    "nodes": [
+      {
+        "type": "folder",
+        "id": "price-limit-list-directory",
+        "title": "限价申请列表标注目录",
+        "defaultExpanded": true,
+        "children": [
+          {
+            "type": "link",
+            "id": "price-limit-list-prototype",
+            "title": "打开限价申请列表原型",
+            "href": "/prototypes/price-limit-list",
+            "target": "self"
+          },
+          {
+            "type": "link",
+            "id": "price-limit-apply-prototype",
+            "title": "相关原型：限价申请（审核/详情）",
+            "href": "/prototypes/price-limit-apply",
+            "target": "self"
+          },
+          {
+            "type": "link",
+            "id": "policy-management-edit-prototype",
+            "title": "相关原型：限价规则编辑",
+            "href": "/prototypes/policy-management-edit",
+            "target": "self"
+          },
+          {
+            "type": "markdown",
+            "id": "price-limit-list-overview-doc",
+            "title": "需求说明",
+            "markdown": "# 限价申请列表需求说明\n\n## 业务背景\n\n门店在销售低于综合毛利限价的车辆前，需要提交限价申请，按突破金额的多少流转到不同审核层级。列表页集中呈现所有申请单及其审核进度，供审核人员处理。\n\n## 当前原型范围\n- 申请单列表展示\n- 审核层级判定与展示\n- 审核入口（跳转审核页，携带申请号、mode、level）\n- 只读查看入口（跳转详情页）\n- 分页能力（需求已确认，后续补齐）
+- 更多筛选维度（需求已确认，后续补齐）\n\n## 审核层级判定（示例：综合毛利限价 2000）\n\n- 预估综合毛利 ≥ 2000：无需审批\n- 预估综合毛利 1999 / 1500：大区审核\n- 预估综合毛利 1001 / 1000：大区审核后流转至条线审核\n- 预估综合毛利 999 / 0：流转至门店审核\n- 预估综合毛利 -1：流转至集团审批\n\n## 已确认需求\n- 需要分页能力\n- 暂不需要新增申请入口\n- 审核按钮跳转审核页需要携带申请号、mode、level 参数\n- 审核人需要接真实登录用户\n\n## 待产品确认\n- 当前示例中的权限值是否需要与共享规则完全一致，还是仅作为业务说明示例\n- 是否需要日期筛选、更多筛选维度（如 VIN、门店名称）\n- 是否需要展示申请理由 / 附件等更多信息列"
+          },
+          {
+            "type": "route",
+            "id": "price-limit-list-route-all",
+            "title": "状态演示：全部",
+            "route": "list",
+            "payload": { "status": "all" }
+          },
+          {
+            "type": "route",
+            "id": "price-limit-list-route-pending",
+            "title": "状态演示：待审核",
+            "route": "list",
+            "payload": { "status": "pending" }
+          },
+          {
+            "type": "route",
+            "id": "price-limit-list-route-approved",
+            "title": "状态演示：已通过",
+            "route": "list",
+            "payload": { "status": "approved" }
+          },
+          {
+            "type": "route",
+            "id": "price-limit-list-route-rejected",
+            "title": "状态演示：已驳回",
+            "route": "list",
+            "payload": { "status": "rejected" }
+          }
+        ]
+      }
+    ]
+  }
+}

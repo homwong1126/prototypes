@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1400" height="800" viewBox="0 0 1400 800">
+  <defs>
+    <style>
+      .system { fill: #e3f2fd; stroke: #1976d2; stroke-width: 2; }
+      .database { fill: #c8e6c9; stroke: #388e3c; stroke-width: 2; }
+      .external { fill: #fff9c4; stroke: #f57c00; stroke-width: 2; }
+      .finance { fill: #ffccbc; stroke: #d84315; stroke-width: 2; }
+      .text { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 14px; fill: #333; text-anchor: middle; }
+      .text-small { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; fill: #666; text-anchor: middle; }
+      .arrow { fill: none; stroke: #666; stroke-width: 2; marker-end: url(#arrowhead); }
+      .arrow-bi { fill: none; stroke: #666; stroke-width: 2; marker-end: url(#arrowhead); marker-start: url(#arrowhead-start); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#666" />
+    </marker>
+    <marker id="arrowhead-start" markerWidth="10" markerHeight="10" refX="1" refY="3" orient="auto">
+      <polygon points="10 0, 0 3, 10 6" fill="#666" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="700" y="40" class="text" style="font-size: 20px; font-weight: 600;">预收款管理数据流图</text>
+  
+  <!-- Central System: 预收款管理系统 -->
+  <rect x="550" y="350" width="300" height="100" rx="12" class="system" />
+  <text x="700" y="390" class="text" style="font-size: 16px; font-weight: 600;">预收款管理系统</text>
+  <text x="700" y="410" class="text-small">核心业务处理</text>
+  <text x="700" y="428" class="text-small" style="font-size: 11px;">收款登记 | 抵扣计算 | 退款处理</text>
+  
+  <!-- Top Left: 车辆档案库 -->
+  <ellipse cx="250" cy="150" rx="100" ry="60" class="database" />
+  <text x="250" y="145" class="text" style="font-weight: 600;">车辆档案库</text>
+  <text x="250" y="165" class="text-small">Vehicle Archive</text>
+  
+  <!-- Top Right: 维修工单系统 -->
+  <rect x="950" y="100" width="200" height="100" rx="10" class="external" />
+  <text x="1050" y="140" class="text" style="font-weight: 600;">维修工单系统</text>
+  <text x="1050" y="160" class="text-small">Repair Workorder</text>
+  <text x="1050" y="178" class="text-small" style="font-size: 11px;">委托书信息</text>
+  
+  <!-- Bottom Right: 维修结算系统 -->
+  <rect x="950" y="600" width="200" height="100" rx="10" class="external" />
+  <text x="1050" y="640" class="text" style="font-weight: 600;">维修结算系统</text>
+  <text x="1050" y="660" class="text-small">Repair Settlement</text>
+  <text x="1050" y="678" class="text-small" style="font-size: 11px;">结算单 | 自费应收</text>
+  
+  <!-- Bottom Left: 财务系统 -->
+  <rect x="150" y="600" width="200" height="100" rx="10" class="finance" />
+  <text x="250" y="640" class="text" style="font-weight: 600;">财务系统</text>
+  <text x="250" y="660" class="text-small">Finance System</text>
+  <text x="250" y="678" class="text-small" style="font-size: 11px;">对账 | 审计</text>
+  
+  <!-- Left: 客户管理系统 -->
+  <rect x="50" y="350" width="180" height="100" rx="10" class="external" />
+  <text x="140" y="390" class="text" style="font-weight: 600;">客户管理系统</text>
+  <text x="140" y="410" class="text-small">Customer Mgmt</text>
+  <text x="140" y="428" class="text-small" style="font-size: 11px;">客户信息</text>
+  
+  <!-- Right: 支付系统 -->
+  <rect x="1170" y="350" width="180" height="100" rx="10" class="finance" />
+  <text x="1260" y="390" class="text" style="font-weight: 600;">支付系统</text>
+  <text x="1260" y="410" class="text-small">Payment System</text>
+  <text x="1260" y="428" class="text-small" style="font-size: 11px;">收款 | 退款</text>
+  
+  <!-- Arrows and Labels -->
+  
+  <!-- 车辆档案库 -> 预收款管理 -->
+  <path d="M 320 180 Q 450 250 550 370" class="arrow" />
+  <text x="420" y="260" class="text-small" style="fill: #1976d2;">查询车辆信息</text>
+  <text x="420" y="275" class="text-small" style="font-size: 10px; fill: #666;">车牌/VIN/客户</text>
+  
+  <!-- 预收款管理 -> 车辆档案库 (return) -->
+  <path d="M 550 360 Q 450 280 330 200" class="arrow" stroke-dasharray="4,4" />
+  <text x="460" y="300" class="text-small" style="font-size: 10px; fill: #999;">返回候选列表</text>
+  
+  <!-- 维修工单系统 -> 预收款管理 -->
+  <path d="M 950 180 Q 800 250 750 350" class="arrow" />
+  <text x="860" y="250" class="text-small" style="fill: #f57c00;">获取委托书信息</text>
+  <text x="860" y="265" class="text-small" style="font-size: 10px; fill: #666;">委托书号/状态</text>
+  
+  <!-- 预收款管理 -> 维修结算系统 -->
+  <path d="M 750 450 Q 850 550 950 630" class="arrow" />
+  <text x="840" y="530" class="text-small" style="fill: #f57c00;">获取结算单信息</text>
+  <text x="840" y="545" class="text-small" style="font-size: 10px; fill: #666;">自费应收金额</text>
+  
+  <!-- 维修结算系统 -> 预收款管理 (notify) -->
+  <path d="M 950 660 Q 850 580 760 450" class="arrow" stroke-dasharray="4,4" />
+  <text x="870" y="570" class="text-small" style="font-size: 10px; fill: #999;">通知抵扣结果</text>
+  
+  <!-- 预收款管理 -> 财务系统 -->
+  <path d="M 550 430 Q 450 550 350 620" class="arrow" />
+  <text x="460" y="520" class="text-small" style="fill: #d84315;">同步预收款数据</text>
+  <text x="460" y="535" class="text-small" style="font-size: 10px; fill: #666;">收款/抵扣/退款流水</text>
+  
+  <!-- 财务系统 -> 预收款管理 (query) -->
+  <path d="M 340 600 Q 440 500 550 420" class="arrow" stroke-dasharray="4,4" />
+  <text x="430" y="560" class="text-small" style="font-size: 10px; fill: #999;">查询对账数据</text>
+  
+  <!-- 客户管理系统 <-> 预收款管理 -->
+  <line x1="230" y1="400" x2="550" y2="400" class="arrow-bi" />
+  <text x="390" y="390" class="text-small" style="fill: #f57c00;">查询客户信息</text>
+  <text x="390" y="420" class="text-small" style="font-size: 10px; fill: #999;">双向同步</text>
+  
+  <!-- 支付系统 <-> 预收款管理 -->
+  <line x1="850" y1="400" x2="1170" y2="400" class="arrow-bi" />
+  <text x="1010" y="390" class="text-small" style="fill: #d84315;">发起收款/退款</text>
+  <text x="1010" y="420" class="text-small" style="font-size: 10px; fill: #999;">支付回调</text>
+  
+  <!-- Data Flow Annotations -->
+  <g transform="translate(100, 100)">
+    <rect x="0" y="0" width="180" height="80" rx="8" fill="#f5f5f5" stroke="#ddd" stroke-width="1" />
+    <text x="90" y="20" class="text-small" style="font-weight: 600;">数据流说明</text>
+    <text x="90" y="38" class="text-small" style="font-size: 11px;">实线箭头：主动调用</text>
+    <text x="90" y="53" class="text-small" style="font-size: 11px;">虚线箭头：回调/返回</text>
+    <text x="90" y="68" class="text-small" style="font-size: 11px;">双向箭头：双向同步</text>
+  </g>
+  
+  <!-- Core Business Rule -->
+  <g transform="translate(1050, 100)">
+    <rect x="0" y="0" width="250" height="95" rx="8" fill="#fff3e0" stroke="#f57c00" stroke-width="2" />
+    <text x="125" y="20" class="text-small" style="font-weight: 600; fill: #e65100;">核心业务规则</text>
+    <text x="125" y="38" class="text-small" style="font-size: 11px;">1. 仅抵扣客户自费部分</text>
+    <text x="125" y="53" class="text-small" style="font-size: 11px;">2. 抵扣 = min(余额, 自费应收)</text>
+    <text x="125" y="68" class="text-small" style="font-size: 11px;">3. 超额可保留或退款</text>
+    <text x="125" y="83" class="text-small" style="font-size: 11px;">4. 所有操作记录流水</text>
+  </g>
+</svg>
