@@ -18,7 +18,10 @@
  */
 import React, { useState, useCallback, useMemo } from 'react'
 import {
+  ArrowLeft,
+  Bell,
   ChevronDown,
+  ChevronLeft,
   Lock,
   Check,
   X,
@@ -44,7 +47,7 @@ import logoImg from './assets/logo.jpeg'
 
 type ApproveLevel = '大区' | '条线' | '门店' | '集团'
 type ApplicationStatus = '待审核' | '已通过' | '已驳回'
-type ViewMode = 'list' | 'review' | 'detail'
+type ViewMode = 'message' | 'list' | 'review' | 'detail'
 
 interface VehicleInfo {
   vin: string
@@ -156,6 +159,19 @@ function makeVehicle(vin: string, interior: string, exterior: string, price: num
 
 const INITIAL_APPLICATIONS: PriceLimitApplication[] = [
   {
+    id: 'XJ3356202609010001',
+    storeErpNo: '3356',
+    storeName: '上海盈丰',
+    vehicle: makeVehicle('LVTDB21B6TDN03356', '琥珀棕', '珍珠白', 75080),
+    marginLimit: 3000,
+    estimatedMargin: 1200,
+    status: '待审核',
+    createdAt: '2026-09-01 10:08:00',
+    approver: '',
+    approvedAt: '',
+    reviewComment: '',
+  },
+  {
     id: 'XJ3463-1202608260001',
     storeErpNo: '3463-1',
     storeName: '上海QQ',
@@ -255,7 +271,7 @@ const STATUS_BADGE_CLASS: Record<ApplicationStatus, string> = {
 }
 
 function normalizeViewMode(value: unknown): ViewMode {
-  return value === 'review' || value === 'detail' ? (value as ViewMode) : 'list'
+  return value === 'message' || value === 'review' || value === 'detail' ? (value as ViewMode) : 'list'
 }
 
 // ─── 组件 ────────────────────────────────────────────────────────────────────
@@ -264,7 +280,6 @@ type ProtoState = {
   filter_status?: string
   filter_level?: string
   review_level?: string
-  review_state?: string
 }
 
 function normalizeProtoString(value: unknown, fallback: string): string {
@@ -273,14 +288,15 @@ function normalizeProtoString(value: unknown, fallback: string): string {
 
 const Component = function Component() {
   const protoState = useProtoDevState<ProtoState>()
-  const [viewMode, setViewMode] = useState<ViewMode>('list')
+  const [viewMode, setViewMode] = useState<ViewMode>('message')
   const [applications, setApplications] = useState<PriceLimitApplication[]>(INITIAL_APPLICATIONS)
-  const [selectedId, setSelectedId] = useState<string>('')
+  const [selectedId, setSelectedId] = useState<string>('XJ3356202609010001')
   const [reviewComment, setReviewComment] = useState('')
   const [showCommentError, setShowCommentError] = useState(false)
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>(null)
+  const [reviewOrigin, setReviewOrigin] = useState<ViewMode>('list')
 
-  // 列表筛选（受控于标注面板 controls，经 protoState 同步）
+  // 列表筛选（受控于标注面板）
   const [filterStatus, setFilterStatus] = useState<string>(() => {
     const v = protoState.filter_status
     return v === '待审核' || v === '已通过' || v === '已驳回' ? v : ''
@@ -302,23 +318,11 @@ const Component = function Component() {
     setProtoDevState({ filter_status: value || 'all' })
   }, [])
 
-  const syncFilterLevel = useCallback((value: string) => {
-    setFilterLevel(value)
-    setProtoDevState({ filter_level: value || 'all' })
-  }, [])
-
-  // 外部通过标注面板切换 filter 时同步到本地 state
   React.useEffect(() => {
     const v = normalizeProtoString(protoState.filter_status, 'all')
     const next = v === '待审核' || v === '已通过' || v === '已驳回' ? v : ''
     if (next !== filterStatus) setFilterStatus(next)
   }, [protoState.filter_status])
-
-  React.useEffect(() => {
-    const v = normalizeProtoString(protoState.filter_level, 'all')
-    const next = v === '大区' || v === '条线' || v === '门店' || v === '集团' ? v : ''
-    if (next !== filterLevel) setFilterLevel(next)
-  }, [protoState.filter_level])
 
   const selected = useMemo(
     () => applications.find(app => app.id === selectedId) || null,
@@ -330,7 +334,8 @@ const Component = function Component() {
     setTimeout(() => setToast(null), 3000)
   }, [])
 
-  const openReview = useCallback((id: string) => {
+  const openReview = useCallback((id: string, origin: ViewMode = 'list') => {
+    setReviewOrigin(origin)
     setSelectedId(id)
     setReviewComment('')
     setShowCommentError(false)
@@ -348,6 +353,16 @@ const Component = function Component() {
     setShowCommentError(false)
     syncViewMode('list')
   }, [syncViewMode])
+
+  const backFromReview = useCallback(() => {
+    if (reviewOrigin === 'message') {
+      setReviewComment('')
+      setShowCommentError(false)
+      syncViewMode('message')
+      return
+    }
+    backToList()
+  }, [backToList, reviewOrigin, syncViewMode])
 
   const handleApprove = useCallback(() => {
     if (!selected) return
@@ -418,10 +433,10 @@ const Component = function Component() {
   }, [applications, filterStatus, filterLevel, keyword])
 
   const resetFilters = useCallback(() => {
-    syncFilterStatus('')
-    syncFilterLevel('')
+    setFilterStatus('')
+    setFilterLevel('')
     setKeyword('')
-  }, [syncFilterStatus, syncFilterLevel])
+  }, [])
 
   const annotationOptions = useMemo<AnnotationViewerOptions>(() => ({
     showToolbar: true,
@@ -453,7 +468,7 @@ const Component = function Component() {
         source={annotationSourceDocument as AnnotationSourceDocument}
         options={annotationOptions}
       />
-      <div className="pla-container">
+      <div className={`pla-container pla-mode-${effectiveViewMode}`}>
       {/* ── Header ── */}
       <header className="pla-header">
         <div className="pla-header-left">
@@ -512,19 +527,25 @@ const Component = function Component() {
             </span>
           </div>
 
-          <div className="pla-page-content" data-annotation-id="pla-page-content">
+        <div className="pla-page-content pla-review-page-content" data-annotation-id="pla-page-content">
             {effectiveViewMode === 'list' && (
               <ListPage
                 applications={filteredApplications}
                 filterStatus={filterStatus}
                 filterLevel={filterLevel}
                 keyword={keyword}
-                onFilterStatus={syncFilterStatus}
-                onFilterLevel={syncFilterLevel}
+                onFilterStatus={setFilterStatus}
+                onFilterLevel={setFilterLevel}
                 onKeyword={setKeyword}
                 onReset={resetFilters}
                 onReview={openReview}
                 onDetail={openDetail}
+              />
+            )}
+
+            {effectiveViewMode === 'message' && (
+              <MessagePage
+                onOpenReview={() => openReview('XJ3356202609010001', 'message')}
               />
             )}
 
@@ -537,7 +558,7 @@ const Component = function Component() {
                   setReviewComment(value)
                   if (showCommentError) setShowCommentError(false)
                 }}
-                onBack={backToList}
+                onBack={backFromReview}
                 onApprove={handleApprove}
                 onReject={handleReject}
               />
@@ -599,7 +620,7 @@ function ListPage(props: ListPageProps) {
   return (
     <>
       {/* 筛选条件 */}
-      <div className="pla-card" data-annotation-id="pla-list-filter">
+      <div className="pla-card pla-desktop-filter" data-annotation-id="pla-list-filter">
         <div className="pla-section-title">
           <Info size={14} />
           <span>筛选条件</span>
@@ -731,7 +752,205 @@ function ListPage(props: ListPageProps) {
           </table>
         </div>
       </div>
+
+      {/* 移动端申请单卡片列表 */}
+      <div className="pla-mobile-list">
+        <header className="pla-mobile-list-header">
+          <div>
+            <h1>限价申请</h1>
+            <p>{applications.length} 条申请</p>
+          </div>
+          <button className="pla-btn pla-btn-ghost" onClick={onReset}>重置</button>
+        </header>
+        <div className="pla-mobile-filter">
+          <div className="pla-input-wrap pla-input-with-icon">
+            <input
+              type="text"
+              className="pla-form-input"
+              placeholder="申请单号 / VIN码"
+              value={keyword}
+              onChange={e => onKeyword(e.target.value)}
+            />
+            <Search size={16} className="pla-input-suffix" />
+          </div>
+          <div className="pla-mobile-chips" role="tablist" aria-label="审核状态筛选">
+            {[
+              { value: '', label: '全部' },
+              { value: '待审核', label: '待审核' },
+              { value: '已通过', label: '已通过' },
+              { value: '已驳回', label: '已驳回' },
+            ].map(option => (
+              <button
+                key={option.label}
+                className={`pla-mobile-chip ${filterStatus === option.value ? 'pla-mobile-chip-active' : ''}`}
+                onClick={() => onFilterStatus(option.value)}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="pla-mobile-cards">
+          {applications.map(app => {
+            const { level } = computeMarginApproval(app.marginLimit, app.estimatedMargin)
+            const isPending = app.status === '待审核'
+            return (
+              <article key={app.id} className="pla-mobile-card">
+                <div className="pla-mobile-card-top">
+                  <span className="pla-cell-mono">{app.id}</span>
+                  <span className={STATUS_BADGE_CLASS[app.status]}>{app.status}</span>
+                </div>
+                <div className="pla-mobile-card-title">
+                  <strong>{app.vehicle.modelName}</strong>
+                  <span>{app.vehicle.carSeries}</span>
+                </div>
+                <div className="pla-mobile-card-grid">
+                  <div>
+                    <span className="pla-v-label">预估综合毛利</span>
+                    <span className={app.estimatedMargin < app.marginLimit ? 'pla-mobile-value pla-cell-warn' : 'pla-mobile-value'}>
+                      {app.estimatedMargin.toLocaleString()} 元
+                    </span>
+                  </div>
+                  <div>
+                    <span className="pla-v-label">综合毛利限价</span>
+                    <span className="pla-mobile-value">{app.marginLimit.toLocaleString()} 元</span>
+                  </div>
+                  <div>
+                    <span className="pla-v-label">需审核级别</span>
+                    <span className="pla-mobile-value">{level ? `${level}审核` : '无需审批'}</span>
+                  </div>
+                  <div>
+                    <span className="pla-v-label">创建时间</span>
+                    <span className="pla-mobile-value">{app.createdAt}</span>
+                  </div>
+                  <div>
+                    <span className="pla-v-label">审核人</span>
+                    <span className="pla-mobile-value">{app.approver || '-'}</span>
+                  </div>
+                  <div>
+                    <span className="pla-v-label">审核时间</span>
+                    <span className="pla-mobile-value">{app.approvedAt || '-'}</span>
+                  </div>
+                </div>
+                <div className="pla-mobile-card-actions">
+                  {isPending && level ? (
+                    <button className="pla-btn pla-btn-primary" onClick={() => onReview(app.id)}>
+                      {level}审核
+                    </button>
+                  ) : !isPending ? (
+                    <button className="pla-btn pla-btn-view" onClick={() => onDetail(app.id)}>
+                      <Eye size={14} />
+                      查看
+                    </button>
+                  ) : null}
+                </div>
+              </article>
+            )
+          })}
+          {applications.length === 0 && (
+            <div className="pla-mobile-card pla-mobile-empty">暂无符合条件的数据</div>
+          )}
+        </div>
+      </div>
     </>
+  )
+}
+
+// ─── 消息提醒页 ──────────────────────────────────────────────────────────────
+
+function MessagePage({ onOpenReview }: { onOpenReview: () => void }) {
+  const messages = [
+    {
+      id: 'message-20260901',
+      idLabel: 'XJ3356202609010001+3356',
+      module: '限价申请',
+      approvers: '张三/李四',
+      submittedLabel: '单据提交时间',
+      submittedAt: '2026-09-01 10:08:00',
+      time: '9月1日 10:08',
+    },
+    {
+      id: 'message-20260415',
+      idLabel: 'RF20250924009+10145',
+      module: '返利资金划转申请',
+      approvers: '王泓/樊昕/测试曹子良',
+      submittedLabel: '单据提交日期',
+      submittedAt: '2026-04-15 13:53:30',
+      time: '4月15日 13:53',
+    },
+    {
+      id: 'message-20260715',
+      idLabel: 'RF20250924022+10145',
+      module: '返利资金划转申请',
+      approvers: '王泓/樊昕/测试曹子良',
+      submittedLabel: '单据提交日期',
+      submittedAt: '2026-07-15 15:47:02',
+      time: '7月15日 15:47',
+    },
+    {
+      id: 'message-20260904',
+      idLabel: 'RF20260630001+10145',
+      module: '返利资金划转申请',
+      approvers: '王泓/樊昕/测试曹子良',
+      submittedLabel: '单据提交日期',
+      submittedAt: '2026-09-04 15:11:56',
+      time: '9月4日 15:12',
+    },
+  ]
+
+  return (
+    <div className="pla-message-page" data-annotation-id="pla-message-page">
+      <header className="pla-message-header">
+        <button className="pla-message-nav-btn" aria-label="返回">
+          <ChevronLeft size={22} />
+        </button>
+        <div className="pla-message-title-wrap">
+          <div className="pla-message-title-row">
+            <h1>盈丰平台消息提醒</h1>
+            <span className="pla-message-robot">机器人</span>
+            <ChevronDown size={13} />
+          </div>
+          <p>盈丰平台消息提醒</p>
+        </div>
+        <button className="pla-message-nav-btn" aria-label="更多">
+          <span className="pla-message-more-dot" />
+          <span className="pla-message-more-dot" />
+          <span className="pla-message-more-dot" />
+        </button>
+      </header>
+
+      <div className="pla-message-body">
+        {messages.map((message, index) => (
+          <React.Fragment key={message.id}>
+            <div className="pla-message-divider"><span>{message.time.split(' ')[0]}</span></div>
+            <div className="pla-message-time">{message.time}</div>
+            <div className="pla-message-thread">
+              <div className="pla-message-avatar"><Bell size={18} /></div>
+              <article className="pla-message-card">
+                <div>
+                  <span className="pla-message-field">流程标题：</span>
+                  {index === 0 ? (
+                    <button className="pla-message-link" onClick={onOpenReview}>{message.idLabel}</button>
+                  ) : (
+                    <span>{message.idLabel}</span>
+                  )}
+                </div>
+                <div><span className="pla-message-field">流程模块：</span><span>{message.module}</span></div>
+                <div><span className="pla-message-field">当前审批人：</span><span>{message.approvers}</span></div>
+                <div><span className="pla-message-field">{message.submittedLabel}：</span><span>{message.submittedAt}</span></div>
+              </article>
+            </div>
+          </React.Fragment>
+        ))}
+      </div>
+
+      <footer className="pla-message-inputbar">
+        <div className="pla-message-input">暂时无法给该机器人发消息 <span>如何配置?</span></div>
+        <div className="pla-message-toolbar">
+          {['😊', '@', '🎙', '🖼', 'Aa', '＋'].map(item => <span key={item}>{item}</span>)}
+        </div>
+      </footer>
+    </div>
   )
 }
 
@@ -754,7 +973,17 @@ function ReviewPage(props: ReviewPageProps) {
   const drop = approval.drop
 
   return (
-    <>
+    <div className="pla-mobile-review">
+      <header className="pla-mobile-review-header">
+        <button className="pla-mobile-back" onClick={onBack} aria-label="返回列表">
+          <ArrowLeft size={18} />
+        </button>
+        <div className="pla-mobile-review-heading">
+          <h1>审核</h1>
+          <span>{level ? `${level}审核` : '无需审批'}</span>
+        </div>
+      </header>
+
       {/* 申请单信息 */}
       <div className="pla-card" data-annotation-id="pla-review-app-info">
         <div className="pla-section-title">
@@ -769,7 +998,7 @@ function ReviewPage(props: ReviewPageProps) {
               <Lock size={14} className="pla-input-suffix" />
             </div>
             <p className="pla-form-hint">
-              自动生成：XJ + 经销商ERP号({app.storeErpNo}) + 年月日 + 流水号，不可编辑
+              不可编辑
             </p>
           </div>
           <div className="pla-form-item">
@@ -839,7 +1068,7 @@ function ReviewPage(props: ReviewPageProps) {
         <div className="pla-review-row">
           <span className="pla-form-label pla-review-label">审核状态</span>
           <span className="pla-status-badge pla-status-pending">待审核</span>
-          <span className="pla-form-label pla-review-label" style={{ marginLeft: 24 }}>创建时间</span>
+          <span className="pla-form-label pla-review-label">创建时间</span>
           <span className="pla-review-text">{app.createdAt}</span>
         </div>
         <div className="pla-form-item pla-form-item-full pla-review-comment">
@@ -858,8 +1087,8 @@ function ReviewPage(props: ReviewPageProps) {
       </div>
 
       {/* 底部操作 */}
-      <div className="pla-footer-actions">
-        <button className="pla-footer-btn pla-footer-btn-cancel" onClick={onBack}>返回</button>
+      <div className="pla-footer-actions pla-mobile-footer">
+        <button className="pla-footer-btn pla-footer-btn-cancel pla-desktop-back" onClick={onBack}>返回</button>
         <button className="pla-footer-btn pla-footer-btn-reject" onClick={onReject}>
           <X size={14} />
           驳回
@@ -869,7 +1098,7 @@ function ReviewPage(props: ReviewPageProps) {
           通过
         </button>
       </div>
-    </>
+    </div>
   )
 }
 

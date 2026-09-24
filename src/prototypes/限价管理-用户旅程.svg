@@ -44,21 +44,23 @@
   <text x="695" y="148" class="text-small" style="font-size: 10px;">&#x964d;&#x5e45;&gt;0 &#x89e6;&#x53d1;</text>
   <line x1="600" y1="125" x2="630" y2="125" class="arrow" />
 
-  <rect x="790" y="100" width="130" height="50" rx="8" class="step-highlight" />
-  <text x="855" y="125" class="text" style="font-weight: 600;">&#x751f;&#x6210;&#x7533;&#x8bf7;&#x5355;</text>
-  <text x="855" y="140" class="text-small">&#x72b6;&#x6001;:&#x5f85;&#x5ba1;&#x6838;</text>
+  <rect x="790" y="100" width="130" height="62" rx="8" class="step-highlight" />
+  <text x="855" y="122" class="text" style="font-weight: 600;">&#x751f;&#x6210;&#x7533;&#x8bf7;&#x5355;</text>
+  <text x="855" y="138" class="text-small">&#x72b6;&#x6001;:&#x5f85;&#x5ba1;&#x6838;</text>
+  <text x="855" y="154" class="text-small" style="font-size: 10px;">&#x5e26;&#x51fa;&#x5927;&#x533a;/&#x6761;&#x7ebf;&#x5ba1;&#x6279;&#x4eba;</text>
   <line x1="760" y1="125" x2="790" y2="125" class="arrow" />
 
-  <rect x="950" y="100" width="130" height="50" rx="8" class="step" />
-  <text x="1015" y="120" class="text">&#x9010;&#x7ea7;&#x5ba1;&#x6279;</text>
-  <text x="1015" y="135" class="text-small">&#x5927;&#x533a;&#x2192;&#x6761;&#x7ebf;&#x2192;</text>
-  <text x="1015" y="148" class="text-small">&#x95e8;&#x5e97;&#x2192;&#x96c6;&#x56e2;</text>
+  <rect x="950" y="90" width="150" height="68" rx="8" class="step" />
+  <text x="1025" y="112" class="text">&#x9010;&#x7ea7;&#x5ba1;&#x6279;</text>
+  <text x="1025" y="128" class="text-small">&#x5927;&#x533a;&#x2192;&#x6761;&#x7ebf;&#x2192;&#x95e8;&#x5e97;&#x2192;&#x96c6;&#x56e2;</text>
+  <text x="1025" y="142" class="text-small" style="font-size: 10px;">&#x5927;&#x533a;&#x6309;&#x95e8;&#x5e97;&#x6240;&#x5c5e;&#x5927;&#x533a;&#x8fc7;&#x6ee4;</text>
+  <text x="1025" y="154" class="text-small" style="font-size: 10px;">&#x6761;&#x7ebf;&#x6309;&#x54c1;&#x724c;+&#x4ea7;&#x54c1;&#x5e8f;&#x5217;&#x8def;&#x7531;</text>
   <line x1="920" y1="125" x2="950" y2="125" class="arrow" />
 
   <rect x="1110" y="100" width="130" height="50" rx="8" class="step-warning" />
   <text x="1175" y="125" class="text" style="font-weight: 600;">&#x9a73;&#x56de;&#x9010;&#x7ea7;&#x9000;&#x56de;</text>
   <text x="1175" y="140" class="text-small">&#x9000;&#x56de;&#x4e0a;&#x4e00;&#x8282;&#x70b9;</text>
-  <line x1="1080" y1="125" x2="1110" y2="125" class="arrow" />
+  <line x1="1100" y1="125" x2="1110" y2="125" class="arrow" />
 
   <rect x="1270" y="100" width="130" height="50" rx="8" class="step-info" />
   <text x="1335" y="125" class="text" style="font-weight: 600;">&#x5ba1;&#x6838;&#x901a;&#x8fc7;</text>

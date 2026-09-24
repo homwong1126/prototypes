@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>限价申请（移动版）— 规格文档</title>
+  <style>
+    :root {
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --brand: #008f5d;
+      --brand-ink: #007a50;
+      --brand-soft: #e6f5ef;
+      --brand-surface: #f2faf7;
+      --brand-border: #b7ddcf;
+      --text: #222832;
+      --text-secondary: #4b5565;
+      --text-muted: #6f7888;
+      --text-placeholder: #8b94a3;
+      color: var(--text);
+      background: #f5f7fb;
+      scrollbar-gutter: stable;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 32px 20px 64px; }
+    .shell { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 24px; width: min(1200px, 100%); margin: 0 auto; align-items: start; }
+    .sidebar { position: sticky; top: 32px; padding: 18px 14px; border: 1px solid #dfe4ee; border-radius: 8px; background: #fff; }
+    .sidebar-title { margin: 0 8px 10px; color: var(--text-muted); font-size: 12px; font-weight: 600; }
+    .page-nav { display: flex; flex-direction: column; gap: 4px; }
+    .page-nav button { width: 100%; padding: 8px 10px; border: 0; border-radius: 8px; color: var(--text-secondary); background: transparent; font: inherit; font-size: 13px; line-height: 1.45; text-align: left; cursor: pointer; }
+    .page-nav button:hover, .page-nav button[aria-current="page"] { color: var(--brand-ink); background: var(--brand-soft); }
+    .page-nav button[aria-current="page"] { font-weight: 600; }
+    main { min-width: 0; padding: 40px; border: 1px solid #dfe4ee; border-radius: 8px; background: #fff; box-shadow: 0 4px 16px rgb(30 45 75 / 6%); }
+    h1 { margin: 0; font-size: 28px; line-height: 1.3; }
+    h2 { margin: 44px 0 20px; padding-bottom: 8px; border-bottom: 1px solid #e7eaf0; font-size: 19px; line-height: 1.55; }
+    h3 { margin: 28px 0 12px; font-size: 16px; line-height: 1.5; }
+    p, li { font-size: 14px; line-height: 1.9; }
+    p { margin: 14px 0; }
+    td, th { font-size: 13px; line-height: 1.65; }
+    .definition { margin: 16px 0 0; padding: 14px 16px; border-left: 3px solid var(--brand); color: var(--text-secondary); background: var(--brand-surface); }
+    .hint { color: var(--text-muted); font-size: 13px; }
+    ul { margin: 10px 0 20px; padding-left: 22px; }
+    .placeholder-list { padding-left: 0; }
+    .placeholder-list li { list-style: none; color: var(--text-placeholder); }
+    .placeholder-list li::before { margin-right: 8px; color: #b2bac6; content: "—"; }
+    table { width: 100%; margin-top: 14px; border-collapse: collapse; }
+    th, td { min-width: 110px; padding: 10px 12px; border: 1px solid #dfe4ee; text-align: left; vertical-align: top; }
+    th { background: #f6f8fb; font-weight: 600; }
+    td:empty::after { content: "待补充"; color: var(--text-placeholder); }
+    code { padding: 2px 5px; border-radius: 5px; background: #eef1f6; font-size: 13px; }
+    .mermaid { display: flex; justify-content: center; margin: 12px 0 0; padding: 16px; overflow-x: auto; border: 1px solid var(--brand-border); border-radius: 8px; background: var(--brand-surface); }
+    .mermaid svg { max-width: 100%; height: auto; }
+    .spec-page[hidden] { display: none; }
+    .pill { display: inline-block; padding: 2px 8px; border-radius: 999px; background: var(--brand-soft); color: var(--brand-ink); font-size: 12px; font-weight: 600; }
+    @media (max-width: 720px) {
+      body { padding: 0 8px 40px; }
+      .shell { display: block; }
+      .sidebar { position: sticky; top: 0; z-index: 10; margin: 0 -8px 12px; padding: 10px 8px; border-width: 0 0 1px; border-radius: 0; }
+      .sidebar-title { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+      .page-nav { flex-direction: row; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+      .page-nav::-webkit-scrollbar { display: none; }
+      .page-nav button { width: auto; flex: 0 0 auto; white-space: nowrap; }
+      main { padding: 24px 18px; border-radius: 8px; }
+      .table-wrap { overflow: visible; }
+      table, tbody, tr, td { display: block; width: 100%; }
+      thead { display: none; }
+      tbody { display: grid; gap: 12px; }
+      tr { overflow: hidden; border: 1px solid #dfe4ee; border-radius: 6px; background: #fff; }
+      td { display: grid; grid-template-columns: minmax(96px, 36%) minmax(0, 1fr); gap: 12px; min-width: 0; padding: 10px 12px; border: 0; border-bottom: 1px solid #e7eaf0; }
+      td:last-child { border-bottom: 0; }
+      td::before { content: attr(data-label); color: var(--text-secondary); font-size: 12px; font-weight: 600; line-height: 1.5; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <p class="sidebar-title">目录</p>
+      <nav class="page-nav" aria-label="规格文档页面">
+        <button type="button" data-page-target="overview" aria-current="page">当前方案</button>
+      </nav>
+    </aside>
+
+    <main>
+      <article class="spec-page" data-spec-page="overview">
+        <h1>限价申请（移动版） <span class="pill">price-limit-apply-copy</span></h1>
+        <p class="definition">本文档是用户与 Agent 围绕当前原型进行方案沟通、确认和持续生成的事实依据。只维护当前有效方案，并简短记录会影响当前原型的重要用户决策和变更。</p>
+
+        <section id="current-plan">
+          <h2>当前方案</h2>
+          <ul>
+            <li><strong>原型意图：</strong>为“大客户营销平台 — 限价管理”提供移动端轻量审核闭环，与桌面端 <code>price-limit-apply</code> 同规则、同数据；承接消息提醒入口，完成申请单浏览、筛选、按计算级别审核、详情只读查看。</li>
+            <li><strong>使用场景：</strong>门店/大区/条线/集团审核人在手机端接收限价申请待办提醒；快速按状态检索；在列表中识别“需审核级别”标签；进入审核页完成通过/驳回；已审单据仅只读查看。</li>
+            <li><strong>当前表达：</strong>React 原型 <code>src/prototypes/price-limit-apply-copy/index.tsx</code> 已实现 4 视图 <code>message / list / review / detail</code>，含双形态列表（桌面 12 列表格 + 移动卡片网格）、审核级别自动计算、吸底操作区与只读详情页。</li>
+          </ul>
+        </section>
+
+        <section id="facts-inputs">
+          <h2>事实与输入</h2>
+          <h3>用户确认事实</h3>
+          <ul>
+            <li><strong>审核级别</strong>：<code>大区 / 条线 / 门店 / 集团</code>；权限额度 <code>1000 / 2000 / 3000 / ∞</code> 元；降幅 <code>drop = 限价 - 预估</code>。</li>
+            <li><strong>审核规则</strong> <code>computeMarginApproval(limit, estimated)</code>：① <code>estimated ≥ limit</code> → <code>ok / 无需审批</code>；② <code>estimated &lt; 0</code> → <code>negative / 集团</code>；③ 否则按 <code>drop</code> 1000/2000/3000 逐级判定，大区为起点，超出即升级。</li>
+            <li><strong>状态</strong>：<code>待审核 / 已通过 / 已驳回</code>；待审核可审核（按钮文案为计算出的级别如“大区审核”），已审仅“查看”。</li>
+            <li><strong>申请单核心字段</strong>：单号 <code>id</code>（如 <code>XJ3356202609010001</code>）、门店 ERP <code>storeErpNo</code>、门店名、车辆信息（VIN/SAP物料/物料/品牌/系列/车系/车型/年款/动力/版型/内外饰色/采购订单类型/采购类型/生产日期/入库时间/采购价）、限价 <code>marginLimit</code>、预估 <code>estimatedMargin</code>、<code>createdAt / approver / approvedAt / reviewComment</code>。</li>
+            <li><strong>文案</strong>：驳回时“审核意见”必填；吸底操作区按钮：<code>驳回（红）/ 通过（蓝）</code>；顶部面包屑 <code>限价申请 / 审核 | 详情</code>。</li>
+          </ul>
+
+          <h3>参考资料</h3>
+          <ul>
+            <li><code>src/prototypes/price-limit-apply-copy/index.tsx</code>（1265 行）— 主原型实现，含 MessagePage / ListPage / ReviewPage / DetailPage 四视图与状态流转。</li>
+            <li><code>src/prototypes/price-limit-apply-copy/style.css</code> — 移动端适配：<code>pla-mobile-*</code>、<code>pla-review-page-content</code> 紧凑间距、吸底 footer。</li>
+            <li>桌面对照 <code>src/prototypes/price-limit-apply</code> — 同规则对照实现。</li>
+            <li>标注源 <code>src/prototypes/price-limit-apply-copy/annotation-source.json</code> + <code>src/prototypes/price-limit-apply-copy/.spec/acp</code> — 标注目录与路由联动。</li>
+          </ul>
+
+          <h3>当前假设</h3>
+          <ul>
+            <li>移动端列表中“需审核级别”仅展示标签，不提供独立筛选入口（与桌面筛选器差异为有意简化，待确认是否需加回）。</li>
+            <li>消息流中非限价模块（如“返利资金划转”）仅占位展示，不做真实跳转；首条限价消息可直进审核并记忆 <code>reviewOrigin=message</code>。</li>
+          </ul>
+        </section>
+
+        <section id="prototype-scope">
+          <h2>原型范围</h2>
+          <h3>本次呈现</h3>
+          <ul>
+            <li><strong>消息页 <code>message</code></strong>：机器人消息流（4 条示例），限价申请卡片可点进审核，记忆返回来源。</li>
+            <li><strong>列表页 <code>list</code></strong>：双形态 — 桌面 <code>pla-table-container</code> 表格（悬停高亮）与移动 <code>pla-mobile-cards</code> 卡片网格（2 列、金额低于限价标红）；筛选区：关键字（申请单号/VIN）、审核状态、需审核级别（桌面端保留选择器）；空状态“暂无符合条件的数据”。</li>
+            <li><strong>审核页 <code>review</code></strong>：申请单信息（单号只读带锁）+ 车辆信息卡（2 列网格，VIN 高亮、采购价橙色）+ 限价信息三卡（限价/预估/级别，移动端 2+1 布局）+ 审核信息（状态/人/时间/意见 textarea，驳回必填）+ 吸底操作（驳回/通过）、顶部返回头。</li>
+            <li><strong>详情页 <code>detail</code></strong>：申请单/车辆/限价/审核信息只读展示，复用审核页卡片，按钮仅“返回列表”。</li>
+            <li><strong>全局</strong>：四级级别标签色 <code>大区蓝 / 条线靛 / 门店橙 / 集团紫</code>、状态徽章、Toast 成功/失败、标注路由 <code>message/list/review/detail</code> 联动。</li>
+          </ul>
+          <h3>本次不呈现</h3>
+          <ul>
+            <li>真实后端、权限鉴权、分页/批量操作、导出、限价规则编辑联动。</li>
+            <li>消息推送与已读状态持久化；全量移动手势与离线。</li>
+            <li>除 <code>style.css</code> 覆盖外的独立 Design System 定制。</li>
+          </ul>
+        </section>
+
+        <section id="pages-content">
+          <h2>页面与内容方案</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>页面/视图</th><th>页面作用</th><th>主要模块与内容</th><th>示例数据或素材</th><th>与其他页面的关系</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td data-label="页面/视图">消息 <code>message</code></td>
+                  <td data-label="页面作用">待办提醒入口</td>
+                  <td data-label="主要模块与内容">消息流卡：模块名、单号+ERP、提交人/时间、时间戳；限价首条可点</td>
+                  <td data-label="示例数据或素材">4 条（含 XJ3356202609010001 / 3356，9-01 10:08）</td>
+                  <td data-label="与其他页面的关系">→ <code>review</code>（携带 <code>reviewOrigin=message</code> 返回此页）</td>
+                </tr>
+                <tr>
+                  <td data-label="页面/视图">列表 <code>list</code></td>
+                  <td data-label="页面作用">申请单浏览与筛选</td>
+                  <td data-label="主要模块与内容">筛选卡（关键字/状态/级别·桌面）；桌面表格（12 列）+ 移动卡片网格（单号/状态/车型/金额/限价/级别/时间/人/时间/操作）</td>
+                  <td data-label="示例数据或素材">8 条示例（XJ3356… 等，预估 1200/2500/1500/500/-300… 限价 3000）</td>
+                  <td data-label="与其他页面的关系">待审核 → <code>review</code>；已审 → <code>detail</code>；受标注控件联动</td>
+                </tr>
+                <tr>
+                  <td data-label="页面/视图">审核 <code>review</code></td>
+                  <td data-label="页面作用">按级别执行审核</td>
+                  <td data-label="主要模块与内容">申请单信息（只读/禁用）· 车辆信息 16 字段 · 限价三卡（预警/级别标签）· 审核信息（textarea）· 吸底驳回/通过</td>
+                  <td data-label="示例数据或素材">当前选中单的车辆与限价；驳回校验演示</td>
+                  <td data-label="与其他页面的关系">通过/驳回 → 回 <code>list</code> 并更新状态/人/时间；返回按 <code>reviewOrigin</code></td>
+                </tr>
+                <tr>
+                  <td data-label="页面/视图">详情 <code>detail</code></td>
+                  <td data-label="页面作用">已审只读查看</td>
+                  <td data-label="主要模块与内容">与审核页同四卡，只读徽章与评语样式区分 <code>pla-detail-comment-approve</code></td>
+                  <td data-label="示例数据或素材">已通过/已驳回样例</td>
+                  <td data-label="与其他页面的关系">仅“返回列表”</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="interaction-states">
+          <h2>交互与状态方案</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>对象/场景</th><th>前置状态</th><th>用户操作</th><th>原型表现</th><th>后续状态</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td data-label="对象/场景">列表筛选</td>
+                  <td data-label="前置状态">任意</td>
+                  <td data-label="用户操作">输入关键字 / 切换状态 / 切换级别</td>
+                  <td data-label="原型表现">即时过滤 <code>filteredApplications</code>；无匹配显空状态</td>
+                  <td data-label="后续状态">列表刷新</td>
+                </tr>
+                <tr>
+                  <td data-label="对象/场景">待审核操作列</td>
+                  <td data-label="前置状态">状态=待审核 且 <code>level≠null</code></td>
+                  <td data-label="用户操作">点击“{级别}审核”</td>
+                  <td data-label="原型表现">进入 <code>review</code>，同步 <code>effectiveViewMode</code></td>
+                  <td data-label="后续状态">审核页，有吸底操作</td>
+                </tr>
+                <tr>
+                  <td data-label="对象/场景">无需审批条目</td>
+                  <td data-label="前置状态"><code>level=null</code> 且待审核</td>
+                  <td data-label="用户操作">查看操作区</td>
+                  <td data-label="原型表现">不展示审核按钮（按当前实现）</td>
+                  <td data-label="后续状态">—</td>
+                </tr>
+                <tr>
+                  <td data-label="对象/场景">已审查看</td>
+                  <td data-label="前置状态">状态≠待审核</td>
+                  <td data-label="用户操作">点击“查看”</td>
+                  <td data-label="原型表现">进入 <code>detail</code> 只读</td>
+                  <td data-label="后续状态">详情页</td>
+                </tr>
+                <tr>
+                  <td data-label="对象/场景">驳回校验</td>
+                  <td data-label="前置状态">审核页</td>
+                  <td data-label="用户操作">点击“驳回”且意见为空</td>
+                  <td data-label="原型表现">行内错误提示，阻止提交</td>
+                  <td data-label="后续状态">停留审核页</td>
+                </tr>
+                <tr>
+                  <td data-label="对象/场景">通过/驳回成功</td>
+                  <td data-label="前置状态">审核页（驳回已填意见）</td>
+                  <td data-label="用户操作">点击“通过”或“驳回”</td>
+                  <td data-label="原型表现">更新 <code>status / approver / approvedAt / reviewComment</code>，Toast 提示</td>
+                  <td data-label="后续状态">自动回 <code>list</code></td>
+                </tr>
+                <tr>
+                  <td data-label="对象/场景">消息返回</td>
+                  <td data-label="前置状态">从 <code>message</code> 进入的审核页</td>
+                  <td data-label="用户操作">点顶部返回箭头 / 取消</td>
+                  <td data-label="原型表现">按 <code>reviewOrigin</code> 返回消息页</td>
+                  <td data-label="后续状态"><code>message</code></td>
+                </tr>
+                <tr>
+                  <td data-label="对象/场景">标注联动</td>
+                  <td data-label="前置状态">任意视图</td>
+                  <td data-label="用户操作">标注面板切换路由/分段控件</td>
+                  <td data-label="原型表现">路由 <code>view_mode</code> 同步 <code>effectiveViewMode</code></td>
+                  <td data-label="后续状态">对应视图</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="hint">边界：负值集团、低于限价按档位、≥限价无需审批；空列表与高亮金额 <code>pla-cell-warn</code> 需真实表现。</p>
+          <pre id="prototype-review-flow" class="mermaid">flowchart LR
+  A[消息 message] --> B[列表 list]
+  B -- 待审核 且 有级别 --> C[审核 review]
+  B -- 已审 --> D[详情 detail]
+  C -- 驳回校验 --> C
+  C -- 通过/驳回 --> B
+  D --> B
+  A -- 首条直进 --> C
+  C -- origin=message 返回 --> A
+</pre>
+        </section>
+
+        <section id="design-basis">
+          <h2>设计基底与原型特有调整</h2>
+          <ul>
+            <li>采用的 <code>DESIGN.md</code>：未绑定主题，基于原型自有 <code>style.css</code>；如需主题可后续指定 <code>src/themes/&lt;theme&gt;/DESIGN.md</code>。</li>
+            <li>继承方式：默认遵循通用排版与卡片、表格、表单规范。</li>
+            <li>本原型特有调整：移动端 <code>pla-mobile-cards / pla-mobile-card-grid</code> 2 列网格、<code>pla-mobile-footer</code> 吸底双按钮、<code>pla-mobile-review-header</code>、四级级别色与状态徽章、金额预警 <code>pla-margin-warning</code>。</li>
+          </ul>
+        </section>
+
+        <section id="open-questions">
+          <h2>当前待确认事项</h2>
+          <ul>
+            <li>移动端是否需补回“需审核级别”独立筛选入口，或保持当前卡内展示即可？</li>
+            <li>消息流中其他模块（返利资金划转）是否需真实跳转，还是保持占位？</li>
+          </ul>
+        </section>
+
+        <section id="decision-history">
+          <h2>用户重要决策与变更</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>日期</th><th>用户决策或变更</th><th>对当前原型的影响</th></tr></thead>
+              <tbody>
+                <tr><td data-label="日期">2026-09-10</td><td data-label="用户决策或变更">确认将本原型作为移动版独立承接，与桌面版同规则同数据，消息→列表→审核→详情闭环。</td><td data-label="对当前原型的影响">已按 4 视图实现，双形态列表与吸底审核交互定版。</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </article>
+    </main>
+  </div>
+
+  <script>
+    const navItems = [...document.querySelectorAll('[data-page-target]')];
+    const pages = [...document.querySelectorAll('[data-spec-page]')];
+    const showPage = (pageId) => {
+      for (const navItem of navItems) {
+        const isCurrent = navItem.dataset.pageTarget === pageId;
+        if (isCurrent) navItem.setAttribute('aria-current', 'page');
+        else navItem.removeAttribute('aria-current');
+      }
+      for (const page of pages) page.hidden = page.dataset.specPage !== pageId;
+    };
+    for (const navItem of navItems) navItem.addEventListener('click', () => showPage(navItem.dataset.pageTarget));
+  </script>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'base', themeVariables: { primaryColor: '#e6f5ef', primaryTextColor: '#222832', primaryBorderColor: '#008f5d', lineColor: '#008f5d', secondaryColor: '#f2faf7', tertiaryColor: '#ffffff', edgeLabelBackground: '#ffffff', fontFamily: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' } });
+  </script>
+</body>
+</html>

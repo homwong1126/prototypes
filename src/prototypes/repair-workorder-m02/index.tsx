@@ -54,7 +54,8 @@ import {
   X,
   Image,
 } from 'lucide-react'
-import cheryLogo from '../../assets/chery-logo.png'
+// chery-logo.png was missing; replaced with inline SVG
+const cheryLogo = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 28"><text x="4" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1a73e8">CHERY</text></svg>')
 import './style.css'
 
 // ─── 类型 ────────────────────────────────────────────────────────────────────
