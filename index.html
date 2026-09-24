@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axhub Make Prototypes</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #f0f2f5;
+      color: #1a1a2e;
+      min-height: 100vh;
+    }
+    .header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: white;
+      padding: 48px 24px;
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .header p {
+      font-size: 15px;
+      opacity: 0.8;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 32px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e8e8e8;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: white;
+      border: 1px solid #e8e8e8;
+      border-radius: 10px;
+      padding: 16px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+    }
+    .card:hover {
+      border-color: #0f3460;
+      box-shadow: 0 4px 12px rgba(15, 52, 96, 0.12);
+      transform: translateY(-1px);
+    }
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #0f3460, #533483);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .card-content {
+      flex: 1;
+      min-width: 0;
+    }
+    .card-title {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    .card-subtitle {
+      font-size: 12px;
+      color: #888;
+      margin-top: 2px;
+    }
+    .card-arrow {
+      color: #ccc;
+      font-size: 18px;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    .card:hover .card-arrow {
+      transform: translateX(3px);
+      color: #0f3460;
+    }
+    @media (max-width: 640px) {
+      .header { padding: 32px 16px; }
+      .header h1 { font-size: 22px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Axhub Make Prototypes</h1>
+    <p>交互原型 · 设计系统 · 可运行演示</p>
+  </header>
+  <div class="container">
+    <div class="section-title">原型列表</div>
+    <div class="grid">
+      
+    <a class="card" href="prototypes/annotation-demo.html">
+      <div class="card-icon">A</div>
+      <div class="card-content">
+        <div class="card-title">Annotation Demo</div>
+        <div class="card-subtitle">annotation-demo</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a class="card" href="prototypes/beginner-guide.html">
+      <div class="card-icon">B</div>
+      <div class="card-content">
+        <div class="card-title">Beginner Guide</div>
+        <div class="card-subtitle">beginner-guide</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a class="card" href="prototypes/icar-e-service-app.html">
+      <div class="card-icon">I</div>
+      <div class="card-content">
+        <div class="card-title">Icar E Service App</div>
+        <div class="card-subtitle">icar-e-service-app</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a class="card" href="prototypes/inventory-manage.html">
+      <div class="card-icon">I</div>
+      <div class="card-content">
+        <div class="card-title">Inventory Manage</div>
+        <div class="card-subtitle">inventory-manage</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a class="card" href="prototypes/market-plan-manage.html">
+      <div class="card-icon">M</div>
+      <div class="card-content">
+        <div class="card-title">Market Plan Manage</div>
+        <div class="card-subtitle">market-plan-manage</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a class="card" href="prototypes/oem-benefits-admin.html">
+      <div class="card-icon">O</div>
+      <div class="card-content">
+        <div class="card-title">Oem Benefits Admin</div>
+        <div class="card-subtitle">oem-benefits-admin</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a class="card" href="prototypes/olympiad-learning-system.html">
+      <div class="card-icon">O</div>
+      <div class="card-content">
+        <div class="card-title">Olympiad Learning System</div>
+        <div class="card-subtitle">olympiad-learning-system</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a class="card" href="prototypes/order-manage-entry.html">
+      <div class="card-icon">O</div>
+      <div class="card-content">
+        <div class="card-title">Order Manage Entry</div>
+        <div class="card-subtitle">order-manage-entry</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a class="card" href="prototypes/policy-management-edit.html">
+      <div class="card-icon">P</div>
+      <div class="card-content">
+        <div class="card-title">Policy Management Edit</div>
+        <div class="card-subtitle">policy-management-edit</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a class="card" href="prototypes/pre-diagnosis-order-management.html">
+      <div class="card-icon">P</div>
+      <div class="card-content">
+        <div class="card-title">Pre Diagnosis Order Management</div>
+        <div class="card-subtitle">pre-diagnosis-order-management</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a class="card" href="prototypes/pre-diagnosis-template-config.html">
+      <div class="card-icon">P</div>
+      <div class="card-content">
+        <div class="card-title">Pre Diagnosis Template Config</div>
+        <div class="card-subtitle">pre-diagnosis-template-config</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a class="card" href="prototypes/price-limit-apply.html">
+      <div class="card-icon">P</div>
+      <div class="card-content">
+        <div class="card-title">Price Limit Apply</div>
+        <div class="card-subtitle">price-limit-apply</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a class="card" href="prototypes/price-limit-apply-copy.html">
+      <div class="card-icon">P</div>
+      <div class="card-content">
+        <div class="card-title">Price Limit Apply Copy</div>
+        <div class="card-subtitle">price-limit-apply-copy</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a class="card" href="prototypes/price-limit-list.html">
+      <div class="card-icon">P</div>
+      <div class="card-content">
+        <div class="card-title">Price Limit List</div>
+        <div class="card-subtitle">price-limit-list</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a class="card" href="prototypes/price-limit-list-copy.html">
+      <div class="card-icon">P</div>
+      <div class="card-content">
+        <div class="card-title">Price Limit List Copy</div>
+        <div class="card-subtitle">price-limit-list-copy</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a class="card" href="prototypes/repair-dispatch-management.html">
+      <div class="card-icon">R</div>
+      <div class="card-content">
+        <div class="card-title">Repair Dispatch Management</div>
+        <div class="card-subtitle">repair-dispatch-management</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a class="card" href="prototypes/repair-workorder-m02.html">
+      <div class="card-icon">R</div>
+      <div class="card-content">
+        <div class="card-title">Repair Workorder M02</div>
+        <div class="card-subtitle">repair-workorder-m02</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+
+    <a class="card" href="prototypes/touch-and-talk-annotation-demo.html">
+      <div class="card-icon">T</div>
+      <div class="card-content">
+        <div class="card-title">Touch And Talk Annotation Demo</div>
+        <div class="card-subtitle">touch-and-talk-annotation-demo</div>
+      </div>
+      <span class="card-arrow">→</span>
+    </a>
+    </div>
+  </div>
+</body>
+</html>
