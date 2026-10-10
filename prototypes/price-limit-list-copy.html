@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Price Limit List Copy - Axhub Make Prototype</title>
+  <style>
+    html, body, #root {
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+    window.__AXHUB_DEFINE_COMPONENT__ = function(Component) {
+      var rootElement = document.getElementById('root');
+      if (!rootElement) return;
+      var root = ReactDOM.createRoot(rootElement);
+      root.render(React.createElement(Component, {
+        container: rootElement,
+        config: {},
+        data: {},
+        events: {}
+      }));
+    };
+  </script>
+  <script crossorigin src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="price-limit-list-copy.js"></script>
+</body>
+</html>
